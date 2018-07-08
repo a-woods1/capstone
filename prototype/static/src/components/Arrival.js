@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from '../actions/auth';
@@ -18,7 +18,7 @@ function mapDispatchToProps(dispatch) {
 }
 
 @connect(mapStateToProps, mapDispatchToProps)
-class Arrival extends React.Component { // eslint-disable-line react/prefer-stateless-function
+class Arrival extends Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <Grid>
@@ -35,10 +35,10 @@ class Arrival extends React.Component { // eslint-disable-line react/prefer-stat
             
         <Row className="show-grid">
           <Col xs={2} md={2}>
-            <span><Glyphicon glyph="calendar" /> 8-6-2018</span>
+            <span><Glyphicon glyph="time" /> 9:00 AM</span>
           </Col>
           <Col xs={2} md={2}>
-            <span><Glyphicon glyph="time" /> 9:00 AM</span>
+            <span><Glyphicon glyph="calendar" /> 8-6-2018</span>
           </Col>
           <Col xs={5} md={5}>
             <span><Glyphicon glyph="map-marker" /> 731 Lexington Avenue, New York</span>
@@ -55,7 +55,7 @@ class Arrival extends React.Component { // eslint-disable-line react/prefer-stat
           <p>Here is what you should plan to do once you arrive.</p>
         </Row>
             
-        <div class="info_box">
+        <div className="info_box">
           <Row>
             <Col xs={1} md={1}>
               <Glyphicon glyph="star" />
@@ -80,7 +80,7 @@ class Arrival extends React.Component { // eslint-disable-line react/prefer-stat
             <Col xs={1} md={1}>
               <Glyphicon glyph="star" />
             </Col>
-            <Col xs={1} md={11}>
+            <Col xs={11} md={11}>
               <h2>Wait for Recruiter</h2>
               <p>Security will direct you to the 6th floor, where a greeter at the help desk will point you to the pink couch.</p>
             </Col>
@@ -99,10 +99,10 @@ class Arrival extends React.Component { // eslint-disable-line react/prefer-stat
             
         <Row className="show-grid">
           <Col xs={2} md={2}>
-            <span><Glyphicon glyph="calendar" /> 8-6-2018</span>
+            <span><Glyphicon glyph="time" /> 9:30 AM</span>
           </Col>
           <Col xs={2} md={2}>
-            <span><Glyphicon glyph="time" /> 9:30 AM</span>
+            <span><Glyphicon glyph="calendar" /> 8-6-2018</span>
           </Col>
           <Col xs={5} md={5}>
             <span><Glyphicon glyph="map-marker" /> 731 Lexington Avenue, New York</span>

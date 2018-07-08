@@ -71,43 +71,47 @@ export class Header extends Component {
     render() {
         return (
             <header>
-                <LeftNav open={this.state.open}>
-                    {
-                        !this.props.isAuthenticated ?
-                            <div>
-                                <MenuItem onClick={() => this.dispatchNewRoute('/login')}>
-                                    Login
-                                </MenuItem>
-                                <MenuItem onClick={() => this.dispatchNewRoute('/register')}>
-                                    Register
-                                </MenuItem>
-                            </div>
-                            :
-                            <div>
-                                <MenuItem onClick={() => this.dispatchNewRoute('/analytics')}>
-                                    Analytics
-                                </MenuItem>
-                                <Divider />
 
-                                <MenuItem onClick={(e) => this.logout(e)}>
-                                    Logout
-                                </MenuItem>
-                            </div>
-                    }
-                </LeftNav>
-                <AppBar
-                  title="logo"
-                  onLeftIconButtonTouchTap={() => this.openNav()}
-                  iconElementRight={
-                    <div>
-                      <FlatButton label="My Account" onClick={() => this.dispatchNewRoute('/account')} />
-                    </div>
-                    }
-                />
+                <Navbar inverse collapseOnSelect>
+  <Navbar.Header>
+    <Navbar.Brand>
+      <a href="#brand">logo</a>
+    </Navbar.Brand>
+    <Navbar.Toggle />
+  </Navbar.Header>
+  <Navbar.Collapse>
+    <Nav>
+    </Nav>
+    <Nav pullRight>
+      <NavDropdown title="My Account" id="basic-nav-dropdown">{
+      !this.props.isAuthenticated ?
+          <NavItem>
+              <MenuItem onClick={() => this.dispatchNewRoute('/login')}>
+                  Login
+              </MenuItem>
+              <MenuItem onClick={() => this.dispatchNewRoute('/register')}>
+                  Register
+              </MenuItem>
+          </NavItem>
+          :
+          <NavItem>
+              <MenuItem onClick={() => this.dispatchNewRoute('/requests')}>
+                  Requests
+              </MenuItem>
+              <Divider />
+
+              <MenuItem onClick={(e) => this.logout(e)}>
+                  Logout
+              </MenuItem>
+          </NavItem>
+        }
+      </NavDropdown>
+
+    </Nav>
+  </Navbar.Collapse>
+</Navbar>
                 <div>
                 <Navbar>
-                <Navbar.Header>
-                </Navbar.Header>
                 <Nav>
                 <NavItem>
                   <FlatButton label="Overview" onClick={() => this.dispatchNewRoute('/overview')} />
