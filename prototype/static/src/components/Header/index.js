@@ -7,8 +7,11 @@ import LeftNav from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import FlatButton from 'material-ui/FlatButton';
 import Divider from 'material-ui/Divider';
+import { Navbar, Nav, NavItem, NavDropdown } from 'react-bootstrap';
+
 
 import * as actionCreators from '../../actions/auth';
+
 
 function mapStateToProps(state) {
     return {
@@ -62,6 +65,9 @@ export class Header extends Component {
         });
     }
 
+
+
+
     render() {
         return (
             <header>
@@ -90,13 +96,34 @@ export class Header extends Component {
                     }
                 </LeftNav>
                 <AppBar
-                  title="React-Redux-Flask"
+                  title="logo"
                   onLeftIconButtonTouchTap={() => this.openNav()}
                   iconElementRight={
-                      <FlatButton label="Home" onClick={() => this.dispatchNewRoute('/')} />
+                    <div>
+                      <FlatButton label="My Account" onClick={() => this.dispatchNewRoute('/account')} />
+                    </div>
                     }
                 />
+                <div>
+                <Navbar>
+                <Navbar.Header>
+                </Navbar.Header>
+                <Nav>
+                <NavItem>
+                  <FlatButton label="Overview" onClick={() => this.dispatchNewRoute('/overview')} />
+                </NavItem>
+                <NavItem>
+                  <FlatButton label="Arrival" onClick={() => this.dispatchNewRoute('/arrival')} />
+                </NavItem>
+                <NavItem>
+                  <FlatButton label="Interview" onClick={() => this.dispatchNewRoute('/interview')} />
+                </NavItem>
+
+                </Nav>
+                </Navbar>;
+                </div>
             </header>
+
 
         );
     }
