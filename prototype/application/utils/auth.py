@@ -12,6 +12,7 @@ def generate_token(user, expiration=TWO_WEEKS):
     token = s.dumps({
         'id': user.id,
         'email': user.email,
+        'first_name': user.first_name,
     }).decode('utf-8')
     return token
 

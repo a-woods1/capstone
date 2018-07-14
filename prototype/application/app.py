@@ -1,5 +1,6 @@
 from flask import request, render_template, jsonify, url_for, redirect, g
 from .models import User
+from .models import Person
 from index import app, db
 from sqlalchemy.exc import IntegrityError
 from .utils.auth import generate_token, requires_auth, verify_token
@@ -24,21 +25,36 @@ def get_user():
 @app.route("/api/create_user", methods=["POST"])
 def create_user():
     incoming = request.get_json()
-    user = User(
-        email=incoming["email"],
-        password=incoming["password"]
-    )
-    db.session.add(user)
+    person = Person(
+                     first_name="Victoria",
+                     last_name="Kitt",
+                     email=incoming["email"],
+                     phone_number="4122865555",
+                     password=incoming["password"],
+                     address_id=1,
+                     job_id=1,
+                     stage_id=3
+                     )
 
-    try:
-        db.session.commit()
-    except IntegrityError:
-        return jsonify(message="User with that email already exists"), 409
+    db.session.add(person)
+    db.session.commit()
+    app.logger.info(person.id) # gets assigned an id after being persisted
 
-    new_user = User.query.filter_by(email=incoming["email"]).first()
+    #person = Person(email=incoming["email"], password=incoming["password"])
+    #db.session.add(user)
+    #db.session.add(person)
 
+    #try:
+    #    db.session.commit()
+    #except IntegrityError:
+      #return jsonify(message="User with that email already exists"), 409
+      #  return jsonify(message="Person with that email already exists"), 409
+
+    #new_user = User.query.filter_by(email=incoming["email"]).first()
+    new_user = Person.query.filter_by(email=incoming["email"]).first()
     return jsonify(
-        id=user.id,
+        #id=user.id,
+        id=person.id,
         token=generate_token(new_user)
     )
 
@@ -46,10 +62,10 @@ def create_user():
 @app.route("/api/get_token", methods=["POST"])
 def get_token():
     incoming = request.get_json()
-    user = User.get_user_with_email_and_password(incoming["email"], incoming["password"])
+    #user = User.get_user_with_email_and_password(incoming["email"], incoming["password"])
+    user = Person.get_person_with_email_and_password(incoming["email"], incoming["password"])
     if user:
         return jsonify(token=generate_token(user))
-
     return jsonify(error=True), 403
 
 

@@ -1,8 +1,5 @@
 import React from 'react';
+import LoginView from '../LoginView.js';
 
-export const Home = () =>
-    <section>
-        <div className="container text-center">
-            <h1>Hello</h1>
-        </div>
-    </section>;
+
+export const Home = () => <LoginView />;

@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from '../actions/auth';
-import { Grid, Row, Col, Glyphicon, Alert } from 'react-bootstrap';
+import { Grid, Row, Col, Glyphicon, Modal, ButtonToolbar, Button } from 'react-bootstrap';
+
+import AccommodationModal from './AccommodationModal.js';
 
 import arrival_360 from '../images/photos/placeholder.png';
 
@@ -17,22 +19,36 @@ function mapDispatchToProps(dispatch) {
     return bindActionCreators(actionCreators, dispatch);
 }
 
+
 @connect(mapStateToProps, mapDispatchToProps)
 class Arrival extends Component { // eslint-disable-line react/prefer-stateless-function
+    constructor(props, context) {
+        super(props, context);
+
+        this.state = {
+        lgShow: false
+        };
+    }
   render() {
+      let lgClose = () => this.setState({ lgShow: false });
     return (
+
       <Grid>
-            
-        <Alert bsStyle="success">
-            <Row><Glyphicon glyph="remove" /></Row>
-            <Row>
-              <span><Glyphicon glyph="ok-sign" /> You've successfully submitted 2 requests. Check your request status in <strong>My Requests</strong>.</span>
-            </Row>
-        </Alert>
+
+            <Button
+            bsStyle="primary"
+            onClick={() => this.setState({ lgShow: true })}
+            >
+            Launch large demo modal
+            </Button>
+
+
+            <AccommodationModal show={this.state.lgShow} onHide={lgClose} />
+
         <Row className="show-grid">
           <h1>Arrival</h1>
         </Row>
-            
+
         <Row className="show-grid">
           <Col xs={2} md={2}>
             <span><Glyphicon glyph="time" /> 9:00 AM</span>
@@ -44,7 +60,7 @@ class Arrival extends Component { // eslint-disable-line react/prefer-stateless-
             <span><Glyphicon glyph="map-marker" /> 731 Lexington Avenue, New York</span>
           </Col>
         </Row>
-            
+
         <Row className="show-grid">
           <img width="650px" height="175px" className="arrival_360" src={arrival_360} alt="Immersive view"/>
         </Row>
@@ -54,7 +70,7 @@ class Arrival extends Component { // eslint-disable-line react/prefer-stateless-
         <Row>
           <p>Here is what you should plan to do once you arrive.</p>
         </Row>
-            
+
         <div className="info_box">
           <Row>
             <Col xs={1} md={1}>
@@ -65,7 +81,7 @@ class Arrival extends Component { // eslint-disable-line react/prefer-stateless-
               <p>You will need to present a valid, government-issued photo ID at reception so we can print your visitor badge.</p>
             </Col>
           </Row>
-                
+
           <Row>
             <Col xs={1} md={1}>
               <Glyphicon glyph="star" />
@@ -75,7 +91,7 @@ class Arrival extends Component { // eslint-disable-line react/prefer-stateless-
               <p>The visitor badge obtained at reception must be worn and visible at all times.</p>
             </Col>
           </Row>
-                
+
           <Row>
             <Col xs={1} md={1}>
               <Glyphicon glyph="star" />
@@ -86,17 +102,17 @@ class Arrival extends Component { // eslint-disable-line react/prefer-stateless-
             </Col>
           </Row>
         </div>
-            
+
         <Row>
-          <span><a href="https://www.w3schools.com/html/">Related Accommodations</a> <Glyphicon glyph="menu-down" /></span>
+          <span><a href="/accommodations">Related Accommodations</a> <Glyphicon glyph="menu-down" /></span>
         </Row>
-            
+
         <hr />
-            
+
         <Row className="show-grid">
           <h1>Interview</h1>
         </Row>
-            
+
         <Row className="show-grid">
           <Col xs={2} md={2}>
             <span><Glyphicon glyph="time" /> 9:30 AM</span>
@@ -108,12 +124,12 @@ class Arrival extends Component { // eslint-disable-line react/prefer-stateless-
             <span><Glyphicon glyph="map-marker" /> 731 Lexington Avenue, New York</span>
           </Col>
         </Row>
-            
+
         <Row className="show-grid">
           <img width="650px" height="175px" className="arrival_360" src={arrival_360} alt="Immersive view"/>
         </Row>
       </Grid>
-            
+
         );
     }
 }

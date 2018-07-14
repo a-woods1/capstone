@@ -33,7 +33,7 @@ export default createReducer(initialState, {
             isAuthenticating: false,
             isAuthenticated: true,
             token: payload.token,
-            userName: jwtDecode(payload.token).email,
+            userName: jwtDecode(payload.token).first_name,
             statusText: 'You have been successfully logged in.',
         }),
     [LOGIN_USER_FAILURE]: (state, payload) =>
@@ -57,7 +57,7 @@ export default createReducer(initialState, {
             isAuthenticated: true,
             isRegistering: false,
             token: payload.token,
-            userName: jwtDecode(payload.token).email,
+            userName: jwtDecode(payload.token).first_name,
             registerStatusText: 'You have been successfully logged in.',
         }),
     [REGISTER_USER_REQUEST]: (state) =>
