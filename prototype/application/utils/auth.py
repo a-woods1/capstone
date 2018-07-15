@@ -7,12 +7,13 @@ from index import app
 TWO_WEEKS = 1209600
 
 
-def generate_token(user, expiration=TWO_WEEKS):
+def generate_token(user, stages, expiration=TWO_WEEKS):
     s = Serializer(app.config['SECRET_KEY'], expires_in=expiration)
     token = s.dumps({
         'id': user.id,
         'email': user.email,
         'first_name': user.first_name,
+        'stage_id': stages,
     }).decode('utf-8')
     return token
 

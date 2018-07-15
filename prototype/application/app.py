@@ -1,6 +1,6 @@
 from flask import request, render_template, jsonify, url_for, redirect, g
-from .models import User
 from .models import Person
+from .models import Stage
 from index import app, db
 from sqlalchemy.exc import IntegrityError
 from .utils.auth import generate_token, requires_auth, verify_token
@@ -52,10 +52,16 @@ def create_user():
 
     #new_user = User.query.filter_by(email=incoming["email"]).first()
     new_user = Person.query.filter_by(email=incoming["email"]).first()
+    stage_list = Stage.query.all()
+
+    stages = []
+    for s in stage_list:
+      stages.append({"stage_id": s.id, "state_title": s.stage_title})
+
     return jsonify(
         #id=user.id,
         id=person.id,
-        token=generate_token(new_user)
+        token=generate_token(new_user, stages)
     )
 
 

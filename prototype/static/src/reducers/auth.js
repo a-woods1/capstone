@@ -20,6 +20,7 @@ const initialState = {
     isRegistering: false,
     isRegistered: false,
     registerStatusText: null,
+    stageID: null,
 };
 
 export default createReducer(initialState, {
@@ -58,6 +59,7 @@ export default createReducer(initialState, {
             isRegistering: false,
             token: payload.token,
             userName: jwtDecode(payload.token).first_name,
+            stageID: jwtDecode(payload.token).stage_id,
             registerStatusText: 'You have been successfully logged in.',
         }),
     [REGISTER_USER_REQUEST]: (state) =>

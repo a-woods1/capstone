@@ -18,6 +18,7 @@ function mapStateToProps(state) {
         token: state.auth.token,
         userName: state.auth.userName,
         isAuthenticated: state.auth.isAuthenticated,
+        stageID: state.auth.stageID,
     };
 }
 
