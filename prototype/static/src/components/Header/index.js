@@ -45,6 +45,26 @@ export class Header extends Component {
         this.mouseLeave = this.mouseLeave.bind(this);
     }
 
+    renderEntry(){
+        var num_stages = this.props.stageID.length
+        //console.log(num_stages)
+        return Object.entries(this.props.stageID).map(([key, value], i) => {
+          //console.log("i " + i)
+          var obj = this.props.stageID[i]
+          var stage_id = obj.stage_id
+          var stage_title = obj.state_title
+          return (
+            <NavItem href="">
+              <span className="ordinal_stage">Stage {stage_id}</span><br/>
+                {num_stages-1 === i ?
+                  <span className="stage_title">Current Stage</span>
+                  :
+                  <span className="stage_title">{stage_title}</span>
+                }
+            </NavItem>
+         )
+       })
+  }
 
     initializeCart() {
         //set item quantity
@@ -138,18 +158,7 @@ export class Header extends Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav>
-            <NavItem href="">
-              <span className="ordinal_stage">Stage 1</span><br/>
-              <span className="stage_title">Phone Interview</span>
-            </NavItem>
-            <NavItem href="">
-              <span className="ordinal_stage">Stage 2</span><br/>
-              <span className="stage_title">Coding Challenge</span>
-            </NavItem>
-            <NavItem href="/">
-              <span className="ordinal_stage">Current Stage</span><br/>
-              <span className="stage_title">Onsite Iterview</span>
-            </NavItem>
+            {this.renderEntry()}
           </Nav>
           <Nav pullRight>
             <NavDropdown title="My Requests" id="basic-nav-dropdown">

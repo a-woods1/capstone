@@ -8,6 +8,7 @@ function mapStateToProps(state) {
     return {
         token: state.auth.token,
         userName: state.auth.userName,
+        stageID: state.auth.stageID,
         isAuthenticated: state.auth.isAuthenticated,
     };
 }

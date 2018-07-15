@@ -35,6 +35,7 @@ export default createReducer(initialState, {
             isAuthenticated: true,
             token: payload.token,
             userName: jwtDecode(payload.token).first_name,
+            stageID: jwtDecode(payload.token).stage_id,
             statusText: 'You have been successfully logged in.',
         }),
     [LOGIN_USER_FAILURE]: (state, payload) =>
@@ -43,6 +44,7 @@ export default createReducer(initialState, {
             isAuthenticated: false,
             token: null,
             userName: null,
+            stageID: null,
             statusText: `Authentication Error: ${payload.status} ${payload.statusText}`,
         }),
     [LOGOUT_USER]: (state) =>
@@ -50,6 +52,7 @@ export default createReducer(initialState, {
             isAuthenticated: false,
             token: null,
             userName: null,
+            stageID: null,
             statusText: 'You have been successfully logged out.',
         }),
     [REGISTER_USER_SUCCESS]: (state, payload) =>
@@ -71,6 +74,7 @@ export default createReducer(initialState, {
             isAuthenticated: false,
             token: null,
             userName: null,
+            stageID: null,
             registerStatusText: `Register Error: ${payload.status} ${payload.statusText}`,
         }),
 });
