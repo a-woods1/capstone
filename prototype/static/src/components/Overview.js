@@ -19,12 +19,12 @@ class Overview extends React.Component { // eslint-disable-line react/prefer-sta
     render() {
       var i;
 
-console.log("local storage");
+console.log("Local Storage:");
 for (i = 0; i < localStorage.length; i++)   {
     console.log(localStorage.key(i) + "=[" + localStorage.getItem(localStorage.key(i)) + "]");
 }
 
-console.log("session storage");
+console.log("Session Storage:");
 for (i = 0; i < sessionStorage.length; i++) {
     console.log(sessionStorage.key(i) + "=[" + sessionStorage.getItem(sessionStorage.key(i)) + "]");
 }

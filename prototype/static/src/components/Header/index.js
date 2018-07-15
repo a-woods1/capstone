@@ -18,7 +18,7 @@ function mapStateToProps(state) {
         token: state.auth.token,
         userName: state.auth.userName,
         isAuthenticated: state.auth.isAuthenticated,
-        stageID: state.auth.stageID,
+        stages: state.auth.stages,
     };
 }
 
@@ -46,13 +46,13 @@ export class Header extends Component {
     }
 
     renderEntry(){
-        var num_stages = this.props.stageID.length
+        var num_stages = this.props.stages.length
         //console.log(num_stages)
-        return Object.entries(this.props.stageID).map(([key, value], i) => {
+        return Object.entries(this.props.stages).map(([key, value], i) => {
           //console.log("i " + i)
-          var obj = this.props.stageID[i]
+          var obj = this.props.stages[i]
           var stage_id = obj.stage_id
-          var stage_title = obj.state_title
+          var stage_title = obj.stage_title
           return (
             <NavItem href="">
               <span className="ordinal_stage">Stage {stage_id}</span><br/>

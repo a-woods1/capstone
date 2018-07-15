@@ -20,7 +20,7 @@ const initialState = {
     isRegistering: false,
     isRegistered: false,
     registerStatusText: null,
-    stageID: null,
+    stages: [],
 };
 
 export default createReducer(initialState, {
@@ -35,7 +35,7 @@ export default createReducer(initialState, {
             isAuthenticated: true,
             token: payload.token,
             userName: jwtDecode(payload.token).first_name,
-            stageID: jwtDecode(payload.token).stage_id,
+            stages: jwtDecode(payload.token).stage_list,
             statusText: 'You have been successfully logged in.',
         }),
     [LOGIN_USER_FAILURE]: (state, payload) =>
@@ -44,7 +44,7 @@ export default createReducer(initialState, {
             isAuthenticated: false,
             token: null,
             userName: null,
-            stageID: null,
+            stages: [],
             statusText: `Authentication Error: ${payload.status} ${payload.statusText}`,
         }),
     [LOGOUT_USER]: (state) =>
@@ -52,7 +52,7 @@ export default createReducer(initialState, {
             isAuthenticated: false,
             token: null,
             userName: null,
-            stageID: null,
+            stages: [],
             statusText: 'You have been successfully logged out.',
         }),
     [REGISTER_USER_SUCCESS]: (state, payload) =>
@@ -62,7 +62,7 @@ export default createReducer(initialState, {
             isRegistering: false,
             token: payload.token,
             userName: jwtDecode(payload.token).first_name,
-            stageID: jwtDecode(payload.token).stage_id,
+            stages: jwtDecode(payload.token).stage_list,
             registerStatusText: 'You have been successfully logged in.',
         }),
     [REGISTER_USER_REQUEST]: (state) =>
@@ -74,7 +74,7 @@ export default createReducer(initialState, {
             isAuthenticated: false,
             token: null,
             userName: null,
-            stageID: null,
+            stages: [],
             registerStatusText: `Register Error: ${payload.status} ${payload.statusText}`,
         }),
 });

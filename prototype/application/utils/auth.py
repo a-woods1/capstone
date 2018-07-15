@@ -13,7 +13,7 @@ def generate_token(user, stages, expiration=TWO_WEEKS):
         'id': user.id,
         'email': user.email,
         'first_name': user.first_name,
-        'stage_id': stages,
+        'stage_list': stages,
     }).decode('utf-8')
     return token
 

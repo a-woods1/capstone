@@ -56,7 +56,7 @@ def create_user():
 
     stages = []
     for s in stage_list:
-      stages.append({"stage_id": s.id, "state_title": s.stage_title})
+      stages.append({"stage_id": s.id, "stage_title": s.stage_title})
 
     return jsonify(
         #id=user.id,
