@@ -1,6 +1,7 @@
 from flask import request, render_template, jsonify, url_for, redirect, g
 from .models import Person
 from .models import Stage
+from .models import Step
 from index import app, db
 from sqlalchemy.exc import IntegrityError
 from .utils.auth import generate_token, requires_auth, verify_token
@@ -37,31 +38,30 @@ def create_user():
                      )
 
     db.session.add(person)
-    db.session.commit()
-    app.logger.info(person.id) # gets assigned an id after being persisted
 
-    #person = Person(email=incoming["email"], password=incoming["password"])
-    #db.session.add(user)
-    #db.session.add(person)
-
-    #try:
-    #    db.session.commit()
-    #except IntegrityError:
+    try:
+      db.session.commit()
+    except IntegrityError:
       #return jsonify(message="User with that email already exists"), 409
-      #  return jsonify(message="Person with that email already exists"), 409
+      return jsonify(message="Person with that email already exists"), 409
 
     #new_user = User.query.filter_by(email=incoming["email"]).first()
     new_user = Person.query.filter_by(email=incoming["email"]).first()
     stage_list = Stage.query.all()
+    step_list = Step.query.filter_by(stage_id=person.stage_id).all()
 
     stages = []
-    for s in stage_list:
-      stages.append({"stage_id": s.id, "stage_title": s.stage_title})
+    for stage in stage_list:
+      stages.append({"stage_id": stage.id, "stage_title": stage.stage_title})
+
+    steps = []
+    for step in step_list:
+      steps.append({"step_id": step.id, "step_title": step.step_title})
 
     return jsonify(
         #id=user.id,
         id=person.id,
-        token=generate_token(new_user, stages)
+        token=generate_token(new_user, stages, steps)
     )
 
 

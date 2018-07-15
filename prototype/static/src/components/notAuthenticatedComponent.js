@@ -9,6 +9,7 @@ function mapStateToProps(state) {
         token: state.auth.token,
         userName: state.auth.userName,
         stages: state.auth.stages,
+        steps: state.auth.steps,
         isAuthenticated: state.auth.isAuthenticated,
     };
 }

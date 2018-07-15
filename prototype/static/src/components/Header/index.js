@@ -19,6 +19,7 @@ function mapStateToProps(state) {
         userName: state.auth.userName,
         isAuthenticated: state.auth.isAuthenticated,
         stages: state.auth.stages,
+        steps: state.auth.steps,
     };
 }
 
@@ -55,12 +56,16 @@ export class Header extends Component {
           var stage_title = obj.stage_title
           return (
             <NavItem href="">
-              <span className="ordinal_stage">Stage {stage_id}</span><br/>
-                {num_stages-1 === i ?
-                  <span className="stage_title">Current Stage</span>
-                  :
-                  <span className="stage_title">{stage_title}</span>
-                }
+            <div>
+            {num_stages-1 === i ?
+              <span className="ordinal_stage">Current Stage</span>
+              :
+              <span className="ordinal_stage">Stage {stage_id}</span>
+            }
+            <br/>
+
+            <span className="stage_title">{stage_title}</span>
+            </div>
             </NavItem>
          )
        })
@@ -183,16 +188,16 @@ export class Header extends Component {
         <Navbar>
           <Nav>
             <NavItem>
-              <FlatButton label="Overview" onClick={() => this.dispatchNewRoute('/overview')} />
+              <FlatButton label={this.props.steps[0].step_title} onClick={() => this.dispatchNewRoute('/overview')} />
             </NavItem>
             <NavItem>
-              <FlatButton label="Arrival" onClick={() => this.dispatchNewRoute('/arrival')} />
+              <FlatButton label={this.props.steps[1].step_title} onClick={() => this.dispatchNewRoute('/arrival')} />
             </NavItem>
             <NavItem>
-              <FlatButton label="In-Person Interview" onClick={() => this.dispatchNewRoute('/interview')} />
+              <FlatButton label={this.props.steps[2].step_title} onClick={() => this.dispatchNewRoute('/interview')} />
             </NavItem>
             <NavItem>
-              <FlatButton label="Coding Interview" onClick={() => this.dispatchNewRoute('/interview')} />
+              <FlatButton label={this.props.steps[3].step_title} onClick={() => this.dispatchNewRoute('/interview')} />
             </NavItem>
           </Nav>
         </Navbar>

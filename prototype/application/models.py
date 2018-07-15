@@ -17,6 +17,12 @@ class Stage(db.Model):
     id = db.Column(db.Integer(), primary_key=True)
     stage_title = db.Column(db.String(255))
 
+class Step(db.Model):
+    id = db.Column(db.Integer(), primary_key=True)
+    step_title = db.Column(db.String(255))
+    stage_id = db.Column(db.Integer(), db.ForeignKey('stage.id'))
+    #TODO: Make id and stage_id a composite primary key
+
 class Person(db.Model):
     id = db.Column(db.Integer(), primary_key=True)
     first_name = db.Column(db.String(255))
