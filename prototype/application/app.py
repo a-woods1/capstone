@@ -2,6 +2,8 @@ from flask import request, render_template, jsonify, url_for, redirect, g
 from .models import Person
 from .models import Stage
 from .models import Step
+from .models import Category
+from .models import Product
 from index import app, db
 from sqlalchemy.exc import IntegrityError
 from .utils.auth import generate_token, requires_auth, verify_token
@@ -21,6 +23,40 @@ def any_root_path(path):
 @requires_auth
 def get_user():
     return jsonify(result=g.current_user)
+
+
+def get_stages():
+  stage_list = Stage.query.all()
+  stages = []
+  for stage in stage_list:
+    stages.append({"stage_id": stage.id, "stage_title": stage.stage_title})
+  return stages
+
+def get_steps(person):
+  step_list = Step.query.filter_by(stage_id=person.stage_id).all()
+  steps = []
+  for step in step_list:
+    steps.append({"step_id": step.id, "step_title": step.step_title})
+  return steps
+
+def get_products():
+  #product_list = Product.query.join(Category, Product.category_id==Category.id).add_columns(Product.id, Product.product_name, Product.product_description, Product.category_id, Category.category_name, Product.pre_approved).all()
+  category_list = Category.query.all()
+  categories = []
+  for category in category_list:
+    categories.append([category.id, category.category_name])
+  #products = []
+  #for product in product_list:
+  #  products.append({"product_id": product.id, "product_name": product.product_name, "product_description": product.product_description, "category_id": product.category_id, "category_name": product.category_name, "pre_approved": product.pre_approved})
+  products = []
+  for i in range(0, len(category_list)):
+    index = i+1
+    product_list = Product.query.filter_by(category_id=index).all()
+    temp = []
+    for product in product_list:
+      temp.append({"product_id": product.id, "product_name": product.product_name, "product_description": product.product_description, "category_id": product.category_id, "category_name": categories[i][1], "pre_approved": product.pre_approved})
+    products.append(temp)
+  return products
 
 
 @app.route("/api/create_user", methods=["POST"])
@@ -47,21 +83,14 @@ def create_user():
 
     #new_user = User.query.filter_by(email=incoming["email"]).first()
     new_user = Person.query.filter_by(email=incoming["email"]).first()
-    stage_list = Stage.query.all()
-    step_list = Step.query.filter_by(stage_id=person.stage_id).all()
-
-    stages = []
-    for stage in stage_list:
-      stages.append({"stage_id": stage.id, "stage_title": stage.stage_title})
-
-    steps = []
-    for step in step_list:
-      steps.append({"step_id": step.id, "step_title": step.step_title})
+    stages = get_stages()
+    steps = get_steps(new_user)
+    products = get_products()
 
     return jsonify(
         #id=user.id,
         id=person.id,
-        token=generate_token(new_user, stages, steps)
+        token=generate_token(new_user, stages, steps, products)
     )
 
 
@@ -70,8 +99,11 @@ def get_token():
     incoming = request.get_json()
     #user = User.get_user_with_email_and_password(incoming["email"], incoming["password"])
     user = Person.get_person_with_email_and_password(incoming["email"], incoming["password"])
+    stages = get_stages()
+    steps = get_steps(user)
+    products = get_products()
     if user:
-        return jsonify(token=generate_token(user))
+        return jsonify(token=generate_token(user, stages, steps, products))
     return jsonify(error=True), 403
 
 

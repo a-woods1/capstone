@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import * as actionCreators from '../actions/auth';
 import { Grid, Row, Col, Glyphicon, Modal, ButtonToolbar, Button } from 'react-bootstrap';
 
-import AccommodationModal from './AccommodationModal.js';
+import AccommodationModal from './Modal/AccommodationModal.js';
 
 import arrival_360 from '../images/photos/placeholder.png';
 
@@ -12,6 +12,12 @@ function mapStateToProps(state) {
     return {
         isRegistering: state.auth.isRegistering,
         registerStatusText: state.auth.registerStatusText,
+        token: state.auth.token,
+        userName: state.auth.userName,
+        isAuthenticated: state.auth.isAuthenticated,
+        stages: state.auth.stages,
+        steps: state.auth.steps,
+        products: state.auth.products,
     };
 }
 
@@ -43,7 +49,7 @@ class Arrival extends Component { // eslint-disable-line react/prefer-stateless-
             </Button>
 
 
-            <AccommodationModal show={this.state.lgShow} onHide={lgClose} />
+            <AccommodationModal show={this.state.lgShow} products={this.props.products} onHide={lgClose} />
 
         <Row className="show-grid">
           <h1>Arrival</h1>

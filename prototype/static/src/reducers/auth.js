@@ -22,6 +22,7 @@ const initialState = {
     registerStatusText: null,
     stages: [],
     steps: [],
+    products: [],
 };
 
 export default createReducer(initialState, {
@@ -38,6 +39,7 @@ export default createReducer(initialState, {
             userName: jwtDecode(payload.token).first_name,
             stages: jwtDecode(payload.token).stage_list,
             steps: jwtDecode(payload.token).step_list,
+            products: jwtDecode(payload.token).product_list,
             statusText: 'You have been successfully logged in.',
         }),
     [LOGIN_USER_FAILURE]: (state, payload) =>
@@ -48,6 +50,7 @@ export default createReducer(initialState, {
             userName: null,
             stages: [],
             steps: [],
+            products: [],
             statusText: `Authentication Error: ${payload.status} ${payload.statusText}`,
         }),
     [LOGOUT_USER]: (state) =>
@@ -57,6 +60,7 @@ export default createReducer(initialState, {
             userName: null,
             stages: [],
             steps: [],
+            products: [],
             statusText: 'You have been successfully logged out.',
         }),
     [REGISTER_USER_SUCCESS]: (state, payload) =>
@@ -68,6 +72,7 @@ export default createReducer(initialState, {
             userName: jwtDecode(payload.token).first_name,
             stages: jwtDecode(payload.token).stage_list,
             steps: jwtDecode(payload.token).step_list,
+            products: jwtDecode(payload.token).product_list,
             registerStatusText: 'You have been successfully logged in.',
         }),
     [REGISTER_USER_REQUEST]: (state) =>
@@ -81,6 +86,7 @@ export default createReducer(initialState, {
             userName: null,
             stages: [],
             steps: [],
+            products: [],
             registerStatusText: `Register Error: ${payload.status} ${payload.statusText}`,
         }),
 });

@@ -36,9 +36,38 @@ def populate_tables():
         cur.execute("INSERT INTO step values (%s, %s, %s)", (2, "Arrival", 3))
         cur.execute("INSERT INTO step values (%s, %s, %s)", (3, "In-Person Interview", 3))
         cur.execute("INSERT INTO step values (%s, %s, %s)", (4, "Coding Interview", 3))
-
         #TODO: Make id and stage_id a composite primary key
         
+        #category table
+        #(id, category_name)
+        cur.execute("INSERT INTO category values (%s, %s)", (1, "Equipment"))
+        cur.execute("INSERT INTO category values (%s, %s)", (2, "Environment"))
+        cur.execute("INSERT INTO category values (%s, %s)", (3, "Communications"))
+        cur.execute("INSERT INTO category values (%s, %s)", (4, "Policy"))
+            
+        #product table
+        #(id, product_name, product_description, category_id, pre_approved)
+        cur.execute("INSERT INTO product values (%s, %s, %s, %s, %s)", (1, "Ergonomic Keyboard", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 1, True))
+        cur.execute("INSERT INTO product values (%s, %s, %s, %s, %s)", (2, "Ergonomic Mouse", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 1, True))
+        cur.execute("INSERT INTO product values (%s, %s, %s, %s, %s)", (3, "Large Computer Monitor", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 1, False))
+        cur.execute("INSERT INTO product values (%s, %s, %s, %s, %s)", (4, "Screen-Reader Compatible Computer", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 1, True))
+
+        cur.execute("INSERT INTO product values (%s, %s, %s, %s, %s)", (5, "Elevator All-Floor Access", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 2, False))
+        cur.execute("INSERT INTO product values (%s, %s, %s, %s, %s)", (6, "Severe Allergies", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 2, False))
+        cur.execute("INSERT INTO product values (%s, %s, %s, %s, %s)", (7, "Minimize Walking", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 2, False))
+        cur.execute("INSERT INTO product values (%s, %s, %s, %s, %s)", (8, "Quiet Space", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 2, True))
+        cur.execute("INSERT INTO product values (%s, %s, %s, %s, %s)", (9, "Height-Adjustable Table/Desk", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 2, True))
+
+        cur.execute("INSERT INTO product values (%s, %s, %s, %s, %s)", (10, "Text-to-Speech Software", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 3, True))
+        cur.execute("INSERT INTO product values (%s, %s, %s, %s, %s)", (11, "Sign-Language Interpreter", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 3, False))
+        cur.execute("INSERT INTO product values (%s, %s, %s, %s, %s)", (12, "Captions", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 3, True))
+        cur.execute("INSERT INTO product values (%s, %s, %s, %s, %s)", (13, "Braille Copies", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 3, False))
+
+        cur.execute("INSERT INTO product values (%s, %s, %s, %s, %s)", (14, "Use My Own Computer", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 4, True))
+        cur.execute("INSERT INTO product values (%s, %s, %s, %s, %s)", (15, "Extra Time", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 4, True))
+        cur.execute("INSERT INTO product values (%s, %s, %s, %s, %s)", (16, "Transportation to Interview", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 4, False))
+        cur.execute("INSERT INTO product values (%s, %s, %s, %s, %s)", (17, "Service Animal", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 4, False))
+        cur.execute("INSERT INTO product values (%s, %s, %s, %s, %s)", (18, "Personal Aide", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 4, False))
         #person table
         #(person_id, first_name, last_name, email, phone_number, password, address_id, job_id, stage_id
         #cur.execute("INSERT INTO person values (%s, %s, %s, %s, %s, %s, %s, %s, %s)", (1, 'Victoria', 'Kitt', 'vkitt@bb.com', '4122865555', 'welcome123', 1, 1, 3))

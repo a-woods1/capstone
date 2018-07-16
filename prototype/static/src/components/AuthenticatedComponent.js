@@ -10,6 +10,7 @@ function mapStateToProps(state) {
         userName: state.auth.userName,
         stages: state.auth.stages,
         steps: state.auth.steps,
+        products: state.auth.products,
         isAuthenticated: state.auth.isAuthenticated,
     };
 }
