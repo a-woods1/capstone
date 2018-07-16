@@ -8,6 +8,9 @@ import AccommodationModal from './Modal/AccommodationModal.js';
 
 import arrival_360 from '../images/photos/placeholder.png';
 
+//Load JSON file
+var categories = require('./Modal/category.json');
+
 function mapStateToProps(state) {
     return {
         isRegistering: state.auth.isRegistering,
@@ -49,7 +52,7 @@ class Arrival extends Component { // eslint-disable-line react/prefer-stateless-
             </Button>
 
 
-            <AccommodationModal show={this.state.lgShow} products={this.props.products} onHide={lgClose} />
+            <AccommodationModal show={this.state.lgShow} products={this.props.steps} onHide={lgClose} />
 
         <Row className="show-grid">
           <h1>Arrival</h1>

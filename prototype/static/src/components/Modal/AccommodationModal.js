@@ -19,45 +19,31 @@ import search_icon from '../../images/photos/placeholder.png';
 import AccommodationList from '../AccommodationList.js';
 
 
-function mapStateToProps(state) {
-    return {
-        token: state.auth.token,
-        userName: state.auth.userName,
-        isAuthenticated: state.auth.isAuthenticated,
-        stages: state.auth.stages,
-        steps: state.auth.steps,
-        products: state.auth.products,
-    };
-}
-
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators(actionCreators, dispatch);
-}
-
-
-@connect(mapStateToProps, mapDispatchToProps)
 class AccommodationModal extends React.Component {
+  constructor(props) {
+      super(props);
 
-/*
+      this.state = {
+          categories: this.props.products
+      };
+  }
+
   renderEntry(){
-      var num_stages = this.props.products.length
-      console.log(num_stages)
-      return Object.entries(this.props.products[0]).map(([key, value], i) => {
-        //console.log("i " + i)
-        var obj = this.props.products[i]
-        console.log(obj)
-        return (
-
-          <Tab eventKey={1} title={i}>
-            <AccommodationList />
-          </Tab>
-
-       )
-     })
-}
-*/
-
-
+    //var categories =
+    console.log(this.state.categories)
+    //var num_stages = this.props.categories.length
+    //console.log(num_stages)
+    return Object.entries(this.state.categories).map(([key, value], i) => {
+      //console.log("i " + i)
+      var obj = this.state.categories[i]
+      //console.log(obj)
+      return (
+        <Tab eventKey={i+1} title={value.step_title}>
+          <AccommodationList />
+        </Tab>
+      )
+    })
+  }
 
 
   render() {
@@ -88,15 +74,7 @@ class AccommodationModal extends React.Component {
         </Modal.Header>
         <Modal.Body>
           <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
-            <Tab eventKey={1} title="Tab 1">
-              <AccommodationList />
-            </Tab>
-            <Tab eventKey={2} title="Tab 2">
-              <AccommodationList />
-            </Tab>
-            <Tab eventKey={3} title="Tab 3">
-              <AccommodationList />
-            </Tab>
+            {this.renderEntry()}
           </Tabs>
         </Modal.Body>
         <Modal.Footer>
