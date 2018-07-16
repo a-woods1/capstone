@@ -27,5 +27,12 @@ def insert_db():
     """Inserts seed data into db tables"""
     populate_tables()
 
+@manager.command
+def rebuild_db():
+    """Inserts seed data into db tables"""
+    delete_db()
+    create_db()
+    insert_db()
+
 if __name__ == '__main__':
     manager.run()
