@@ -7,7 +7,7 @@ from index import app
 TWO_WEEKS = 1209600
 
 
-def generate_token(user, stages, steps, products, expiration=TWO_WEEKS):
+def generate_token(user, stages, steps, categories, products, expiration=TWO_WEEKS):
     s = Serializer(app.config['SECRET_KEY'], expires_in=expiration)
     token = s.dumps({
         'id': user.id,
@@ -15,6 +15,7 @@ def generate_token(user, stages, steps, products, expiration=TWO_WEEKS):
         'first_name': user.first_name,
         'stage_list': stages,
         'step_list': steps,
+        'category_list': categories,
         'product_list': products,
     }).decode('utf-8')
     return token

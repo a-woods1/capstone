@@ -18,15 +18,69 @@ import search_icon from '../../images/photos/placeholder.png';
 
 import AccommodationList from '../AccommodationList.js';
 
+const style = {
+    marginTop: 10,
+    paddingBottom: 10,
+    paddingTop: 10,
+    width: '100%',
+    display: 'inline-block',
+};
+
+var items = {
+  a: {
+    "accommodation_name": "Elevator Access",
+    "accommodation_description": "Lorem ipsum dolor sit amet",
+    "pre_approved": false
+  },
+  b: {
+    "accommodation_name": "Service Animal",
+    "accommodation_description": "consectetur adipiscing elit",
+    "pre_approved": true
+  }
+};
 
 class AccommodationModal extends React.Component {
   constructor(props) {
       super(props);
 
       this.state = {
-          categories: this.props.products
+          categories: this.props.categories,
+          showMe: false
       };
   }
+
+  renderAccommodationList(){
+
+      return Object.entries(items).map(([key, value], i) => {
+        console.log("i " + i)
+        console.log("key " + key)
+        //console.log("value " + value)
+        return (
+          <Paper style={style}>
+           <Grid id="accommodation_list">
+            <Row>
+              <Col xs={7} md={7}>
+                <span>
+                  <h4>{value.accommodation_name}</h4>
+
+                  {value.pre_approved
+                      ? <div id="pre_approved">Common Request</div>
+                      : <div></div>
+                  }
+
+                </span>
+                <p>{value.accommodation_description}</p>
+              </Col>
+              <Col xs={5} md={5}>
+                <Button onClick={this.onClick}>Request</Button>
+              </Col>
+            </Row>
+            {i < items.length && <hr />}
+    </Grid>
+    </Paper>
+  )
+})
+}
 
   renderEntry(){
     //var categories =
@@ -38,13 +92,32 @@ class AccommodationModal extends React.Component {
       var obj = this.state.categories[i]
       //console.log(obj)
       return (
-        <Tab eventKey={i+1} title={value.step_title}>
-          <AccommodationList />
+        <Tab eventKey={i+1} title={value.category_name}>
+        <div>
+          {this.renderAccommodationList()}
+
+          <Grid>
+            <Row>
+              <Col xs={1} md={1}>
+                  <Glyphicon glyph="plus" />
+              </Col>
+              <Col xs={11} md={11}>
+                <p>Specify your Accommodation</p>
+              </Col>
+            </Row>
+          </Grid>
+        </div>
         </Tab>
       )
     })
   }
 
+
+onClick = () => {
+      this.setState({
+          showMe : !this.state.showMe
+      });
+  }
 
   render() {
     return (
@@ -73,9 +146,17 @@ class AccommodationModal extends React.Component {
 
         </Modal.Header>
         <Modal.Body>
+        <div>
+        {this.state.showMe
+          ?
+          <h1>Accommodation</h1>      
+          :
           <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
             {this.renderEntry()}
           </Tabs>
+
+        }
+        </div>
         </Modal.Body>
         <Modal.Footer>
         </Modal.Footer>

@@ -39,22 +39,25 @@ def get_steps(person):
     steps.append({"step_id": step.id, "step_title": step.step_title})
   return steps
 
-def get_products():
-  #product_list = Product.query.join(Category, Product.category_id==Category.id).add_columns(Product.id, Product.product_name, Product.product_description, Product.category_id, Category.category_name, Product.pre_approved).all()
+def get_categories():
   category_list = Category.query.all()
   categories = []
   for category in category_list:
-    categories.append([category.id, category.category_name])
+    categories.append({"category_id":category.id, "category_name":category.category_name})
+  return categories
+
+def get_products(categories):
+  #product_list = Product.query.join(Category, Product.category_id==Category.id).add_columns(Product.id, Product.product_name, Product.product_description, Product.category_id, Category.category_name, Product.pre_approved).all()
   #products = []
   #for product in product_list:
   #  products.append({"product_id": product.id, "product_name": product.product_name, "product_description": product.product_description, "category_id": product.category_id, "category_name": product.category_name, "pre_approved": product.pre_approved})
   products = []
-  for i in range(0, len(category_list)):
+  for i in range(0, len(categories)):
     index = i+1
     product_list = Product.query.filter_by(category_id=index).all()
     temp = []
     for product in product_list:
-      temp.append({"product_id": product.id, "product_name": product.product_name, "product_description": product.product_description, "category_id": product.category_id, "category_name": categories[i][1], "pre_approved": product.pre_approved})
+      temp.append({"product_id": product.id, "product_name": product.product_name, "product_description": product.product_description, "category_id": product.category_id, "pre_approved": product.pre_approved})
     products.append(temp)
   return products
 
@@ -85,12 +88,13 @@ def create_user():
     new_user = Person.query.filter_by(email=incoming["email"]).first()
     stages = get_stages()
     steps = get_steps(new_user)
-    products = get_products()
+    categories = get_categories()
+    products = get_products(categories)
 
     return jsonify(
         #id=user.id,
         id=person.id,
-        token=generate_token(new_user, stages, steps, products)
+        token=generate_token(new_user, stages, steps, categories, products)
     )
 
 
@@ -103,7 +107,7 @@ def get_token():
     steps = get_steps(user)
     products = get_products()
     if user:
-        return jsonify(token=generate_token(user, stages, steps, products))
+        return jsonify(token=generate_token(user, stages, steps, categories, products))
     return jsonify(error=True), 403
 
 
