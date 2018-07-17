@@ -16,7 +16,7 @@ import search_icon from '../../images/photos/placeholder.png';
 //import '../styles/index.css';
 //import '../styles/cart.css';
 
-import AccommodationList from '../AccommodationList.js';
+import ItemRequest from '../ItemRequest.js';
 
 const style = {
     marginTop: 10,
@@ -45,7 +45,7 @@ class AccommodationModal extends React.Component {
 
       this.state = {
           categories: this.props.categories,
-          showMe: false
+          showPage: 1
       };
   }
 
@@ -72,7 +72,7 @@ class AccommodationModal extends React.Component {
                 <p>{value.accommodation_description}</p>
               </Col>
               <Col xs={5} md={5}>
-                <Button onClick={this.onClick}>Request</Button>
+                <Button onClick={this.clickRequest}>Request</Button>
               </Col>
             </Row>
             {i < items.length && <hr />}
@@ -113,20 +113,27 @@ class AccommodationModal extends React.Component {
   }
 
 
-onClick = () => {
+clickRequest = () => {
       this.setState({
-          showMe : !this.state.showMe
+          showPage : 2
       });
   }
 
+  closeModal = () => {
+        this.setState({
+            showPage : 1
+        });
+    }
+
   render() {
+    const isFirstPage = this.state.showPage === 1
     return (
       <Modal
         {...this.props}
         bsSize="large"
         aria-labelledby="contained-modal-title-lg"
       >
-        <Modal.Header closeButton>
+        <Modal.Header closeButton onClick={this.closeModal}>
          <Grid>
            <Row>
              <Col xs={1} md={1}>
@@ -147,14 +154,13 @@ onClick = () => {
         </Modal.Header>
         <Modal.Body>
         <div>
-        {this.state.showMe
+        {isFirstPage
           ?
-          <h1>Accommodation</h1>      
-          :
           <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
             {this.renderEntry()}
           </Tabs>
-
+          :
+          <ItemRequest />
         }
         </div>
         </Modal.Body>

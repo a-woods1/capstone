@@ -34,7 +34,7 @@ class Arrival extends Component { // eslint-disable-line react/prefer-stateless-
         super(props, context);
 
         this.state = {
-        lgShow: false
+          lgShow: false
         };
     }
   render() {
