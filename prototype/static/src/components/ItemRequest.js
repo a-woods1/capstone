@@ -14,14 +14,15 @@ const style = {
     display: 'inline-block',
 };
 
-
-
 class ItemRequest extends Component{
   constructor(props) {
       super(props);
 
       this.state = {
-          showPage: 2
+          showPage: 2,
+          product_id: this.props.product_id,
+          accommodation_name: this.props.accommodation_name,
+          accommodation_description: this.props.accommodation_description,
       };
   }
 
@@ -37,9 +38,35 @@ class ItemRequest extends Component{
         <div>
         {isSecondPage
           ?
-          <div>
-          <Button onClick={this.clickNext}>Request</Button>
-          </div>
+          <Grid>
+            <Row>
+              <Col xs={12} md={12}>
+                <p>Would you prefer to bring your own {this.state.accommodation_name}? Or do you need us to provide a {this.state.accommodation_name}?</p>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={12} md={12}>
+                <div className="request_selection">
+                  <span><Glyphicon glyph="time" />I will bring my own</span>
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={12} md={12}>
+                <div className="request_selection">
+                  <span><Glyphicon glyph="time" />Please provide a {this.state.accommodation_name}</span>
+                </div>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={4} md={4}>
+                <Button bsSize="small" block>Cancel</Button>
+              </Col>
+              <Col xs={4} md={4}>
+                <Button onClick={this.clickNext} bsSize="small" block>Next</Button>
+              </Col>
+            </Row>
+          </Grid>
           :
           <Confirmation />
         }

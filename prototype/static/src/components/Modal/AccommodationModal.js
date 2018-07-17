@@ -72,7 +72,8 @@ class AccommodationModal extends React.Component {
                 <p>{value.accommodation_description}</p>
               </Col>
               <Col xs={5} md={5}>
-                <Button onClick={this.clickRequest}>Request</Button>
+
+                <Button onClick={(e) => this.clickRequest(e, i, value.accommodation_name, value.accommodation_description)}>Request</Button>
               </Col>
             </Row>
             {i < items.length && <hr />}
@@ -113,9 +114,12 @@ class AccommodationModal extends React.Component {
   }
 
 
-clickRequest = () => {
+clickRequest = (e, i, accommodation_name, accommodation_description) => {
       this.setState({
-          showPage : 2
+          showPage: 2,
+          product_id: i,
+          accommodation_name: accommodation_name,
+          accommodation_description: accommodation_description
       });
   }
 
@@ -160,7 +164,7 @@ clickRequest = () => {
             {this.renderEntry()}
           </Tabs>
           :
-          <ItemRequest />
+          <ItemRequest product_id={this.state.product_id} accommodation_name={this.state.accommodation_name} accommodation_description={this.state.accommodation_description}/>
         }
         </div>
         </Modal.Body>
