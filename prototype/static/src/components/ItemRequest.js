@@ -68,7 +68,7 @@ class ItemRequest extends Component{
             </Row>
           </Grid>
           :
-          <Confirmation />
+          <Confirmation product_id={this.state.product_id} accommodation_name={this.state.accommodation_name} accommodation_description={this.state.accommodation_description}/>
         }
         </div>
     );
