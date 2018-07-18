@@ -13,8 +13,6 @@ import Paper from 'material-ui/Paper';
 import * as actionCreators from '../../actions/auth';
 import accessibility_logo from '../../images/photos/placeholder.png';
 import search_icon from '../../images/photos/placeholder.png';
-//import '../styles/index.css';
-//import '../styles/cart.css';
 
 import ItemRequest from '../ItemRequest.js';
 
@@ -24,6 +22,19 @@ const style = {
     paddingTop: 10,
     width: '100%',
     display: 'inline-block',
+};
+
+var items = {
+  a: {
+    "accommodation_name": "Elevator Access",
+    "accommodation_description": "Lorem ipsum dolor sit amet",
+    "pre_approved": false
+  },
+  b: {
+    "accommodation_name": "Service Animal",
+    "accommodation_description": "consectetur adipiscing elit",
+    "pre_approved": true
+  }
 };
 
 class AccommodationModal extends React.Component {
