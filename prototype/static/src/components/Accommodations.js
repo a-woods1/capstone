@@ -25,83 +25,7 @@ class Accommodations extends React.Component { // eslint-disable-line react/pref
       };
   }
 
-    
-  /*Update the number of items in the cart with the quantity of items selected*/
-  updateCart(){
-      var product_id = 1
-      var quantity = 1
-      
-      var button = document.getElementById("product_1_button");
-      if (button.innerHTML === "Add") {
-          //add item
-          
-          //increment quantity
-          var previous_count = document.getElementById('cart_quantity').innerHTML;
-          var new_value = parseInt(previous_count, 10) + quantity;
-          document.getElementById('cart_quantity').innerHTML = new_value;
-          localStorage.setItem('cart_quantity', new_value);
-          
-          //console.log("product_id " + product_id);
-          //console.log("previous_count " + previous_count);
-          //console.log("new_value " + new_value)
-          
-          //add item
-          //product_id = 0
-          var title = document.getElementById("product_1_title").innerHTML;
-          
-          //var product_id = parseInt(0, 10);
-          //var photo = "./images/products/product_" + product_id + ".png"
-          
-          var items = localStorage.getItem("cart_items");
-          if (items == null) {
-              items = [];
-          }
-          else {
-              items = JSON.parse(items);
-              
-          }
-          console.log(product_id)
-          console.log(title)
-          console.log(quantity)
-          items.push({
-                     product_id: product_id,
-                     title: title,
-                     quantity: quantity
-                     });
-          
-          localStorage.setItem('cart_items', JSON.stringify(items));
-          button.innerHTML = "Remove";
-          
-      } else {
-          //remove item
-          
-          //decrement quantity
-          var previous_count = document.getElementById('cart_quantity').innerHTML;
-          var new_value = parseInt(previous_count, 10) - quantity;
-          document.getElementById('cart_quantity').innerHTML = new_value;
-          localStorage.setItem('cart_quantity', new_value);
-          
-          var cart_items = JSON.parse(localStorage.getItem("cart_items"));
-          console.log(cart_items)
-          for (var i = 0; i < cart_items.length; i++) {
-              console.log(cart_items[i])
-              var id = cart_items[i].product_id
-              console.log(id)
-              if(product_id == id){
-                  console.log("match!");
-                  //var index = cart_items.indexOf(product_id);
-                  //if (index > -1) {
-                      cart_items.splice(i, 1);
-                      console.log("items remaining " + cart_items.length)
-                  //}
-              }
-          }
-          localStorage.setItem('cart_items', JSON.stringify(cart_items));
-          button.innerHTML = "Add";
-      }
-      
- 
-  }
+
   render() {
     return (
       <Grid>
@@ -137,7 +61,7 @@ class Accommodations extends React.Component { // eslint-disable-line react/pref
             </Col>
             <Col xs={2} md={2}>
               <ButtonToolbar>
-                <Button onClick={this.updateCart} bsSize="large">Add</Button>
+                <Button bsSize="large">Add</Button>
               </ButtonToolbar>
             </Col>
           </Row>

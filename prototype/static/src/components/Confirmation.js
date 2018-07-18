@@ -24,15 +24,32 @@ class Confirmation extends Component{
           showPage: 3,
           product_id: this.props.product_id,
           accommodation_name: this.props.accommodation_name,
-          accommodation_description: this.props.accommodation_description,
+          accommodation_description: this.props.accommodation_description
       };
   }
 
-  clickNext = () => {
-        this.setState({
-            showPage : 4
-        });
+  clickSubmit = () => {
+    var items = localStorage.getItem("accommodation_requests");
+    if (items == null) {
+        items = [];
     }
+    else {
+        items = JSON.parse(items);
+
+    }
+
+    items.push({
+      product_id: this.state.product_id,
+      accommodation_name: this.state.accommodation_name,
+      accommodation_description: this.props.accommodation_description
+    });
+
+    localStorage.setItem("accommodation_requests", JSON.stringify(items));
+
+    this.setState({
+      showPage : 4
+    });
+}
 
     render() {
       const isThirdPage = this.state.showPage === 3
@@ -76,8 +93,6 @@ class Confirmation extends Component{
             <Row>
               <hr />
             </Row>
-
-
             <Row>
               <Col xs={12} md={12}>
                 <h3 className="confirmation_heading"><span>3</span>Send Message</h3>
@@ -94,7 +109,7 @@ class Confirmation extends Component{
                 <Button bsSize="small" block>Cancel</Button>
               </Col>
               <Col xs={4} md={4}>
-                <Button onClick={this.clickNext} bsSize="small" block>Submit</Button>
+                <Button onClick={this.clickSubmit} bsSize="small" block>Submit</Button>
               </Col>
             </Row>
            </Grid>

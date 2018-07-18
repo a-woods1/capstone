@@ -26,19 +26,6 @@ const style = {
     display: 'inline-block',
 };
 
-var items = {
-  a: {
-    "accommodation_name": "Elevator Access",
-    "accommodation_description": "Lorem ipsum dolor sit amet",
-    "pre_approved": false
-  },
-  b: {
-    "accommodation_name": "Service Animal",
-    "accommodation_description": "consectetur adipiscing elit",
-    "pre_approved": true
-  }
-};
-
 class AccommodationModal extends React.Component {
   constructor(props) {
       super(props);
