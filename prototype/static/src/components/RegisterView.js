@@ -38,8 +38,10 @@ export default class RegisterView extends React.Component {
         super(props);
         const redirectRoute = '/login';
         this.state = {
+            username: '',
             email: '',
             password: '',
+            username_error_text: null,
             email_error_text: null,
             password_error_text: null,
             redirectTo: redirectRoute,
@@ -110,7 +112,7 @@ export default class RegisterView extends React.Component {
 
     login(e) {
         e.preventDefault();
-        this.props.registerUser(this.state.email, this.state.password, this.state.redirectTo);
+        this.props.registerUser(this.state.username, this.state.email, this.state.password, this.state.redirectTo);
     }
 
     render() {
@@ -125,7 +127,15 @@ export default class RegisterView extends React.Component {
                                     {this.props.registerStatusText}
                                 </div>
                         }
-
+                        <div className="col-md-12">
+                            <TextField
+                              hintText="Username"
+                              floatingLabelText="Username"
+                              type="username"
+                              errorText={this.state.username_error_text}
+                              onChange={(e) => this.changeValue(e, 'username')}
+                            />
+                        </div>
                         <div className="col-md-12">
                             <TextField
                               hintText="Email"

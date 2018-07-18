@@ -48,7 +48,7 @@ class Person(db.Model):
     @staticmethod
     def hashed_password(password):
         return bcrypt.generate_password_hash(password).decode("utf-8")
-    
+
     @staticmethod
     def get_person_with_email_and_password(email, password):
         person = Person.query.filter_by(email=email).first()
@@ -94,4 +94,3 @@ class Room(db.Model):
 #quantity integer,
 #PRIMARY KEY(product_id, room_id)
 #)
-

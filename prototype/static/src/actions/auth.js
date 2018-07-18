@@ -43,7 +43,8 @@ export function loginUserRequest() {
 }
 
 export function logout() {
-    localStorage.removeItem('token');
+    //localStorage.removeItem('token');
+    localStorage.clear();
     return {
         type: LOGOUT_USER,
     };
@@ -120,10 +121,10 @@ export function registerUserFailure(error) {
     };
 }
 
-export function registerUser(email, password) {
+export function registerUser(username, email, password) {
     return function (dispatch) {
         dispatch(registerUserRequest());
-        return create_user(email, password)
+        return create_user(username, email, password)
             .then(parseJSON)
             .then(response => {
                 try {

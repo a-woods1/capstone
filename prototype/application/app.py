@@ -66,8 +66,8 @@ def get_products(categories):
 def create_user():
     incoming = request.get_json()
     person = Person(
-                     first_name="Victoria",
-                     last_name="Kitt",
+                     first_name=incoming["username"],
+                     last_name="Sample",
                      email=incoming["email"],
                      phone_number="4122865555",
                      password=incoming["password"],
@@ -105,7 +105,8 @@ def get_token():
     user = Person.get_person_with_email_and_password(incoming["email"], incoming["password"])
     stages = get_stages()
     steps = get_steps(user)
-    products = get_products()
+    categories = get_categories()
+    products = get_products(categories)
     if user:
         return jsonify(token=generate_token(user, stages, steps, categories, products))
     return jsonify(error=True), 403
