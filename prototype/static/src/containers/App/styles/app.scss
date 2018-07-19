@@ -39,6 +39,7 @@
 	border-radius: 0px; 
 	margin-bottom: 0px;
 	height: 60px;
+	border: none;
 }
 
 #top-nav .container {
@@ -180,6 +181,7 @@
 	border: none;
 }
 
+// TODO: Fix hover styles for dropdown menu
 #top-nav-right-nav > li.top-nav-user-menu.dropdown.open {
 	background-color: #0f0f0f;
 }
@@ -193,6 +195,7 @@
 	border-radius: 0;
 	height: 60px;
 }
+
 
 
 
