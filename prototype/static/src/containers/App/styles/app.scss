@@ -191,14 +191,44 @@
 // ------
 
 #both-nav #sub-nav {
-	background-color: white;
+	background-color: #ffffff;
+	padding: 0;
+	margin: 0;
 	border-radius: 0;
 	height: 60px;
+	border: none;
+	border-bottom: solid 1px #d8d8d8;
 }
 
+#both-nav #sub-nav .container {
+	padding: 0 !important;
+	margin: 0 !important;
+	// TODO: Figure out what's the right container size 
+	margin-left: 10% !important;
+	margin-right: 10% !important;
+}
 
+#both-nav #sub-nav ul li {
+	position: relative;
+}
 
+#both-nav #sub-nav ul li a {
+	display: block;
+	background-color: #ffffff;
+	height: 100%;
+	width: 100%;
+	font-size: 14px;
+	font-weight: 900;
+	text-transform: uppercase;
+	color: #1a1a1a;
+	letter-spacing: -0.1px;
+	padding-left: 32px;
+	padding-right: 32px;
+	padding-top: 20px;
+}
 
-
-
+#both-nav #sub-nav ul li:hover a {
+	background-color: #0000ff;
+	color: #ffffff;
+}
 
