@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col, Button, Glyphicon } from 'react-bootstrap';
-import Paper from 'material-ui/Paper';
-//import './styles/index.css';
-//import './styles/cart.css';
+
 
 import RequestSuccess from './RequestSuccess.js';
 

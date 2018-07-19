@@ -51,22 +51,69 @@ class Arrival extends Component { // eslint-disable-line react/prefer-stateless-
 
 
             <AccommodationModal show={this.state.lgShow} categories={this.props.categories} onHide={lgClose} />
+            <Row>
+                <div>Software Engineer > Onsite Interview</div>
+            </Row>
 
-        <Row className="show-grid">
+            <Row className="overview_section">
+              <ScrollableAnchor id={'section1'}>
+                <h1 className="section_title">Overview</h1>
+              </ScrollableAnchor>
+            </Row>
+
+            <Row className="overview_details">
+                <span className="date"><Glyphicon glyph="calendar" /> August 6, 2018</span>
+            </Row>
+            <Row className="overview_details">
+              <span className="location"><Glyphicon glyph="map-marker" /> 731 Lexington Avenue, New York</span>
+            </Row>
+
+            <Row className="info_box">
+              <h3 className="info_box_title">{this.props.userName}:</h3>
+              <p className="info_box_text">Great news! The team enjoyed speaking with you, and would like to invite you to the NYC office for an onsite, in-person interview.</p>
+            </Row>
+            <Row>
+              <h2 className="subsection_title">360 Views</h2>
+            </Row>
+            <Row>
+              <img width="650px" height="175px" className="arrival_360" src={arrival_360} alt="Immersive view"/>
+            </Row>
+            <Row>
+              <h2 className="subsection_title">Schedule</h2>
+            </Row>
+            <Row className="info_box">
+              <span className="info_box_time"><Glyphicon glyph="time" /> 9:00 a.m.</span>
+              <h3 className="info_box_title">Arrival</h3>
+              <p className="info_box_text">We would like you to arrive and make yourself comfortable at the Bloomberg office by 9 a.m. EDT.</p>
+            </Row>
+
+            <Row className="info_box">
+              <span className="info_box_time"><Glyphicon glyph="time" /> Early Morning</span>
+              <h3 className="info_box_title">In-Person Interview</h3>
+              <p className="info_box_text">You will have at least one in-person interview during the day with a recruiter.</p>
+            </Row>
+
+            <Row className="info_box">
+              <span className="info_box_time"><Glyphicon glyph="time" /> Late Morning</span>
+              <h3 className="info_box_title">Coding Interview</h3>
+              <p className="info_box_text">You will have at least one coding interview during the day with a software engineer.</p>
+            </Row>
+
+        <Row className="arrival_section">
           <ScrollableAnchor id={'section2'}>
-            <h1>Arrival</h1>
+            <h1 className="section_title">Arrival</h1>
           </ScrollableAnchor>
         </Row>
 
-        <Row className="show-grid">
+        <Row className="arrival_details">
           <Col xs={2} md={2}>
-            <span><Glyphicon glyph="time" /> 9:00 AM</span>
+            <span className="time"><Glyphicon glyph="time" /> 9:00 AM</span>
           </Col>
           <Col xs={2} md={2}>
-            <span><Glyphicon glyph="calendar" /> 8-6-2018</span>
+            <span className="date"><Glyphicon glyph="calendar" /> 8-6-2018</span>
           </Col>
           <Col xs={5} md={5}>
-            <span><Glyphicon glyph="map-marker" /> 731 Lexington Avenue, New York</span>
+            <span className="location"><Glyphicon glyph="map-marker" /> 731 Lexington Avenue, New York</span>
           </Col>
         </Row>
 

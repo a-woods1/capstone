@@ -2,12 +2,7 @@ import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import AppBar from 'material-ui/AppBar';
-import LeftNav from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
-import FlatButton from 'material-ui/FlatButton';
-import Divider from 'material-ui/Divider';
-import { Navbar, Nav, NavItem, NavDropdown, Glyphicon} from 'react-bootstrap';
+import { Navbar, Nav, NavItem, MenuItem, NavDropdown, Glyphicon} from 'react-bootstrap';
 import ScrollableAnchor from 'react-scrollable-anchor'
 
 

@@ -1,16 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col, Button, Glyphicon } from 'react-bootstrap';
-import Paper from 'material-ui/Paper';
-//import './styles/index.css';
-//import './styles/cart.css';
 
-const style = {
-    marginTop: 10,
-    paddingBottom: 10,
-    paddingTop: 10,
-    width: '100%',
-    display: 'inline-block',
-};
 
 class RequestList extends Component{
 
@@ -27,7 +17,7 @@ class RequestList extends Component{
           console.log("value " + value.accommodation_name)
 
           return (
-            <Paper style={style}>
+            <div className="request_list_item">
               <Grid>
                 <Row>
                   <Col xs={1} md={1}>
@@ -51,7 +41,7 @@ class RequestList extends Component{
                   <Col xs={1} md={1}></Col>
                 </Row>
               </Grid>
-            </Paper>
+            </div>
         )
      })
    }

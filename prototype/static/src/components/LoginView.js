@@ -3,12 +3,9 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import TextField from 'material-ui/TextField';
-import RaisedButton from 'material-ui/RaisedButton';
-import Paper from 'material-ui/Paper';
 import * as actionCreators from '../actions/auth';
 import { validateEmail } from '../utils/misc';
-import { Grid, Row, Col, Button } from 'react-bootstrap';
+import { Grid, Row, Col, FormControl, Button } from 'react-bootstrap';
 
 import logo from '../images/photos/placeholder.png';
 
@@ -121,7 +118,7 @@ export default class LoginView extends React.Component {
                     }
                     <div className="col-md-12">
                       <label htmlFor="email">Email</label>
-                      <TextField
+                      <FormControl
                         id="email"
                         type="email"
                         errorText={this.state.email_error_text}
@@ -130,7 +127,7 @@ export default class LoginView extends React.Component {
                    </div>
                    <div className="col-md-12">
                      <label htmlFor="password">Password</label>
-                     <TextField
+                     <FormControl
                        id="password"
                        type="password"
                        errorText={this.state.password_error_text}
@@ -138,13 +135,13 @@ export default class LoginView extends React.Component {
                       />
                    </div>
                    <div className="col-md-12">
-                   <RaisedButton
+                   <Button bsStyle="primary" bsSize="large" block
                      disabled={this.state.disabled}
                      style={{ marginTop: 50 }}
                      label="Login"
                      fullWidth={true}
                      onClick={(e) => this.login(e)}
-                    />
+                    >Login</Button>
                     </div>
                     <div className="text-center">
                     <p>Forgot username or password?</p>
@@ -159,13 +156,6 @@ export default class LoginView extends React.Component {
               </Col>
             </Row>
           </Grid>
-
-
-
-
-
-
-
         );
 
     }

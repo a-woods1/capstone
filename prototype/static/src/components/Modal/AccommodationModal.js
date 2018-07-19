@@ -2,13 +2,7 @@ import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import AppBar from 'material-ui/AppBar';
-import LeftNav from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
-import FlatButton from 'material-ui/FlatButton';
-import Divider from 'material-ui/Divider';
 import { Grid, Row, Col, Modal, Button, Tabs, Tab, TabContainer, TabContent, TabPane, Glyphicon } from 'react-bootstrap';
-import Paper from 'material-ui/Paper';
 
 import * as actionCreators from '../../actions/auth';
 import accessibility_logo from '../../images/photos/placeholder.png';
@@ -54,8 +48,8 @@ class AccommodationModal extends React.Component {
         console.log("key " + key)
         //console.log("value " + value)
         return (
-          <Paper style={style}>
-           <Grid id="accommodation_list">
+          <div id="accommodation_list_item">
+           <Grid>
             <Row>
               <Col xs={7} md={7}>
                 <span>
@@ -76,7 +70,7 @@ class AccommodationModal extends React.Component {
             </Row>
             {i < items.length && <hr />}
     </Grid>
-    </Paper>
+    </div>
   )
 })
 }

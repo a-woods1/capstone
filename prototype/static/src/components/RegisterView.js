@@ -3,9 +3,8 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import TextField from 'material-ui/TextField';
-import RaisedButton from 'material-ui/RaisedButton';
-import Paper from 'material-ui/Paper';
+import { Grid, Row, Col, FormControl, ControlLabel, Button } from 'react-bootstrap';
+
 
 import * as actionCreators from '../actions/auth';
 
@@ -21,15 +20,6 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
     return bindActionCreators(actionCreators, dispatch);
 }
-
-const style = {
-    marginTop: 50,
-    paddingBottom: 50,
-    paddingTop: 25,
-    width: '100%',
-    textAlign: 'center',
-    display: 'inline-block',
-};
 
 @connect(mapStateToProps, mapDispatchToProps)
 export default class RegisterView extends React.Component {
@@ -118,9 +108,9 @@ export default class RegisterView extends React.Component {
     render() {
         return (
             <div className="col-md-6 col-md-offset-3" onKeyPress={(e) => this._handleKeyPress(e)}>
-                <Paper style={style}>
+                <div id="register_page">
                     <div className="text-center">
-                        <h2>Register to view protected content!</h2>
+                        <h2>Register</h2>
                         {
                             this.props.registerStatusText &&
                                 <div className="alert alert-info">
@@ -128,7 +118,8 @@ export default class RegisterView extends React.Component {
                                 </div>
                         }
                         <div className="col-md-12">
-                            <TextField
+                        <ControlLabel>Username</ControlLabel>
+                            <FormControl
                               hintText="Username"
                               floatingLabelText="Username"
                               type="username"
@@ -136,8 +127,10 @@ export default class RegisterView extends React.Component {
                               onChange={(e) => this.changeValue(e, 'username')}
                             />
                         </div>
+
                         <div className="col-md-12">
-                            <TextField
+                        <ControlLabel>Email</ControlLabel>
+                            <FormControl
                               hintText="Email"
                               floatingLabelText="Email"
                               type="email"
@@ -145,8 +138,10 @@ export default class RegisterView extends React.Component {
                               onChange={(e) => this.changeValue(e, 'email')}
                             />
                         </div>
+
                         <div className="col-md-12">
-                            <TextField
+                        <ControlLabel>Password</ControlLabel>
+                            <FormControl
                               hintText="Password"
                               floatingLabelText="Password"
                               type="password"
@@ -155,15 +150,14 @@ export default class RegisterView extends React.Component {
                             />
                         </div>
 
-                        <RaisedButton
+                        <Button bsStyle="primary" bsSize="large" block
                           disabled={this.state.disabled}
-                          style={{ marginTop: 50 }}
                           label="Submit"
                           onClick={(e) => this.login(e)}
-                        />
+                        >Register</Button>
 
                     </div>
-                </Paper>
+                </div>
 
             </div>
         );
