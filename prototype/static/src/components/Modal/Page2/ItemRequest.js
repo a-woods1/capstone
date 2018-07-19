@@ -1,15 +1,8 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col, Button, Glyphicon } from 'react-bootstrap';
 
-import Confirmation from './Confirmation.js';
+import Confirmation from '../Page3/Confirmation.js';
 
-const style = {
-    marginTop: 10,
-    paddingBottom: 10,
-    paddingTop: 10,
-    width: '100%',
-    display: 'inline-block',
-};
 
 class ItemRequest extends Component{
   constructor(props) {

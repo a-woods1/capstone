@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as actionCreators from '../actions/auth';
+import * as actionCreators from '../../actions/auth';
 import { Grid, Row, Col, Glyphicon, Modal, ButtonToolbar, Button } from 'react-bootstrap';
 import ScrollableAnchor from 'react-scrollable-anchor'
 
-import AccommodationModal from './Modal/AccommodationModal.js';
+import AccommodationModal from '../Modal/AccommodationModal.js';
 
-import arrival_360 from '../images/photos/placeholder.png';
+import arrival_360 from '../../images/photos/placeholder.png';
 
 
 function mapStateToProps(state) {

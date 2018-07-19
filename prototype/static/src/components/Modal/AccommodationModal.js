@@ -8,7 +8,7 @@ import * as actionCreators from '../../actions/auth';
 import accessibility_logo from '../../images/photos/placeholder.png';
 import search_icon from '../../images/photos/placeholder.png';
 
-import ItemRequest from '../ItemRequest.js';
+import ItemRequest from './Page2/ItemRequest.js';
 
 const style = {
     marginTop: 10,

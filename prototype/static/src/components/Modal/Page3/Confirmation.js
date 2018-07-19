@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Grid, Row, Col, Button, Glyphicon } from 'react-bootstrap';
 
 
-import RequestSuccess from './RequestSuccess.js';
+import RequestSuccess from '../Page4/RequestSuccess.js';
 
 const style = {
     marginTop: 10,

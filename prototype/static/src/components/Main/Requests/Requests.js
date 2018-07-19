@@ -1,10 +1,10 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as actionCreators from '../actions/auth';
+import * as actionCreators from '../../../actions/auth';
 import { Grid, Row, Col, Glyphicon,ButtonToolbar, Button } from 'react-bootstrap';
 
-import RequestList from './RequestList.js';
+import RequestList from './RequestList/RequestList.js';
 
 
 function mapStateToProps(state) {
