@@ -8,6 +8,7 @@ import ScrollableAnchor from 'react-scrollable-anchor'
 
 import * as actionCreators from '../../actions/auth';
 import brand_logo from '../../images/photos/placeholder.png';
+import profile_img from '../../images/profile-img.png';
 
 function mapStateToProps(state) {
     return {
@@ -42,15 +43,13 @@ export class Header extends Component {
           var stage_id = obj.stage_id
           var stage_title = obj.stage_title
           return (
-            <NavItem href="">
+            <NavItem className={num_stages-1 === i ? "current-stage" : ""} href="">
             <div>
             {num_stages-1 === i ?
               <span className="ordinal_stage">Current Stage</span>
               :
               <span className="ordinal_stage">Stage {stage_id}</span>
             }
-            <br/>
-
             <span className="stage_title">{stage_title}</span>
             </div>
             </NavItem>
@@ -106,24 +105,23 @@ export class Header extends Component {
       <header id="both-nav">
         <Navbar inverse collapseOnSelect id="top-nav">
         <Navbar.Header>
-          <Navbar.Brand>
-            <a href="/"><img src={brand_logo} width="20" height="20"/></a>
+          <Navbar.Brand className="brand-logo">
+            <a href="/"><span>B</span></a>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
-          <Nav>
+          <Nav id="top-nav-stages">
             {this.renderEntry()}
           </Nav>
-          <Nav pullRight>
-            <NavItem title="My Requests" onClick={() => this.dispatchNewRoute('/requests')}>
-              Requests
+          <Nav pullRight id="top-nav-right-nav">
+            <NavItem className="my-requests" title="My Requests" onClick={() => this.dispatchNewRoute('/requests')}>
+              My Requests
             </NavItem>
-            <NavDropdown title={<span><Glyphicon glyph="user" /><span>Hi, {this.props.userName}!</span></span>
-              } id="basic-nav-dropdown">
+            <NavDropdown className="top-nav-user-menu" title={<span><img id="profile_img" src={profile_img} />Hi, {this.props.userName}!</span>} id="basic-nav-dropdown">
               <NavItem>
                 <MenuItem onClick={(e) => this.logout(e)}>
-                  Logout
+                  Log Out
                 </MenuItem>
               </NavItem>
             </NavDropdown>
