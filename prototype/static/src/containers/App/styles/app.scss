@@ -61,7 +61,7 @@
 	margin-left: 0;
 	padding-top: 18px;
 	padding-left: 18px;
-	border-right: 1px solid #4a4a4a;	
+	border-right: 1px solid #000000;	
 }
 
 // Stages
@@ -85,7 +85,7 @@
 }
 
 #both-nav #top-nav ul#top-nav-stages li {
-	border-right: 1px solid #4a4a4a;
+	border-right: 1px solid #000000;
 }
 
 #both-nav #top-nav ul#top-nav-stages li.current-stage a div span.ordinal_stage,
@@ -94,7 +94,7 @@
 }
 
 #both-nav #top-nav ul#top-nav-stages li.current-stage {
-	background-color: #0f0f0f;
+	background-color: #4A4A4A;
 }
 
 #both-nav #top-nav #top-nav-stages li a div span.ordinal_stage {
@@ -102,7 +102,7 @@
 	font-size: 11px;
 	font-weight: 300;
 	letter-spacing: normal;
-	color: #666666;
+	color: #ffffff;
 	margin: 0;
 	padding: 0;
 	margin-top: 10px;
@@ -112,7 +112,7 @@
 	display: block;
 	font-size: 16px;
 	font-weight: 700;
-	color: #808080;
+	color: #ffffff;
 	margin: 0;
 	margin-top: -4px;
 	padding: 0;	
@@ -120,7 +120,7 @@
 
 // Right Nav
 
-// Requests
+// My Requests
 
 #both-nav #top-nav ul#top-nav-right-nav {
 	height: 60px;
@@ -138,7 +138,7 @@
 	padding-top: 5px;
 	padding-left: 28px;
 	padding-right: 28px;
-	border-left: 1px solid #4a4a4a;			
+	border-left: 1px solid #000000;			
 }
 
 #both-nav #top-nav ul#top-nav-right-nav .my-requests a {
@@ -152,7 +152,7 @@
 	padding-left: 28px;
 	padding-right: 28px;
 	height: 100%;
-	border-left: 1px solid #4a4a4a;				
+	border-left: 1px solid #000000;				
 }
 
 #both-nav #top-nav ul#top-nav-right-nav .top-nav-user-menu a {
@@ -227,8 +227,30 @@
 	padding-top: 20px;
 }
 
+#both-nav #sub-nav ul li a img {
+	position: relative;
+	top: -1px;
+	margin-left: 10px;
+	width: 4px;
+}
+
+#both-nav #sub-nav ul li a div.caret-right {
+	position: relative;
+	top: -1px;
+	display: inline-block;
+	width: 4px;
+	height: 7px;
+	background-size: cover;
+	background-image: url('../../../images/caret-dark-right.png');
+	margin-left: 10px;
+}
+
 #both-nav #sub-nav ul li:hover a {
 	background-color: #0000ff;
 	color: #ffffff;
+}
+
+#both-nav #sub-nav ul li:hover a div.caret-right {
+	background-image: url('../../../images/caret-light-right.png');
 }
 
