@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from '../actions/auth';
 import { Grid, Row, Col, Glyphicon, Modal, ButtonToolbar, Button } from 'react-bootstrap';
+import ScrollableAnchor from 'react-scrollable-anchor'
 
 import AccommodationModal from './Modal/AccommodationModal.js';
 
@@ -40,9 +41,7 @@ class Arrival extends Component { // eslint-disable-line react/prefer-stateless-
   render() {
       let lgClose = () => this.setState({ lgShow: false });
     return (
-
       <Grid>
-
             <Button
             bsStyle="primary"
             onClick={() => this.setState({ lgShow: true })}
@@ -54,7 +53,9 @@ class Arrival extends Component { // eslint-disable-line react/prefer-stateless-
             <AccommodationModal show={this.state.lgShow} categories={this.props.categories} onHide={lgClose} />
 
         <Row className="show-grid">
-          <h1>Arrival</h1>
+          <ScrollableAnchor id={'section2'}>
+            <h1>Arrival</h1>
+          </ScrollableAnchor>
         </Row>
 
         <Row className="show-grid">
@@ -118,7 +119,9 @@ class Arrival extends Component { // eslint-disable-line react/prefer-stateless-
         <hr />
 
         <Row className="show-grid">
-          <h1>Interview</h1>
+        <ScrollableAnchor id={'section3'}>
+          <h1>In-Person Interview</h1>
+        </ScrollableAnchor>
         </Row>
 
         <Row className="show-grid">
