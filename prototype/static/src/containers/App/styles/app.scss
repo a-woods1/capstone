@@ -6,8 +6,196 @@
 :global(body) {
   position: relative;
   font-family: 'Roboto', sans-serif !important;
+  
+  text-rendering: optimizeLegibility !important;
+   -webkit-font-smoothing: antialiased !important;
+
   h1, h2, h3, h4 {
     font-weight: 300;
   }
 
 }
+
+// ------
+// NAVIGATION CONTAINER
+// ------
+
+#both-nav {
+	background-color: red;
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	margin-top: 0;
+	padding-top: 0;
+	height: 120px;
+}
+
+// ------
+// TOP NAVIGATION
+// ------
+
+#both-nav #top-nav {
+	background-color: #1d1d1d;
+	border-radius: 0px; 
+	margin-bottom: 0px;
+	height: 60px;
+}
+
+#top-nav .container {
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 100% !important;
+}
+
+#top-nav .container .navbar-collapse {
+	padding: 0;
+}
+
+#both-nav #top-nav .brand-logo {
+	width: 60px;
+	height: 60px;
+	font-size: 32px;
+	font-weight: 900;
+	color: #ffffff;
+	margin-left: 0;
+	padding-top: 18px;
+	padding-left: 18px;
+	border-right: 1px solid #4a4a4a;	
+}
+
+// Stages
+
+#top-nav #top-nav-stages {
+
+}
+
+#both-nav #top-nav #top-nav-stages li {
+	margin: 0;
+	padding: 0;
+	padding-left: 32px;
+	padding-right: 32px;
+	height: 60px;
+}
+
+#both-nav #top-nav ul#top-nav-stages li a {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+#both-nav #top-nav ul#top-nav-stages li {
+	border-right: 1px solid #4a4a4a;
+}
+
+#both-nav #top-nav ul#top-nav-stages li.current-stage a div span.ordinal_stage,
+#both-nav #top-nav ul#top-nav-stages li.current-stage a div span.stage_title {
+	color: #ffffff;
+}
+
+#both-nav #top-nav ul#top-nav-stages li.current-stage {
+	background-color: #0f0f0f;
+}
+
+#both-nav #top-nav #top-nav-stages li a div span.ordinal_stage {
+	display: block;
+	font-size: 11px;
+	font-weight: 300;
+	letter-spacing: normal;
+	color: #666666;
+	margin: 0;
+	padding: 0;
+	margin-top: 10px;
+}
+
+#both-nav #top-nav #top-nav-stages li a div span.stage_title {
+	display: block;
+	font-size: 16px;
+	font-weight: 700;
+	color: #808080;
+	margin: 0;
+	margin-top: -4px;
+	padding: 0;	
+}
+
+// Right Nav
+
+// Requests
+
+#both-nav #top-nav ul#top-nav-right-nav {
+	height: 60px;
+	float: right;
+	margin-right: 0;
+	font-size: 14px;	
+	font-weight: 600;
+	color: #ffffff;
+}
+
+#both-nav #top-nav ul#top-nav-right-nav .my-requests {
+	height: 60px;
+	padding: 0;
+	margin: 0;
+	padding-top: 5px;
+	padding-left: 28px;
+	padding-right: 28px;
+	border-left: 1px solid #4a4a4a;			
+}
+
+#both-nav #top-nav ul#top-nav-right-nav .my-requests a {
+	color: #ffffff;
+}
+
+// User Menu
+
+#both-nav #top-nav ul#top-nav-right-nav .top-nav-user-menu {
+	padding-top: 19px;
+	padding-left: 28px;
+	padding-right: 28px;
+	height: 100%;
+	border-left: 1px solid #4a4a4a;				
+}
+
+#both-nav #top-nav ul#top-nav-right-nav .top-nav-user-menu a {
+	display: block;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	color: #ffffff;	
+}
+
+#both-nav #top-nav ul#top-nav-right-nav .top-nav-user-menu img {
+	width: 24px;
+	margin-right: 10px;
+}
+
+// Log out button
+#both-nav #top-nav ul#top-nav-right-nav .top-nav-user-menu ul.dropdown-menu {
+	width: 100%;
+	background-color: #1d1d1d; 
+	border-radius: 0;
+	height: 60px;
+	padding-top: 19px;	
+	padding-left: 28px;
+	padding-right: 28px;
+	border: none;
+}
+
+#top-nav-right-nav > li.top-nav-user-menu.dropdown.open {
+	background-color: #0f0f0f;
+}
+
+// ------
+// SUB NAVIGATION
+// ------
+
+#both-nav #sub-nav {
+	background-color: white;
+	border-radius: 0;
+	height: 60px;
+}
+
+
+
+
+
+
