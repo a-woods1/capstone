@@ -103,8 +103,8 @@ export class Header extends Component {
         <header>
         </header>
       :
-      <header>
-        <Navbar inverse collapseOnSelect>
+      <header id="both-nav">
+        <Navbar inverse collapseOnSelect id="top-nav">
         <Navbar.Header>
           <Navbar.Brand>
             <a href="/"><img src={brand_logo} width="20" height="20"/></a>
@@ -130,7 +130,7 @@ export class Header extends Component {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <Navbar>
+      <Navbar id="sub-nav">
         <Nav>
           <NavItem href='#section1'>{this.props.steps[0].step_title}
           </NavItem>

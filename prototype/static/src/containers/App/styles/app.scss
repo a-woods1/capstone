@@ -11,3 +11,28 @@
   }
 
 }
+
+// TOP NAVIGATION
+#both-nav {
+	background-color: red;
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	margin-top: 0;
+	padding-top: 0;
+	height: 120px;
+}
+
+#both-nav #top-nav {
+	background-color: blue;
+	border-radius: 0px; 
+	margin-bottom: 0px;
+	height: 60px;
+}
+
+
+#both-nav #sub-nav {
+	background-color: yellow;
+	border-radius: 0;
+	height: 60px;	
+}
