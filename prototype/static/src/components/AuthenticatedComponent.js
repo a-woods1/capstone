@@ -57,7 +57,7 @@ export function requireAuthentication(Component) {
                                 });
 
                             } else {
-                                browserHistory.push('/overview');
+                                browserHistory.push('/main');
 
                             }
                         });

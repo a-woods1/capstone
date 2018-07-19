@@ -168,21 +168,17 @@ export class Header extends Component {
             {this.renderEntry()}
           </Nav>
           <Nav pullRight>
-            <NavDropdown title="My Requests" id="basic-nav-dropdown">
-                <NavItem>
-                  <MenuItem onClick={() => this.dispatchNewRoute('/requests')}>
-                    Requests
-                  </MenuItem>
-                  <Divider />
-                  <MenuItem onClick={(e) => this.logout(e)}>
-                    Logout
-                  </MenuItem>
-                </NavItem>
-            </NavDropdown>
-            <NavItem href="/">
-              <span><Glyphicon glyph="user" /></span>
-              Hi, {this.props.userName}
+            <NavItem title="My Requests" onClick={() => this.dispatchNewRoute('/requests')}>
+              Requests
             </NavItem>
+            <NavDropdown title={<span><Glyphicon glyph="user" /><span>Hi, {this.props.userName}!</span></span>
+              } id="basic-nav-dropdown">
+              <NavItem>
+                <MenuItem onClick={(e) => this.logout(e)}>
+                  Logout
+                </MenuItem>
+              </NavItem>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -190,16 +186,16 @@ export class Header extends Component {
         <Navbar>
           <Nav>
             <NavItem>
-              <FlatButton label={this.props.steps[0].step_title} onClick={() => this.dispatchNewRoute('/overview')} />
+              <FlatButton label={this.props.steps[0].step_title} onClick={() => this.dispatchNewRoute('/main')}/>
             </NavItem>
             <NavItem>
-              <FlatButton label={this.props.steps[1].step_title} onClick={() => this.dispatchNewRoute('/arrival')} />
+              <FlatButton label={this.props.steps[1].step_title} onClick={() => this.dispatchNewRoute('/main')}/>
             </NavItem>
             <NavItem>
-              <FlatButton label={this.props.steps[2].step_title} onClick={() => this.dispatchNewRoute('/interview')} />
+              <FlatButton label={this.props.steps[2].step_title} onClick={() => this.dispatchNewRoute('/main')}/>
             </NavItem>
             <NavItem>
-              <FlatButton label={this.props.steps[3].step_title} onClick={() => this.dispatchNewRoute('/interview')} />
+              <FlatButton label={this.props.steps[3].step_title} onClick={() => this.dispatchNewRoute('/main')}/>
             </NavItem>
           </Nav>
         </Navbar>

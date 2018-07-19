@@ -19,9 +19,16 @@ function mapDispatchToProps(dispatch) {
 }
 
 @connect(mapStateToProps, mapDispatchToProps)
-class Requests extends React.Component { // eslint-disable-line react/prefer-stateless-function
+class Requests extends React.Component {
+
+
+
   render() {
+    var requests = JSON.parse(localStorage.getItem("accommodation_requests"));
+    const hasRequests = requests != null
+    console.log(hasRequests)
     return (
+     <div>
       <Grid>
       <Row>
         <Col xs={12} md={12}>
@@ -33,6 +40,8 @@ class Requests extends React.Component { // eslint-disable-line react/prefer-sta
             <h1>Current Requests</h1>
           </Col>
         </Row>
+        {hasRequests
+        ?
         <Row>
           <Col xs={1} md={1}></Col>
           <Col xs={2} md={2}>
@@ -52,9 +61,12 @@ class Requests extends React.Component { // eslint-disable-line react/prefer-sta
           </Col>
           <Col xs={1} md={1}></Col>
         </Row>
-        <RequestList />
-        
-      </Grid>
+      :
+      <div></div>
+    }
+    <RequestList />
+    </Grid>
+    </div>
     );
   }
 }

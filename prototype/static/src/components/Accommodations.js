@@ -74,7 +74,7 @@ class Accommodations extends React.Component { // eslint-disable-line react/pref
           </Col>
           <Col xs={12} md={6}>
             <ButtonToolbar>
-              <Button href="/arrival" bsStyle="primary" bsSize="large" block>Submit</Button>
+              <Button href="/main" bsStyle="primary" bsSize="large" block>Submit</Button>
             </ButtonToolbar>
           </Col>
         </Row>

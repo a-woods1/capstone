@@ -18,8 +18,9 @@ class RequestList extends Component{
 
     renderEntry(){
         var requests = JSON.parse(localStorage.getItem("accommodation_requests"));
-        console.log(requests)
-        console.log(requests.length)
+        //console.log(requests)
+        //console.log(requests.length)
+        if (requests != null){
         return Object.entries(requests).map(([key, value], i) => {
           //console.log("i " + i)
           //console.log("key " + key)
@@ -53,6 +54,7 @@ class RequestList extends Component{
             </Paper>
         )
      })
+   }
 }
 
     render() {
