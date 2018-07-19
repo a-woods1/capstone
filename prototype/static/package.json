@@ -29,6 +29,7 @@
   "author": "https://github.com/anorudes, https://github.com/keske",
   "license": "MIT",
   "devDependencies": {
+    "@tweenjs/tween.js": "^17.2.0",
     "autoprefixer": "6.5.3",
     "axios": "^0.15.3",
     "babel-core": "^6.4.5",
@@ -46,6 +47,7 @@
     "bootstrap-sass": "^3.3.6",
     "bootstrap-webpack": "0.0.5",
     "classnames": "^2.2.3",
+    "cors": "^2.8.4",
     "css-loader": "^0.26.1",
     "csswring": "^5.1.0",
     "deep-equal": "^1.0.1",
@@ -108,6 +110,7 @@
     "rimraf": "^2.5.0",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.0",
+    "three": "^0.94.0",
     "url-loader": "^1.0.1",
     "webpack": "^1.12.11",
     "webpack-dev-middleware": "^1.5.0",
@@ -120,6 +123,7 @@
     "react-bootstrap": "^0.32.1",
     "react-navigation": "^2.6.2",
     "react-router-dom": "^4.3.1",
-    "react-scrollable-anchor": "^0.6.1"
+    "react-scrollable-anchor": "^0.6.1",
+    "typeface-roboto": "0.0.54"
   }
 }
