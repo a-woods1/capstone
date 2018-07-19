@@ -180,8 +180,8 @@
 	border: none;
 }
 
-#both-nav #top-nav ul#top-nav-right-nav .top-nav-user-menu li.open {
-	background-color: pink;
+#top-nav-right-nav > li.top-nav-user-menu.dropdown.open {
+	background-color: #0f0f0f;
 }
 
 // ------
