@@ -16,12 +16,12 @@
 
 }
 
+
 // ------
 // NAVIGATION CONTAINER
 // ------
 
 #both-nav {
-	background-color: red;
 	position: fixed;
 	width: 100%;
 	top: 0px;
@@ -389,4 +389,121 @@
 .contact-recruiter img {
 	width: 18px;
 	margin-right: 11px;
+}
+
+
+// ------
+// ACCOMMODATIONS MODAL
+// ------
+
+#accommodations-modal .modal-dialog {
+	width: 800px;
+}
+
+#accommodations-modal .modal-dialog .modal-content {
+	background-color: #ffffff;
+	border-radius: 0px;
+}
+
+// Header
+
+#accommodations-modal .modal-dialog .modal-content .modal-header {
+	height: 60px;
+	padding: 0;
+	margin: 0;
+}
+
+#accommodations-modal .modal-dialog .modal-content .modal-header .container {
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 100%;
+	height: 60px;
+}
+
+#accommodations-modal .modal-dialog .modal-content .modal-header .container .row {
+	margin: 0 !important;
+	padding: 0 !important;
+	height: 60px;
+}
+
+
+#accommodations-modal .modal-dialog .modal-content .modal-header img#a11y_icon {
+	display: inline-block;
+	position: relative;
+	top: -3px;
+	width: 24px;
+	height: 24px;
+	margin-left: 8px;
+	margin-right: 12px;
+}
+
+#accommodations-modal .modal-dialog .modal-content .modal-header h4 {
+	display: inline-block;
+	font-family: Roboto;
+	font-weight: 600;
+	font-size: 18px;
+	color: #000000;
+	margin: 0;
+	margin-top: 22px;	
+}
+
+// Search
+
+#accommodations-modal .modal-dialog .modal-content .modal-header #search {
+	width: 100%;
+	height: 60px;
+}
+
+#accommodations-modal .modal-dialog .modal-content .modal-header #search input {
+	width: 100%;
+	height: 100%;
+	border: none;
+	padding-left: 32px;
+	padding-top: 8px;
+	border-left: solid 1px #E6E6E6;
+	border-bottom: solid 1px #E6E6E6;
+}
+
+#accommodations-modal .modal-dialog .modal-content .modal-header #search input,
+#accommodations-modal .modal-dialog .modal-content .modal-header #search input::placeholder {
+	font-family: Roboto-Regular;
+	font-size: 16px;
+	color: #B3B3B3;
+	font-weight: 400;
+}
+
+#accommodations-modal .modal-dialog .modal-content .modal-header #search input::placeholder {
+	color: #B3B3B3;
+}
+
+#accommodations-modal .modal-dialog .modal-content .modal-header #search input {
+	color: #000000;
+}
+
+#accommodations-modal .modal-dialog .modal-content .modal-header #search img {
+	width: 22px;
+	display: block;
+	position: absolute;
+	right: 0;
+	margin: 0;
+	margin-right: 24px;
+	top: 22px;
+}
+
+// Close
+#accommodations-modal .modal-dialog .modal-content .modal-header button.close {
+	opacity: 1;
+	margin: 0;
+	padding: 0;
+	width: 60px;
+	height: 60px;
+	color: #808080;
+	border-left: solid 1px #E6E6E6;
+	border-bottom: solid 1px #E6E6E6;
+}
+
+#accommodations-modal .modal-dialog .modal-content .modal-header button.close span {
+	font-size: 36px;
+	font-weight: 400;
+	text-shadow: none;
 }
