@@ -405,6 +405,11 @@
 	border-radius: 0px;
 }
 
+#accommodations-modal .modal-dialog .modal-content .modal-body {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
 // Header
 
 #accommodations-modal .modal-dialog .modal-content .modal-header {
@@ -507,3 +512,56 @@
 	font-weight: 400;
 	text-shadow: none;
 }
+
+// Category Tabs
+
+
+#accommodations-modal .modal-dialog .modal-content .modal-body ul.nav {
+	height: 60px;
+	background-color: #1D1D1D;
+	border: none;
+	box-shadow: 0 3px 10px 0 rgba(0,0,0,0.37);	
+	padding-left: 60px;
+}
+
+#accommodations-modal .modal-dialog .modal-content .modal-body ul.nav-tabs li {
+	height: 60px;
+	background-color: #1D1D1D;
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 0 !important;
+	margin: 0 !important;
+	border: none;
+	border-radius: 0;
+}
+
+#accommodations-modal .modal-dialog .modal-content .modal-body ul.nav-tabs li a {
+	padding: 0 !important;
+	margin: 0 !important;
+	height: 60px;
+	color: #B3B3B3;
+	border: none;
+	letter-spacing: -0.58px;
+	margin-top: 18px !important;
+	margin-left: 16px !important;
+	margin-right: 16px !important;		
+}
+
+#accommodations-modal .modal-dialog .modal-content .modal-body ul.nav-tabs li.active a,
+#accommodations-modal .modal-dialog .modal-content .modal-body ul.nav-tabs li:hover a,
+#accommodations-modal .modal-dialog .modal-content .modal-body ul.nav-tabs li:focus a, {
+	padding: 0 !important;
+	margin: 0 !important;
+	height: 60px;
+	background-color: #1D1D1D;
+	color: #ffffff;
+	border-radius: 0;
+	border: none;
+	border-bottom: solid 5px #ffffff;
+	margin-left: 16px !important;
+	margin-right: 16px !important;	
+	padding-top: 18px !important;	
+}
+
+
