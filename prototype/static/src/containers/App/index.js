@@ -18,7 +18,7 @@ class App extends React.Component { // eslint-disable-line react/prefer-stateles
                 <section>
                     <Header />
                     <div
-                      className="container"
+                      className="container page-view"
                       style={{ marginTop: 10, paddingBottom: 250 }}
                     >
                         {this.props.children}
