@@ -1,0 +1,867 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"top-nav",
+				"top-nav-stages"
+			],
+			[
+				"thumbn",
+				"thumbnailPath"
+			],
+			[
+				"thumb",
+				"thumbnailStyle"
+			],
+			[
+				"thum",
+				"thumbnailStyle"
+			],
+			[
+				"previewS",
+				"previewScenes"
+			],
+			[
+				"immersivev",
+				"immersiveViewData"
+			],
+			[
+				"immersiveView",
+				"immersiveViewData"
+			],
+			[
+				"change",
+				"changeImmersiveView"
+			],
+			[
+				"three",
+				"threeEntryPoint"
+			],
+			[
+				"immer",
+				"immersiveViewId"
+			],
+			[
+				"immr",
+				"immersiveViewId"
+			],
+			[
+				"addEven",
+				"addEventListener"
+			],
+			[
+				"updateP",
+				"updateProjectionMatrix"
+			],
+			[
+				"canva",
+				"canvas.height"
+			],
+			[
+				"cameraa",
+				"cameraManager.camera"
+			],
+			[
+				"linke",
+				"linkedViews"
+			],
+			[
+				"camera",
+				"cameraManager"
+			],
+			[
+				"photo",
+				"photoSphere"
+			],
+			[
+				"scene",
+				"sceneManager"
+			],
+			[
+				"onPointerDown",
+				"onPointerDownPointerX"
+			],
+			[
+				"wireframe",
+				"wireframeSphere"
+			],
+			[
+				"build",
+				"buildScene"
+			],
+			[
+				"canvas",
+				"canvasManager"
+			],
+			[
+				"background-",
+				"background-size"
+			],
+			[
+				"destroy",
+				"destroyDomLink"
+			],
+			[
+				"updateD",
+				"updateDomLinkPosition"
+			],
+			[
+				"dom",
+				"domAnnotation"
+			],
+			[
+				"upd",
+				"updateDomAnnotationPosition"
+			],
+			[
+				"annotation",
+				"annotationPositions"
+			],
+			[
+				"annotat",
+				"annotationPositions"
+			],
+			[
+				"intersection",
+				"intersectingPosition"
+			],
+			[
+				"v",
+				"v"
+			],
+			[
+				"DOM",
+				"DOMAnnotations"
+			],
+			[
+				"clas",
+				"className\t: DOMString Element"
+			],
+			[
+				"create",
+				"createElement\t( localName: DOMString ): Element Document"
+			],
+			[
+				"wiref",
+				"wireframeSphere"
+			],
+			[
+				"polar",
+				"polarGridHelper"
+			],
+			[
+				"togg",
+				"toggleDebug"
+			],
+			[
+				"annota",
+				"annotations"
+			],
+			[
+				"spher",
+				"sphereDivisions"
+			],
+			[
+				"he",
+				"hex_color"
+			],
+			[
+				"upda",
+				"updatedSubscribers"
+			],
+			[
+				"subscri",
+				"subscribers"
+			],
+			[
+				"we",
+				"webPort"
+			],
+			[
+				"subsc",
+				"subscribers"
+			],
+			[
+				"http",
+				"httpServer"
+			],
+			[
+				"a",
+				"a"
+			],
+			[
+				"fig",
+				"figcaption\tTag"
+			],
+			[
+				"trans",
+				"transition"
+			],
+			[
+				"mouseo",
+				"mouseOffsetY"
+			],
+			[
+				"backgroun",
+				"background-size"
+			],
+			[
+				"mouse",
+				"mouseOffsetX"
+			],
+			[
+				"mouseOffset",
+				"mouseOffsetX"
+			],
+			[
+				"mouseO",
+				"mouseOffsetX"
+			],
+			[
+				"mouseOff",
+				"mouseOffsetY"
+			],
+			[
+				"adjusted",
+				"adjustedXRot"
+			],
+			[
+				"max",
+				"maxRotX"
+			],
+			[
+				"mous",
+				"mouseOffsetX"
+			],
+			[
+				"itemCenter",
+				"itemCenterY"
+			],
+			[
+				"calc",
+				"calculateHover"
+			],
+			[
+				"hover",
+				"hoveredItem"
+			],
+			[
+				"rotate",
+				"rotateString"
+			],
+			[
+				"text-ra",
+				"text-transform"
+			],
+			[
+				"props",
+				"PropTypes.string"
+			],
+			[
+				"Bro",
+				"BrowseItem"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"productDes",
+				"productDescLong"
+			],
+			[
+				"productDesc",
+				"productDescShort"
+			],
+			[
+				"product",
+				"productData"
+			],
+			[
+				"productD",
+				"productDescShort"
+			],
+			[
+				"overl",
+				"overflow-x"
+			],
+			[
+				"transit",
+				"transition-duration"
+			],
+			[
+				"isWindo",
+				"isWindowHeight"
+			],
+			[
+				"isWindow",
+				"isWindowWidth"
+			],
+			[
+				"isWind",
+				"isWindowHeight"
+			],
+			[
+				"wasWin",
+				"wasWindowWidth"
+			],
+			[
+				"was",
+				"wasWindowHeight"
+			],
+			[
+				"wasWindow",
+				"wasWindowHeight"
+			],
+			[
+				"rollov",
+				"rollover-time"
+			],
+			[
+				"tra",
+				"transform"
+			],
+			[
+				"link",
+				"link-easing"
+			],
+			[
+				"tran",
+				"transition"
+			],
+			[
+				"line",
+				"link-time"
+			],
+			[
+				"text-",
+				"text-decoration"
+			],
+			[
+				"nav",
+				"nav"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"background",
+				"background-position"
+			],
+			[
+				"col-md-push-",
+				"col-md-push-7"
+			],
+			[
+				"padding",
+				"padding-bottom"
+			],
+			[
+				"pri-color",
+				"pri-color-light"
+			],
+			[
+				"body",
+				"body-font"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"rem",
+				"removeClass"
+			],
+			[
+				"wit3d",
+				"wit3d"
+			],
+			[
+				"rollover-",
+				"rollover-easing"
+			],
+			[
+				"Init",
+				"InitiateColorFade"
+			],
+			[
+				"de",
+				"debugLastSectionTop"
+			],
+			[
+				"Ini",
+				"InitializeIncrements"
+			],
+			[
+				"color",
+				"colorSectionArray"
+			],
+			[
+				"col",
+				"colorSectionArray"
+			],
+			[
+				"roll",
+				"rollover-easing"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"back",
+				"background-attachment"
+			],
+			[
+				"ba",
+				"background-size"
+			],
+			[
+				"hidd",
+				"hidden-projects"
+			],
+			[
+				"backgro",
+				"background-position"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"font-s",
+				"font-style"
+			],
+			[
+				"scro",
+				"scroll"
+			],
+			[
+				"data",
+				"dataNavigationItem"
+			],
+			[
+				"target",
+				"targetContentArea"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"t",
+				"transparent"
+			],
+			[
+				"backgrou",
+				"background-size"
+			],
+			[
+				"pro",
+				"project_featured"
+			],
+			[
+				"inline",
+				"inline-block"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 179.0,
+		"last_filter": "instal",
+		"selected_items":
+		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"javascript",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"indentation",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"install pa",
+				"Package Control: Install Package"
+			],
+			[
+				"material",
+				"Material Theme: Configuration"
+			],
+			[
+				"material theme: act",
+				"Material Theme: Activate theme"
+			],
+			[
+				"Material Theme: Act",
+				"Material Theme: Activate theme"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"pacakage",
+				"Package Control: List Packages"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"sur",
+				"Surround: surround selection"
+			],
+			[
+				"surr",
+				"Surround: surround selection"
+			],
+			[
+				"surround",
+				"Surround: change surround"
+			],
+			[
+				"surro",
+				"Surround: surround selection"
+			],
+			[
+				"<a",
+				"Snippet: <?php foreach (…) … <?php endforeach ?>"
+			],
+			[
+				"a",
+				"About"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: Enable Package"
+			],
+			[
+				"package control",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 428.0
+	},
+	"console":
+	{
+		"height": 328.0,
+		"history":
+		[
+			"Package Control",
+			"Package Control: Install Package",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype"
+	],
+	"file_history":
+	[
+		"/Users/afaucher/Documents/Career/Jobs 2018/Samsung/2018-07-20 Call with Andrew McHugh",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/node_modules/fsevents/node_modules/tar/lib/header.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/Modal/AccommodationModal.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/Main/Requests/RequestList/RequestList.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/Main/Requests/Requests.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/containers/App/index.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/Header/index.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/containers/App/styles/app.scss",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/index.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/main.css",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/style.scss",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/ThreeContainer.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/SubstageDetail.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/ImmersiveNavStagePoi.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/data/temp-data-util.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/data/stages.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/App.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/ImmersiveNavStagesList.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/ImmersiveNavStagePoiList.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/ImmersiveNavStage.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/ImmersiveControls.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/ImmersiveNavigator.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/node_modules/gh-pages/.cache/github.com!afauch!bb-react.git/static/js/main.b6224172.js.map",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/node_modules/gh-pages/.cache/github.com!afauch!bb-react.git/static/js/main.b6224172.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/build/static/js/main.b6224172.js.map",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/build/static/js/main.b6224172.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/css/App.css",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/css/Placeholder.css",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/index.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/threejs/DataManager.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/threejs/PhotoSphere.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/threejs/threeEntryPoint.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/threejs/CanvasManager.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/js/viewer.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/threejs/InteractionManager.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/threejs/CameraManager.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/threejs/SceneManager.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/threejs/Annotation.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/Stage.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/SideNav.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/Content.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/Itinerary.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/threejs/LinkedView.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-immersive-preview/data/temp-data-photo.js",
+		"/Users/afaucher/Desktop/cors.json",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/threejs/globals.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/css/styles.css",
+		"/Users/afaucher/Desktop/three-react-demo/threejs/SceneManager.js",
+		"/Users/afaucher/Desktop/three-react-demo/threejs/threeEntryPoint.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/data/temp-data-photo.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/package.json",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/webpack.config.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/threejs/GeneralLights.js",
+		"/Users/afaucher/Desktop/Chat with Eddie Ishak",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Sprint 3/07 05 Chris Carducci Notes",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/threejs/SceneSubject.js",
+		"/Users/afaucher/Documents/Github/memory-generator/src/App.js",
+		"/Users/afaucher/Documents/Github/memory-generator/src/index.js",
+		"/Users/afaucher/Documents/Github/memory-generator/src/App.css",
+		"/Users/afaucher/Documents/Github/memory-generator/functions/index.js",
+		"/Users/afaucher/Documents/Github/memory-generator/functions/untitled",
+		"/Users/afaucher/Desktop/Today's Agenda",
+		"/Users/afaucher/Desktop/Crit 07-03",
+		"/Users/afaucher/Desktop/trevor notes 07-03",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-react/src/components/threejs/Tween.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/bb-immersive-preview/js/viewer.js",
+		"/Users/afaucher/Documents/Github/memory-generator/functions/config.js",
+		"/Users/afaucher/Desktop/analyze/analyze.html",
+		"/Users/afaucher/Documents/Letters/lan-3/brainstorming",
+		"/Users/afaucher/Desktop/memories-1.json",
+		"/Users/afaucher/Desktop/analyze.html",
+		"/Users/afaucher/Documents/Github/memory-generator/src/fire.js",
+		"/Users/afaucher/Documents/Github/memory-generator/database.rules.json",
+		"/Users/afaucher/Documents/Github/memory-generator/package.json",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/Summer/Prototyping/bb-immersive-preview/data/data.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/Team Health/Week 5 reflections",
+		"/Users/afaucher/Desktop/Mom Birthday",
+		"/Users/afaucher/Desktop/fathers-day-2018/styles.css",
+		"/Users/afaucher/Documents/Letters/fathers-day-2018/index.html",
+		"/Users/afaucher/Documents/Letters/fathers-day-2018/styles.css",
+		"/Users/afaucher/Desktop/fathers-day-2018/index.html",
+		"/Users/afaucher/Desktop/Risks in execution for Drew interview",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/Team Health/Week 4 Reflections",
+		"/Users/afaucher/Desktop/fathers-day-2018/restaurant ideas",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/Faculty Advising Notes/06 14 Francine Stephanie Notes",
+		"/Users/afaucher/Desktop/Website Feedback",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/Class Notes/06 13 Design Session with Karen",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/Class Notes/Crit ?",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/Class Notes/06 07 UI Kits",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/Summer/Sprint 1/Interviews/My general takeaways from Hai ",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/Team Health/Week 3 Reflections",
+		"/Users/afaucher/Desktop/Notes from Lee",
+		"/Users/afaucher/Desktop/Ishac Bertran Notes",
+		"/Users/afaucher/Desktop/Drew - CoDesign",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/Summer/Sprint 1/while prototyping 3",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/Summer/Sprint 1/while prototyping 1",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/Summer/Sprint 1/while prototyping 2",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Misc/When you come back to prototyping:",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/Meeting Notes/06 04 Notes on User Test",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Misc/Assumption",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Misc/06-01-2018 Agenda for Talk with Lee",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Misc/I'm feeling like I have 'noise' about the prototyp",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/Team Health/Quick reflections from Week 2:",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Misc/Prototyping Approach",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/Team Health/Hey Lee,",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/Team Health/Additional 'tools:'",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Misc/Immediate To-Dos:",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Misc/What are the key hooks for me in the design proces",
+		"/Users/afaucher/Desktop/Reflections from Wednesday:Thursday Ideation",
+		"/Users/afaucher/Desktop/Aaron - keep this on Desktop",
+		"/Users/afaucher/Documents/Unity/design-systems/Assets/Atlassian/Materials/color-0052CC.mat",
+		"/Users/afaucher/Documents/Unity/design-systems/Assets/Atlassian/Materials/color-FF5630.mat",
+		"/Users/afaucher/Library/Preferences/Unity/Editor-5.x/Presets/Atlassian.colors",
+		"/Users/afaucher/Documents/Recent Directories",
+		"/Users/afaucher/Documents/Media Browser Provider Exception",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Building User Focused Sensing/Assignments/BUILD Final Project/simple-server/js/core/db.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Building User Focused Sensing/Assignments/BUILD Final Project/simple-server/js/controllers/handler.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Building User Focused Sensing/Assignments/BUILD Final Project/simple-server/js/core/server.js",
+		"/Users/afaucher/_APPLML Final Project/_Notebook/data_processed/train.arff",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Building User Focused Sensing/Assignments/BUILD Final Project/protoHost/response.json",
+		"/Users/afaucher/Desktop/SB - Current Phases",
+		"/Users/afaucher/Desktop/Bloomberg - to sort/Ok so I feel paralyzed here why:",
+		"/Users/afaucher/Desktop/Bloomberg - to sort/Full list of stakeholders from raw data",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Building User Focused Sensing/Assignments/BUILD Final Project/mites/get_sensor_data.py",
+		"/Users/afaucher/Desktop/Quote for Printing",
+		"/Users/afaucher/Desktop/Partner Dancing Videos",
+		"/Users/afaucher/Desktop/Mayank Notes",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Building User Focused Sensing/Assignments/BUILD Final Project/simple-server/js/routes/index.js"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 43.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.SublimeLinter Messages":
+	{
+		"height": 104.0
+	},
+	"output.exec":
+	{
+		"height": 30.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 25.0
+	},
+	"pinned_build_system": "",
+	"project": "bb-prototype.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 274.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

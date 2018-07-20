@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col, Button, Glyphicon } from 'react-bootstrap';
+import { Grid, Row, Col, Glyphicon } from 'react-bootstrap';
 
 
 import RequestSuccess from '../Page4/RequestSuccess.js';
@@ -55,16 +55,16 @@ class Confirmation extends Component{
         <div>
         {isThirdPage
           ?
-            <Grid>
+            <Grid className="confirm-page-content">
             <Row>
             <Col xs={12} md={12}>
-              <h3 className="confirmation_heading"><span>1</span>Confirm Accommodation(s)</h3>
+              <h3 className="confirmation_heading"><span className="num">1</span><span>Confirm Accommodation(s)</span></h3>
             </Col>
 
             </Row>
             <Row>
               <Col xs={12} md={12}>
-                <h3>{this.state.accommodation_name}</h3>
+                <h4>{this.state.accommodation_name}</h4>
                 <p className="modal_text">{this.state.accommodation_description}</p>
               </Col>
             </Row>
@@ -73,7 +73,7 @@ class Confirmation extends Component{
             </Row>
             <Row>
               <Col xs={12} md={12}>
-                <h3 className="confirmation_heading"><span>2</span>Confirm Date & Location</h3>
+                <h3 className="confirmation_heading"><span className="num">2</span><span>Confirm Date & Location</span></h3>
               </Col>
             </Row>
             <Row>
@@ -93,7 +93,7 @@ class Confirmation extends Component{
             </Row>
             <Row>
               <Col xs={12} md={12}>
-                <h3 className="confirmation_heading"><span>3</span>Send Message</h3>
+                <h3 className="confirmation_heading"><span className="num">3</span><span>Send Message</span></h3>
               </Col>
             </Row>
             <Row>
@@ -103,11 +103,11 @@ class Confirmation extends Component{
               </Col>
             </Row>
             <Row>
-              <Col xs={4} md={4}>
-                <Button bsSize="small" block>Cancel</Button>
+              <Col xs={6} md={6}>
+                <button>Cancel</button>
               </Col>
-              <Col xs={4} md={4}>
-                <Button onClick={this.clickSubmit} bsSize="small" block>Submit</Button>
+              <Col xs={6} md={6}>
+                <button onClick={this.clickSubmit} className="cta">Submit</button>
               </Col>
             </Row>
            </Grid>
