@@ -18,17 +18,96 @@ const style = {
     display: 'inline-block',
 };
 
-var items = {
-  a: {
-    "accommodation_name": "Elevator Access",
-    "accommodation_description": "Lorem ipsum dolor sit amet",
-    "pre_approved": false
-  },
-  b: {
-    "accommodation_name": "Service Animal",
-    "accommodation_description": "consectetur adipiscing elit",
-    "pre_approved": true
-  }
+let items = {
+    "Equipment" : [{
+      "accommodation_name": "Ergonomic Keyboard",
+      "accommodation_description": "Lorem ipsum dolor sit amet",
+      "pre_approved": true
+    },
+    {
+      "accommodation_name": "Ergonomic Mouse",
+      "accommodation_description": "Lorem ipsum dolor sit amet",
+      "pre_approved": true
+    },
+    {
+      "accommodation_name": "Large Computer Monitor",
+      "accommodation_description": "Lorem ipsum dolor sit amet",
+      "pre_approved": false
+    },
+    {
+      "accommodation_name": "Screen-Reader Compatible Computer",
+      "accommodation_description": "Lorem ipsum dolor sit amet",
+      "pre_approved": true
+    }
+],
+    "Environment" : [{
+      "accommodation_name": "Elevator All-Floor Access",
+      "accommodation_description": "Lorem ipsum dolor sit amet",
+      "pre_approved": false
+    }, {
+      "accommodation_name": "Severe Allergies",
+      "accommodation_description": "Lorem ipsum dolor sit amet",
+      "pre_approved": false
+    },
+{
+      "accommodation_name": "Minimize Walking",
+      "accommodation_description": "Lorem ipsum dolor sit amet",
+      "pre_approved": false
+    },
+{
+      "accommodation_name": "Quiet Space",
+      "accommodation_description": "Lorem ipsum dolor sit amet",
+      "pre_approved": true
+    }, {
+      "accommodation_name": "Height-Adjustable Table/Desk",
+      "accommodation_description": "Lorem ipsum dolor sit amet",
+      "pre_approved": true
+    }],
+    "Communications" : [{
+      "accommodation_name": "Text-to-Speech Software",
+      "accommodation_description": "Lorem ipsum dolor sit amet",
+      "pre_approved": true
+    }, {
+      "accommodation_name": "Sign-Language Interpreter",
+      "accommodation_description": "Lorem ipsum dolor sit amet",
+      "pre_approved": false
+    },
+{
+      "accommodation_name": "Captions",
+      "accommodation_description": "Lorem ipsum dolor sit amet",
+      "pre_approved": true
+    },
+{
+      "accommodation_name": "Braille Copies",
+      "accommodation_description": "Lorem ipsum dolor sit amet",
+      "pre_approved": false
+    }],
+
+
+    "Policy" : [{
+      "accommodation_name": "Use My Own Computer",
+      "accommodation_description": "Lorem ipsum dolor sit amet",
+      "pre_approved": true
+    }, {
+      "accommodation_name": "Extra Time",
+      "accommodation_description": "Lorem ipsum dolor sit amet",
+      "pre_approved": true
+    },
+{
+      "accommodation_name": "Transportation to Interview",
+      "accommodation_description": "Lorem ipsum dolor sit amet",
+      "pre_approved": false
+    },
+{
+      "accommodation_name": "Service Animal",
+      "accommodation_description": "Lorem ipsum dolor sit amet",
+      "pre_approved": false
+    }, {
+      "accommodation_name": "Personal Aide",
+      "accommodation_description": "Lorem ipsum dolor sit amet",
+      "pre_approved": false
+    }]
+
 };
 
 class AccommodationModal extends React.Component {
@@ -41,70 +120,64 @@ class AccommodationModal extends React.Component {
       };
   }
 
-  renderAccommodationList(){
 
-      return Object.entries(items).map(([key, value], i) => {
-        console.log("i " + i)
-        console.log("key " + key)
-        //console.log("value " + value)
-        return (
-          <div id="accommodation_list_item">
-           <Grid>
+
+renderEntry = () => {
+  let tabs = []
+
+  //Create tabs
+  Object.entries(items).forEach(([key, value], i) => {
+    let list_items = []
+    //Create list items
+    Object.entries(value).forEach(([subkey, subvalue]) => {
+      console.log(subvalue)
+      list_items.push(
+        <Grid>
             <Row>
               <Col xs={7} md={7}>
                 <span>
-                  <h4>{value.accommodation_name}</h4>
+                  <h4>{subvalue.accommodation_name}</h4>
 
-                  {value.pre_approved
+                  {Boolean(subvalue.pre_approved)
                       ? <div id="pre_approved">Common Request</div>
                       : <div></div>
                   }
 
                 </span>
-                <p>{value.accommodation_description}</p>
+                <p>{subvalue.accommodation_description}</p>
               </Col>
               <Col xs={5} md={5}>
 
-                <Button onClick={(e) => this.clickRequest(e, i, value.accommodation_name, value.accommodation_description)}>Request</Button>
+                <Button onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Request</Button>
               </Col>
             </Row>
             {i < items.length && <hr />}
     </Grid>
-    </div>
-  )
-})
-}
-
-  renderEntry(){
-    //var categories =
-    console.log(this.state.categories)
-    //var num_stages = this.props.categories.length
-    //console.log(num_stages)
-    return Object.entries(this.state.categories).map(([key, value], i) => {
-      //console.log("i " + i)
-      var obj = this.state.categories[i]
-      //console.log(obj)
-      return (
-        <Tab eventKey={i+1} title={value.category_name}>
-        <div>
-          {this.renderAccommodationList()}
-
-          <Grid>
-            <Row>
-              <Col xs={1} md={1}>
-                  <Glyphicon glyph="plus" />
-              </Col>
-              <Col xs={11} md={11}>
-                <p>Specify your Accommodation</p>
-              </Col>
-            </Row>
-          </Grid>
-        </div>
-        </Tab>
       )
     })
-  }
+    //Create tabs and add list items
+    tabs.push(
+      <Tab eventKey={i+1} title={key}>
+      <div>
+        {list_items}
 
+        <Grid>
+          <Row>
+            <Col xs={1} md={1}>
+                <Glyphicon glyph="plus" />
+            </Col>
+            <Col xs={11} md={11}>
+              <p>Specify your Accommodation</p>
+            </Col>
+          </Row>
+        </Grid>
+      </div>
+      </Tab>
+
+    )
+  })
+  return tabs
+}
 
 clickRequest = (e, i, accommodation_name, accommodation_description) => {
       this.setState({

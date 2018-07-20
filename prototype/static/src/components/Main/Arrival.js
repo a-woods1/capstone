@@ -9,6 +9,11 @@ import AccommodationModal from '../Modal/AccommodationModal.js';
 
 import arrival_360 from '../../images/photos/placeholder.png';
 
+import SubStageDetail from '../SubstageDetail.js';
+import ThreeContainer from '../ThreeContainer.js';
+import { threeEntryPoint } from '../threejs/threeEntryPoint';
+import { previewScenes } from '../data/temp-data-util.js';
+import { stages } from '../data/stages.js';
 
 function mapStateToProps(state) {
     return {
@@ -34,23 +39,113 @@ class Arrival extends Component { // eslint-disable-line react/prefer-stateless-
     constructor(props, context) {
         super(props, context);
 
+        this.threeEntryPoint;
         this.state = {
-          lgShow: false
-        };
+          lgShow: false,
+          immersiveOpen : false,
+          previewScenes : previewScenes,
+          activeViewId : 'g-58th-ext-3',
+          activeViewData: '',
+          immersiveNavigatorExpanded: true,
+          stages : stages
     }
+    this.changeImmersive = this.changeImmersive.bind(this);
+    this.toggleImmersiveNavigator = this.toggleImmersiveNavigator.bind(this);
+
+  }
+
+  componentDidMount() {
+
+      var s = { stages };
+      var p = { previewScenes };
+      // console.log('app js loaded stages');
+      // console.log(s);
+
+      this.setState({
+        previewScenes: previewScenes,
+        stages: stages
+      });
+
+    }
+
+
+    getDataById(recordId) {
+      var record = previewScenes.find(function(previewScene){
+        return previewScene.id == recordId;
+      });
+      return record;
+    }
+
+    setThreeEntryPoint ( instance ) {
+      this.threeEntryPoint = instance;
+    }
+
+    toggleImmersiveNavigator ( expand ) {
+
+      if(expand) {
+       this.setState({immersiveNavigatorExpanded: true});
+      } else {
+       this.setState({immersiveNavigatorExpanded: false});
+      }
+
+    }
+
+    // Switches the photosphere visible in the immersive view
+    changeImmersive ( ) {
+
+      // update the view in threeEntryPoint
+      this.threeEntryPoint.changeView( this.state.activeViewId );
+
+      // update the current data on record
+      var dataRecord = this.getDataById(this.state.activeViewId);
+      // console.log('App.js got data record');
+      // console.log(dataRecord);
+
+      this.setState({
+        activeViewData: dataRecord
+      }, function() {
+        console.log('App.js set state for data record');
+        console.log(dataRecord);
+      });
+
+    }
+
+    hideImmersive () {
+      // this.threeEntryPoint.updateRenderer();
+      this.setState({immersiveOpen : false });
+      this.threeEntryPoint.pauseRender();
+    }
+
+    showImmersive ( id ) {
+      console.log('showImmersiveView called');
+      this.setState({
+        immersiveOpen : true,
+        activeViewId : id
+      }, function() {
+        this.changeImmersive();
+        this.threeEntryPoint.updateRenderer();
+        this.threeEntryPoint.resumeRender();
+      }.bind(this));
+    }
+
+    // TODO: Placeholder, To delete after testing
+    ph_topHeader() {
+      return(
+        <div className="ph_topHeader">
+          <span onClick={this.hideImmersive.bind(this)}>B</span>
+        </div>
+      );
+    }
+
+
   render() {
       let lgClose = () => this.setState({ lgShow: false });
     return (
+<div>
+
+
+<h1>New Section</h1>
       <Grid>
-            <Button
-            bsStyle="primary"
-            onClick={() => this.setState({ lgShow: true })}
-            >
-            Launch large demo modal
-            </Button>
-
-
-            <AccommodationModal show={this.state.lgShow} categories={this.props.categories} onHide={lgClose} />
             <Row>
                 <div>Software Engineer > Onsite Interview</div>
             </Row>
@@ -75,9 +170,7 @@ class Arrival extends Component { // eslint-disable-line react/prefer-stateless-
             <Row>
               <h2 className="subsection_title">360 Views</h2>
             </Row>
-            <Row>
-              <img width="650px" height="175px" className="arrival_360" src={arrival_360} alt="Immersive view"/>
-            </Row>
+
             <Row>
               <h2 className="subsection_title">Schedule</h2>
             </Row>
@@ -158,7 +251,15 @@ class Arrival extends Component { // eslint-disable-line react/prefer-stateless-
             </Col>
           </Row>
         </div>
+        <Button
+        bsStyle="primary"
+        onClick={() => this.setState({ lgShow: true })}
+        >
+        Launch large demo modal
+        </Button>
 
+
+        <AccommodationModal show={this.state.lgShow} categories={this.props.categories} onHide={lgClose} />
         <Row>
           <span><a href="/accommodations">Related Accommodations</a> <Glyphicon glyph="menu-down" /></span>
         </Row>
@@ -187,7 +288,7 @@ class Arrival extends Component { // eslint-disable-line react/prefer-stateless-
           <img width="650px" height="175px" className="arrival_360" src={arrival_360} alt="Immersive view"/>
         </Row>
       </Grid>
-
+</div>
         );
     }
 }

@@ -1,0 +1,302 @@
+/* PLACEHOLDER STYLES */
+/* These are for testing Thursday only */
+/* And can be removed from the app after */
+
+
+/* */
+.main-content {
+  padding-top: 60px;
+}
+
+/* Top Header */
+
+.ph_topHeader {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #1a1a1a;
+  color: #808080;
+  margin-top: 0;
+  z-index: 100;
+}
+
+.ph_topHeader span {
+  display: block;
+  float: left;
+  top: 0;
+  padding-left: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin: 0;
+  font-weight: 900;
+  font-size: 32px;
+  color: #ffffff;
+  overflow: hidden;
+  width: 44px;
+  height: 44px;
+  border-right: 1px solid grey;  
+}
+
+.ph_topHeader span:hover {
+  cursor: pointer;
+}
+
+.ph_topHeader ul {
+  display: inline-block;
+  float: left;
+  height: 60px;
+  width: 800px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.ph_topHeader ul li {
+  display: inline-block;
+  padding-top: 15px;
+  padding-left: 32px;
+  margin: 0;
+  width: 200px;
+  height: 60px;
+  overflow: hidden;  
+  list-style-type: none;
+  border-right: 1px solid grey;
+}
+
+.ph_topHeader ul li:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.ph_topHeader ul li h4 {
+  font-weight: 400;
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 11px;
+}
+
+.ph_topHeader ul li h3 {
+  font-weight: 900;
+  display: block;
+  margin: 0;
+  padding: 0;  
+  font-size: 16px;  
+}
+
+.ph_topHeader_currentStage {
+  color: #ffffff;
+}
+
+/* Sub Header */
+
+.ph_subHeader {
+  position: fixed;
+  top: 60px;
+  width: 100%;
+  padding-left: 112px;
+  height: 60px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  margin-top: 0;
+  z-index: 20;
+  border-bottom: solid 1px #d8d8d8; 
+}
+
+.ph_subHeader ul {
+  display: inline-block;
+  height: 60px;
+  width: 800px;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.ph_subHeader ul li {
+  font-size: 14px;
+  display: inline-block;
+  padding: 8px;
+  margin: 0;
+  width: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 22px;
+  height: 60px;
+  overflow: hidden;  
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+.ph_subHeader ul li a {
+  text-decoration: none;
+  font-weight: 900;
+  color: #1a1a1a;
+}
+
+
+.ph_subHeader ul li:hover a {
+  color: #ffffff;
+}
+
+.ph_subHeader ul li:hover {
+  background-color: #0000ff;
+}
+
+
+.ph_subHeader ul li.ph_subHeader_currentStage {
+  background-color: #0000ff;
+}
+
+.ph_subHeader ul li.ph_subHeader_currentStage a {
+  color: #ffffff;
+}
+
+/* Placeholder Section Images */
+
+.ph_textSection {
+  position: relative;
+  margin-left: 112px;
+  width: 654px;
+}
+
+
+/* Placeholder POI selectors */
+
+.ph_poiSelector {
+  margin-left: 112px;
+  width: 654px; 
+}
+
+
+.ph_poiSelector .poi-selector {
+  border-left: 8px solid #333333;
+  background-color: #F7F7F7;
+  padding-top: 8px;
+}
+
+.ph_poiSelector .poi-selector h2.kicker {
+  display: block;
+  margin-left: 16px;
+  margin-bottom: 0;
+}
+
+.ph_poiSelector .poi-selector ul {
+  list-style-type: none;
+  height: 156px;
+  white-space: nowrap;  
+  overflow-x: auto;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 16px;
+  padding-bottom: 20px;
+}
+
+.ph_poiSelector .poi-selector ul li {
+  display: inline-block;
+  margin-top: 0;
+  margin-right: 16px;
+  width: 128px;  
+  padding: 0;
+  border: none;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+
+  transition: all 00ms ease-out;
+  -webkit-transition: all 200ms ease-out;
+
+}
+
+.ph_poiSelector .poi-selector ul li:first-of-type {
+  margin-left: 16px;
+}
+
+.ph_poiSelector .poi-selector ul li:hover, ul.poi-selector li:focus {
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.5);
+
+  transition: all 200ms ease-out;
+  -webkit-transition: all 200ms ease-out;
+} 
+
+.ph_poiSelector .poi-selector ul li .poi-thumbnail {
+  position: relative;
+  background-color: #1a1a1a;
+  width: 128px;
+  height: 114px;
+}
+
+.ph_poiSelector .poi-selector ul li .poi-label {
+  position: relative;
+  background-color: #ffffff;
+  display: block;
+  width: 128px;
+  height: 32px;
+  padding: 0;
+
+  transition: all 200ms linear;
+  -webkit-transition: all 200ms linear;
+}
+
+.ph_poiSelector .poi-selector ul li .poi-label img {
+  display: inline-block;
+  width: 8px;
+  margin: 0;
+  margin-left: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  
+}
+
+.ph_poiSelector .poi-selector ul li .poi-label h5 {
+  display: inline-block;
+  width: 70%;
+  height: 12px;
+
+  /* Required for text-overflow to do anything */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;  
+
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;  
+  margin-left: 8px;
+  margin-top: 8px; 
+  margin-bottom: 8px;  
+
+  transition: all 200ms linear;
+  -webkit-transition: all 200ms linear;
+  
+}
+
+.substage-detail {
+  width: 100%;
+  height: calc(100vh - 120px);
+  position: fixed;
+  top: 120px;
+  overflow-y: scroll;
+}
+
+.substage-detail section {
+  z-index: 0;  
+}
+
+.ph_poiSelector .poi-selector ul li.active-poi .poi-label {
+  background-color: #0000ff;
+
+  transition: all 200ms linear;
+  -webkit-transition: all 200ms linear;
+
+}
+
+.ph_poiSelector .poi-selector ul li.active-poi .poi-label h5 {
+  color: #ffffff;
+
+  transition: all 200ms linear;
+  -webkit-transition: all 200ms linear;
+}
+
