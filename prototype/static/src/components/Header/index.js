@@ -128,17 +128,24 @@ export class Header extends Component {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <Navbar id="sub-nav">
+
+
+      <Navbar inverse collapseOnSelect id="sub-nav">
+      <Navbar.Header>
+        <Navbar.Toggle />
+      </Navbar.Header>
+      <Navbar.Collapse>
         <Nav>
           <NavItem href='#section1'>{this.props.steps[0].step_title}
           </NavItem>
-          <NavItem href='#section2'>{this.props.steps[1].step_title}<div className="caret-right"></div>
+          <NavItem href='#section2'>{this.props.steps[1].step_title}
           </NavItem>
-          <NavItem href='#section3'>{this.props.steps[2].step_title}<div className="caret-right"></div>
+          <NavItem href='#section3'>{this.props.steps[2].step_title}
           </NavItem>
-          <NavItem href='#section4'>{this.props.steps[3].step_title}<div className="caret-right"></div>
+          <NavItem href='#section4'>{this.props.steps[3].step_title}
           </NavItem>
         </Nav>
+        </Navbar.Collapse>
       </Navbar>
       </header>
         );
