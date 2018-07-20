@@ -136,30 +136,32 @@ componentDidMount() {
 
     render() {
         return (
-          <div>
-          <Row className="show-grid">
-          <ScrollableAnchor id={'section3'}>
-            <h1>In-Person Interview</h1>
-          </ScrollableAnchor>
-          </Row>
+          <section id="section-interview">          
+            <div>
+            <Row className="show-grid">
+            <ScrollableAnchor id={'section3'}>
+              <h1>In-Person Interview</h1>
+            </ScrollableAnchor>
+            </Row>
 
-          <Row className="show-grid">
-            <Col xs={2} md={2}>
-              <span><Glyphicon glyph="time" /> 9:30 AM</span>
-            </Col>
-            <Col xs={2} md={2}>
-              <span><Glyphicon glyph="calendar" /> 8-6-2018</span>
-            </Col>
-            <Col xs={5} md={5}>
-              <span><Glyphicon glyph="map-marker" /> 731 Lexington Avenue, New York</span>
-            </Col>
-          </Row>
+            <Row className="show-grid">
+              <Col xs={2} md={2}>
+                <span><Glyphicon glyph="time" /> 9:30 AM</span>
+              </Col>
+              <Col xs={2} md={2}>
+                <span><Glyphicon glyph="calendar" /> 8-6-2018</span>
+              </Col>
+              <Col xs={5} md={5}>
+                <span><Glyphicon glyph="map-marker" /> 731 Lexington Avenue, New York</span>
+              </Col>
+            </Row>
 
-          <Row className="show-grid">
-            <img width="650px" height="175px" className="arrival_360" src={arrival_360} alt="Immersive view"/>
-          </Row>
-          <hr />
-          </div>
+            <Row className="show-grid">
+              <img width="650px" height="175px" className="arrival_360" src={arrival_360} alt="Immersive view"/>
+            </Row>
+            <hr />
+            </div>
+          </section>
         );
     }
 }

@@ -138,81 +138,84 @@ componentDidMount() {
     render() {
         let lgClose = () => this.setState({ lgShow: false });
         return (
-          <div>
-          <Row className="arrival_section">
-            <ScrollableAnchor id={'section2'}>
-              <h1 className="section_title">Arrival</h1>
-            </ScrollableAnchor>
-          </Row>
+          <section id="section-arrival">          
+            <div>
+            <Row className="arrival_section">
+              <ScrollableAnchor id={'section2'}>
+                <h1 className="section_title">Arrival</h1>
+              </ScrollableAnchor>
+            </Row>
 
-          <Row className="arrival_details">
-            <Col xs={2} md={2}>
-              <span className="time"><Glyphicon glyph="time" /> 9:00 AM</span>
-            </Col>
-            <Col xs={2} md={2}>
-              <span className="date"><Glyphicon glyph="calendar" /> 8-6-2018</span>
-            </Col>
-            <Col xs={5} md={5}>
-              <span className="location"><Glyphicon glyph="map-marker" /> 731 Lexington Avenue, New York</span>
-            </Col>
-          </Row>
-
-          <Row className="show-grid">
-            <img width="650px" height="175px" className="arrival_360" src={arrival_360} alt="Immersive view"/>
-          </Row>
-          <Row>
-            <p>We are pleased to welcome you to Bloomberg’s NY offices for an interview.</p>
-          </Row>
-          <Row>
-            <p>Here is what you should plan to do once you arrive.</p>
-          </Row>
-
-          <div className="info_box">
-            <Row>
-              <Col xs={1} md={1}>
-                <Glyphicon glyph="star" />
+            <Row className="arrival_details">
+              <Col xs={2} md={2}>
+                <span className="time"><Glyphicon glyph="time" /> 9:00 AM</span>
               </Col>
-              <Col xs={11} md={11}>
-                <h2>Show your ID</h2>
-                <p>You will need to present a valid, government-issued photo ID at reception so we can print your visitor badge.</p>
+              <Col xs={2} md={2}>
+                <span className="date"><Glyphicon glyph="calendar" /> 8-6-2018</span>
+              </Col>
+              <Col xs={5} md={5}>
+                <span className="location"><Glyphicon glyph="map-marker" /> 731 Lexington Avenue, New York</span>
               </Col>
             </Row>
 
+            <Row className="show-grid">
+              <img width="650px" height="175px" className="arrival_360" src={arrival_360} alt="Immersive view"/>
+            </Row>
             <Row>
-              <Col xs={1} md={1}>
-                <Glyphicon glyph="star" />
-              </Col>
-              <Col xs={11} md={11}>
-                <h2>Wear visitor badge</h2>
-                <p>The visitor badge obtained at reception must be worn and visible at all times.</p>
-              </Col>
+              <p>We are pleased to welcome you to Bloomberg’s NY offices for an interview.</p>
+            </Row>
+            <Row>
+              <p>Here is what you should plan to do once you arrive.</p>
             </Row>
 
+            <div className="info_box">
+              <Row>
+                <Col xs={1} md={1}>
+                  <Glyphicon glyph="star" />
+                </Col>
+                <Col xs={11} md={11}>
+                  <h2>Show your ID</h2>
+                  <p>You will need to present a valid, government-issued photo ID at reception so we can print your visitor badge.</p>
+                </Col>
+              </Row>
+
+              <Row>
+                <Col xs={1} md={1}>
+                  <Glyphicon glyph="star" />
+                </Col>
+                <Col xs={11} md={11}>
+                  <h2>Wear visitor badge</h2>
+                  <p>The visitor badge obtained at reception must be worn and visible at all times.</p>
+                </Col>
+              </Row>
+
+              <Row>
+                <Col xs={1} md={1}>
+                  <Glyphicon glyph="star" />
+                </Col>
+                <Col xs={11} md={11}>
+                  <h2>Wait for Recruiter</h2>
+                  <p>Security will direct you to the 6th floor, where a greeter at the help desk will point you to the pink couch.</p>
+                </Col>
+              </Row>
+            </div>
+            <Button
+            bsStyle="primary"
+            onClick={() => this.setState({ lgShow: true })}
+            >
+            Launch large demo modal
+            </Button>
+
+
+            <AccommodationModal show={this.state.lgShow} categories={this.props.categories} onHide={lgClose} />
             <Row>
-              <Col xs={1} md={1}>
-                <Glyphicon glyph="star" />
-              </Col>
-              <Col xs={11} md={11}>
-                <h2>Wait for Recruiter</h2>
-                <p>Security will direct you to the 6th floor, where a greeter at the help desk will point you to the pink couch.</p>
-              </Col>
+              <span><a href="/accommodations">Related Accommodations</a> <Glyphicon glyph="menu-down" /></span>
             </Row>
-          </div>
-          <Button
-          bsStyle="primary"
-          onClick={() => this.setState({ lgShow: true })}
-          >
-          Launch large demo modal
-          </Button>
 
+            <hr />
+            </div>
+          </section>
 
-          <AccommodationModal show={this.state.lgShow} categories={this.props.categories} onHide={lgClose} />
-          <Row>
-            <span><a href="/accommodations">Related Accommodations</a> <Glyphicon glyph="menu-down" /></span>
-          </Row>
-
-          <hr />
-          </div>
         );
     }
 }

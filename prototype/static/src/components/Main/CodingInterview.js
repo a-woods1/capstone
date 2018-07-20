@@ -136,10 +136,12 @@ componentDidMount() {
 
     render() {
         return (
-            <div className="col-md-8">
+          <section id="section-coding">
+            <Row>
                 <h1>Interview</h1>
                 <hr />
-            </div>
+            </Row>
+          </section>
         );
     }
 }
