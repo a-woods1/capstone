@@ -8,6 +8,7 @@ import * as actionCreators from '../../actions/auth';
 import accessibility_logo from '../../images/a11y.png';
 import search_icon from '../../images/search.png';
 import common_req from '../../images/common-req.png';
+import plus from '../../images/plus.png';
 
 import ItemRequest from './Page2/ItemRequest.js';
 
@@ -133,7 +134,7 @@ renderEntry = () => {
     Object.entries(value).forEach(([subkey, subvalue]) => {
       console.log(subvalue)
       list_items.push(
-        <Grid>
+        <Grid className="accommodation-item">
             <Row>
               <Col xs={7} md={7}>
                 <span>
@@ -162,13 +163,11 @@ renderEntry = () => {
       <div>
         {list_items}
 
-        <Grid>
+        <Grid className="accommodation-item" id="custom-accommodation">
           <Row>
-            <Col xs={1} md={1}>
-                <Glyphicon glyph="plus" />
-            </Col>
-            <Col xs={11} md={11}>
-              <p>Specify your Accommodation</p>
+            <Col xs={12} md={12}>
+              <img src={plus} className="plus"/>
+              <span>I need another accommodation that is not on this list</span>
             </Col>
           </Row>
         </Grid>
@@ -222,7 +221,7 @@ clickRequest = (e, i, accommodation_name, accommodation_description) => {
 
         </Modal.Header>
         <Modal.Body>
-        <div id="accommodations-list">
+        <div id="modal-body-main">
         {isFirstPage
           ?
           <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
@@ -233,8 +232,6 @@ clickRequest = (e, i, accommodation_name, accommodation_description) => {
         }
         </div>
         </Modal.Body>
-        <Modal.Footer>
-        </Modal.Footer>
       </Modal>
     );
   }

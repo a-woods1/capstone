@@ -55,10 +55,10 @@ class Confirmation extends Component{
         <div>
         {isThirdPage
           ?
-            <Grid>
+            <Grid className="confirm-page-content">
             <Row>
             <Col xs={12} md={12}>
-              <h3 className="confirmation_heading"><span>1</span>Confirm Accommodation(s)</h3>
+              <h3 className="confirmation_heading"><span className="num">1</span><span>Confirm Accommodation(s)</span></h3>
             </Col>
 
             </Row>
@@ -73,7 +73,7 @@ class Confirmation extends Component{
             </Row>
             <Row>
               <Col xs={12} md={12}>
-                <h3 className="confirmation_heading"><span>2</span>Confirm Date & Location</h3>
+                <h3 className="confirmation_heading"><span className="num">2</span><span>Confirm Date & Location</span></h3>
               </Col>
             </Row>
             <Row>
@@ -93,7 +93,7 @@ class Confirmation extends Component{
             </Row>
             <Row>
               <Col xs={12} md={12}>
-                <h3 className="confirmation_heading"><span>3</span>Send Message</h3>
+                <h3 className="confirmation_heading"><span className="num">3</span><span>Send Message</span></h3>
               </Col>
             </Row>
             <Row>
