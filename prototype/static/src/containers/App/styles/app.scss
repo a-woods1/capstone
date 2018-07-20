@@ -28,6 +28,7 @@
 	margin-top: 0;
 	padding-top: 0;
 	height: 120px;
+	z-index: 100;
 }
 
 // ------
@@ -61,7 +62,7 @@
 	margin-left: 0;
 	padding-top: 18px;
 	padding-left: 18px;
-	border-right: 1px solid #4a4a4a;	
+	border-right: 1px solid #000000;	
 }
 
 // Stages
@@ -85,7 +86,7 @@
 }
 
 #both-nav #top-nav ul#top-nav-stages li {
-	border-right: 1px solid #4a4a4a;
+	border-right: 1px solid #000000;
 }
 
 #both-nav #top-nav ul#top-nav-stages li.current-stage a div span.ordinal_stage,
@@ -94,7 +95,7 @@
 }
 
 #both-nav #top-nav ul#top-nav-stages li.current-stage {
-	background-color: #0f0f0f;
+	background-color: #4A4A4A;
 }
 
 #both-nav #top-nav #top-nav-stages li a div span.ordinal_stage {
@@ -102,7 +103,7 @@
 	font-size: 11px;
 	font-weight: 300;
 	letter-spacing: normal;
-	color: #666666;
+	color: #ffffff;
 	margin: 0;
 	padding: 0;
 	margin-top: 10px;
@@ -112,7 +113,7 @@
 	display: block;
 	font-size: 16px;
 	font-weight: 700;
-	color: #808080;
+	color: #ffffff;
 	margin: 0;
 	margin-top: -4px;
 	padding: 0;	
@@ -120,7 +121,7 @@
 
 // Right Nav
 
-// Requests
+// My Requests
 
 #both-nav #top-nav ul#top-nav-right-nav {
 	height: 60px;
@@ -138,7 +139,7 @@
 	padding-top: 5px;
 	padding-left: 28px;
 	padding-right: 28px;
-	border-left: 1px solid #4a4a4a;			
+	border-left: 1px solid #000000;			
 }
 
 #both-nav #top-nav ul#top-nav-right-nav .my-requests a {
@@ -152,7 +153,7 @@
 	padding-left: 28px;
 	padding-right: 28px;
 	height: 100%;
-	border-left: 1px solid #4a4a4a;				
+	border-left: 1px solid #000000;				
 }
 
 #both-nav #top-nav ul#top-nav-right-nav .top-nav-user-menu a {
@@ -227,8 +228,165 @@
 	padding-top: 20px;
 }
 
+#both-nav #sub-nav ul li a img {
+	position: relative;
+	top: -1px;
+	margin-left: 10px;
+	width: 4px;
+}
+
+#both-nav #sub-nav ul li a div.caret-right {
+	position: relative;
+	top: -1px;
+	display: inline-block;
+	width: 4px;
+	height: 7px;
+	background-size: cover;
+	background-image: url('../../../images/caret-dark-right.png');
+	margin-left: 10px;
+}
+
 #both-nav #sub-nav ul li:hover a {
 	background-color: #0000ff;
 	color: #ffffff;
 }
 
+#both-nav #sub-nav ul li:hover a div.caret-right {
+	background-image: url('../../../images/caret-light-right.png');
+}
+
+
+// ------
+// MAIN CONTENT PAGES
+// ------
+
+.page-view.container {
+	position: relative;
+	top: 120px;
+	margin:0 !important;
+	padding:0 !important;
+	width: 100%;
+	//margin-left: 10% !important;
+	//margin-right: 10% !important;
+	padding-left: 10% !important;
+	padding-right: 10% !important;
+	background-color: #F8F8F9;
+	height: 100%;
+}
+
+.page-view .container {
+	margin:0 !important;
+	padding:0 !important;
+	width: 100%;
+}
+
+// ------
+// REQUESTS PAGE
+// ------
+
+.page-view #requests {
+	background-color: #F8F8F9;
+}
+
+.page-view #requests h1 {
+	font-family: Roboto;
+	font-weight: 900;
+	font-size: 36px;
+	color: #1A1A1A;
+	letter-spacing: -0.43px;
+	text-align: left;
+	line-height: 56px;
+	margin-top: 56px;
+	margin-bottom: 32px;
+}
+
+.page-view #requests .request-table {
+	width: 100%;
+	margin: 0 !important;	
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.14);
+	font-weight: 400;
+}
+
+.page-view #requests .request-table .request-table .row {
+	width: 100%;
+	margin: 0 !important;	
+}
+
+.page-view #requests .request-table .request-table-header {
+	background-color: #1d1d1d;
+	color: #b3b3b3;
+	text-transform: uppercase;
+	font-weight: 600;
+	width: 100%;
+	margin: 0 !important;
+	font-size: 12px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+.page-view #requests .request-table .request_list_item .row {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.page-view #requests .request-table .request_list_item {
+	font-size: 14px;	
+	background-color: #ffffff;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	border-bottom: 1px solid #D8D8D8;
+}
+
+.page-view #requests .request-table .request_list_item img.expand {
+	position: relative;
+	top: -1px;
+	width: 24px;
+}
+
+.page-view #requests .request-table .request_list_item img.calendar {
+	position: relative;
+	top: -1px;
+	width: 16px;
+	margin-right: 4px;
+}
+
+.page-view #requests .request-table .request_list_item img.pin {
+	position: relative;
+	top: -1px;	
+	width: 16px;
+	margin-right: 4px;
+}
+
+.page-view #requests .request-table .request_list_item .status_tag img {
+	height: 24px;
+}
+
+.page-view #requests .request-table .request_list_item .accommodation_name {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+// ------
+// MAIN CONTENT PAGES
+// ------
+
+.contact-recruiter {
+	margin-top: 30px;
+}
+
+.contact-recruiter a {
+	font-size: 16px;
+	font-weight: 600;
+	color: #0000ff;
+}
+
+.contact-recruiter a:hover,
+.contact-recruiter a:focus,
+.contact-recruiter a:active {
+	color: #0000ff;
+}
+
+.contact-recruiter img {
+	width: 18px;
+	margin-right: 11px;
+}
