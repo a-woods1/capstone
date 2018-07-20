@@ -52,7 +52,7 @@ def populate_tables():
         cur.execute("INSERT INTO product values (%s, %s, %s, %s, %s)", (3, "Large Computer Monitor", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 1, False))
         cur.execute("INSERT INTO product values (%s, %s, %s, %s, %s)", (4, "Screen-Reader Compatible Computer", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 1, True))
 
-        cur.execute("INSERT INTO product values (%s, %s, %s, %s, %s)", (5, "Elevator All-Floor Access", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 2, False))
+        cur.execute("INSERT INTO product values (%s, %s, %s, %s, %s)", (5, "Elevator All-Floor Access", "This badge allows you to stop the elevator at any floor you need.", 2, False))
         cur.execute("INSERT INTO product values (%s, %s, %s, %s, %s)", (6, "Severe Allergies", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 2, False))
         cur.execute("INSERT INTO product values (%s, %s, %s, %s, %s)", (7, "Minimize Walking", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 2, False))
         cur.execute("INSERT INTO product values (%s, %s, %s, %s, %s)", (8, "Quiet Space", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", 2, True))

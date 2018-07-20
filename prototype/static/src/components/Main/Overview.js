@@ -192,6 +192,28 @@ for (var i = 0; i < sessionStorage.length; i++) {
                     <h3 className="info_box_title">Coding Interview</h3>
                     <p className="info_box_text">You will have at least one coding interview during the day with a software engineer.</p>
                   </Row>
+                  <Row>
+                    <h2 className="subsection_title">Tips</h2>
+                  </Row>
+                  <Row className="info_box">
+                    <h3 className="info_box_title">Review Your Interview Details</h3>
+                    <p className="info_box_text">The following sections of this website will provide you with more information about what to expect during the onsite interview.</p>
+                  </Row>
+                  <Row className="info_box">
+                    <h3 className="info_box_title">Let Us Know What You Need</h3>
+                    <p className="info_box_text">If you require any accommodations to fully participate in the interview, please let us know. We will make every effort to ensure you are provided with appropriate assistance.</p>
+                    <span className="accessibility_link"><Glyphicon glyph="time" /> Accessibility Accommodations</span>
+                  </Row>
+                  <Row className="info_box">
+                    <h3 className="info_box_title">Come as You Are</h3>
+                    <p className="info_box_text">Engineers at Bloomberg often dress casually. We encourage you to wear whatever make you feel most comfortable, as we will be focused on you knowledge and skills, not your clothing.</p>
+                  </Row>
+                  <Row className="info_box">
+                    <h3 className="info_box_title">Get Excited!</h3>
+                    <p className="info_box_text">Bloomberg is a great company, and if you’re a strong engineer, we want you here. Engineering is at the core of our business,
+and our work reaches millions of users on a daily basis. There’s a lot of opportunity to have a huge impact, and we want to hire
+people who are just as excited about it as we are.</p>
+                  </Row>
                   <hr />
             </div>
         );

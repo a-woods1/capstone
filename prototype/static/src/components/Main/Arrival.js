@@ -138,66 +138,110 @@ componentDidMount() {
     render() {
         let lgClose = () => this.setState({ lgShow: false });
         return (
-          <div>
+          <div className="col-md-8">
+          <Row>
+              <div>Software Engineer > Onsite Interview</div>
+          </Row>
           <Row className="arrival_section">
             <ScrollableAnchor id={'section2'}>
               <h1 className="section_title">Arrival</h1>
             </ScrollableAnchor>
           </Row>
 
-          <Row className="arrival_details">
-            <Col xs={2} md={2}>
-              <span className="time"><Glyphicon glyph="time" /> 9:00 AM</span>
-            </Col>
-            <Col xs={2} md={2}>
-              <span className="date"><Glyphicon glyph="calendar" /> 8-6-2018</span>
-            </Col>
-            <Col xs={5} md={5}>
-              <span className="location"><Glyphicon glyph="map-marker" /> 731 Lexington Avenue, New York</span>
-            </Col>
+          <Row className="overview_details">
+              <span className="time"><Glyphicon glyph="time" /> 9:00 a.m.</span>
+          </Row>
+          <Row className="overview_details">
+            <span className="location"><Glyphicon glyph="map-marker" /> 731 Lexington Avenue, New York</span>
           </Row>
 
-          <Row className="show-grid">
-            <img width="650px" height="175px" className="arrival_360" src={arrival_360} alt="Immersive view"/>
+          <Row className="info_box">
+            <h3 className="info_box_title">Welcome!</h3>
+            <p className="info_box_text">We are pleased to welcome you to Bloomberg’s primary NYC office for an interview.</p>
           </Row>
           <Row>
-            <p>We are pleased to welcome you to Bloomberg’s NY offices for an interview.</p>
+            <h2 className="subsection_title">360 Views</h2>
           </Row>
+
           <Row>
-            <p>Here is what you should plan to do once you arrive.</p>
+            <h2 className="subsection_title">What You Will Do</h2>
           </Row>
 
-          <div className="info_box">
-            <Row>
-              <Col xs={1} md={1}>
-                <Glyphicon glyph="star" />
-              </Col>
-              <Col xs={11} md={11}>
-                <h2>Show your ID</h2>
-                <p>You will need to present a valid, government-issued photo ID at reception so we can print your visitor badge.</p>
-              </Col>
-            </Row>
+          <Row className="info_box">
+            <h3 className="info_box_title">Show Your ID</h3>
+            <p className="info_box_text">You will need to present a valid, government-issued photo ID at reception so we can print your visitor badge.</p>
+          </Row>
 
-            <Row>
-              <Col xs={1} md={1}>
-                <Glyphicon glyph="star" />
-              </Col>
-              <Col xs={11} md={11}>
-                <h2>Wear visitor badge</h2>
-                <p>The visitor badge obtained at reception must be worn and visible at all times.</p>
-              </Col>
-            </Row>
+          <Row className="info_box">
+            <h3 className="info_box_title">Wear Visitor Badge</h3>
+            <p className="info_box_text">The visitor badge obtained at reception must be worn and visible at all times.</p>
+          </Row>
 
-            <Row>
-              <Col xs={1} md={1}>
-                <Glyphicon glyph="star" />
-              </Col>
-              <Col xs={11} md={11}>
-                <h2>Wait for Recruiter</h2>
-                <p>Security will direct you to the 6th floor, where a greeter at the help desk will point you to the pink couch.</p>
-              </Col>
-            </Row>
-          </div>
+          <Row className="info_box">
+            <h3 className="info_box_title">Go to the 6th Floor</h3>
+            <p className="info_box_text">All elevators stop on the 6th floor. However, by default, the elevators do not stop on every floor. Please request Elevator All-Floor Access from the accessibility accommodations below if you prefer to minimize stair climbing. Note that we will never ask you to take more than three flights of stairs.</p>
+            <span className="accessibility_link"><Glyphicon glyph="time" /> Related Accessibility Accommodations <Glyphicon glyph="chevron-right" /></span>
+            <div className="accommodation-item">
+            <Grid>
+              <Row>
+                <Col xs={7} md={7}>
+                  <h4>Elevator All-Floor Access</h4>
+                  <p>This badge allows you to stop the elevator at any floor you need.</p>
+                  </Col>
+                  <Col xs={5} md={5}>
+                    <button className="short-button" onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Select</button>
+                  </Col>
+                </Row>
+                <Row>
+                <Col xs={7} md={7}>
+                  <span className="accommodation_list_link"><Glyphicon glyph="time" /> Full Accommodation List</span>
+                </Col>
+                </Row>
+            </Grid>
+            </div>
+
+          </Row>
+
+          <Row className="info_box">
+            <h3 className="info_box_title">Wait for Recruiter</h3>
+            <p className="info_box_text">A greeter at the help desk on the 6th floor will point you to the pink couch.</p>
+          </Row>
+
+          <Row>
+            <h2 className="subsection_title">Additional Details</h2>
+          </Row>
+          <Row className="info_box">
+            <h3 className="info_box_title">Enjoy a Drink or a Snack</h3>
+            <p className="info_box_text">Beverages and snacks can be acquired from our pantry while you wait for your recruiter to meet you. Everything is complimentary,
+            so please help yourself! Water fountains are located near the men’s and women’s restrooms on every floor: help
+            yourself at any time if you need water throughout the day.</p>
+          </Row>
+          <Row className="info_box">
+            <h3 className="info_box_title">Wireless Internet Access</h3>
+            <p className="info_box_text">Your visitor badge will contain a username and password to access our guest WiFi network.</p>
+          </Row>
+
+          <Row>
+            <h2 className="subsection_title">About the Space</h2>
+          </Row>
+          <Row className="info_box">
+            <h3 className="info_box_title">Entrance</h3>
+            <p className="info_box_text">If you prefer to avoid steps, please use the accessible entrance on Lexington Avenue.</p>
+          </Row>
+          <Row className="info_box">
+            <h3 className="info_box_title">Restrooms</h3>
+            <p className="info_box_text">All restrooms contain a private, accessible stall. We also have family restrooms available.</p>
+          </Row>
+          <Row className="info_box">
+            <h3 className="info_box_title">Security</h3>
+            <p className="info_box_text">Our office is supported by a top-knotch security team. As a guest, security asks that you be accompanied by a Bloomberg employee at all times.</p>
+          </Row>
+          <Row className="info_box">
+            <h3 className="info_box_title">Help Desk</h3>
+            <p className="info_box_text">If you need anything, please feel free to approach someone at the help desk on the 6th floor.</p>
+          </Row>
+
+
           <Button
           bsStyle="primary"
           onClick={() => this.setState({ lgShow: true })}
@@ -205,11 +249,7 @@ componentDidMount() {
           Launch large demo modal
           </Button>
 
-
           <AccommodationModal show={this.state.lgShow} categories={this.props.categories} onHide={lgClose} />
-          <Row>
-            <span><a href="/accommodations">Related Accommodations</a> <Glyphicon glyph="menu-down" /></span>
-          </Row>
 
           <hr />
           </div>
