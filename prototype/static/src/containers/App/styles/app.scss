@@ -817,6 +817,14 @@ button.cta:active {
 	width: 100%;
 	resize: none;
 	margin-bottom: 36px;
+	padding-left: 19px;
+	padding-right: 19px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .confirm-page-content textarea::placeholder {
+	color: #999999;
 }
 
 #accommodations-modal .modal-dialog .modal-content #modal-body-main .confirm-page-content button {
@@ -824,4 +832,49 @@ button.cta:active {
 	margin-bottom: 42px;
 }
 
+// Success page
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .request-success.container {
+	width: 100%;
+
+	background-color: #ffffff;
+	width: 100%;
+	padding-left: 116px;
+	padding-right: 116px;
+	padding-top: 48px;
+
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 24px;
+	color: #000000;	
+
+	padding-bottom: 42px;
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .request-success {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 24px;
+	text-align: center;
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .request-success img {
+	width: 81px;
+	margin-bottom: 24px;
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .request-success h3 {
+	font-weight: 600;
+	font-size: 32px;
+	margin-bottom: 24px;	
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .request-success p {
+	font-size: 18px;	
+	margin-bottom: 56px;
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .request-success button {
+	width: 100%;
+}
 
