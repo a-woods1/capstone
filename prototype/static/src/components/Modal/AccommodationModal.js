@@ -5,8 +5,9 @@ import { bindActionCreators } from 'redux';
 import { Grid, Row, Col, Modal, Button, Tabs, Tab, TabContainer, TabContent, TabPane, Glyphicon } from 'react-bootstrap';
 
 import * as actionCreators from '../../actions/auth';
-import accessibility_logo from '../../images/photos/placeholder.png';
-import search_icon from '../../images/photos/placeholder.png';
+import accessibility_logo from '../../images/a11y.png';
+import search_icon from '../../images/search.png';
+import common_req from '../../images/common-req.png';
 
 import ItemRequest from './Page2/ItemRequest.js';
 
@@ -139,7 +140,7 @@ renderEntry = () => {
                   <h4>{subvalue.accommodation_name}</h4>
 
                   {Boolean(subvalue.pre_approved)
-                      ? <div id="pre_approved">Common Request</div>
+                      ? <span className="common-req">Common Request</span>
                       : <div></div>
                   }
 
@@ -148,7 +149,7 @@ renderEntry = () => {
               </Col>
               <Col xs={5} md={5}>
 
-                <Button onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Request</Button>
+                <Button onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Select</Button>
               </Col>
             </Row>
             {i < items.length && <hr />}
@@ -199,22 +200,21 @@ clickRequest = (e, i, accommodation_name, accommodation_description) => {
     return (
       <Modal
         {...this.props}
+        id="accommodations-modal"
         bsSize="large"
         aria-labelledby="contained-modal-title-lg"
       >
         <Modal.Header closeButton onClick={this.closeModal}>
          <Grid>
            <Row>
-             <Col xs={1} md={1}>
-               <img id="search_icon" width="20px" height="20px" alt="search icon" src={search_icon}/>
+             <Col xs={5} md={5}>
+               <img id="a11y_icon" alt="Accessibility icon" src={accessibility_logo} />             
+               <h4 id = "modal_screen_title">Accessibility Accommodations</h4>
              </Col>
-             <Col xs={4} md={4}>
-               <h4 id = "modal_screen_title">Accessibility Support</h4>
-             </Col>
-             <Col xs={7} md={7}>
+             <Col xs={6} md={6}>
              <div id="search">
-               <input id="search_field" type="text" placeholder="Search Accommodations" />
-               <Glyphicon glyph="search" />
+               <input id="search_field" type="text" placeholder="Search accommodations" />
+               <img class="search_icon" alt="Search icon" src={search_icon}/>             
              </div>
              </Col>
            </Row>
@@ -222,7 +222,7 @@ clickRequest = (e, i, accommodation_name, accommodation_description) => {
 
         </Modal.Header>
         <Modal.Body>
-        <div>
+        <div id="accommodations-list">
         {isFirstPage
           ?
           <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
