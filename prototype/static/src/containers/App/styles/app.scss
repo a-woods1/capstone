@@ -28,6 +28,7 @@
 	margin-top: 0;
 	padding-top: 0;
 	height: 120px;
+	z-index: 100;
 }
 
 // ------
@@ -254,3 +255,138 @@
 	background-image: url('../../../images/caret-light-right.png');
 }
 
+
+// ------
+// MAIN CONTENT PAGES
+// ------
+
+.page-view.container {
+	position: relative;
+	top: 120px;
+	margin:0 !important;
+	padding:0 !important;
+	width: 100%;
+	//margin-left: 10% !important;
+	//margin-right: 10% !important;
+	padding-left: 10% !important;
+	padding-right: 10% !important;
+	background-color: #F8F8F9;
+	height: 100%;
+}
+
+.page-view .container {
+	margin:0 !important;
+	padding:0 !important;
+	width: 100%;
+}
+
+// ------
+// REQUESTS PAGE
+// ------
+
+.page-view #requests {
+	background-color: #F8F8F9;
+}
+
+.page-view #requests h1 {
+	font-family: Roboto;
+	font-weight: 900;
+	font-size: 36px;
+	color: #1A1A1A;
+	letter-spacing: -0.43px;
+	text-align: left;
+	line-height: 56px;
+	margin-top: 56px;
+	margin-bottom: 32px;
+}
+
+.page-view #requests .request-table {
+	width: 100%;
+	margin: 0 !important;	
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.14);
+	font-weight: 400;
+}
+
+.page-view #requests .request-table .request-table .row {
+	width: 100%;
+	margin: 0 !important;	
+}
+
+.page-view #requests .request-table .request-table-header {
+	background-color: #1d1d1d;
+	color: #b3b3b3;
+	text-transform: uppercase;
+	font-weight: 600;
+	width: 100%;
+	margin: 0 !important;
+	font-size: 12px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+.page-view #requests .request-table .request_list_item .row {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.page-view #requests .request-table .request_list_item {
+	font-size: 14px;	
+	background-color: #ffffff;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	border-bottom: 1px solid #D8D8D8;
+}
+
+.page-view #requests .request-table .request_list_item img.expand {
+	position: relative;
+	top: -1px;
+	width: 24px;
+}
+
+.page-view #requests .request-table .request_list_item img.calendar {
+	position: relative;
+	top: -1px;
+	width: 16px;
+	margin-right: 4px;
+}
+
+.page-view #requests .request-table .request_list_item img.pin {
+	position: relative;
+	top: -1px;	
+	width: 16px;
+	margin-right: 4px;
+}
+
+.page-view #requests .request-table .request_list_item .status_tag img {
+	height: 24px;
+}
+
+.page-view #requests .request-table .request_list_item .accommodation_name {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+// ------
+// MAIN CONTENT PAGES
+// ------
+
+.contact-recruiter {
+	margin-top: 30px;
+}
+
+.contact-recruiter a {
+	font-size: 16px;
+	font-weight: 600;
+	color: #0000ff;
+}
+
+.contact-recruiter a:hover,
+.contact-recruiter a:focus,
+.contact-recruiter a:active {
+	color: #0000ff;
+}
+
+.contact-recruiter img {
+	width: 18px;
+	margin-right: 11px;
+}
