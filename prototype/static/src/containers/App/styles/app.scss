@@ -281,6 +281,72 @@
 }
 
 // ------
+// BUTTON STYLES
+// ------
+
+
+
+button,
+button.btn,
+button.btn-default,
+button.short-button,
+button.cta,
+.container button,
+{
+	color: #ffffff;
+	font-size: 16px;
+	background-color: #1A1A1A;
+	border: none;
+	text-transform: uppercase;
+	font-weight: 600;
+	padding-top: 16px;
+	padding-bottom: 16px;	
+	border-radius: 0 !important;
+}
+
+button:hover,
+button.btn:hover,
+button.short-button:hover,
+button:focus,
+button.btn:focus,
+button.short-button:focus, {
+	color: #ffffff;
+	background-color: #4C4C4C;
+}
+
+button:active,
+button.btn:active,
+button.short-button:active,
+button:active:focus,
+button.btn:active:focus,
+button.short-button:active:focus,
+ {
+	color: #ffffff;
+	background-color: #000000;
+}
+
+button.short-button {
+	padding-left: 32px;
+	padding-right: 32px;
+	padding-top: 10px;
+	padding-bottom: 10px;	
+	border-radius: 6px !important;
+}
+
+button.cta {
+	background-color: #0000ff;
+}
+
+button.cta:hover,
+button.cta:focus {
+	background-color: #6666FF;
+}
+
+button.cta:active {
+	background-color: #0000AF;
+}
+
+// ------
 // REQUESTS PAGE
 // ------
 
@@ -505,6 +571,7 @@
 	color: #808080;
 	border-left: solid 1px #E6E6E6;
 	border-bottom: solid 1px #E6E6E6;
+	border-radius: 0 !important;
 }
 
 #accommodations-modal .modal-dialog .modal-content .modal-header button.close:hover {
@@ -518,6 +585,9 @@
 	border-bottom: solid 1px #E6E6E6;
 }
 
+#accommodations-modal .modal-dialog .modal-content .modal-header button.close:active {
+	background-color: #f7f7f7;
+}
 
 #accommodations-modal .modal-dialog .modal-content .modal-header button.close span {
 	font-size: 36px;
@@ -553,7 +623,6 @@
 	height: 60px;
 	color: #B3B3B3;
 	border: none;
-	letter-spacing: -0.58px;
 	margin-top: 18px !important;
 	margin-left: 16px !important;
 	margin-right: 16px !important;		
@@ -577,9 +646,13 @@
 
 // Accommodations list
 #accommodations-modal .modal-dialog .modal-content #modal-body-main {
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main #accommodations-list {
 	background-color: #F6F6F6;
 	padding-bottom: 42px;
 }
+
 
 // Outer container for each item
 
@@ -627,7 +700,6 @@
 }
 
 #accommodations-modal .modal-dialog .modal-content #modal-body-main p {
-	font-family: Roboto;
 	font-weight: 400;
 	font-size: 14px;
 	color: #000000;
@@ -638,30 +710,10 @@
 	width: 24px;
 }
 
-#accommodations-modal .modal-dialog .modal-content #modal-body-main button {
+#accommodations-modal .modal-dialog .modal-content #modal-body-main button.short-button {
 	position: relative;
 	float: right;
-	color: #ffffff;
-	font-size: 16px;
-	border-radius: 6px;
-	background-color: #1A1A1A;
-	border: none;
-	text-transform: uppercase;
-	font-weight: 600;
-	padding-left: 32px;
-	padding-right: 32px;
-	padding-top: 10px;
-	padding-bottom: 10px;
 	top: 12px;
-}
-
-#accommodations-modal .modal-dialog .modal-content #modal-body-main button:hover,
-#accommodations-modal .modal-dialog .modal-content #modal-body-main button:focus {
-	background-color: #4C4C4C;
-}
-
-#accommodations-modal .modal-dialog .modal-content #modal-body-main button:active {
-	background-color: #000000;
 }
 
 #accommodations-modal .modal-dialog .modal-content #custom-accommodation.container {
@@ -708,6 +760,11 @@
 	padding-left: 116px;
 	padding-right: 116px;
 	padding-top: 48px;
+
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+	color: #000000;	
 }
 
 #accommodations-modal .modal-dialog .modal-content .confirm-page-content h3.confirmation_heading {
@@ -720,6 +777,7 @@
 	color: #000000;	
 	text-transform: uppercase;
 	height: 33px;
+	margin-bottom: 16px;
 }
 
 #accommodations-modal .modal-dialog .modal-content .confirm-page-content h3.confirmation_heading span {
@@ -735,3 +793,35 @@
 	height: 33px;
 	color: #ffffff;
 }
+
+#accommodations-modal .modal-dialog .modal-content .confirm-page-content h4 {
+	font-weight: 600;
+	font-size: 18px;
+	color: #000000;
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .confirm-page-content p {
+	margin-bottom: 4px;
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .confirm-page-content p.modal_text_emphasized {
+	font-size: 18px;
+	font-weight: 600;
+	color: #1A1A1A;
+	margin-bottom: 16px;
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .confirm-page-content textarea {
+	display: block;
+	margin-top: 12px !important;
+	width: 100%;
+	resize: none;
+	margin-bottom: 36px;
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .confirm-page-content button {
+	width: 100%;
+	margin-bottom: 42px;
+}
+
+

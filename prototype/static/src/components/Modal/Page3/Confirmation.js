@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col, Button, Glyphicon } from 'react-bootstrap';
+import { Grid, Row, Col, Glyphicon } from 'react-bootstrap';
 
 
 import RequestSuccess from '../Page4/RequestSuccess.js';
@@ -64,7 +64,7 @@ class Confirmation extends Component{
             </Row>
             <Row>
               <Col xs={12} md={12}>
-                <h3>{this.state.accommodation_name}</h3>
+                <h4>{this.state.accommodation_name}</h4>
                 <p className="modal_text">{this.state.accommodation_description}</p>
               </Col>
             </Row>
@@ -103,11 +103,11 @@ class Confirmation extends Component{
               </Col>
             </Row>
             <Row>
-              <Col xs={4} md={4}>
-                <Button bsSize="small" block>Cancel</Button>
+              <Col xs={6} md={6}>
+                <button>Cancel</button>
               </Col>
-              <Col xs={4} md={4}>
-                <Button onClick={this.clickSubmit} bsSize="small" block>Submit</Button>
+              <Col xs={6} md={6}>
+                <button onClick={this.clickSubmit} className="cta">Submit</button>
               </Col>
             </Row>
            </Grid>

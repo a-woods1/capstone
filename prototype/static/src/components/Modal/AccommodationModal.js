@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { browserHistory } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { Grid, Row, Col, Modal, Button, Tabs, Tab, TabContainer, TabContent, TabPane, Glyphicon } from 'react-bootstrap';
+import { Grid, Row, Col, Modal, Tabs, Tab, TabContainer, TabContent, TabPane, Glyphicon } from 'react-bootstrap';
 
 import * as actionCreators from '../../actions/auth';
 import accessibility_logo from '../../images/a11y.png';
@@ -150,7 +150,7 @@ renderEntry = () => {
               </Col>
               <Col xs={5} md={5}>
 
-                <Button onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Select</Button>
+                <button className="short-button" onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Select</button>
               </Col>
             </Row>
             {i < items.length && <hr />}
@@ -224,9 +224,11 @@ clickRequest = (e, i, accommodation_name, accommodation_description) => {
         <div id="modal-body-main">
         {isFirstPage
           ?
-          <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
-            {this.renderEntry()}
-          </Tabs>
+          <div id="accommodations-list">
+            <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
+              {this.renderEntry()}
+            </Tabs>
+          </div>
           :
           <ItemRequest product_id={this.state.product_id} accommodation_name={this.state.accommodation_name} accommodation_description={this.state.accommodation_description}/>
         }
