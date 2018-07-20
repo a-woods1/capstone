@@ -507,6 +507,18 @@
 	border-bottom: solid 1px #E6E6E6;
 }
 
+#accommodations-modal .modal-dialog .modal-content .modal-header button.close:hover {
+	opacity: 1;
+	margin: 0;
+	padding: 0;
+	width: 60px;
+	height: 60px;
+	color: #1D1D1D;
+	border-left: solid 1px #E6E6E6;
+	border-bottom: solid 1px #E6E6E6;
+}
+
+
 #accommodations-modal .modal-dialog .modal-content .modal-header button.close span {
 	font-size: 36px;
 	font-weight: 400;
@@ -514,7 +526,6 @@
 }
 
 // Category Tabs
-
 
 #accommodations-modal .modal-dialog .modal-content .modal-body ul.nav {
 	height: 60px;
@@ -564,4 +575,81 @@
 	padding-top: 18px !important;	
 }
 
+// Accommodations list
+#accommodations-modal .modal-dialog .modal-content #accommodations-list {
+	background-color: #F6F6F6;
+}
 
+// Outer container for each item
+
+#accommodations-modal .modal-dialog .modal-content #accommodations-list .container:first-of-type {
+	margin-top: 30px !important;
+}
+
+#accommodations-modal .modal-dialog .modal-content #accommodations-list .container {
+	width: 680px;
+	margin: 0 !important;
+	padding: 0 !important;
+	margin: 0 auto !important;
+	background-color: #ffffff;
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.14);
+	margin-bottom: 14px !important;
+	padding-left: 32px !important;
+	padding-right: 40px !important;
+	padding-top: 12px !important;
+	padding-bottom: 10px !important;	
+}
+
+#accommodations-modal .modal-dialog .modal-content #accommodations-list h4 {
+	display: inline-block;
+	font-family: Roboto;
+	font-weight: 600;
+	font-size: 18px;
+	color: #000000;
+}
+
+#accommodations-modal .modal-dialog .modal-content #accommodations-list .common-req {
+	display: inline-block;
+	position: relative;
+	top: -2px;
+	padding-top: 4px;
+	padding-bottom: 2px;
+	padding-left: 8px !important;
+	padding-right: 10px !important;	
+	font-family: Roboto-Bold;
+	color: #206D53;
+	background-color: #9CF4DC;
+	font-size: 11px;
+	text-transform: uppercase;
+	border-radius: 50px;
+	margin-left: 12px;
+}
+
+#accommodations-modal .modal-dialog .modal-content #accommodations-list p {
+	font-family: Roboto;
+	font-weight: 400;
+	font-size: 14px;
+	color: #000000;
+}
+
+#accommodations-modal .modal-dialog .modal-content #accommodations-list img.common-req {
+	height: 24px;
+	width: 24px;
+}
+
+#accommodations-modal .modal-dialog .modal-content #accommodations-list button {
+	position: relative;
+	float: right;
+	color: #ffffff;
+	font-size: 16px;
+	border-radius: 0;
+	background-color: #1A1A1A;
+	border: none;
+	text-transform: uppercase;
+	font-weight: 600;
+	padding-left: 32px;
+	padding-right: 32px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	top: 12px;
+}

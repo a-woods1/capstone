@@ -7,6 +7,7 @@ import { Grid, Row, Col, Modal, Button, Tabs, Tab, TabContainer, TabContent, Tab
 import * as actionCreators from '../../actions/auth';
 import accessibility_logo from '../../images/a11y.png';
 import search_icon from '../../images/search.png';
+import common_req from '../../images/common-req.png';
 
 import ItemRequest from './Page2/ItemRequest.js';
 
@@ -139,7 +140,7 @@ renderEntry = () => {
                   <h4>{subvalue.accommodation_name}</h4>
 
                   {Boolean(subvalue.pre_approved)
-                      ? <div id="pre_approved">Common Request</div>
+                      ? <span className="common-req">Common Request</span>
                       : <div></div>
                   }
 
@@ -148,7 +149,7 @@ renderEntry = () => {
               </Col>
               <Col xs={5} md={5}>
 
-                <Button onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Request</Button>
+                <Button onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Select</Button>
               </Col>
             </Row>
             {i < items.length && <hr />}
@@ -221,7 +222,7 @@ clickRequest = (e, i, accommodation_name, accommodation_description) => {
 
         </Modal.Header>
         <Modal.Body>
-        <div>
+        <div id="accommodations-list">
         {isFirstPage
           ?
           <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
