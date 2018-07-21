@@ -5,6 +5,7 @@ import * as actionCreators from '../../actions/auth';
 import ScrollableAnchor from 'react-scrollable-anchor'
 import { Grid, Row, Col, Glyphicon, Modal, ButtonToolbar, Button } from 'react-bootstrap';
 
+import ImmersiveComponent from '../ImmersiveComponent.js';
 import AccommodationModal from '../Modal/AccommodationModal.js';
 import SubStageDetail from '../SubstageDetail.js';
 import ThreeContainer from '../ThreeContainer.js';
@@ -139,6 +140,7 @@ componentDidMount() {
         let lgClose = () => this.setState({ lgShow: false });
         return (
           <div className="col-md-8">
+          <ImmersiveComponent />
           <Row>
               <div>Software Engineer > Onsite Interview</div>
           </Row>

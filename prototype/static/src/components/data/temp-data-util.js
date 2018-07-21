@@ -2,6 +2,7 @@ export var previewScenes = [
 	{
 		id : "g-58th-ext-3",
 		name : "58th Street Entrance",
+		thumbnailID: 0,
 		thumbnailUrl: "./textures/thumbnails/g-58th-ext-3-thumb.jpg",
 		texture : {
 			textureType : "photo",
@@ -31,6 +32,7 @@ export var previewScenes = [
 	{
 		id : "g-58th-ext-4",
 		name : "58th Street Entrance",
+		thumbnailID: 1,
 		thumbnailUrl: "./textures/thumbnails/g-58th-ext-4-thumb.jpg",
 		texture : {
 			textureType : "photo",
@@ -64,6 +66,7 @@ export var previewScenes = [
 	{
 		id : "g-58th-desk-2",
 		name : "Front Desk",
+		thumbnailID: 2,
 		thumbnailUrl: "./textures/thumbnails/g-58th-desk-2-thumb.jpg",
 		texture : {
 			textureType : "photo",
@@ -101,6 +104,7 @@ export var previewScenes = [
 	{
 		id : "g-badge-1",
 		name : "Badge Check-In",
+		thumbnailID: 3,
 		thumbnailUrl: "./textures/thumbnails/g-badge-1-thumb.jpg",
 		texture : {
 			textureType : "photo",
@@ -134,6 +138,7 @@ export var previewScenes = [
 	{
 		id : "g-elevator-1",
 		name : "Elevators",
+		thumbnailID: 4,
 		thumbnailUrl: "./textures/thumbnails/g-elevator-1-thumb.jpg",
 		texture : {
 			textureType : "photo",
@@ -159,6 +164,7 @@ export var previewScenes = [
 	{
 		id : "6-elevator-2",
 		name : "6-elevator-2",
+		thumbnailID: 5,
 		thumbnailUrl: "./textures/thumbnails/6-elevator-2-thumb.jpg",
 		texture : {
 			textureType : "photo",
@@ -177,6 +183,7 @@ export var previewScenes = [
 	{
 		id : "6-link-15",
 		name : "6-link-15",
+		thumbnailID: 6,
 		thumbnailUrl: "./textures/thumbnails/6-link-15-thumb.jpg",
 		texture : {
 			textureType : "photo",
@@ -198,6 +205,7 @@ export var previewScenes = [
 	{
 		id : "6-link-13",
 		name : "6-link-13",
+		thumbnailID: 7,
 		thumbnailUrl: "./textures/thumbnails/6-link-13-thumb.jpg",
 		texture : {
 			textureType : "photo",
@@ -220,6 +228,7 @@ export var previewScenes = [
 	{
 		id : "6-link-couch",
 		name : "6th Fl - Pink Couch",
+		thumbnailID: 8,
 		thumbnailUrl: "./textures/thumbnails/6-link-couch-thumb.jpg",
 		texture : {
 			textureType : "photo",
@@ -245,6 +254,7 @@ export var previewScenes = [
 	{
 		id : "6-hall-2",
 		name : "6-hall-2",
+		thumbnailID: 9,
 		thumbnailUrl: "./textures/thumbnails/6-hall-2-thumb.jpg",
 		texture : {
 			textureType : "photo",
@@ -270,6 +280,7 @@ export var previewScenes = [
 	{
 		id : "6-elevator-4",
 		name : "6-elevator-4",
+		thumbnailID: 10,
 		thumbnailUrl: "./textures/thumbnails/6-elevator-4-thumb.jpg",
 		texture : {
 			textureType : "photo",
@@ -292,6 +303,7 @@ export var previewScenes = [
 	{
 		id : "21wa-ext-1",
 		name : "Interview Room - 21WA",
+		thumbnailID: 11,
 		thumbnailUrl: "./textures/thumbnails/21wa-ext-1-thumb.jpg",
 		texture : {
 			textureType : "photo",
@@ -308,6 +320,7 @@ export var previewScenes = [
 	{
 		id : "21wa-int-1",
 		name : "Interview Room - 21WA",
+		thumbnailID: 12,
 		thumbnailUrl: "./textures/thumbnails/21wa-int-1-thumb.jpg",
 		texture : {
 			textureType : "photo",
@@ -329,6 +342,7 @@ export var previewScenes = [
 	{
 		id : "21wa-int-3",
 		name : "Interview Room - 21WA",
+		thumbnailID: 13,
 		thumbnailUrl: "./textures/thumbnails/21wa-int-3-thumb.jpg",
 		texture : {
 			textureType : "photo",
@@ -349,6 +363,7 @@ export var previewScenes = [
 	{
 		id : "21wa-int-4",
 		name : "Interview Room - 21WA",
+		thumbnailID: 14,
 		thumbnailUrl: "./textures/thumbnails/21wa-int-4-thumb.jpg",
 		texture : {
 			textureType : "photo",
