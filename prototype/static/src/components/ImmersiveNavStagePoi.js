@@ -30,21 +30,21 @@ class ImmersiveNavStagePoi extends Component {
 	render () {
 
 		var thumbnails = [
-				require( "./textures/thumbnails/g-58th-ext-3.jpg"),
-				require("./textures/thumbnails/g-58th-ext-4.jpg"),
-				require("./textures/thumbnails/g-58th-desk-2.jpg"),
-				require("./textures/thumbnails/g-badge-1.jpg"),
-				require("./textures/thumbnails/g-elevator-1.jpg"),
-				require("./textures/thumbnails/6-elevator-2.jpg"),
-				require("./textures/thumbnails/6-link-15.jpg"),
-				require("./textures/thumbnails/6-link-13.jpg"),
-				require("./textures/thumbnails/6-link-couch.jpg"),
-				require("./textures/thumbnails/6-hall-2.jpg"),
-				require("./textures/thumbnails/6-elevator-4.jpg"),
-				require("./textures/thumbnails/21wa-ext-1.jpg"),
-				require("./textures/thumbnails/21wa-int-1.jpg"),
-				require("./textures/thumbnails/21wa-int-3.jpg"),
-				require("./textures/thumbnails/21wa-int-4.jpg"),
+			require( "./textures/g-58th-ext-3.jpg"),
+			require("./textures/g-58th-ext-4.jpg"),
+			require("./textures/g-58th-desk-2.jpg"),
+			require("./textures/g-badge-1.jpg"),
+			require("./textures/g-elevator-1.jpg"),
+			require("./textures/6-elevator-2.jpg"),
+			require("./textures/6-link-15.jpg"),
+			require("./textures/6-link-13.jpg"),
+			require("./textures/6-link-couch.jpg"),
+			require("./textures/6-hall-2.jpg"),
+			require("./textures/6-elevator-4.jpg"),
+			require("./textures/21wa-ext-1.jpg"),
+			require("./textures/21wa-int-1.jpg"),
+			require("./textures/21wa-int-3.jpg"),
+			require("./textures/21wa-int-4.jpg"),
 		];
 
 		var thumbnailStyle;
