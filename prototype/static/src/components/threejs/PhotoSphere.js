@@ -3,7 +3,7 @@ import { Annotation } from './Annotation';
 import { LinkedView } from './LinkedView';
 
 export function PhotoSphere(canvas, cameraManager, dataManager, scene, geometry, mesh) {
-	
+
 	// array to hold annotations
 	var annotations = [];
 	var linkedViews = [];
@@ -66,12 +66,12 @@ export function PhotoSphere(canvas, cameraManager, dataManager, scene, geometry,
 
 		console.log('loadAnnotations called');
 
-		// Draw an annotation 
+		// Draw an annotation
 		for(var i = 0; i < data.annotations.length; i++)
 		{
 			console.log( 'loading annotation from data ' );
 			var a = new Annotation( scene, data.annotations[i].position, data.annotations[i].data );
-			a.setIndex(annotations.length);			
+			a.setIndex(annotations.length);
 			annotations.push(a);
 			console.log(annotations);
 		}
@@ -87,7 +87,7 @@ export function PhotoSphere(canvas, cameraManager, dataManager, scene, geometry,
 			var a = new LinkedView( scene, data.linkedViews[i].position, data.linkedViews[i].id );
 			a.addDomListener(changeView, a.id);
 			linkedViews.push(a);
-		}		
+		}
 
 	}
 
@@ -95,17 +95,37 @@ export function PhotoSphere(canvas, cameraManager, dataManager, scene, geometry,
 	// TODO: move this to DataManager
 	function loadTexture ( data ) {
 
+		var textures = [
+				require( "../textures/g-58th-ext-3.jpg"),
+				require("../textures/g-58th-ext-4.jpg"),
+				require("../textures/g-58th-desk-2.jpg"),
+				require("../textures/g-badge-1.jpg"),
+				require("../textures/g-elevator-1.jpg"),
+				require("../textures/6-elevator-2.jpg"),
+				require("../textures/6-link-15.jpg"),
+				require("../textures/6-link-13.jpg"),
+				require("../textures/6-link-couch.jpg"),
+				require("../textures/6-hall-2.jpg"),
+				require("../textures/6-elevator-4.jpg"),
+				require("../textures/21wa-ext-1.jpg"),
+				require("../textures/21wa-int-1.jpg"),
+				require("../textures/21wa-int-3.jpg"),
+				require("../textures/21wa-int-4.jpg"),
+		];
+
 		console.log('loadTexture called');
 		var t;
 
 		// Load photo texture
+		var textureID = data.thumbnailID;
+
 		if(data.texture.textureType == "photo") {
 
 			console.log("loading photo texture");
 			console.log(data.texture.textureUrl);
 			// TODO: TEMP WORKAROUND FOR LOCAL TESTING
-			var path = './' + data.texture.textureUrl;
-			t = new THREE.TextureLoader().load( path );
+			//var path = './' + data.texture.textureUrl;
+			t = new THREE.TextureLoader().load( textures[textureID] );
 		// Load video texture
 		// TODO: Performance improves if all 'linked' videos
 		// are pre-loaded in the background at this time
@@ -128,12 +148,12 @@ export function PhotoSphere(canvas, cameraManager, dataManager, scene, geometry,
 
 		console.log("loadTexture is ending");
 
-		return t;		
+		return t;
 
 	}
 
 	function update () {
-		
+
 		// Update annotation positions
 		for(var i = 0; i < annotations.length; i++) {
 			annotations[i].updateDomAnnotationPosition(canvas, cameraManager);
@@ -142,7 +162,7 @@ export function PhotoSphere(canvas, cameraManager, dataManager, scene, geometry,
 		// Update link positions
 		for(var i = 0; i < linkedViews.length; i++) {
 			linkedViews[i].updateDomLinkPosition(canvas, cameraManager);
-		}		
+		}
 
 	}
 
