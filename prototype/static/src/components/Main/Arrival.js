@@ -164,7 +164,7 @@ componentDidMount() {
           </Row>
 
           <Row>
-            <h2 className="subsection_title">What You Will Do</h2>
+            <h2 className="subsection_title">What You’ll Do</h2>
           </Row>
 
           <Row className="info_box">
@@ -179,7 +179,7 @@ componentDidMount() {
 
           <Row className="info_box">
             <h3 className="info_box_title">Go to the 6th Floor</h3>
-            <p className="info_box_text">All elevators stop on the 6th floor. However, by default, the elevators do not stop on every floor. Please request Elevator All-Floor Access from the accessibility accommodations below if you prefer to minimize stair climbing. Note that we will never ask you to take more than three flights of stairs.</p>
+            <p className="info_box_text">All elevators stop on the 6th floor. However, by default, the elevators do not stop on every floor. Please request Elevator All-Floor Access from the accessibility accommodations below if you would prefer to avoid stair climbing. Note that we will never ask you to take more than three flights of stairs.</p>
             <span className="accessibility_link"><Glyphicon glyph="time" /> Related Accessibility Accommodations <Glyphicon glyph="chevron-right" /></span>
             <div className="accommodation-item">
             <Grid>
