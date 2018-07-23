@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col, Button, Glyphicon } from 'react-bootstrap';
 
-import request_success from '../../../images/request-success.png';
 
 class RequestSuccess extends Component{
   constructor(props) {
@@ -17,26 +16,18 @@ class RequestSuccess extends Component{
 
     render() {
       return (
-        <Grid className="request-success">
+        <Grid>
           <Row>
             <Col xs={12} md={12}>
-              <div className="text-center"><img src={request_success}/></div>
+              <div className="text-center"><Glyphicon glyph="time" /></div>
             </Col>
           </Row>
           <Row>
             <Col xs={12} md={12}>
-              <h3>Success!</h3>
-              <p className="modal_text">You’ve just submitted a request for {this.state.accommodation_name} successfully. We will ensure that your coordinator has an {this.state.accommodation_name} available during the onsite interview. If you have any questions, please reach out to your recruiter.</p>
+              <p className="modal_text">Thank you! Your request has been successfully submitted.</p>
+              <p className="modal_text">One of our recruiters will contact you via email within the next few days to follow up on your request.</p>
             </Col>
           </Row>
-            <Row>
-              <Col xs={6} md={6}>
-                <button>Back</button>
-              </Col>
-              <Col xs={6} md={6}>
-                <button className="cta">Done</button>
-              </Col>
-            </Row>          
         </Grid>
     );
   }
