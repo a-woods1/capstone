@@ -5,8 +5,8 @@ import * as actionCreators from '../../actions/auth';
 import ScrollableAnchor from 'react-scrollable-anchor'
 import { Grid, Row, Col, Glyphicon, Modal, ButtonToolbar, Button } from 'react-bootstrap';
 
-import ImmersiveNavStagePoiList from '../ImmersiveNavStagePoiList.js';
 import AccommodationModal from '../Modal/AccommodationModal.js';
+import ImmersiveNavStagePoiList from '../ImmersiveNavStagePoiList.js';
 
 import arrival_360 from '../../images/photos/placeholder.png';
 import calendar from '../../images/calendar.png';
@@ -49,8 +49,8 @@ componentDidMount() {
 
     render() {
 
-        console.log('Rendering Arrival.js');
-        console.log(this.state.xxxzzz);        
+        //console.log('Rendering Arrival.js');
+        //console.log(this.state.xxxzzz);
 
         let lgClose = () => this.setState({ lgShow: false });
         return (
@@ -79,7 +79,7 @@ componentDidMount() {
               <p className="info_box_text">We are pleased to welcome you to Bloomberg’s primary NYC office for an interview.</p>
             </Row>
             <Row className="poiSelector">
-              <h2 className="subsection_title">360 Views</h2>   
+              <h2 className="subsection_title">360 Views</h2>
                 <div>
                 <ImmersiveNavStagePoiList
                   kickerLabel=""
@@ -87,7 +87,7 @@ componentDidMount() {
                   changeImmersive={this.props.changeImmersive}
                   pois={this.props.stagePois[0] ? this.props.stagePois[0].pois : []}
                 />
-                </div>              
+                </div>
 
             </Row>
 
@@ -115,7 +115,8 @@ componentDidMount() {
                   <p>This badge allows you to stop the elevator at any floor you need.</p>
                   <button className="short-button" onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Select</button>
                 </div>
-                <span className="accommodation_list_link"><img src={new_window} /> Full Accommodation List</span>
+                <a onClick={() => this.setState({ lgShow: true })} className="accommodation_list_link"><img src={new_window} /> Full Accommodation List</a>
+                <AccommodationModal show={this.state.lgShow} categories={this.props.categories} onHide={lgClose} />
               </div>
             </Row>
 
@@ -157,18 +158,8 @@ componentDidMount() {
               <h3 className="info_box_title">Help Desk</h3>
               <p className="info_box_text">If you need anything, please feel free to approach someone at the help desk on the 6th floor.</p>
             </Row>
-
-
-            <Button
-            bsStyle="primary"
-            onClick={() => this.setState({ lgShow: true })}
-            >
-            Launch large demo modal
-            </Button>
-
-            <AccommodationModal show={this.state.lgShow} categories={this.props.categories} onHide={lgClose} />
             </div>
-        </section>    
+        </section>
         );
     }
 }

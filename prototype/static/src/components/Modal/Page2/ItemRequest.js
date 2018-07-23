@@ -39,7 +39,7 @@ class ItemRequest extends Component{
             <Grid>
               <Row>
                 <Col xs={12} md={12}>
-                        <p>Would you prefer to bring your own {this.state.accommodation_name}? Or do you need us to provide a {this.state.accommodation_name}?</p>
+                        <p>Would you prefer to bring your own {this.state.accommodation_name}? Or do you need us to provide the {this.state.accommodation_name}?</p>
                       </Col>
                     </Row>
                     <Row>

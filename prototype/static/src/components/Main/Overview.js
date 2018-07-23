@@ -5,6 +5,8 @@ import * as actionCreators from '../../actions/auth';
 import ScrollableAnchor from 'react-scrollable-anchor'
 import { Grid, Row, Col, Glyphicon, Modal, ButtonToolbar, Button } from 'react-bootstrap';
 
+import AccommodationModal from '../Modal/AccommodationModal.js';
+
 import SubStageDetail from '../SubstageDetail.js';
 import ThreeContainer from '../ThreeContainer.js';
 import { threeEntryPoint } from '../threejs/threeEntryPoint';
@@ -49,6 +51,8 @@ class Overview extends React.Component { // eslint-disable-line react/prefer-sta
   }
 
     render() {
+
+      let lgClose = () => this.setState({ lgShow: false });
 
 console.log("Local Storage:");
 for (var i = 0; i < localStorage.length; i++)   {
@@ -119,7 +123,11 @@ for (var i = 0; i < sessionStorage.length; i++) {
                   <Row className="info_box">
                     <h3 className="info_box_title">Let Us Know What You Need</h3>
                     <p className="info_box_text">If you require any accommodations to fully participate in the interview, please let us know. We will make every effort to ensure you are provided with appropriate assistance.</p>
-                    <span className="accessibility_link"><img src={a11y_blue} /> Accessibility Accommodations</span>
+                    <a onClick={() => this.setState({ lgShow: true })} className="accessibility_link"><img src={a11y_blue} /> Accessibility Accommodations</a>
+
+
+                    <AccommodationModal show={this.state.lgShow} categories={this.props.categories} onHide={lgClose} />
+
                   </Row>
                   <Row className="info_box">
                     <h3 className="info_box_title">Come as You Are</h3>

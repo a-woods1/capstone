@@ -139,13 +139,10 @@ export class Header extends Component {
           <NavItem href='#section1'>{this.props.steps[0].step_title}
           </NavItem>
           <NavItem href='#section2'>{this.props.steps[1].step_title}
-            <div className="caret-right"></div>
           </NavItem>
           <NavItem href='#section3'>{this.props.steps[2].step_title}
-            <div className="caret-right"></div>
           </NavItem>
           <NavItem href='#section4'>{this.props.steps[3].step_title}
-            <div className="caret-right"></div>
           </NavItem>
         </Nav>
         </Navbar.Collapse>

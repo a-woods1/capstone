@@ -5,6 +5,7 @@ import * as actionCreators from '../../actions/auth';
 import ScrollableAnchor from 'react-scrollable-anchor'
 import { Grid, Row, Col, Glyphicon, Modal, ButtonToolbar, Button } from 'react-bootstrap';
 
+import AccommodationModal from '../Modal/AccommodationModal.js';
 import ImmersiveNavStagePoiList from '../ImmersiveNavStagePoiList.js';
 
 import arrival_360 from '../../images/photos/placeholder.png';
@@ -48,6 +49,7 @@ componentDidMount() {
 }
 
     render() {
+        let lgClose = () => this.setState({ lgShow: false });
         return (
         <section id="section-coding">
           <div>
@@ -67,7 +69,7 @@ componentDidMount() {
               <Row>
                 <span className="location"><img src={pin} /> 731 Lexington Avenue, New York</span>
               </Row>
-            </div>            
+            </div>
 
             <Row className="info_box">
               <h3 className="info_box_title">The Coding Interview</h3>
@@ -82,7 +84,7 @@ componentDidMount() {
                   changeImmersive={this.props.changeImmersive}
                   pois={this.props.stagePois[2] ? this.props.stagePois[2].pois : []}
                 />
-                </div>              
+                </div>
             </Row>
 
             <Row>
@@ -126,11 +128,12 @@ componentDidMount() {
                   <p>This badge allows you to stop the elevator at any floor you need.</p>
                   <button className="short-button" onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Select</button>
                 </div>
-                <span className="accommodation_list_link"><img src={new_window} /> Full Accommodation List</span>
+                <a onClick={() => this.setState({ lgShow: true })} className="accommodation_list_link"><img src={new_window} /> Full Accommodation List</a>
+                <AccommodationModal show={this.state.lgShow} categories={this.props.categories} onHide={lgClose} />
               </div>
             </Row>
           </div>
-        </section>          
+        </section>
         );
     }
 }

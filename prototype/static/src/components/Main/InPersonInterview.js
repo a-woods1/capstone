@@ -5,6 +5,7 @@ import * as actionCreators from '../../actions/auth';
 import ScrollableAnchor from 'react-scrollable-anchor'
 import { Grid, Row, Col, Glyphicon, Modal, ButtonToolbar, Button } from 'react-bootstrap';
 
+import AccommodationModal from '../Modal/AccommodationModal.js';
 import ImmersiveNavStagePoiList from '../ImmersiveNavStagePoiList.js';
 
 import arrival_360 from '../../images/photos/placeholder.png';
@@ -45,10 +46,11 @@ class InPersonInterview extends React.Component { // eslint-disable-line react/p
 
     componentDidMount() {
     }
-    
+
     render() {
+        let lgClose = () => this.setState({ lgShow: false });
         return (
-        <section id="section-interview">  
+        <section id="section-interview">
           <div>
             <Row>
               <div>Software Engineer > Onsite Interview</div>
@@ -146,10 +148,11 @@ class InPersonInterview extends React.Component { // eslint-disable-line react/p
                   <p>This badge allows you to stop the elevator at any floor you need.</p>
                   <button className="short-button" onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Select</button>
                 </div>
-                <span className="accommodation_list_link"><img src={new_window} /> Full Accommodation List</span>
+                <a onClick={() => this.setState({ lgShow: true })} className="accommodation_list_link"><img src={new_window} /> Full Accommodation List</a>
+                <AccommodationModal show={this.state.lgShow} categories={this.props.categories} onHide={lgClose} />
               </div>
             </Row>
-          </div> 
+          </div>
         </section>
         );
     }
