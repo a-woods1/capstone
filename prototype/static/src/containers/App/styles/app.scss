@@ -910,6 +910,7 @@ button.cta:active {
 }
 
 #text-content span.date img,
+#text-content span.time img,
 #text-content span.location img 
 {
 	width: 24px;
@@ -917,6 +918,7 @@ button.cta:active {
 }
 
 #text-content span.date,
+#text-content span.time,
 #text-content span.location {
 	display: block;
 	font-weight: 400;
@@ -957,9 +959,11 @@ button.cta:active {
 }
 
 #text-content .info_box span.info_box_time {
+	display: block;
 	font-weight: 400;
 	font-size: 14px;
 	color: #333333;
+	margin-bottom: 4px;
 }
 
 
@@ -969,17 +973,96 @@ button.cta:active {
 	width: 14px;
 }
 
+#text-content .schedule .info_box h3.info_box_title {
+	margin-bottom: 4px;
+}
+
+// Related Accessibility Accommodations
+
 #text-content .accessibility_link img {
 	width: 16px;
 	margin-right: 8px;
 }
 
+#text-content .accessibility_link img.expand {
+	position: relative;
+	top: -1px;
+	width: 12px;
+	margin-left: 12px;
+}
+
 #text-content .accessibility_link {
+	display: block;
 	font-size: 14;
 	color: #0000FF;
 	font-weight: 600;
 	text-transform: uppercase;
+	margin-top: 18px;
 }
+
+// Inline Accommodation Item
+
+#text-content .accommodation-item {
+	position: relative;
+	background-color: #ffffff;
+	box-shadow: 0 0 8px 0 rgba(0,0,0,0.19);
+	margin-top: 14px;
+}
+
+#text-content .accommodation-item {
+	padding-top: 24px;
+	padding-left: 32px;
+	padding-bottom: 16px;
+	padding-right: 32px;
+}
+
+#text-content .accommodation-item .accommodation-item-details {
+	border-bottom: 1px solid #EFEFEF;
+}
+
+#text-content .accommodation-item h4 {
+	font-weight: 600;
+	font-size: 16px;
+	color: #000000;
+	margin-bottom: 6px;
+	margin-top: 0;
+	max-width: 60%;
+}
+
+#text-content .accommodation-item p {
+	font-weight: 400;
+	font-size: 14px;
+	color: #000000;
+	margin-bottom: 12px;
+	margin-top: 0;
+	max-width: 60%;	
+}
+
+#text-content .accommodation-item button.short-button {
+	position: absolute;
+	top: 32px;
+	right: 32px;
+	width: 100px;
+	height: 36px;
+	padding: 0;
+	text-align: center;
+}
+
+#text-content .accommodation-item .accommodation_list_link img {
+	width: 18px;
+	margin-right: 8px;
+	position: relative;
+	top: -1px;
+}
+
+#text-content .accommodation-item .accommodation_list_link {
+	display: block;
+	color: #0000ff;
+	font-weight: 600;
+	font-size: 16px;
+	margin-top: 10px;
+}
+
 
 #text-content .overview_details,
 #text-content .arrival_details {

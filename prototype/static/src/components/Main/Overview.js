@@ -177,28 +177,32 @@ for (var i = 0; i < sessionStorage.length; i++) {
                     <h2 className="subsection_title">360 Views</h2>
                   </Row>
 
-                  <Row>
-                    <h2 className="subsection_title">Schedule</h2>
-                  </Row>
-                  <Row className="info_box">
-                    <span className="info_box_time"><img src={clock} /> 9:00 a.m.</span>
-                    <h3 className="info_box_title">Arrival</h3>
-                    <p className="info_box_text">We would like you to arrive and make yourself comfortable at the Bloomberg office by 9 a.m. EDT.</p>
-                  </Row>
+                  <div className="schedule">
+                    <Row>
+                      <h2 className="subsection_title">Schedule</h2>
+                    </Row>
+                    <Row className="info_box">
+                      <span className="info_box_time"><img src={clock} /> 9:00 a.m.</span>
+                      <h3 className="info_box_title">Arrival</h3>
+                      <p className="info_box_text">We would like you to arrive and make yourself comfortable at the Bloomberg office by 9 a.m. EDT.</p>
+                    </Row>
 
-                  <Row className="info_box">
-                    <span className="info_box_time"><img src={clock} /> Early Morning</span>
-                    <h3 className="info_box_title">In-Person Interview</h3>
-                    <p className="info_box_text">You will have at least one in-person interview during the day with a recruiter.</p>
-                  </Row>
+                    <Row className="info_box">
+                      <span className="info_box_time"><img src={clock} /> Early Morning</span>
+                      <h3 className="info_box_title">In-Person Interview</h3>
+                      <p className="info_box_text">You will have at least one in-person interview during the day with a recruiter.</p>
+                    </Row>
 
-                  <Row className="info_box">
-                    <span className="info_box_time"><img src={clock} /> Late Morning</span>
-                    <h3 className="info_box_title">Coding Interview</h3>
-                    <p className="info_box_text">You will have at least one coding interview during the day with a software engineer.</p>
-                  </Row>
+                    <Row className="info_box">
+                      <span className="info_box_time"><img src={clock} /> Late Morning</span>
+                      <h3 className="info_box_title">Coding Interview</h3>
+                      <p className="info_box_text">You will have at least one coding interview during the day with a software engineer.</p>
+                    </Row>
+
+                  </div>
+
                   <Row>
-                    <h2 className="subsection_title">Tips</h2>
+                  <h2 className="subsection_title">Tips</h2>
                   </Row>
                   <Row className="info_box">
                     <h3 className="info_box_title">Review Your Interview Details</h3>
@@ -219,7 +223,6 @@ for (var i = 0; i < sessionStorage.length; i++) {
 and our work reaches millions of users on a daily basis. There’s a lot of opportunity to have a huge impact, and we want to hire
 people who are just as excited about it as we are.</p>
                   </Row>
-                  <hr />
             </section>
         );
     }

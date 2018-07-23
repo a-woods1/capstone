@@ -18,6 +18,8 @@ import calendar from '../../images/calendar.png';
 import clock from '../../images/clock.png';
 import pin from '../../images/pin.png';
 import a11y_blue from '../../images/a11y-blue.png';
+import new_window from '../../images/new-window.png';
+import expand_blue from '../../images/expand-blue.png';
 
 function mapStateToProps(state) {
     return {
@@ -154,12 +156,14 @@ componentDidMount() {
               </ScrollableAnchor>
             </Row>
 
-            <Row className="overview_details">
-                <span className="time"><img src={clock} /> 9:00 a.m.</span>
-            </Row>
-            <Row className="overview_details">
-              <span className="location"><img src={pin} /> 731 Lexington Avenue, New York</span>
-            </Row>
+            <div className="overview_details">
+              <Row>
+                  <span className="time"><img src={clock} /> 9:00 a.m.</span>
+              </Row>
+              <Row>
+                <span className="location"><img src={pin} /> 731 Lexington Avenue, New York</span>
+              </Row>
+            </div>
 
             <Row className="info_box">
               <h3 className="info_box_title">Welcome!</h3>
@@ -186,24 +190,14 @@ componentDidMount() {
             <Row className="info_box">
               <h3 className="info_box_title">Go to the 6th Floor</h3>
               <p className="info_box_text">All elevators stop on the 6th floor. However, by default, the elevators do not stop on every floor. Please request Elevator All-Floor Access from the accessibility accommodations below if you would prefer to avoid stair climbing. Note that we will never ask you to take more than three flights of stairs.</p>
-              <span className="accessibility_link"><img src={a11y_blue} /> Related Accessibility Accommodations <Glyphicon glyph="chevron-right" /></span>
+              <span className="accessibility_link"><img src={a11y_blue} /> Related Accessibility Accommodations <img className="expand" src={expand_blue} /></span>
               <div className="accommodation-item">
-              <Grid>
-                <Row>
-                  <Col xs={7} md={7}>
-                    <h4>Elevator All-Floor Access</h4>
-                    <p>This badge allows you to stop the elevator at any floor you need.</p>
-                    </Col>
-                    <Col xs={5} md={5}>
-                      <button className="short-button" onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Select</button>
-                    </Col>
-                  </Row>
-                  <Row>
-                  <Col xs={7} md={7}>
-                    <span className="accommodation_list_link"><img src={a11y_blue} /> Full Accommodation List</span>
-                  </Col>
-                  </Row>
-              </Grid>
+                <div className="accommodation-item-details">
+                  <h4>Elevator All-Floor Access</h4>
+                  <p>This badge allows you to stop the elevator at any floor you need.</p>
+                  <button className="short-button" onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Select</button>
+                </div>
+                <span className="accommodation_list_link"><img src={new_window} /> Full Accommodation List</span>
               </div>
             </Row>
 
@@ -255,8 +249,6 @@ componentDidMount() {
             </Button>
 
             <AccommodationModal show={this.state.lgShow} categories={this.props.categories} onHide={lgClose} />
-
-            <hr />
             </div>
         </section>    
         );
