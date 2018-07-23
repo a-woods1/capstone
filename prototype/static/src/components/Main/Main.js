@@ -143,7 +143,7 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
 
   render() {
     return (
-      <div>
+      <div id="text-content" className="col-xs-8">
         <Grid>
           <Overview />
           <Arrival />
