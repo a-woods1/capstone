@@ -92,26 +92,24 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
     console.log(this.sectionPositions);
     console.log(this.navElements);
 
-    // starting with the last element, 
+    // starting with the last element,
 
-    for(var i = this.sectionPositions.length - 1; i > -1; i--) {
 
-      var foundOnThisLoop = false;
-
-      console.log('looping through sectionpo');
-      console.log(this.previouslyActive);
-
+    // remove the active class from all other elements
+    for(var i = 0; i < this.navElements.length; i++) {
       this.navElements[i].classList.remove("active");
-      console.log('removing class from element ' + i);
+    }
 
-      if(x < this.sectionPositions[i] && !foundOnThisLoop) {
-        console.log('scroll is less than position ' + i);        
-        continue;
+    for(var i = 0; i < this.navElements.length; i++) {
+
+      // is it the last one in the list?
+      if(i != this.navElements.length - 1) {
+        if(x >= this.sectionPositions[i] && x < this.sectionPositions[i+1]) {
+          this.navElements[i].classList.add("active");
+          return;
+        }
       } else {
-        console.log('scroll is greater than position ' + i);        
         this.navElements[i].classList.add("active");
-        break;
-        // this.previouslyActive = i;
       }
 
     }

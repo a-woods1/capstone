@@ -192,6 +192,10 @@
 // SUB NAVIGATION
 // ------
 
+.navbar-inverse .navbar-collapse {
+	padding: 0 !important;
+}
+
 #both-nav #sub-nav {
 	position: relative;
 	background-color: #ffffff;
