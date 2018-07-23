@@ -5,13 +5,8 @@ import * as actionCreators from '../../actions/auth';
 import ScrollableAnchor from 'react-scrollable-anchor'
 import { Grid, Row, Col, Glyphicon, Modal, ButtonToolbar, Button } from 'react-bootstrap';
 
-import ImmersiveComponent from '../ImmersiveComponent.js';
+import ImmersiveNavStagePoiList from '../ImmersiveNavStagePoiList.js';
 import AccommodationModal from '../Modal/AccommodationModal.js';
-import SubStageDetail from '../SubstageDetail.js';
-import ThreeContainer from '../ThreeContainer.js';
-import { threeEntryPoint } from '../threejs/threeEntryPoint';
-import { previewScenes } from '../data/temp-data-util.js';
-import { stages } from '../data/stages.js';
 
 import arrival_360 from '../../images/photos/placeholder.png';
 import calendar from '../../images/calendar.png';
@@ -28,7 +23,7 @@ function mapStateToProps(state) {
       token: state.auth.token,
       userName: state.auth.userName,
       isAuthenticated: state.auth.isAuthenticated,
-      stages: state.auth.stages,
+      // stages: state.auth.stages,
       steps: state.auth.steps,
       categories: state.auth.categories,
       products: state.auth.products,
@@ -53,6 +48,10 @@ componentDidMount() {
 }
 
     render() {
+
+        console.log('Rendering Arrival.js');
+        console.log(this.state.xxxzzz);        
+
         let lgClose = () => this.setState({ lgShow: false });
         return (
           <section id="section-arrival">
@@ -79,8 +78,17 @@ componentDidMount() {
               <h3 className="info_box_title">Welcome!</h3>
               <p className="info_box_text">We are pleased to welcome you to Bloomberg’s primary NYC office for an interview.</p>
             </Row>
-            <Row>
-              <h2 className="subsection_title">360 Views</h2>
+            <Row className="poiSelector">
+              <h2 className="subsection_title">360 Views</h2>   
+                <div>
+                <ImmersiveNavStagePoiList
+                  kickerLabel=""
+                  activeViewData={this.props.activeViewData}
+                  changeImmersive={this.props.changeImmersive}
+                  pois={this.props.stagePois[0] ? this.props.stagePois[0].pois : []}
+                />
+                </div>              
+
             </Row>
 
             <Row>

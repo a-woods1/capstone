@@ -5,11 +5,7 @@ import * as actionCreators from '../../actions/auth';
 import ScrollableAnchor from 'react-scrollable-anchor'
 import { Grid, Row, Col, Glyphicon, Modal, ButtonToolbar, Button } from 'react-bootstrap';
 
-import SubStageDetail from '../SubstageDetail.js';
-import ThreeContainer from '../ThreeContainer.js';
-import { threeEntryPoint } from '../threejs/threeEntryPoint';
-import { previewScenes } from '../data/temp-data-util.js';
-import { stages } from '../data/stages.js';
+import ImmersiveNavStagePoiList from '../ImmersiveNavStagePoiList.js';
 
 import arrival_360 from '../../images/photos/placeholder.png';
 import calendar from '../../images/calendar.png';
@@ -77,8 +73,16 @@ componentDidMount() {
               <h3 className="info_box_title">The Coding Interview</h3>
               <p className="info_box_text">Each coding challenge can last up to 60 minutes.</p>
             </Row>
-            <Row>
+            <Row className="poiSelector">
               <h2 className="subsection_title">360 Views</h2>
+              <div>
+                <ImmersiveNavStagePoiList
+                  kickerLabel=""
+                  activeViewData={this.props.activeViewData}
+                  changeImmersive={this.props.changeImmersive}
+                  pois={this.props.stagePois[2] ? this.props.stagePois[2].pois : []}
+                />
+                </div>              
             </Row>
 
             <Row>

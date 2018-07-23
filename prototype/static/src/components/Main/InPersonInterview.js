@@ -5,11 +5,7 @@ import * as actionCreators from '../../actions/auth';
 import ScrollableAnchor from 'react-scrollable-anchor'
 import { Grid, Row, Col, Glyphicon, Modal, ButtonToolbar, Button } from 'react-bootstrap';
 
-import SubStageDetail from '../SubstageDetail.js';
-import ThreeContainer from '../ThreeContainer.js';
-import { threeEntryPoint } from '../threejs/threeEntryPoint';
-import { previewScenes } from '../data/temp-data-util.js';
-import { stages } from '../data/stages.js';
+import ImmersiveNavStagePoiList from '../ImmersiveNavStagePoiList.js';
 
 import arrival_360 from '../../images/photos/placeholder.png';
 import calendar from '../../images/calendar.png';
@@ -77,8 +73,18 @@ class InPersonInterview extends React.Component { // eslint-disable-line react/p
               <p className="info_box_text">This 30-60 minute interview will consist of a few rounds of technical interviews (most likely) with members of the Engineering team. During the interview we are assessing your thought process
     and problem solving ability as much as anything else, so please talk through your steps as you solve the problem.</p>
             </Row>
-            <Row>
+            <Row className="poiSelector">
               <h2 className="subsection_title">360 Views</h2>
+
+              <div>
+                <ImmersiveNavStagePoiList
+                  kickerLabel=""
+                  activeViewData={this.props.activeViewData}
+                  changeImmersive={this.props.changeImmersive}
+                  pois={this.props.stagePois[1] ? this.props.stagePois[1].pois : []}
+                />
+                </div>
+
             </Row>
 
             <Row>

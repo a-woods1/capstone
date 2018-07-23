@@ -4,6 +4,9 @@ import { connect } from 'react-redux';
 import * as actionCreators from '../../actions/auth';
 import ScrollableAnchor from 'react-scrollable-anchor'
 import { Grid, Row, Col, Glyphicon, Modal, ButtonToolbar, Button } from 'react-bootstrap';
+import { threeEntryPoint } from '../threejs/threeEntryPoint';
+import { previewScenes } from '../data/temp-data-util.js';
+import { stages } from '../data/stages.js';
 
 import Overview from './Overview.js';
 import Arrival from './Arrival';
@@ -11,9 +14,6 @@ import InPersonInterview from './InPersonInterview';
 import CodingInterview from './CodingInterview';
 import SubStageDetail from '../SubstageDetail.js';
 import ThreeContainer from '../ThreeContainer.js';
-import { threeEntryPoint } from '../threejs/threeEntryPoint';
-import { previewScenes } from '../data/temp-data-util.js';
-import { stages } from '../data/stages.js';
 import ImmersiveComponent from '../../components/ImmersiveComponent.js';
 
 import arrival_360 from '../../images/photos/placeholder.png';
@@ -56,11 +56,11 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
     this.changeImmersive = this.changeImmersive.bind(this);
     this.toggleImmersiveNavigator = this.toggleImmersiveNavigator.bind(this);
 
-    this.testFunction = this.testFunction.bind(this);
+    this.testFunction = this.testFunction.bind(this); // TODO: Test function - delete this
 
   }
 
-
+  // TODO: Test function - delete this
   testFunction() {
     alert("TEST");
   }
@@ -76,6 +76,9 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
         previewScenes: previewScenes,
         stages: stages
       });
+
+      console.log('XYZ Component (main) did mount');
+      console.log(this.state.stages);
 
     }
 
@@ -138,26 +141,48 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
       }.bind(this));
     }
 
-    // TODO: Placeholder, To delete after testing
-    ph_topHeader() {
-      return(
-        <div className="ph_topHeader">
-          <span onClick={this.hideImmersive.bind(this)}>B</span>
-        </div>
-      );
-    }
-
-
   render() {
+
+    console.log('Rendering Main.js');
+    console.log(this.state.stages);
+
     return (
       <div>
-      <ImmersiveComponent />
+      <ImmersiveComponent
+            changeImmersive={this.showImmersive.bind(this)}
+            toggleImmersiveNavigator={this.toggleImmersiveNavigator.bind(this)}
+            setThreeEntryPoint={this.setThreeEntryPoint.bind(this)}
+            immersiveOpen={this.state.immersiveOpen}
+            activeViewId={this.state.activeViewId}
+            activeViewData={this.state.activeViewData}
+            immersiveNavigatorExpanded={this.state.immersiveNavigatorExpanded}
+            hideImmersive={this.hideImmersive.bind(this)}
+            stages={this.state.stages}
+            previewScenes={this.state.previewScenes}      
+      />
       <div id="text-content" className="col-xs-8">
         <Grid>
-          <Overview testFunction={this.testFunction.bind(this)}/>
-          <Arrival />
-          <InPersonInterview />
-          <CodingInterview />
+          <Overview
+            testFunction={this.testFunction.bind(this)}
+          />
+          <Arrival
+            changeImmersive={this.showImmersive.bind(this)}
+            activeViewData={this.state.activeViewData}
+            previewScenes={this.state.previewScenes}
+            stagePois={this.state.stages}
+          />
+          <InPersonInterview
+            changeImmersive={this.showImmersive.bind(this)}
+            activeViewData={this.state.activeViewData}
+            previewScenes={this.state.previewScenes}
+            stagePois={this.state.stages}
+          />
+          <CodingInterview
+            changeImmersive={this.showImmersive.bind(this)}
+            activeViewData={this.state.activeViewData}
+            previewScenes={this.state.previewScenes}
+            stagePois={this.state.stages}
+          />
         </Grid>
       </div>
       </div>
