@@ -12,6 +12,8 @@ class App extends React.Component { // eslint-disable-line react/prefer-stateles
         children: React.PropTypes.node,
     };
 
+    
+
     render() {
         return (
             <div id="app_container">

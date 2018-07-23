@@ -14,6 +14,7 @@ import ThreeContainer from '../ThreeContainer.js';
 import { threeEntryPoint } from '../threejs/threeEntryPoint';
 import { previewScenes } from '../data/temp-data-util.js';
 import { stages } from '../data/stages.js';
+import ImmersiveComponent from '../../components/ImmersiveComponent.js';
 
 import arrival_360 from '../../images/photos/placeholder.png';
 
@@ -55,6 +56,13 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
     this.changeImmersive = this.changeImmersive.bind(this);
     this.toggleImmersiveNavigator = this.toggleImmersiveNavigator.bind(this);
 
+    this.testFunction = this.testFunction.bind(this);
+
+  }
+
+
+  testFunction() {
+    alert("TEST");
   }
 
   componentDidMount() {
@@ -70,7 +78,6 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
       });
 
     }
-
 
     getDataById(recordId) {
       var record = previewScenes.find(function(previewScene){
@@ -143,13 +150,16 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
 
   render() {
     return (
+      <div>
+      <ImmersiveComponent />
       <div id="text-content" className="col-xs-8">
         <Grid>
-          <Overview />
+          <Overview testFunction={this.testFunction.bind(this)}/>
           <Arrival />
           <InPersonInterview />
           <CodingInterview />
         </Grid>
+      </div>
       </div>
       );
     }

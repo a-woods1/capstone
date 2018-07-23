@@ -102,31 +102,6 @@ class ImmersiveComponent extends Component {
     }.bind(this));
   }
 
-  // TODO: Placeholder, To delete after testing
-  ph_topHeader() {
-    return(
-      <div>
-        <span onClick={this.hideImmersive.bind(this)}>B</span>
-        <ul>
-          <li>
-            <h4>First Stage</h4>
-            <h3>Phone Interview</h3>
-          </li>
-          <li>
-            <h4>Second Stage</h4>
-            <h3>Coding Challenge</h3>
-          </li>
-          <li className="ph_topHeader_currentStage">
-            <h4>Third Stage</h4>
-            <h3>Onsite Interview</h3>
-          </li>
-        </ul>
-        </div>
-    );
-  }
-
-
-
 
   render() {
 
@@ -135,8 +110,6 @@ class ImmersiveComponent extends Component {
       <div>
 
         <div className="main-content">
-
-          {this.ph_topHeader()}
 
           <SubStageDetail
             changeImmersive={this.showImmersive.bind(this)}
