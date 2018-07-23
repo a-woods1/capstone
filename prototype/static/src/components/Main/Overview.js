@@ -160,12 +160,14 @@ for (var i = 0; i < sessionStorage.length; i++) {
                     </ScrollableAnchor>
                   </Row>
 
-                  <Row className="overview_details">
-                      <span className="date"><img src={calendar} /> August 6, 2018</span>
-                  </Row>
-                  <Row className="overview_details">
-                    <span className="location"><img src={pin} /> 731 Lexington Avenue, New York</span>
-                  </Row>
+                  <div className="overview_details">
+                    <Row>
+                        <span className="date"><img src={calendar} /> August 6, 2018</span>
+                    </Row>
+                    <Row>
+                      <span className="location"><img src={pin} /> 731 Lexington Avenue, New York</span>
+                    </Row>
+                  </div>
 
                   <Row className="info_box">
                     <h3 className="info_box_title">{this.props.userName}:</h3>
@@ -205,7 +207,7 @@ for (var i = 0; i < sessionStorage.length; i++) {
                   <Row className="info_box">
                     <h3 className="info_box_title">Let Us Know What You Need</h3>
                     <p className="info_box_text">If you require any accommodations to fully participate in the interview, please let us know. We will make every effort to ensure you are provided with appropriate assistance.</p>
-                    <span className="accessibility_link"><Glyphicon glyph="time" /> Accessibility Accommodations</span>
+                    <span className="accessibility_link"><img src={a11y_blue} /> Accessibility Accommodations</span>
                   </Row>
                   <Row className="info_box">
                     <h3 className="info_box_title">Come as You Are</h3>

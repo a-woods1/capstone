@@ -969,6 +969,18 @@ button.cta:active {
 	width: 14px;
 }
 
+#text-content .accessibility_link img {
+	width: 16px;
+	margin-right: 8px;
+}
+
+#text-content .accessibility_link {
+	font-size: 14;
+	color: #0000FF;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
 #text-content .overview_details,
 #text-content .arrival_details {
 	margin-bottom: 56px;
