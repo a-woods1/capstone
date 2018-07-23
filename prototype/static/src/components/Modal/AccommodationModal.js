@@ -12,13 +12,6 @@ import plus from '../../images/plus.png';
 
 import ItemRequest from './Page2/ItemRequest.js';
 
-const style = {
-    marginTop: 10,
-    paddingBottom: 10,
-    paddingTop: 10,
-    width: '100%',
-    display: 'inline-block',
-};
 
 let items = {
     "Equipment" : [{
@@ -230,7 +223,8 @@ clickRequest = (e, i, accommodation_name, accommodation_description) => {
             </Tabs>
           </div>
           :
-          <ItemRequest product_id={this.state.product_id} accommodation_name={this.state.accommodation_name} accommodation_description={this.state.accommodation_description}/>
+          <ItemRequest product_id={this.state.product_id} accommodation_name={this.state.accommodation_name}
+          accommodation_description={this.state.accommodation_description}/>
         }
         </div>
         </Modal.Body>
