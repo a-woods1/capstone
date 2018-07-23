@@ -1298,6 +1298,8 @@ canvas {
   width: 12px;
   margin: 0;
   opacity: 0.5;
+  position: relative;
+  top: -4px;
 }
 
 .imm-current-view .imm-current-view-label h2 {
@@ -1464,7 +1466,7 @@ ul.imm-stages li.stage-collapsed .poi-selector {
   width: 8px;
   margin: 0;
   margin-left: 8px;
-  margin-top: 8px;
+  margin-top: -4px;
 }
 
 .poi-selector ul li .poi-label h5 {
