@@ -270,7 +270,9 @@
 	//margin-right: 10% !important;
 	padding-left: 10% !important;
 	padding-right: 10% !important;
-	background-color: #F8F8F9;
+	// TODO: Resolve issue where back backgrounds are
+	// two different colors
+	// background-color: #F8F8F9;
 	height: 100%;
 }
 
@@ -817,6 +819,14 @@ button.cta:active {
 	width: 100%;
 	resize: none;
 	margin-bottom: 36px;
+	padding-left: 19px;
+	padding-right: 19px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .confirm-page-content textarea::placeholder {
+	color: #999999;
 }
 
 #accommodations-modal .modal-dialog .modal-content #modal-body-main .confirm-page-content button {
@@ -824,4 +834,148 @@ button.cta:active {
 	margin-bottom: 42px;
 }
 
+// Success page
 
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .request-success.container {
+	width: 100%;
+
+	background-color: #ffffff;
+	width: 100%;
+	padding-left: 116px;
+	padding-right: 116px;
+	padding-top: 48px;
+
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 24px;
+	color: #000000;	
+
+	padding-bottom: 42px;
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .request-success {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 24px;
+	text-align: center;
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .request-success img {
+	width: 81px;
+	margin-bottom: 24px;
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .request-success h3 {
+	font-weight: 600;
+	font-size: 32px;
+	margin-bottom: 24px;	
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .request-success p {
+	font-size: 18px;	
+	margin-bottom: 56px;
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .request-success button {
+	width: 100%;
+}
+
+
+// ------
+// TEXT CONTENT
+// ------
+
+#text-content {
+	background-color: #ffffff;
+}
+
+
+#text-content .container {
+	padding: 0 !important;
+	margin: 0 !important;
+	margin: 0 !important;
+}
+
+#text-content section {
+	padding-top: 56px;
+}
+
+#text-content h1 {
+	font-family: Roboto;
+	font-weight: 900;
+	font-size: 42px;
+	color: #1A1A1A;
+	letter-spacing: -0.43px;	
+	margin-bottom: 20px;
+}
+
+#text-content span.date img,
+#text-content span.location img 
+{
+	width: 24px;
+	margin-right: 4px;
+}
+
+#text-content span.date,
+#text-content span.location {
+	display: block;
+	font-weight: 400;
+	font-size: 16px;
+	color: #4A4A4A;
+	margin-bottom: 10px;
+}
+
+#text-content .info_box {
+	background-color: #F7F7F7;
+	border-left: solid 8px #333333;
+	margin-top: 12px;
+	margin-bottom: 12px;
+	padding-left: 24px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 24px;
+}
+
+#text-content .info_box h3.info_box_title {
+	font-weight: 600;
+	font-size: 20px;
+	color: #000000;
+	margin-top: 0;
+}
+
+#text-content h2.subsection_title {
+	font-weight: 600;
+	font-size: 24px;
+	color: #1A1A1A;
+}
+
+#text-content .info_box p.info_box_text {
+	font-weight: 400;
+	font-size: 16px;
+	color: #4D4D4D;
+	line-height: 22px;
+}
+
+#text-content .info_box span.info_box_time {
+	font-weight: 400;
+	font-size: 14px;
+	color: #333333;
+}
+
+
+#text-content .info_box span.info_box_time img {
+	position: relative;
+	top: -1px;
+	width: 14px;
+}
+
+#text-content .overview_details,
+#text-content .arrival_details {
+	margin-bottom: 56px;
+}
+
+#text-content .breadcrumbs {
+	font-weight: 400;
+	font-size: 16px;
+	color: #4A4A4A;
+}
