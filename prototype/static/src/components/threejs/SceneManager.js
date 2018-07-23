@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import { CameraManager } from './CameraManager';
 import { PhotoSphere } from './PhotoSphere';
 
-export function SceneManager(dataManager, canvasManager) {
+export function SceneManager(dataManager, canvasManager, renderer) {
 
 	// set up a clock for three.js to use
 	const clock = new THREE.Clock();
@@ -108,7 +108,7 @@ export function SceneManager(dataManager, canvasManager) {
 	// creates a new PhotoSphere
 	function initPhotoSphere() {
 
-		photoSphere = new PhotoSphere(canvasManager.canvas, cameraManager, dataManager, scene, geometry, mesh);
+		photoSphere = new PhotoSphere(canvasManager, cameraManager, dataManager, scene, geometry, mesh);
 		
 		return photoSphere;
 	}

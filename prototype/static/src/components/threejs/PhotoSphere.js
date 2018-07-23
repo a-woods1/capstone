@@ -2,11 +2,12 @@ import * as THREE from 'three';
 import { Annotation } from './Annotation';
 import { LinkedView } from './LinkedView';
 
-export function PhotoSphere(canvas, cameraManager, dataManager, scene, geometry, mesh) {
+export function PhotoSphere(canvasManager, cameraManager, dataManager, scene, geometry, mesh) {
 
 	// array to hold annotations
 	var annotations = [];
 	var linkedViews = [];
+	var texture;
 
 	// change the Photosphere to a new view
 	function changeView ( id ) {
@@ -22,7 +23,13 @@ export function PhotoSphere(canvas, cameraManager, dataManager, scene, geometry,
 
 		// TODO: The scene isn't removing the mesh which
 		// is causing performance issues
+
+		// See here: https://github.com/mrdoob/three.js/issues/12447
+		geometry.dispose();
 		scene.remove( mesh );
+
+		// canvasManager.renderer.deallocateObject( mesh );
+		// canvasManager.renderer.deallocateTexture ( texture );
 
 		loadAnnotations( newData );
 		loadLinks( newData );
@@ -33,7 +40,7 @@ export function PhotoSphere(canvas, cameraManager, dataManager, scene, geometry,
 		cameraManager.setLon(newData.defaultTarget.lon);
 		cameraManager.setLat(newData.defaultTarget.lat);
 
-		var texture = loadTexture ( newData );
+		texture = loadTexture ( newData );
 		var material = new THREE.MeshBasicMaterial( { map : texture } );
 		var newMesh = new THREE.Mesh( geometry, material );
 
@@ -156,12 +163,12 @@ export function PhotoSphere(canvas, cameraManager, dataManager, scene, geometry,
 
 		// Update annotation positions
 		for(var i = 0; i < annotations.length; i++) {
-			annotations[i].updateDomAnnotationPosition(canvas, cameraManager);
+			annotations[i].updateDomAnnotationPosition(canvasManager.canvas, cameraManager);
 		}
 
 		// Update link positions
 		for(var i = 0; i < linkedViews.length; i++) {
-			linkedViews[i].updateDomLinkPosition(canvas, cameraManager);
+			linkedViews[i].updateDomLinkPosition(canvasManager.canvas, cameraManager);
 		}
 
 	}

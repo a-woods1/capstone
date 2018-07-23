@@ -69,7 +69,6 @@ for (var i = 0; i < sessionStorage.length; i++) {
                     <ScrollableAnchor id={'section1'}>
                       <h1
                         className="section_title"
-                        id="test-focus"
                         tabIndex="0"
                         onClick={this.props.testFunction}>
                         Overview

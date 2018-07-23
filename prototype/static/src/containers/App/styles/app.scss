@@ -909,6 +909,15 @@ button.cta:active {
 	background-color: #ffffff;
 }
 
+.hide #text-content {
+	display: none;
+	visibility: hidden;
+}
+
+.show #text-content {
+	display: block;
+	visibility: visible;
+}
 
 #text-content .container {
 	padding: 0 !important;

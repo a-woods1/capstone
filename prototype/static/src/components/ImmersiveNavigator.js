@@ -23,11 +23,21 @@ class ImmersiveNavigator extends Component {
       return (
           <div className={"imm-navigator " + (this.props.immersiveNavigatorExpanded ? 'imm-navigator-expanded' : 'imm-navigator-collapsed')}>
             <div className="imm-current-view">
-              <span className="kicker">Current View</span>
+              <span className="kicker">Current Room</span>
               <div className="imm-current-view-label">
                 <img src={pin_white} role="presentation" />
-                <h2 id="dialog-title" tabIndex="0">{this.props.activeViewData.name ? this.props.activeViewData.name : 'Bloomberg Offices'}</h2>
-                <p className="sr-only">{this.props.activeViewData.srDescription ? this.props.activeViewData.srDescription : 'No description available for this room.'}</p>
+                <h2
+                  id="dialog-title"
+                  tabIndex="0"
+                  aria-label={this.props.activeViewData.name ? this.props.activeViewData.name : 'Bloomberg Offices'}
+                  aria-live="polite">{this.props.activeViewData.name ? this.props.activeViewData.name : 'Bloomberg Offices'}
+                </h2>
+                <p
+                  className="sr-only"
+                  aria-live="polite"
+                >
+                  {this.props.activeViewData.srDescription ? this.props.activeViewData.srDescription : 'No description available for this room.'}
+                </p>
               </div>
             </div>
 

@@ -41,6 +41,7 @@ class ImmersiveControls extends Component {
           role="dialog"
           aria-labelledby="dialog-title"
           tabIndex="0"
+          aria-live="assertive"          
         >
           <div id="imm-shim"></div>        
           <ImmersiveNavigator
@@ -58,7 +59,7 @@ class ImmersiveControls extends Component {
             src={exit}
             onClick={this.props.close}
             aria-label="Close Immersive Explorer"
-            tabIndex="0"            
+            tabIndex="1"            
           />
         </div>
       );
