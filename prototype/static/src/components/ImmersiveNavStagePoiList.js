@@ -22,11 +22,18 @@ class ImmersiveNavStagePoiList extends Component {
 	}
 
 	render () {
+
+        console.log('Rendering ImmersiveNavStagePoiList.js');
+        console.log(this.props.stages);
+        console.log(this.props.pois);
+
 	    return (
+
 	    	<div className="poi-selector">
 		    	<h2 className="kicker">{this.props.kickerLabel}</h2>
 				<ul>
-					{this.props.pois.map((poi)=>
+					{this.props.pois ?
+						this.props.pois.map((poi)=>
 						<ImmersiveNavStagePoi
 				            activeViewData={this.props.activeViewData}										
 			                changeImmersive={this.props.changeImmersive}					
@@ -35,7 +42,9 @@ class ImmersiveNavStagePoiList extends Component {
 							// TODO: This POI data is experimental to reduce the number
 							// of queries at the POI component level
 							thisPoiData={this.getPoiData(poi)}
-						/>)}
+						/>)
+						:
+						''}
 				</ul>
 			</div>
 		)
