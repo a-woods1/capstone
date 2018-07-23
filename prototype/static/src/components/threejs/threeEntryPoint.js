@@ -36,7 +36,7 @@ export function threeEntryPoint(container, viewId) {
 
     function init() {
 
-        console.log('threeEntryPoint init() called');
+        //console.log('threeEntryPoint init() called');
 
         // initialize event listeners
         interactionManager.initEventListeners();
@@ -50,7 +50,7 @@ export function threeEntryPoint(container, viewId) {
 
     // for changing the view based on a React prop
     function changeView( id ) {
-        console.log('threeEntryPoint changeView called');
+        //console.log('threeEntryPoint changeView called');
         sceneManager.changeView(id);
     }
 

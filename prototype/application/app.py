@@ -7,6 +7,7 @@ from .models import Product
 from index import app, db
 from sqlalchemy.exc import IntegrityError
 from .utils.auth import generate_token, requires_auth, verify_token
+import collections
 
 
 @app.route('/', methods=['GET'])
@@ -51,15 +52,26 @@ def get_products(categories):
   #products = []
   #for product in product_list:
   #  products.append({"product_id": product.id, "product_name": product.product_name, "product_description": product.product_description, "category_id": product.category_id, "category_name": product.category_name, "pre_approved": product.pre_approved})
-  products = []
+  items = {}
+  all = []
+  product_list = Product.query.all()
+  for product in product_list:
+      all.append({"accommodation_name": product.product_name, "accommodation_description": product.product_description, "pre_approved": product.pre_approved})
+  category_index = int(product.category_id) - 1
+  items["All"] = all
+
   for i in range(0, len(categories)):
+    products = []
     index = i+1
     product_list = Product.query.filter_by(category_id=index).all()
     temp = []
     for product in product_list:
-      temp.append({"product_id": product.id, "product_name": product.product_name, "product_description": product.product_description, "category_id": product.category_id, "pre_approved": product.pre_approved})
-    products.append(temp)
-  return products
+      temp.append({"accommodation_name": product.product_name, "accommodation_description": product.product_description, "pre_approved": product.pre_approved})
+    category_index = int(product.category_id) - 1
+    category_name = categories[category_index]["category_name"]
+    items[category_name] = temp
+  ordered_items = collections.OrderedDict(sorted(items.items()))
+  return ordered_items
 
 
 @app.route("/api/create_user", methods=["POST"])

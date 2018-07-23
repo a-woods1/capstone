@@ -9,13 +9,13 @@ export function CanvasManager(document, container) {
     // creates a new renderer
     function initRenderer() {
 
-        console.log('initRenderer called')
+        //console.log('initRenderer called')
 
         // initializer WebGL renderer
         var r = new THREE.WebGLRenderer();
         r.setPixelRatio( window.devicePixelRatio );
         r.setSize( container.clientWidth, container.clientHeight );
-    
+
         return r;
 
     }
@@ -23,7 +23,7 @@ export function CanvasManager(document, container) {
     // creates a canvas
 	function initCanvas(document, container, renderer) {
 
-        console.log('initCanvas called');
+        //console.log('initCanvas called');
 
         const c = renderer.domElement;
         container.appendChild(c);
@@ -33,22 +33,22 @@ export function CanvasManager(document, container) {
     function update(renderer, scene, camera) {
 
         renderer.render(scene, camera);
-        
+
     }
 
     // updates renderer
     function updateRenderer() {
 
-        console.log('updateRenderer called');
-        console.log('container is ', container);
-        console.log(container.clientWidth);
-        console.log(container.clientHeight);
+        //console.log('updateRenderer called');
+        //console.log('container is ', container);
+        //console.log(container.clientWidth);
+        //console.log(container.clientHeight);
 
         renderer.setPixelRatio( window.devicePixelRatio );
         renderer.setSize( container.clientWidth, container.clientHeight );
         return renderer;
 
-    }    
+    }
 
     // createCanvas should be public
     return {
@@ -57,7 +57,7 @@ export function CanvasManager(document, container) {
         update,
         initRenderer,
     	initCanvas,
-        updateRenderer        
+        updateRenderer
     }
 
 }

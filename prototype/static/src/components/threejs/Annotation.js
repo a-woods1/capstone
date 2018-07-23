@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import * as info from './glyphs/info.png';
 
 export function Annotation( scene, thisPosition, thisData ) {
-	
+
 	const sceneAnnotation = drawSceneAnnotation(scene, thisPosition);
 	const position = thisPosition;
 	const data = thisData;
@@ -40,9 +40,9 @@ export function Annotation( scene, thisPosition, thisData ) {
 	function onPinMouseLeave( e ) {
 
 		// console.log('mouse left' + domPin);
-		domPin.classList.remove('annotation-pin-active');		
-		domPin.classList.add('annotation-pin-inactive');		
-		
+		domPin.classList.remove('annotation-pin-active');
+		domPin.classList.add('annotation-pin-inactive');
+
 		toggleAnnotation();
 
 	}
@@ -66,7 +66,7 @@ export function Annotation( scene, thisPosition, thisData ) {
 
 			// hide the annotation
 			domData.classList.remove('annotation-data-active');
-			domData.classList.add('annotation-data-inactive');			
+			domData.classList.add('annotation-data-inactive');
 		}
 
 		isVisible = !isVisible;
@@ -75,7 +75,7 @@ export function Annotation( scene, thisPosition, thisData ) {
 
 	// destroys the DOM annotation
 	function destroyDomAnnotation() {
-		domAnnotation.parentElement.removeChild(domAnnotation);		
+		domAnnotation.parentElement.removeChild(domAnnotation);
 	}
 
 	// destroys the Scene annotation
@@ -130,8 +130,8 @@ export function Annotation( scene, thisPosition, thisData ) {
 	// of the annotation
 	function drawSceneAnnotation( scene, position ) {
 
-		console.log('drawSceneAnnotation called');
-		console.log(position);
+		//console.log('drawSceneAnnotation called');
+		//console.log(position);
 
 		// var annotationMesh = new THREE.Mesh(
 		//     new THREE.SphereGeometry(.6),
@@ -188,7 +188,7 @@ export function Annotation( scene, thisPosition, thisData ) {
 	// use this to indicate the index of this annotation
 	function setIndex( i ) {
 
-		console.log('setIndex called: ' + i);
+		//console.log('setIndex called: ' + i);
 		index = i;
 
 		// Set the Id in the DOM
@@ -200,7 +200,7 @@ export function Annotation( scene, thisPosition, thisData ) {
 	return {
 		data,
 		destroyDomAnnotation,
-		destroySceneAnnotation,		
+		destroySceneAnnotation,
 		setIndex,
 		updateDomAnnotationPosition
 	}

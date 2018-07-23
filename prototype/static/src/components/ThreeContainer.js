@@ -9,8 +9,8 @@ class ThreeContainer extends Component {
   }
 
   componentDidMount() {
-  	console.log('state:');
-  	console.log(threeEntryPoint);
+  	//console.log('state:');
+  	//console.log(threeEntryPoint);
     this.threeEntryPoint = threeEntryPoint(this.threeRootElement, this.props.activeViewId);
     this.props.setThreeEntryPoint(this.threeEntryPoint);
 }
@@ -25,11 +25,11 @@ class ThreeContainer extends Component {
       		<ImmersiveControls
             changeImmersive={this.props.changeImmersive}
             activeViewData={this.props.activeViewData}
-            immersiveNavigatorExpanded={this.props.immersiveNavigatorExpanded}          
-            toggleImmersiveNavigator={this.props.toggleImmersiveNavigator.bind(this)}          
+            immersiveNavigatorExpanded={this.props.immersiveNavigatorExpanded}
+            toggleImmersiveNavigator={this.props.toggleImmersiveNavigator.bind(this)}
       			close = {this.props.hideImmersive}
-            stages = {this.props.stages}            
-            previewScenes={this.props.previewScenes}            
+            stages = {this.props.stages}
+            previewScenes={this.props.previewScenes}
             />
 	        <div
 	        	id="ThreeContainer"

@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import * as go from './glyphs/go.png';
 
 export function LinkedView( scene, thisPosition, thisId ) {
-	
+
 	const sceneLink = drawSceneLink(scene, thisPosition);
 	const position = thisPosition;
 	const id = thisId;
@@ -10,7 +10,7 @@ export function LinkedView( scene, thisPosition, thisId ) {
 
 	// destroys the DOM annotation
 	function destroyDomLink() {
-		domLink.parentElement.removeChild(domLink);		
+		domLink.parentElement.removeChild(domLink);
 	}
 
 	// destroys the Scene annotation
@@ -21,12 +21,12 @@ export function LinkedView( scene, thisPosition, thisId ) {
 	// Draw an annotation onto the DOM
 	function drawDomLink() {
 
-		console.log('drawDomLink called');
+		//console.log('drawDomLink called');
 
 		var linkPin = document.createElement("a");
-		linkPin.className = "link";	
+		linkPin.className = "link";
 		var pinImg = document.createElement('IMG');
-		pinImg.src = go;	
+		pinImg.src = go;
 		linkPin.appendChild(pinImg);
 		// TODO: add index to thisId
 		var xId = "link-" + thisId;
@@ -41,8 +41,8 @@ export function LinkedView( scene, thisPosition, thisId ) {
 	// adds a listener to the <a> tag
 	function addDomListener( callback, viewId ) {
 
-		console.log('addDomListener called: ');
-		console.log('id : ' + viewId);
+		//console.log('addDomListener called: ');
+		//console.log('id : ' + viewId);
 
 
 		domLink.addEventListener("click", function(){
@@ -55,8 +55,8 @@ export function LinkedView( scene, thisPosition, thisId ) {
 	// of the annotation
 	function drawSceneLink( scene, position ) {
 
-		console.log('drawSceneAnnotation called');
-		console.log(position);
+		//console.log('drawSceneAnnotation called');
+		//console.log(position);
 
 		// var annotationMesh = new THREE.Mesh(
 		//     new THREE.SphereGeometry(.6),
@@ -110,7 +110,7 @@ export function LinkedView( scene, thisPosition, thisId ) {
 		id,
 		addDomListener,
 		destroyDomLink,
-		destroySceneLink,		
+		destroySceneLink,
 		updateDomLinkPosition
 	}
 

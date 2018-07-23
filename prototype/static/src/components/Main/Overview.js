@@ -126,7 +126,7 @@ for (var i = 0; i < sessionStorage.length; i++) {
                     <a onClick={() => this.setState({ lgShow: true })} className="accessibility_link"><img src={a11y_blue} /> Accessibility Accommodations</a>
 
 
-                    <AccommodationModal show={this.state.lgShow} categories={this.props.categories} onHide={lgClose} />
+                    <AccommodationModal show={this.state.lgShow} categories={this.props.categories} products={this.props.products} onHide={lgClose} />
 
                   </Row>
                   <Row className="info_box">

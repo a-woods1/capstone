@@ -18,8 +18,8 @@ class ImmersiveNavStagesList extends Component {
 
 	render () {
 
-		console.log('ImmersiveNavStagesListProps');
-		console.log(this.props.stages.items);
+		//console.log('ImmersiveNavStagesListProps');
+		//console.log(this.props.stages.items);
 
       return (
 
@@ -28,7 +28,7 @@ class ImmersiveNavStagesList extends Component {
 		{this.props.stages.map((item)=>
 			<ImmersiveNavStage
 				expandStage={this.expandStage.bind(this)}
-				activeViewData={this.props.activeViewData}										
+				activeViewData={this.props.activeViewData}
 	            changeImmersive={this.props.changeImmersive}
 	            expandedStage={this.state.expandedStage}
 				stageOrder={item.stageOrder}

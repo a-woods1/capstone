@@ -12,7 +12,7 @@ export function DataManager(viewId) {
 	// TODO: replace this with a database function
 	function initData() {
 
-		console.log('initData called');
+		//console.log('initData called');
 
 		var data = getDataById(startingRecord);
 		return data;
@@ -24,9 +24,9 @@ export function DataManager(viewId) {
 		var record = previewScenes.find(function(previewScene){
 			return previewScene.id == recordId;
 		});
-		
+
 		return record;
-		
+
 	}
 
 	return {

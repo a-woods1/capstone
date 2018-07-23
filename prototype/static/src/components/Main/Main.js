@@ -71,8 +71,8 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
     window.addEventListener('scroll', this.onScroll.bind(this), { passive: true })
 
     this.navElements = document.getElementById('sub-nav').getElementsByTagName('li');
-    console.log('xxxx');
-    console.log(this.navElements);
+    //console.log('xxxx');
+    //console.log(this.navElements);
 
     this.sectionPositions[0] = document.getElementById('section-overview').offsetTop;
     this.sectionPositions[1] = document.getElementById('section-arrival').offsetTop;
@@ -88,9 +88,9 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
     var x = document.body.scrollTop;
     // console.log(x);
 
-    console.log('yyy');
-    console.log(this.sectionPositions);
-    console.log(this.navElements);
+    //console.log('yyy');
+    //console.log(this.sectionPositions);
+    //console.log(this.navElements);
 
     // starting with the last element,
 
@@ -118,7 +118,7 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
 
   componentWillUnmount() {
 
-    // Add 
+    // Add
     window.removeEventListener('scroll', this.onScroll);
 
   }
@@ -137,8 +137,8 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
         stages: stages
       });
 
-      console.log('XYZ Component (main) did mount');
-      console.log(this.state.stages);
+      //console.log('XYZ Component (main) did mount');
+      //console.log(this.state.stages);
 
     }
 
@@ -177,8 +177,8 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
       this.setState({
         activeViewData: dataRecord
       }, function() {
-        console.log('App.js set state for data record');
-        console.log(dataRecord);
+        //console.log('App.js set state for data record');
+        //console.log(dataRecord);
       });
 
     }
@@ -190,7 +190,7 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
     }
 
     showImmersive ( id ) {
-      console.log('showImmersiveView called');
+      //console.log('showImmersiveView called');
       this.setState({
         immersiveOpen : true,
         activeViewId : id
@@ -203,8 +203,8 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
 
   render() {
 
-    console.log('Rendering Main.js');
-    console.log(this.state.stages);
+    //console.log('Rendering Main.js');
+    //console.log(this.state.stages);
 
     return (
       <div>
@@ -218,7 +218,7 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
             immersiveNavigatorExpanded={this.state.immersiveNavigatorExpanded}
             hideImmersive={this.hideImmersive.bind(this)}
             stages={this.state.stages}
-            previewScenes={this.state.previewScenes}      
+            previewScenes={this.state.previewScenes}
       />
       <div id="text-content" className="col-xs-8">
         <Grid>

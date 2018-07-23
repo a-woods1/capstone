@@ -13,119 +13,28 @@ import plus from '../../images/plus.png';
 import ItemRequest from './Page2/ItemRequest.js';
 
 
-let items = {
-    "Equipment" : [{
-      "accommodation_name": "Ergonomic Keyboard",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": true
-    },
-    {
-      "accommodation_name": "Ergonomic Mouse",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": true
-    },
-    {
-      "accommodation_name": "Large Computer Monitor",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": false
-    },
-    {
-      "accommodation_name": "Screen-Reader Compatible Computer",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": true
-    }
-],
-    "Environment" : [{
-      "accommodation_name": "Elevator All-Floor Access",
-      "accommodation_description": "This badge allows you to stop the elevator at any floor you need.",
-      "pre_approved": false
-    }, {
-      "accommodation_name": "Severe Allergies",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": false
-    },
-{
-      "accommodation_name": "Minimize Walking",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": false
-    },
-{
-      "accommodation_name": "Quiet Space",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": true
-    }, {
-      "accommodation_name": "Height-Adjustable Table/Desk",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": true
-    }],
-    "Communications" : [{
-      "accommodation_name": "Text-to-Speech Software",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": true
-    }, {
-      "accommodation_name": "Sign-Language Interpreter",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": false
-    },
-{
-      "accommodation_name": "Captions",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": true
-    },
-{
-      "accommodation_name": "Braille Copies",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": false
-    }],
-
-
-    "Policy" : [{
-      "accommodation_name": "Use My Own Computer",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": true
-    }, {
-      "accommodation_name": "Extra Time",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": true
-    },
-{
-      "accommodation_name": "Transportation to Interview",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": false
-    },
-{
-      "accommodation_name": "Service Animal",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": false
-    }, {
-      "accommodation_name": "Personal Aide",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": false
-    }]
-
-};
-
 class AccommodationModal extends React.Component {
   constructor(props) {
       super(props);
 
       this.state = {
           categories: this.props.categories,
+          products: this.props.products,
           showPage: 1
       };
   }
-
 
 
 renderEntry = () => {
   let tabs = []
 
   //Create tabs
-  Object.entries(items).forEach(([key, value], i) => {
+  Object.entries(this.state.products).forEach(([key, value], i) => {
     let list_items = []
     //Create list items
+    console.log(key)
     Object.entries(value).forEach(([subkey, subvalue]) => {
-      console.log(subvalue)
+      //console.log(subvalue)
       list_items.push(
         <Grid className="accommodation-item">
             <Row>
@@ -146,7 +55,6 @@ renderEntry = () => {
                 <button className="short-button" onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Select</button>
               </Col>
             </Row>
-            {i < items.length && <hr />}
     </Grid>
       )
     })

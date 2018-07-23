@@ -12,8 +12,8 @@ class ImmersiveNavStagePoi extends Component {
 
   	componentDidMount() {
   		this.data = this.getDataById(this.props.id);
-  		console.log('this record: ');
-  		console.log(this.data);
+  		//console.log('this record: ');
+  		//console.log(this.data);
   		window.setTimeout(function(){
   			this.render();
   		}.bind(this), 1000);

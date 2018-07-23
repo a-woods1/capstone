@@ -42,7 +42,7 @@ export function SceneManager(dataManager, canvasManager) {
 	// creates sphere geometry
 	function initGeometry() {
 
-		console.log('initGeometry called');
+		//console.log('initGeometry called');
 
 		// create the geometry
 		const geometry = new THREE.SphereBufferGeometry( 100, 32, 32 );
@@ -57,7 +57,7 @@ export function SceneManager(dataManager, canvasManager) {
 	// creates a light in the scene
 	function initLights() {
 
-		console.log('initLights called');
+		//console.log('initLights called');
 	    const directionalLight = new THREE.DirectionalLight( 0xffffff, 0.5 );
 	    scene.add( directionalLight );
 
@@ -67,7 +67,7 @@ export function SceneManager(dataManager, canvasManager) {
 
 	function initMesh() {
 
-		console.log('initMesh called');
+		//console.log('initMesh called');
 
 		// load a temporary material
 		var material = new THREE.MeshBasicMaterial( {color: 0x0000ff } );
@@ -97,7 +97,7 @@ export function SceneManager(dataManager, canvasManager) {
 	// creates a new scene
 	function initScene() {
 
-		console.log('buildScene called');
+		//console.log('buildScene called');
 
 		const scene = new THREE.Scene();
 		scene.background = new THREE.Color("#FFF");
@@ -109,7 +109,7 @@ export function SceneManager(dataManager, canvasManager) {
 	function initPhotoSphere() {
 
 		photoSphere = new PhotoSphere(canvasManager.canvas, cameraManager, dataManager, scene, geometry, mesh);
-		
+
 		return photoSphere;
 	}
 
