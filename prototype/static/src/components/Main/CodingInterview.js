@@ -12,7 +12,10 @@ import { previewScenes } from '../data/temp-data-util.js';
 import { stages } from '../data/stages.js';
 
 import arrival_360 from '../../images/photos/placeholder.png';
-
+import calendar from '../../images/calendar.png';
+import clock from '../../images/clock.png';
+import pin from '../../images/pin.png';
+import a11y_blue from '../../images/a11y-blue.png';
 
 function mapStateToProps(state) {
     return {
@@ -136,7 +139,8 @@ componentDidMount() {
 
     render() {
         return (
-          <div className="col-md-8">
+        <section id="section-coding">
+          <div>
             <Row>
               <div>Software Engineer > Onsite Interview</div>
             </Row>
@@ -147,10 +151,10 @@ componentDidMount() {
             </Row>
 
             <Row className="overview_details">
-              <span className="time"><Glyphicon glyph="time" /> Late Morning</span>
+              <span className="time"><img src={clock} />Late Morning</span>
             </Row>
             <Row className="overview_details">
-              <span className="location"><Glyphicon glyph="map-marker" /> 731 Lexington Avenue, New York</span>
+              <span className="location"><img src={pin} /> 731 Lexington Avenue, New York</span>
             </Row>
 
             <Row className="info_box">
@@ -169,7 +173,7 @@ componentDidMount() {
               <h3 className="info_box_title">Write Code</h3>
               <p className="info_box_text">You can expect to write code with a pen and paper, whiteboard, or computer depending on the team.</p>
               <p>If you anticipate that any of these tasks will be problematic for you, please look over our accessibility accommodations, and let us know if you need anything.</p>
-              <span className="accessibility_link"><Glyphicon glyph="time" /> Related Accessibility Accommodations <Glyphicon glyph="chevron-right" /></span>
+              <span className="accessibility_link"><img src={a11y_blue} /> Related Accessibility Accommodations <Glyphicon glyph="chevron-right" /></span>
             </Row>
 
             <Row className="info_box">
@@ -195,7 +199,7 @@ componentDidMount() {
             <Row className="info_box">
               <h3 className="info_box_title">Elevators</h3>
               <p className="info_box_text">Our elevators require authorized access to stop at every floor in the building. Please request Elevator All-Floor Access from the accessibility accommodations below if you would prefer to avoid stair climbing. Note that we will never ask you to take more than three flights of stairs.</p>
-              <span className="accessibility_link"><Glyphicon glyph="time" /> Related Accessibility Accommodations <Glyphicon glyph="chevron-right" /></span>
+              <span className="accessibility_link"><img src={a11y_blue} /> Related Accessibility Accommodations <Glyphicon glyph="chevron-right" /></span>
               <div className="accommodation-item">
               <Grid>
                 <Row>
@@ -209,7 +213,7 @@ componentDidMount() {
                   </Row>
                   <Row>
                   <Col xs={7} md={7}>
-                    <span className="accommodation_list_link"><Glyphicon glyph="time" /> Full Accommodation List</span>
+                    <span className="accommodation_list_link"><img src={a11y_blue} /> Full Accommodation List</span>
                   </Col>
                   </Row>
               </Grid>
@@ -217,6 +221,7 @@ componentDidMount() {
             </Row>
             <hr />
           </div>
+        </section>          
         );
     }
 }

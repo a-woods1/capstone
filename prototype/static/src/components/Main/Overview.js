@@ -12,7 +12,10 @@ import { previewScenes } from '../data/temp-data-util.js';
 import { stages } from '../data/stages.js';
 
 import arrival_360 from '../../images/photos/placeholder.png';
-
+import calendar from '../../images/calendar.png';
+import clock from '../../images/clock.png';
+import pin from '../../images/pin.png';
+import a11y_blue from '../../images/a11y-blue.png';
 
 function mapStateToProps(state) {
     return {
@@ -146,7 +149,7 @@ for (var i = 0; i < sessionStorage.length; i++) {
     console.log(sessionStorage.key(i) + "=[" + sessionStorage.getItem(sessionStorage.key(i)) + "]");
 }
         return (
-            <div className="col-md-8">
+            <section id="section-overview">
                   <Row>
                       <div>Software Engineer > Onsite Interview</div>
                   </Row>
@@ -158,10 +161,10 @@ for (var i = 0; i < sessionStorage.length; i++) {
                   </Row>
 
                   <Row className="overview_details">
-                      <span className="date"><Glyphicon glyph="calendar" /> August 6, 2018</span>
+                      <span className="date"><img src={calendar} /> August 6, 2018</span>
                   </Row>
                   <Row className="overview_details">
-                    <span className="location"><Glyphicon glyph="map-marker" /> 731 Lexington Avenue, New York</span>
+                    <span className="location"><img src={pin} /> 731 Lexington Avenue, New York</span>
                   </Row>
 
                   <Row className="info_box">
@@ -176,19 +179,19 @@ for (var i = 0; i < sessionStorage.length; i++) {
                     <h2 className="subsection_title">Schedule</h2>
                   </Row>
                   <Row className="info_box">
-                    <span className="info_box_time"><Glyphicon glyph="time" /> 9:00 a.m.</span>
+                    <span className="info_box_time"><img src={clock} /> 9:00 a.m.</span>
                     <h3 className="info_box_title">Arrival</h3>
                     <p className="info_box_text">We would like you to arrive and make yourself comfortable at the Bloomberg office by 9 a.m. EDT.</p>
                   </Row>
 
                   <Row className="info_box">
-                    <span className="info_box_time"><Glyphicon glyph="time" /> Early Morning</span>
+                    <span className="info_box_time"><img src={clock} /> Early Morning</span>
                     <h3 className="info_box_title">In-Person Interview</h3>
                     <p className="info_box_text">You will have at least one in-person interview during the day with a recruiter.</p>
                   </Row>
 
                   <Row className="info_box">
-                    <span className="info_box_time"><Glyphicon glyph="time" /> Late Morning</span>
+                    <span className="info_box_time"><img src={clock} /> Late Morning</span>
                     <h3 className="info_box_title">Coding Interview</h3>
                     <p className="info_box_text">You will have at least one coding interview during the day with a software engineer.</p>
                   </Row>
@@ -215,7 +218,7 @@ and our work reaches millions of users on a daily basis. There’s a lot of oppo
 people who are just as excited about it as we are.</p>
                   </Row>
                   <hr />
-            </div>
+            </section>
         );
     }
 }
