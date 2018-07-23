@@ -192,6 +192,10 @@
 // SUB NAVIGATION
 // ------
 
+.navbar-inverse .navbar-collapse {
+	padding: 0 !important;
+}
+
 #both-nav #sub-nav {
 	position: relative;
 	background-color: #ffffff;
@@ -248,12 +252,16 @@
 	margin-left: 10px;
 }
 
-#both-nav #sub-nav ul li:hover a {
+#both-nav #sub-nav ul li:hover a,
+#both-nav #sub-nav ul li:focus a,
+#both-nav #sub-nav ul li.active a {
 	background-color: #0000ff;
 	color: #ffffff;
 }
 
-#both-nav #sub-nav ul li:hover a div.caret-right {
+#both-nav #sub-nav ul li:hover a div.caret-right,
+#both-nav #sub-nav ul li:focus a div.caret-right,
+#both-nav #sub-nav ul li.active a div.caret-right, {
 	background-image: url('../../../images/caret-light-right.png');
 }
 

@@ -53,19 +53,79 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
           immersiveNavigatorExpanded: true,
           stages : stages
     }
+
+    this.navElements = [];
+    this.sectionPositions = [];
+    this.previouslyActive = 0;
+
+
     this.changeImmersive = this.changeImmersive.bind(this);
     this.toggleImmersiveNavigator = this.toggleImmersiveNavigator.bind(this);
-
-    this.testFunction = this.testFunction.bind(this); // TODO: Test function - delete this
+    this.oScroll = this.onScroll.bind(this);
 
   }
 
-  // TODO: Test function - delete this
-  testFunction() {
-    alert("TEST");
+  initScroller() {
+
+    // Initialize
+    window.addEventListener('scroll', this.onScroll.bind(this), { passive: true })
+
+    this.navElements = document.getElementById('sub-nav').getElementsByTagName('li');
+    console.log('xxxx');
+    console.log(this.navElements);
+
+    this.sectionPositions[0] = document.getElementById('section-overview').offsetTop;
+    this.sectionPositions[1] = document.getElementById('section-arrival').offsetTop;
+    this.sectionPositions[2] = document.getElementById('section-interview').offsetTop;
+    this.sectionPositions[3] = document.getElementById('section-coding').offsetTop;
+
+
+  }
+
+  onScroll(e) {
+
+    //console.log(e);
+    var x = document.body.scrollTop;
+    // console.log(x);
+
+    console.log('yyy');
+    console.log(this.sectionPositions);
+    console.log(this.navElements);
+
+    // starting with the last element,
+
+
+    // remove the active class from all other elements
+    for(var i = 0; i < this.navElements.length; i++) {
+      this.navElements[i].classList.remove("active");
+    }
+
+    for(var i = 0; i < this.navElements.length; i++) {
+
+      // is it the last one in the list?
+      if(i != this.navElements.length - 1) {
+        if(x >= this.sectionPositions[i] && x < this.sectionPositions[i+1]) {
+          this.navElements[i].classList.add("active");
+          return;
+        }
+      } else {
+        this.navElements[i].classList.add("active");
+      }
+
+    }
+
+  }
+
+  componentWillUnmount() {
+
+    // Add 
+    window.removeEventListener('scroll', this.onScroll);
+
   }
 
   componentDidMount() {
+
+      this.initScroller();
 
       var s = { stages };
       var p = { previewScenes };
@@ -162,9 +222,7 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
       />
       <div id="text-content" className="col-xs-8">
         <Grid>
-          <Overview
-            testFunction={this.testFunction.bind(this)}
-          />
+          <Overview />
           <Arrival
             changeImmersive={this.showImmersive.bind(this)}
             activeViewData={this.state.activeViewData}
