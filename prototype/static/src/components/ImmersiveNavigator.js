@@ -25,7 +25,9 @@ class ImmersiveNavigator extends Component {
             <div className="imm-current-view">
               <span className="kicker">Current View</span>
               <div className="imm-current-view-label">
-                <img src={pin_white} /><h2>{this.props.activeViewData.name ? this.props.activeViewData.name : 'Stage Name'}</h2>
+                <img src={pin_white} role="presentation" />
+                <h2 id="dialog-title" tabIndex="0">{this.props.activeViewData.name ? this.props.activeViewData.name : 'Bloomberg Offices'}</h2>
+                <p className="sr-only">{this.props.activeViewData.srDescription ? this.props.activeViewData.srDescription : 'No description available for this room.'}</p>
               </div>
             </div>
 
@@ -36,8 +38,8 @@ class ImmersiveNavigator extends Component {
               previewScenes={this.props.previewScenes}              
             />
 
-            <div className="toggle" onClick={()=>this.props.toggleImmersiveNavigator(!this.props.immersiveNavigatorExpanded)}>
-              <img className={(this.props.immersiveNavigatorExpanded ? 'left' : 'right')} src={caret}/>
+            <div className="toggle" aria-label="Toggle Immersive Panel" onClick={()=>this.props.toggleImmersiveNavigator(!this.props.immersiveNavigatorExpanded)}>
+              <img className={(this.props.immersiveNavigatorExpanded ? 'left' : 'right')} src={caret} role="presentation"/>
             </div>  
 
           </div>

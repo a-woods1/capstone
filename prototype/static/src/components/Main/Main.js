@@ -63,6 +63,8 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
     this.toggleImmersiveNavigator = this.toggleImmersiveNavigator.bind(this);
     this.oScroll = this.onScroll.bind(this);
 
+    this.testFunction = this.testFunction.bind(this);
+
   }
 
   initScroller() {
@@ -71,8 +73,8 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
     window.addEventListener('scroll', this.onScroll.bind(this), { passive: true })
 
     this.navElements = document.getElementById('sub-nav').getElementsByTagName('li');
-    console.log('xxxx');
-    console.log(this.navElements);
+    // console.log('xxxx');
+    // console.log(this.navElements);
 
     this.sectionPositions[0] = document.getElementById('section-overview').offsetTop;
     this.sectionPositions[1] = document.getElementById('section-arrival').offsetTop;
@@ -88,9 +90,9 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
     var x = document.body.scrollTop;
     // console.log(x);
 
-    console.log('yyy');
-    console.log(this.sectionPositions);
-    console.log(this.navElements);
+    // console.log('yyy');
+    // console.log(this.sectionPositions);
+    // console.log(this.navElements);
 
     // starting with the last element,
 
@@ -126,6 +128,7 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
   componentDidMount() {
 
       this.initScroller();
+      window.addEventListener('keydown', this.testFunction);
 
       var s = { stages };
       var p = { previewScenes };
@@ -137,8 +140,8 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
         stages: stages
       });
 
-      console.log('XYZ Component (main) did mount');
-      console.log(this.state.stages);
+      // console.log('XYZ Component (main) did mount');
+      // console.log(this.state.stages);
 
     }
 
@@ -177,14 +180,34 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
       this.setState({
         activeViewData: dataRecord
       }, function() {
-        console.log('App.js set state for data record');
-        console.log(dataRecord);
+        // console.log('App.js set state for data record');
+        // console.log(dataRecord);
+
+        // Set ARIA focus
+        document.getElementById("ImmersiveControls").focus();
+
       });
+
+    }
+
+    testFunction(e) {
+
+      // use 'K' to test focus functions
+      if(e.keyCode == 75) { 
+
+        var q = document.getElementById("test-focus");
+        console.log('trying to focus on ');
+        console.log(q);
+
+        setTimeout(function() { q.focus({preventScroll:false}) }, 1);   
+
+      }   
 
     }
 
     hideImmersive () {
       // this.threeEntryPoint.updateRenderer();
+      console.log('hideImmersive called');
       this.setState({immersiveOpen : false });
       this.threeEntryPoint.pauseRender();
     }

@@ -6,15 +6,42 @@ class ImmersiveControls extends Component {
 
   constructor(props) {
     super(props);
+
+    this.closeOnEsc = this.closeOnEsc.bind(this);
+
   }
 
   componentDidMount() {
 
+    window.addEventListener('keydown', this.closeOnEsc);
+
   }
+
+  componentWillUnmount() {
+
+    window.removeEventListener('scroll', this.closeOnEsc);
+
+  }
+
+
+  closeOnEsc(e) {
+
+    // esc key
+    if(e.keyCode == 27) {
+      this.props.close();
+    }
+
+  }
+
 
   render () {
       return (
-      	<div id="ImmersiveControls">
+      	<div
+          id="ImmersiveControls"
+          role="dialog"
+          aria-labelledby="dialog-title"
+          tabIndex="0"
+        >
           <div id="imm-shim"></div>        
           <ImmersiveNavigator
             changeImmersive={this.props.changeImmersive}
@@ -25,7 +52,14 @@ class ImmersiveControls extends Component {
             stages = {this.props.stages}
             previewScenes={this.props.previewScenes}            
           />
-      		<img id="imm-exit" src={exit} onClick={this.props.close} />
+      		<img
+            id="imm-exit"
+            alt="Close Immersive Explorer"
+            src={exit}
+            onClick={this.props.close}
+            aria-label="Close Immersive Explorer"
+            tabIndex="0"            
+          />
         </div>
       );
   }

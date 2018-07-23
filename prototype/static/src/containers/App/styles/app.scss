@@ -1688,6 +1688,24 @@ ul.imm-stages li.stage-collapsed .poi-selector {
     z-index: -1;
 }
 
+// Screen Reader
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
 
+// Test style for a11y testing
+#test-focus {
+	border: 1px solid yellow;
+}
 
+#test-focus:focus {
+	border: 10px solid red;
+}
 

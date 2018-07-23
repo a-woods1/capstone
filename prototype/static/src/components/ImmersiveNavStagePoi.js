@@ -78,7 +78,7 @@ class ImmersiveNavStagePoi extends Component {
 					style={thumbnailStyle}>
 				</div>
 				<div className="poi-label">
-					<img src={this.props.activeViewData.id ? (this.props.activeViewData.id == this.props.id ? pin_white : pin_blue) : pin_blue} />
+					<img role="presentation" src={this.props.activeViewData.id ? (this.props.activeViewData.id == this.props.id ? pin_white : pin_blue) : pin_blue} />
 					<h5>{poiName}</h5>
 				</div>
 			</li>

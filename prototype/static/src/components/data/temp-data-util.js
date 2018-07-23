@@ -2,6 +2,7 @@ export var previewScenes = [
 	{
 		id : "g-58th-ext-3",
 		name : "58th Street Entrance",
+		srDescription: "The 58th Street Entrance to Bloomberg's 731 Lexington Ave office is a unique space.",		
 		thumbnailID: 0,
 		thumbnailUrl: "./textures/thumbnails/g-58th-ext-3-thumb.jpg",
 		texture : {
@@ -32,6 +33,7 @@ export var previewScenes = [
 	{
 		id : "g-58th-ext-4",
 		name : "58th Street Entrance",
+		srDescription: "This is a test description of the 58th Street Entrance",		
 		thumbnailID: 1,
 		thumbnailUrl: "./textures/thumbnails/g-58th-ext-4-thumb.jpg",
 		texture : {
@@ -66,6 +68,7 @@ export var previewScenes = [
 	{
 		id : "g-58th-desk-2",
 		name : "Front Desk",
+		srDescription: "This is a test description of the Front Desk check in",		
 		thumbnailID: 2,
 		thumbnailUrl: "./textures/thumbnails/g-58th-desk-2-thumb.jpg",
 		texture : {

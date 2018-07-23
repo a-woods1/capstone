@@ -6,6 +6,9 @@ import { InteractionManager } from './InteractionManager';
 
 export function threeEntryPoint(container, viewId) {
 
+    // frameRate in Hz to improve performance
+    const frameRate = 20;
+
     // Use this to start / stop rendering
     var shouldRender = true;
 
@@ -80,7 +83,14 @@ export function threeEntryPoint(container, viewId) {
 
             // console.log('is rendering');
             // this starts the animation loop
-            window.requestAnimationFrame(render);
+            // window.requestAnimationFrame(render);
+
+            setTimeout( function() {
+
+                window.requestAnimationFrame( render );
+
+            }, 1000 / frameRate );
+
             sceneManager.update();
             canvasManager.update(canvasManager.renderer, sceneManager.scene, sceneManager.cameraManager.camera);
 
