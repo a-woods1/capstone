@@ -237,8 +237,6 @@ componentDidMount() {
             </Row>
             <hr />
           </div>
-
-
         );
     }
 }
