@@ -44,7 +44,7 @@ let items = {
 ],
     "Environment" : [{
       "accommodation_name": "Elevator All-Floor Access",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
+      "accommodation_description": "This badge allows you to stop the elevator at any floor you need.",
       "pre_approved": false
     }, {
       "accommodation_name": "Severe Allergies",
@@ -207,13 +207,13 @@ clickRequest = (e, i, accommodation_name, accommodation_description) => {
          <Grid>
            <Row>
              <Col xs={5} md={5}>
-               <img id="a11y_icon" alt="Accessibility icon" src={accessibility_logo} />             
+               <img id="a11y_icon" alt="Accessibility icon" src={accessibility_logo} />
                <h4 id = "modal_screen_title">Accessibility Accommodations</h4>
              </Col>
              <Col xs={6} md={6}>
              <div id="search">
                <input id="search_field" type="text" placeholder="Search accommodations" />
-               <img class="search_icon" alt="Search icon" src={search_icon}/>             
+               <img class="search_icon" alt="Search icon" src={search_icon}/>
              </div>
              </Col>
            </Row>

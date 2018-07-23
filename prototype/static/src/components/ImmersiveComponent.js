@@ -105,7 +105,7 @@ class ImmersiveComponent extends Component {
   // TODO: Placeholder, To delete after testing
   ph_topHeader() {
     return(
-      <header className="ph_topHeader">
+      <div>
         <span onClick={this.hideImmersive.bind(this)}>B</span>
         <ul>
           <li>
@@ -121,7 +121,7 @@ class ImmersiveComponent extends Component {
             <h3>Onsite Interview</h3>
           </li>
         </ul>
-      </header>
+        </div>
     );
   }
 

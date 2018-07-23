@@ -2,10 +2,11 @@ export var previewScenes = [
 	{
 		id : "g-58th-ext-3",
 		name : "58th Street Entrance",
+		thumbnailID: 0,
 		thumbnailUrl: "./textures/thumbnails/g-58th-ext-3-thumb.jpg",
 		texture : {
 			textureType : "photo",
-			textureUrl : "./textures/g-58th-ext-3.jpg"
+			textureUrl : "textures/g-58th-ext-3.jpg"
 		},
 		defaultTarget : {
 			lon: 130,
@@ -31,10 +32,11 @@ export var previewScenes = [
 	{
 		id : "g-58th-ext-4",
 		name : "58th Street Entrance",
+		thumbnailID: 1,
 		thumbnailUrl: "./textures/thumbnails/g-58th-ext-4-thumb.jpg",
 		texture : {
 			textureType : "photo",
-			textureUrl : "./textures/g-58th-ext-4.jpg"
+			textureUrl : "textures/g-58th-ext-4.jpg"
 		},
 		defaultTarget : {
 			lon: 140,
@@ -64,10 +66,11 @@ export var previewScenes = [
 	{
 		id : "g-58th-desk-2",
 		name : "Front Desk",
+		thumbnailID: 2,
 		thumbnailUrl: "./textures/thumbnails/g-58th-desk-2-thumb.jpg",
 		texture : {
 			textureType : "photo",
-			textureUrl : "./textures/g-58th-desk-2.jpg"
+			textureUrl : "textures/g-58th-desk-2.jpg"
 		},
 		defaultTarget : {
 			lon: 234,
@@ -101,10 +104,11 @@ export var previewScenes = [
 	{
 		id : "g-badge-1",
 		name : "Badge Check-In",
+		thumbnailID: 3,
 		thumbnailUrl: "./textures/thumbnails/g-badge-1-thumb.jpg",
 		texture : {
 			textureType : "photo",
-			textureUrl : "./textures/g-badge-1.jpg"
+			textureUrl : "textures/g-badge-1.jpg"
 		},
 		defaultTarget : {
 			lon: 150,
@@ -134,10 +138,11 @@ export var previewScenes = [
 	{
 		id : "g-elevator-1",
 		name : "Elevators",
+		thumbnailID: 4,
 		thumbnailUrl: "./textures/thumbnails/g-elevator-1-thumb.jpg",
 		texture : {
 			textureType : "photo",
-			textureUrl : "./textures/g-elevator-1.jpg"
+			textureUrl : "textures/g-elevator-1.jpg"
 		},
 		defaultTarget : {
 			lon: -173,
@@ -159,10 +164,11 @@ export var previewScenes = [
 	{
 		id : "6-elevator-2",
 		name : "6-elevator-2",
+		thumbnailID: 5,
 		thumbnailUrl: "./textures/thumbnails/6-elevator-2-thumb.jpg",
 		texture : {
 			textureType : "photo",
-			textureUrl : "./textures/6-elevator-2.jpg"
+			textureUrl : "textures/6-elevator-2.jpg"
 		},
 		defaultTarget : { lon: 182.7, lat: 3.9000000000000004 },
 		annotations : [
@@ -177,10 +183,11 @@ export var previewScenes = [
 	{
 		id : "6-link-15",
 		name : "6-link-15",
+		thumbnailID: 6,
 		thumbnailUrl: "./textures/thumbnails/6-link-15-thumb.jpg",
 		texture : {
 			textureType : "photo",
-			textureUrl : "./textures/6-link-15.jpg"
+			textureUrl : "textures/6-link-15.jpg"
 		},
 		defaultTarget : { lon: 223.87119700017954, lat: 9.6 },		annotations : [
 		],
@@ -198,10 +205,11 @@ export var previewScenes = [
 	{
 		id : "6-link-13",
 		name : "6-link-13",
+		thumbnailID: 7,
 		thumbnailUrl: "./textures/thumbnails/6-link-13-thumb.jpg",
 		texture : {
 			textureType : "photo",
-			textureUrl : "./textures/6-link-13.jpg"
+			textureUrl : "textures/6-link-13.jpg"
 		},
 		defaultTarget : { lon: 316.7985173992517, lat: 13.493561093732627 },
 		annotations : [
@@ -220,10 +228,11 @@ export var previewScenes = [
 	{
 		id : "6-link-couch",
 		name : "6th Fl - Pink Couch",
+		thumbnailID: 8,
 		thumbnailUrl: "./textures/thumbnails/6-link-couch-thumb.jpg",
 		texture : {
 			textureType : "photo",
-			textureUrl : "./textures/6-link-couch.jpg"
+			textureUrl : "textures/6-link-couch.jpg"
 		},
 		defaultTarget : {
 			lon: 0,
@@ -245,10 +254,11 @@ export var previewScenes = [
 	{
 		id : "6-hall-2",
 		name : "6-hall-2",
+		thumbnailID: 9,
 		thumbnailUrl: "./textures/thumbnails/6-hall-2-thumb.jpg",
 		texture : {
 			textureType : "photo",
-			textureUrl : "./textures/6-hall-2.jpg"
+			textureUrl : "textures/6-hall-2.jpg"
 		},
 		defaultTarget : {
 			lon: -140,
@@ -270,10 +280,11 @@ export var previewScenes = [
 	{
 		id : "6-elevator-4",
 		name : "6-elevator-4",
+		thumbnailID: 10,
 		thumbnailUrl: "./textures/thumbnails/6-elevator-4-thumb.jpg",
 		texture : {
 			textureType : "photo",
-			textureUrl : "./textures/6-elevator-4.jpg"
+			textureUrl : "textures/6-elevator-4.jpg"
 		},
 		defaultTarget : { lon: -174, lat: 8.3 },
 		annotations : [
@@ -292,10 +303,11 @@ export var previewScenes = [
 	{
 		id : "21wa-ext-1",
 		name : "Interview Room - 21WA",
+		thumbnailID: 11,
 		thumbnailUrl: "./textures/thumbnails/21wa-ext-1-thumb.jpg",
 		texture : {
 			textureType : "photo",
-			textureUrl : "./textures/21wa-ext-1.jpg"
+			textureUrl : "textures/21wa-ext-1.jpg"
 		},
 		defaultTarget : { lon: 4.999999999999995, lat: 17.5 },		annotations : [
 		],
@@ -308,10 +320,11 @@ export var previewScenes = [
 	{
 		id : "21wa-int-1",
 		name : "Interview Room - 21WA",
+		thumbnailID: 12,
 		thumbnailUrl: "./textures/thumbnails/21wa-int-1-thumb.jpg",
 		texture : {
 			textureType : "photo",
-			textureUrl : "./textures/21wa-int-1.jpg"
+			textureUrl : "textures/21wa-int-1.jpg"
 		},
 		defaultTarget : { lon: 35.47119700017952, lat: 24.3 },
 		annotations : [],
@@ -329,10 +342,11 @@ export var previewScenes = [
 	{
 		id : "21wa-int-3",
 		name : "Interview Room - 21WA",
+		thumbnailID: 13,
 		thumbnailUrl: "./textures/thumbnails/21wa-int-3-thumb.jpg",
 		texture : {
 			textureType : "photo",
-			textureUrl : "./textures/21wa-int-3.jpg"
+			textureUrl : "textures/21wa-int-3.jpg"
 		},
 		defaultTarget : { lon: 386.1985173992517, lat: 25.493561093732623 },
 		annotations : [
@@ -349,10 +363,11 @@ export var previewScenes = [
 	{
 		id : "21wa-int-4",
 		name : "Interview Room - 21WA",
+		thumbnailID: 14,
 		thumbnailUrl: "./textures/thumbnails/21wa-int-4-thumb.jpg",
 		texture : {
 			textureType : "photo",
-			textureUrl : "./textures/21wa-int-4.jpg"
+			textureUrl : "textures/21wa-int-4.jpg"
 		},
 		defaultTarget : { lon: 386.1985173992517, lat: 25.493561093732623 },
 		annotations : [
