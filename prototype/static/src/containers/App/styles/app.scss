@@ -1092,6 +1092,24 @@ button.cta:active {
 	color: #4A4A4A;
 }
 
+#text-content .poi-selector {
+}
+
+#text-content .poi-selector,
+#text-content .poi-selector,
+#text-content .poi-selector ul {
+	padding-left: 0 !important;
+	margin-left: 0 !important;
+}
+
+#text-content .poi-selector ul li:first-of-type {
+	margin-left: 0px;
+}
+
+#text-content .poi-selector {
+	margin-bottom: 48px;
+}
+
 // ------
 // PLACEHOLDER - TO DELETE
 // ------
@@ -1658,86 +1676,6 @@ ul.imm-stages li.stage-collapsed .poi-selector {
 #number {
     position: absolute;
     z-index: -1;
-}
-
-
-/* MISC STYLES THAT CAN BE DELETED */
-
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-/**/
-nav.stage {
-  display: block;
-  width: 100%;
-  background-color: #f1f1f1;
-}
-
-nav.stage ul {
-  width: 60%;
-}
-
-nav.stage li {
-  display: inline-block;
-  list-style-type: none;
-  margin: 32px;
-}
-
-/**/
-div.itinerary,
-div.substage-detail {
-    width: 100%;
-}
-
-.substage-detail li {
-  display: block;
-  font-size: 32px;
-  border: 1px solid grey;
-  padding: 16px;
-  margin: 16px;
-  width: 500px;
-}
-
-.substage-detail li:hover {
-  cursor: pointer;
-  background-color: #eaeaea;
-}
-
-.main-content {
-  display: block;
-  position: relative;
-  width: 100%;
-}
-
-a {
-  color: #0000ff;
 }
 
 
