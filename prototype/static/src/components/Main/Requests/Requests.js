@@ -28,6 +28,7 @@ class Requests extends React.Component {
     const hasRequests = requests != null
     console.log(hasRequests)
     return (
+    <div>
      <div id="requests">
       <Grid>
         <Row>
@@ -70,6 +71,8 @@ class Requests extends React.Component {
         </Row>    
     </Grid>
     </div>
+    <div className="requests background-fill"></div>         
+    </div>    
     );
   }
 }
