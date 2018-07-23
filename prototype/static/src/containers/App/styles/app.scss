@@ -352,8 +352,17 @@ button.cta:active {
 // REQUESTS PAGE
 // ------
 
+.page-view .requests.background-fill {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #F6F6F6;
+	z-index: -10;
+}
+
 .page-view #requests {
-	background-color: #F8F8F9;
 }
 
 .page-view #requests h1 {
