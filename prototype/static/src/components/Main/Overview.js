@@ -84,9 +84,6 @@ for (var i = 0; i < sessionStorage.length; i++) {
                     <h3 className="info_box_title">{this.props.userName}:</h3>
                     <p className="info_box_text">Great news! The team enjoyed speaking with you, and would like to invite you to the NYC office for an onsite, in-person interview.</p>
                   </Row>
-                  <Row>
-                    <h2 className="subsection_title">360 Views</h2>
-                  </Row>
 
                   <div className="schedule">
                     <Row>

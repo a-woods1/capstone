@@ -28,7 +28,7 @@
 	margin-top: 0;
 	padding-top: 0;
 	height: 120px;
-	z-index: 100;
+	z-index: 100;	
 }
 
 // ------
@@ -36,6 +36,7 @@
 // ------
 
 #both-nav #top-nav {
+	position: relative;
 	background-color: #1d1d1d;
 	border-radius: 0px; 
 	margin-bottom: 0px;
@@ -192,6 +193,7 @@
 // ------
 
 #both-nav #sub-nav {
+	position: relative;
 	background-color: #ffffff;
 	padding: 0;
 	margin: 0;
@@ -895,6 +897,7 @@ button.cta:active {
 // ------
 
 #text-content {
+	position: relative;
 	background-color: #ffffff;
 }
 
@@ -906,7 +909,8 @@ button.cta:active {
 }
 
 #text-content section {
-	padding-top: 56px;
+	position: relative;	
+	padding-top: 56px;	
 }
 
 #text-content h1 {
@@ -1110,7 +1114,7 @@ button.cta:active {
   left: 0;
   width: 100vw;
   height: calc(100vh - 60px);
-  z-index: 30;
+  z-index: 100;
 }
 
 .hide #ThreeContainer {
@@ -1137,7 +1141,7 @@ canvas {
   height: 0px;
   top: 60px;
   left: 0;
-  z-index: 100;
+  z-index: 110;
   color: #ffffff;
 }
 
