@@ -28,6 +28,7 @@ class ImmersiveNavigator extends Component {
                 <img src={pin_white} role="presentation" />
                 <h2
                   id="dialog-title"
+                  role="heading"
                   tabIndex="0"
                   aria-label={this.props.activeViewData.name ? this.props.activeViewData.name : 'Bloomberg Offices'}
                   aria-live="polite">{this.props.activeViewData.name ? this.props.activeViewData.name : 'Bloomberg Offices'}

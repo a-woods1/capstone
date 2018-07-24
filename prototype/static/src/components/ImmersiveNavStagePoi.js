@@ -70,7 +70,8 @@ class ImmersiveNavStagePoi extends Component {
 				className={this.props.activeViewData.id ? (this.props.activeViewData.id == this.props.id ? 'active-poi' : '') : ''}
 				onClick={()=>this.props.changeImmersive(this.props.id)}
 				tabIndex="0"
-				role="link"
+				role="listitem"
+				aria-level="2"				
 				aria-label={"Select to open immersive view for" + this.data.name}
 				>
 
