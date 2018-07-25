@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import * as actionCreators from '../../../actions/auth';
 import { Grid, Row, Col, Glyphicon,ButtonToolbar, Button } from 'react-bootstrap';
 
+import Contact from '../../Modal/Contact.js';
 import RequestList from './RequestList/RequestList.js';
 import contact from '../../../images/contact.png';
 
@@ -20,13 +21,20 @@ function mapDispatchToProps(dispatch) {
 
 @connect(mapStateToProps, mapDispatchToProps)
 class Requests extends React.Component {
-
+  constructor(props, context) {
+      super(props, context);
+      this.state = {
+        lgShow: false,
+  }
+}
 
 
   render() {
     var requests = JSON.parse(localStorage.getItem("accommodation_requests"));
     const hasRequests = requests != null
     console.log(hasRequests)
+
+    let lgClose = () => this.setState({ lgShow: false });
     return (
     <div>
      <div id="requests">
@@ -65,14 +73,15 @@ class Requests extends React.Component {
         <Row>
           <Col xs={12} md={12}>
             <div className="contact-recruiter">
-              <a href="#"><img src={contact} />Contact Recruiter</a>
+              <a onClick={() => this.setState({ lgShow: true })} className="accommodation_list_link"><img src={contact} /> Contact Recruiter</a>
+              <Contact show={this.state.lgShow} onHide={lgClose} />
             </div>
-          </Col>    
-        </Row>    
+          </Col>
+        </Row>
     </Grid>
     </div>
-    <div className="requests background-fill"></div>         
-    </div>    
+    <div className="requests background-fill"></div>
+    </div>
     );
   }
 }

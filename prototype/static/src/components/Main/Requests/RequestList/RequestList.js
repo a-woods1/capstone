@@ -40,22 +40,22 @@ class RequestList extends Component{
                 <Grid>
                 <Row>
                   <Col xs={1} md={1}>
-                    <img className="expand" src={expand} />
+                    <img className="expand" height="25px" src={expand} />
                   </Col>
                   <Col xs={3} md={3}>
                     <div className="accommodation_name">{value.accommodation_name}</div>
                   </Col>
                   <Col xs={2} md={2}>
-                    <span><img className="calendar" src={calendar} />August 6, 2018</span>
+                    <span><img className="calendar" height="25px" src={calendar} />August 6, 2018</span>
                   </Col>
                   <Col xs={2} md={2}>
                     <div>Onsite Interview</div>
                   </Col>
                   <Col xs={2} md={2}>
-                    <span><img className="pin" src={pin} />731 Lexington Ave</span>
+                    <span><img className="pin" height="25px" src={pin} />731 Lexington Ave</span>
                   </Col>
                   <Col xs={2} md={2}>
-                    <div className="status_tag"><img src={status_submitted} /></div>
+                    <div className="status_tag"><img src={status_submitted} height="25px" /></div>
                   </Col>
                 </Row>
               </Grid>
