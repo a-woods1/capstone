@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from '../../actions/auth';
 import ScrollableAnchor from 'react-scrollable-anchor'
-import { Grid, Row, Col, Glyphicon, Modal, ButtonToolbar, Button } from 'react-bootstrap';
+import { Grid, Row, Col, Glyphicon, Modal, ButtonToolbar, Button, PanelGroup, Panel } from 'react-bootstrap';
 
 import AccommodationModal from '../Modal/AccommodationModal.js';
 import ImmersiveNavStagePoiList from '../ImmersiveNavStagePoiList.js';
@@ -41,8 +41,14 @@ class InPersonInterview extends React.Component { // eslint-disable-line react/p
 
         this.state = {
           lgShow: false,
-      }
     }
+    this.handleSelect = this.handleSelect.bind(this);
+  }
+
+
+  handleSelect(activeKey) {
+    this.setState({ activeKey });
+  }
 
     componentDidMount() {
     }
@@ -141,16 +147,33 @@ class InPersonInterview extends React.Component { // eslint-disable-line react/p
             <Row className="info_box">
               <h3 className="info_box_title">Elevators</h3>
               <p className="info_box_text">Our elevators require authorized access to stop at every floor in the building. Please request Elevator All-Floor Access from the accessibility accommodations below if you would prefer to avoid stair climbing. Note that we will never ask you to take more than three flights of stairs.</p>
-              <span className="accessibility_link"><img src={a11y_blue} />Related Accessibility Accommodations <img className="expand" src={expand_blue} /></span>
-              <div className="accommodation-item">
-                <div className="accommodation-item-details">
-                  <h4>Elevator All-Floor Access</h4>
-                  <p>This badge allows you to stop the elevator at any floor you need.</p>
-                  <button className="short-button" onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Select</button>
-                </div>
-                <a onClick={() => this.setState({ lgShow: true })} className="accommodation_list_link"><img src={new_window} /> Full Accommodation List</a>
-                <AccommodationModal show={this.state.lgShow} categories={this.props.categories} products={this.props.products} onHide={lgClose} />
-              </div>
+              <PanelGroup
+                accordion
+                id="accordion-controlled-example"
+                onSelect={this.handleSelect}
+              >
+                <Panel eventKey={1}>
+                  <Panel.Heading>
+                    <Panel.Title toggle>
+                      <span className="accessibility_link"><img src={a11y_blue} /> Related Accessibility Accommodations <img className="expand" src={expand_blue} /></span>
+
+                    </Panel.Title>
+                  </Panel.Heading>
+                  <Panel.Body collapsible>
+                  <div className="accommodation-item">
+                    <div className="accommodation-item-details">
+                      <h4>Elevator All-Floor Access</h4>
+                      <p>This badge allows you to stop the elevator at any floor you need.</p>
+                      <button className="short-button" onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Select</button>
+                    </div>
+                    <a onClick={() => this.setState({ lgShow: true })} className="accommodation_list_link"><img src={new_window} /> Full Accommodation List</a>
+                    <AccommodationModal show={this.state.lgShow} categories={this.props.categories} products={this.props.products} onHide={lgClose} />
+                  </div>
+
+                  </Panel.Body>
+                </Panel>
+              </PanelGroup>
+
             </Row>
           </div>
         </section>
