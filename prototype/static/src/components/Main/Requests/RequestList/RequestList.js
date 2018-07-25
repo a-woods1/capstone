@@ -1,29 +1,43 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col, Button, Glyphicon } from 'react-bootstrap';
+import { Grid, Row, Col, Button, Glyphicon, PanelGroup, Panel } from 'react-bootstrap';
 
 import expand from '../../../../images/expand.png';
 import calendar from '../../../../images/calendar.png';
 import pin from '../../../../images/pin.png';
 import status_ready from '../../../../images/status-ready.png';
 import status_submitted from '../../../../images/status-submitted.png';
+import expand_blue from '../../../../images/expand-blue.png';
 
 class RequestList extends Component{
+  constructor(props, context) {
+    super(props, context);
 
+    this.handleSelect = this.handleSelect.bind(this);
+  }
 
+  handleSelect(activeKey) {
+    this.setState({ activeKey });
+  }
 
-    renderEntry(){
-        var requests = JSON.parse(localStorage.getItem("accommodation_requests"));
-        //console.log(requests)
-        //console.log(requests.length)
-        if (requests != null){
-        return Object.entries(requests).map(([key, value], i) => {
-          //console.log("i " + i)
-          //console.log("key " + key)
-          console.log("value " + value.accommodation_name)
-
-          return (
-            <div className="request_list_item">
-              <Grid>
+  renderEntry() {
+    var requests = JSON.parse(localStorage.getItem("accommodation_requests"));
+    //console.log(requests)
+    //console.log(requests.length)
+    if (requests != null){
+      return Object.entries(requests).map(([key, value], i) => {
+        //console.log("i " + i)
+        //console.log("key " + key)
+        console.log("value " + value.accommodation_name)
+        return (
+          <PanelGroup
+            accordion
+            id="accordion-controlled-example"
+            onSelect={this.handleSelect}
+          >
+            <Panel eventKey={i}>
+              <Panel.Heading>
+                <Panel.Title toggle>
+                <Grid>
                 <Row>
                   <Col xs={1} md={1}>
                     <img className="expand" src={expand} />
@@ -45,12 +59,45 @@ class RequestList extends Component{
                   </Col>
                 </Row>
               </Grid>
+
+                </Panel.Title>
+              </Panel.Heading>
+              <Panel.Body collapsible>
+              <Grid>
+              <Row>
+                <Col xs={12} md={12}>
+                  <span><strong>Bring my own?</strong> No.</span>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={12} md={12}>
+                  <span><strong>Detailed Information:</strong> Please have this item available in the interview room.</span>
+                </Col>
+              </Row>
+            </Grid>
+
+              </Panel.Body>
+            </Panel>
+          </PanelGroup>
+        );
+      });
+    }
+  }
+
+/*
+    renderEntry(){
+
+
+          return (
+            <div className="request_list_item">
+              <Grid>
+
             </div>
         )
      })
    }
 }
-
+*/
     render() {
       return (
         <div>
@@ -62,3 +109,7 @@ class RequestList extends Component{
 
 
 export default RequestList;
+
+
+
+//render(<RequestList />);
