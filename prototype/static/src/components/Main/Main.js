@@ -207,7 +207,7 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
     //console.log(this.state.stages);
 
     return (
-      <div>
+      <div className="container page-view page-main">
       <ImmersiveComponent
             changeImmersive={this.showImmersive.bind(this)}
             toggleImmersiveNavigator={this.toggleImmersiveNavigator.bind(this)}
