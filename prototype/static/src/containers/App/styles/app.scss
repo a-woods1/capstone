@@ -279,15 +279,19 @@ $break-small: 768px;
 	margin:0 !important;
 	padding:0 !important;
 	width: 100%;
-	//margin-left: 10% !important;
-	//margin-right: 10% !important;
-	padding-left: 20% !important;
-	padding-right: 10% !important;
-	// TODO: Resolve issue where back backgrounds are
-	// two different colors
-	// background-color: #F8F8F9;
 	height: 100%;
 }
+
+.page-view.container.page-main {
+	padding-left: 20% !important;
+	padding-right: 10% !important;
+}
+
+.page-view.container.page-requests {
+	padding-left: 10% !important;
+	padding-right: 10% !important;
+}
+
 
 .page-view .container {
 	margin:0 !important;
