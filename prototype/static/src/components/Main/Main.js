@@ -220,7 +220,7 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
             stages={this.state.stages}
             previewScenes={this.state.previewScenes}
       />
-      <div id="text-content" className="col-xs-8">
+      <div id="text-content" className="col-xs-9">
         <Grid>
           <Overview />
           <Arrival

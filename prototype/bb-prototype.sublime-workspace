@@ -479,15 +479,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "static/src/containers/App/styles/app.scss",
-			"settings":
-			{
-				"buffer_size": 33685,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -616,32 +607,41 @@
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components",
-		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/containers",
-		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/containers/App",
-		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/containers/App/styles",
-		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/containers/HomeContainer"
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/data"
 	],
 	"file_history":
 	[
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/ImmersiveNavStagePoi.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/ImmersiveControls.js",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/Main/Main.js",
-		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/ImmersiveComponent.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/ImmersiveNavigator.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/ImmersiveNavStage.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/ImmersiveNavStagesList.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/ImmersiveNavStagePoiList.js",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/Main/Overview.js",
-		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/css/App.scss",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/containers/App/styles/app.scss",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/data/temp-data-util.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/threejs/threeEntryPoint.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/threejs/SceneManager.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/threejs/PhotoSphere.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/ImmersiveComponent.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/threejs/CameraManager.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/node_modules/bootstrap/js/modal.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/Header/index.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/Modal/AccommodationModal.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/node_modules/bootstrap/dist/js/bootstrap.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/threejs/LinkedView.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/css/App.scss",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/css/Placeholder.scss",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/Main/Arrival.js",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/Main/InPersonInterview.js",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/Main/CodingInterview.js",
-		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/ImmersiveNavStagePoiList.js",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/data/stages.js",
-		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/ImmersiveNavStagesList.js",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/containers/App/index.js",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/Main/Requests/Requests.js",
 		"/Users/afaucher/Documents/Coding/AppleScript/Wisdom/todos.json",
-		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/Header/index.js",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/Modal/Page3/Confirmation.js",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/Modal/Page4/RequestSuccess.js",
-		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/Modal/AccommodationModal.js",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/Modal/Page2/ItemRequest.js",
 		"/Users/afaucher/Documents/Career/Jobs 2018/Samsung/2018-07-20 Call with Andrew McHugh",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/node_modules/fsevents/node_modules/tar/lib/header.js",
@@ -738,23 +738,11 @@
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Misc/When you come back to prototyping:",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/Meeting Notes/06 04 Notes on User Test",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Misc/Assumption",
-		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Misc/06-01-2018 Agenda for Talk with Lee",
-		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Misc/I'm feeling like I have 'noise' about the prototyp",
-		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/Team Health/Quick reflections from Week 2:",
-		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Misc/Prototyping Approach",
-		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/Team Health/Hey Lee,",
-		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/Team Health/Additional 'tools:'",
-		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Misc/Immediate To-Dos:",
-		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Misc/What are the key hooks for me in the design proces",
-		"/Users/afaucher/Desktop/Reflections from Wednesday:Thursday Ideation",
-		"/Users/afaucher/Desktop/Aaron - keep this on Desktop",
-		"/Users/afaucher/Documents/Unity/design-systems/Assets/Atlassian/Materials/color-0052CC.mat",
-		"/Users/afaucher/Documents/Unity/design-systems/Assets/Atlassian/Materials/color-FF5630.mat",
-		"/Users/afaucher/Library/Preferences/Unity/Editor-5.x/Presets/Atlassian.colors"
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Misc/06-01-2018 Agenda for Talk with Lee"
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 26.0
 	},
 	"find_in_files":
 	{
@@ -769,6 +757,37 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			".hide",
+			"text",
+			"hide",
+			"hidden",
+			"dialog",
+			"current view",
+			"showimmersive",
+			"changeimm",
+			"aria",
+			"main",
+			"name",
+			"canvas",
+			"renderer",
+			"test-",
+			"testfunc",
+			"testfund",
+			"setlon",
+			"shouldrender",
+			"index",
+			"console.log",
+			"profile_img",
+			"focus",
+			"modal",
+			"focus",
+			"aria",
+			"testfunct",
+			"overlay",
+			"pin",
+			"active",
+			"tex",
+			"go.",
 			"z-index",
 			"#tex",
 			"z-index",
@@ -861,44 +880,6 @@
 	"groups":
 	[
 		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 0,
-					"file": "static/src/containers/App/styles/app.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 33685,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3539,
-								3539
-							]
-						],
-						"settings":
-						{
-							"SL.94.region_keys":
-							[
-							],
-							"syntax": "Packages/Sass/Syntaxes/SCSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 3345.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
-			]
-		},
-		{
 			"sheets":
 			[
 			]
@@ -921,18 +902,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.751507282713,
 			1.0
 		],
 		"rows":
@@ -966,7 +940,7 @@
 	"project": "bb-prototype.sublime-project",
 	"replace":
 	{
-		"height": 70.0
+		"height": 48.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1004,7 +978,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 302.0,
+	"side_bar_width": 329.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
