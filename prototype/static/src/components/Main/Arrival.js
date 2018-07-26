@@ -77,9 +77,8 @@ componentDidMount() {
               </Row>
             </div>
 
-            <Row className="info_box">
-              <h3 className="info_box_title">Welcome!</h3>
-              <p className="info_box_text">We are pleased to welcome you to Bloomberg’s primary NYC office for an interview.</p>
+            <Row className="info_box welcome_message">
+              <p className="info_box_text">Welcome!<br/>Bloomberg is an exciting place to be. Here are some things to know for when you arrive at our office:</p>
             </Row>
             <Row className="poiSelector">
               <h2 className="subsection_title">360 Views</h2>

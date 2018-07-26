@@ -925,7 +925,7 @@ button.cta:active {
 #text-content section {
 	position: relative;	
 	// padding-top: 56px;
-	margin-bottom: 220px;	
+	margin-bottom: 120px;	
 }
 
 #text-content h1 {
@@ -1047,8 +1047,9 @@ button.cta:active {
 	font-weight: 300;
 	font-size: 28px;
 	color: #000000;
-	margin-top: 40px;	
 	margin-bottom: 30px;
+	border-top: solid 1px #E6E6E6;
+	padding-top: 30px;	
 }
 
 #text-content .info_box p.info_box_text {
@@ -1081,10 +1082,13 @@ button.cta:active {
 // Schedule
 #text-content #section-overview .info_box.welcome_message {
 	border-top: solid 1px #E6E6E6;
-	border-bottom: solid 1px #E6E6E6;
+	padding-top: 20px;
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
 
 #text-content .schedule {
+	margin-bottom: 32px;
 }
 
 #text-content .schedule .info_box {
@@ -1115,7 +1119,7 @@ button.cta:active {
 
 // Tips
 #text-content .tips {
-	border-top: solid 1px #E6E6E6;
+	// border-top: solid 1px #E6E6E6;
 }
 
 
@@ -1124,8 +1128,27 @@ button.cta:active {
 }
 
 
+// Arrival
+#text-content #section-arrival .info_box.welcome_message {
+	border-top: solid 1px #E6E6E6;
+	padding-top: 20px;
+}
+
+#text-content #section-arrival .info_box.welcome_message .info_box_text {
+	font-weight: 600;
+}
+
 
 // Related Accessibility Accommodations
+
+#text-content #accordion-controlled-example .panel,
+#text-content #accordion-controlled-example .panel-heading, {
+	background-color: #FFFFFF;
+	border-radius: 0;
+	box-shadow: none;
+	border: none;
+	padding-top: 0;
+}
 
 #text-content .accessibility_link img {
 	width: 16px;
