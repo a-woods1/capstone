@@ -31,7 +31,7 @@ class ImmersiveNavStagePoiList extends Component {
 
 	    	<div className="poi-selector">
 		    	<h2 className="kicker">{this.props.kickerLabel}</h2>
-				<ul role="list">
+				<ul>
 					{this.props.pois ?
 						this.props.pois.map((poi)=>
 						<ImmersiveNavStagePoi

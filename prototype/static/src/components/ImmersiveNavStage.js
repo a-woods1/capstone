@@ -13,10 +13,8 @@ class ImmersiveNavStage extends Component {
 			<li
 				className={this.props.stageOrder == this.props.expandedStage ? "stage-expanded" : "stage-collapsed"}
 				onClick={()=>this.props.expandStage(this.props.stageOrder)}
-				role="listitem"
-				aria-level="1"
 			>
-				<img role="presentation" src={clock} className="clock" />
+				<img src={clock} className="clock" />
 				<span className="time">{this.props.stageTime}</span>
 				<h3>{this.props.stageName}</h3>
 				<ImmersiveNavStagePoiList
