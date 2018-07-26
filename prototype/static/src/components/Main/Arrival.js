@@ -11,7 +11,7 @@ import ImmersiveNavStagePoiList from '../ImmersiveNavStagePoiList.js';
 import arrival_360 from '../../images/photos/placeholder.png';
 import calendar from '../../images/calendar.png';
 import clock from '../../images/clock.png';
-import pin from '../../images/pin.png';
+import pin_blue from '../../images/pin-blue.png';
 import a11y_blue from '../../images/a11y-blue.png';
 import new_window from '../../images/new-window.png';
 import expand_blue from '../../images/expand-blue.png';
@@ -63,7 +63,7 @@ componentDidMount() {
           <section id="section-arrival">
             <div>
             <Row>
-                <div>Software Engineer > Onsite Interview</div>
+                <span className="time">9:00<span className="am-pm">am</span></span>
             </Row>
             <Row className="arrival_section">
               <ScrollableAnchor id={'section2'}>
@@ -73,10 +73,7 @@ componentDidMount() {
 
             <div className="overview_details">
               <Row>
-                  <span className="time"><img src={clock} /> 9:00 a.m.</span>
-              </Row>
-              <Row>
-                <span className="location"><img src={pin} /> 731 Lexington Avenue, New York</span>
+                <span className="location"><img src={pin_blue} /> 731 Lexington Avenue, New York</span>
               </Row>
             </div>
 
