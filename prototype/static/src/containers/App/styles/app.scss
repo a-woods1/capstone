@@ -423,13 +423,83 @@ button.cta:active {
 	padding: 0 !important;
 }
 
-.page-view #requests .request-table .request_list_item {
-	font-size: 14px;	
-	background-color: #ffffff;
-	padding-top: 24px;
-	padding-bottom: 24px;
+// .page-view #requests .request-table .request_list_item .panel,
+// .page-view #requests .request-table .request_list_item.panel-group,
+// .page-view #requests .request-table .request_list_item .panel-default,
+// .page-view #requests .request-table .request_list_item .panel-heading,
+// .page-view #requests .request-table .request_list_item .panel-title {
+// 	font-size: 12px;	
+// 	background-color: #ffffff;
+// 	padding-left: 0 !important;
+// 	padding-right: 0 !important;
+// 	border-radius: 0;
+// 	border: none;
+// 	border-bottom: 1px solid #D8D8D8;
+// }
+
+// Accordion overrides
+.page-view #requests .request-table .request_list_item .panel {
+	font-size: 12px;	
+	background-color: yellow;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	border-radius: 0;
+	border: none;
 	border-bottom: 1px solid #D8D8D8;
 }
+
+.page-view #requests .request-table .request_list_item.panel-group {
+	font-size: 12px;	
+	background-color: red;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	border-radius: 0;
+	border: none;
+	border-bottom: 1px solid #D8D8D8;
+	margin-bottom: 0px;
+	height: 100px;
+}
+
+.page-view #requests .request-table .request_list_item .panel-default {
+	font-size: 12px;	
+	background-color: blue;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	border-radius: 0;
+	border: none;
+	height: 100%;
+	border-bottom: 1px solid #D8D8D8;
+}
+
+.page-view #requests .request-table .request_list_item .panel-heading {
+	font-size: 12px;	
+	background-color: green;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	padding-top: 0 !important;	
+	border-radius: 0;
+	border: none;
+	height: 100%;
+	border-bottom: 1px solid #D8D8D8;
+}
+
+.page-view #requests .request-table .request_list_item .panel-title {
+	font-size: 12px;	
+	background-color: purple;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	border-radius: 0;
+	border: none;
+	height: 100%;
+	border-bottom: 1px solid #D8D8D8;	
+}
+
+.page-view #requests .request-table .request_list_item .panel-title a {
+	display: block;
+	background-color: orange;
+	height: 100%;
+}
+
 
 .page-view #requests .request-table .request_list_item img.expand {
 	position: relative;
@@ -441,6 +511,7 @@ button.cta:active {
 	position: relative;
 	top: -1px;
 	width: 16px;
+	height: auto;
 	margin-right: 4px;
 }
 
@@ -448,6 +519,7 @@ button.cta:active {
 	position: relative;
 	top: -1px;	
 	width: 16px;
+	height: auto;
 	margin-right: 4px;
 }
 

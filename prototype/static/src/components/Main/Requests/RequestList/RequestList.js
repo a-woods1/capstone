@@ -33,6 +33,7 @@ class RequestList extends Component{
             accordion
             id="accordion-controlled-example"
             onSelect={this.handleSelect}
+            className="request_list_item"            
           >
             <Panel eventKey={i}>
               <Panel.Heading>
