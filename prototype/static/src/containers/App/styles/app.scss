@@ -16,6 +16,9 @@
 
 }
 
+// Variables
+$break-small: 768px;
+
 
 // ------
 // NAVIGATION CONTAINER
@@ -211,7 +214,7 @@
 	padding: 0 !important;
 	margin: 0 !important;
 	// TODO: Figure out what's the right container size 
-	margin-left: 10% !important;
+	margin-left: 20% !important;
 	margin-right: 10% !important;
 }
 
@@ -228,7 +231,7 @@
 	font-weight: 900;
 	text-transform: uppercase;
 	color: #1a1a1a;
-	letter-spacing: -0.1px;
+	letter-spacing: -0.14px;
 	padding-left: 32px;
 	padding-right: 32px;
 	padding-top: 20px;
@@ -255,8 +258,8 @@
 #both-nav #sub-nav ul li:hover a,
 #both-nav #sub-nav ul li:focus a,
 #both-nav #sub-nav ul li.active a {
-	background-color: #0000ff;
-	color: #ffffff;
+	border-bottom: 5px solid #0000FF;
+	color: #0000ff;
 }
 
 #both-nav #sub-nav ul li:hover a div.caret-right,
@@ -276,15 +279,19 @@
 	margin:0 !important;
 	padding:0 !important;
 	width: 100%;
-	//margin-left: 10% !important;
-	//margin-right: 10% !important;
-	padding-left: 10% !important;
-	padding-right: 10% !important;
-	// TODO: Resolve issue where back backgrounds are
-	// two different colors
-	// background-color: #F8F8F9;
 	height: 100%;
 }
+
+.page-view.container.page-main {
+	padding-left: 20% !important;
+	padding-right: 10% !important;
+}
+
+.page-view.container.page-requests {
+	padding-left: 10% !important;
+	padding-right: 10% !important;
+}
+
 
 .page-view .container {
 	margin:0 !important;
@@ -416,13 +423,94 @@ button.cta:active {
 	padding: 0 !important;
 }
 
-.page-view #requests .request-table .request_list_item {
-	font-size: 14px;	
-	background-color: #ffffff;
-	padding-top: 24px;
-	padding-bottom: 24px;
-	border-bottom: 1px solid #D8D8D8;
+// .page-view #requests .request-table .request_list_item .panel,
+// .page-view #requests .request-table .request_list_item.panel-group,
+// .page-view #requests .request-table .request_list_item .panel-default,
+// .page-view #requests .request-table .request_list_item .panel-heading,
+// .page-view #requests .request-table .request_list_item .panel-title {
+// 	font-size: 12px;	
+// 	background-color: #ffffff;
+// 	padding-left: 0 !important;
+// 	padding-right: 0 !important;
+// 	border-radius: 0;
+// 	border: none;
+// 	border-bottom: 1px solid #D8D8D8;
+// }
+
+// Accordion overrides
+.page-view #requests .request-table .request_list_item .panel {
+	font-size: 12px;	
+	background-color: #FFFFFF;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	border-radius: 0;
+	border: none;
+	// border-bottom: 1px solid #D8D8D8;
 }
+
+.page-view #requests .request-table .request_list_item.panel-group {
+	font-size: 12px;	
+	background-color: #FFFFFF;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	border-radius: 0;
+	border: none;
+	// border-bottom: 1px solid #D8D8D8;
+	margin-bottom: 0px;
+}
+
+.page-view #requests .request-table .request_list_item .panel-default {
+	font-size: 12px;	
+	background-color: #FFFFFF;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	border-radius: 0;
+	border: none;
+	// border-bottom: 1px solid #D8D8D8;
+}
+
+.page-view #requests .request-table .request_list_item .panel-heading {
+	font-size: 12px;	
+	background-color: #FFFFFF;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	border-radius: 0;
+	border: none;
+	// border-bottom: 1px solid #D8D8D8;
+	height: 100px;
+}
+
+.page-view #requests .request-table .request_list_item .panel-title {
+	font-size: 12px;	
+	background-color: #FFFFFF;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	border-radius: 0;
+	border: none;
+	border-top: 1px solid #D8D8D8;
+}
+
+.page-view #requests .request-table .request_list_item .panel-title a {
+	display: block;
+	background-color: #FFFFFF;
+	height: 100%;
+	padding-top: 40px;
+	border-bottom: 1px solid #D8D8D8;	
+	font-weight: 600;
+}
+
+.page-view #requests .request-table .request_list_item .panel-body {
+	margin: 0 !important;
+	padding: 0 !important;
+	padding-top: 24px !important;
+	padding-bottom: 32px !important;
+	padding-left: 8.3333% !important;
+
+	font-size: 16px;
+}
+
 
 .page-view #requests .request-table .request_list_item img.expand {
 	position: relative;
@@ -434,6 +522,7 @@ button.cta:active {
 	position: relative;
 	top: -1px;
 	width: 16px;
+	height: auto;
 	margin-right: 4px;
 }
 
@@ -441,11 +530,14 @@ button.cta:active {
 	position: relative;
 	top: -1px;	
 	width: 16px;
+	height: auto;
 	margin-right: 4px;
 }
 
 .page-view #requests .request-table .request_list_item .status_tag img {
 	height: 24px;
+	position: relative;
+	top: -5px;
 }
 
 .page-view #requests .request-table .request_list_item .accommodation_name {
@@ -907,6 +999,9 @@ button.cta:active {
 #text-content {
 	position: relative;
 	background-color: #ffffff;
+	border-left: 1px solid #E6E6E6;
+	padding-left: 36px;
+	margin-top: 56px;
 }
 
 
@@ -918,7 +1013,8 @@ button.cta:active {
 
 #text-content section {
 	position: relative;	
-	padding-top: 56px;	
+	// padding-top: 56px;
+	margin-bottom: 120px;	
 }
 
 #text-content h1 {
@@ -927,22 +1023,29 @@ button.cta:active {
 	font-size: 42px;
 	color: #1A1A1A;
 	letter-spacing: -0.43px;	
-	margin-bottom: 20px;
+	margin-bottom: 12px;
+	text-transform: uppercase;
 }
 
 #text-content span.date img,
-#text-content span.time img,
-#text-content span.location img 
 {
 	width: 24px;
 	margin-right: 4px;
 }
 
-#text-content span.time img {
+#text-content span.location img {
+	width: 14px;
 	margin-right: 8px;
+	position: relative;
+	top: -2px;
 }
 
-#text-content span.date,
+#text-content span.time img {
+	display: none;
+	// margin-right: 8px;
+}
+
+
 #text-content span.time,
 #text-content span.location {
 	display: block;
@@ -952,15 +1055,74 @@ button.cta:active {
 	margin-bottom: 10px;
 }
 
+#text-content span.location {
+	font-weight: 600;
+	color: #0000FF;
+}
+
+#text-content span.date,
+#text-content span.time {
+	display: block;
+	color: #ffffff;
+	width: 120px;
+	height: 120px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding-left: 16px;
+	position: absolute;
+	left: -156px;
+	@media screen and (max-width: $break-small) {
+		position: relative;
+		left: 0;
+		margin-bottom: 36px;
+	}
+}
+
+#text-content span.date {
+	background-color: #0000FF;
+	padding-top: 20px;	
+}
+
+#text-content span.time {
+	background-color: #1D1D1D;
+	font-size: 30px;
+	padding-top: 40px;
+}
+#text-content span.time span.am-pm {
+	text-transform: uppercase;
+	font-size: 15px;
+}
+
+#text-content span.date span.month,
+#text-content span.date span.num,
+#text-content span.date span.day {
+	display: block;
+	margin-bottom: 0;
+	margin-top: 0;
+	line-height: 1.15;
+}
+
+#text-content span.date span.month {
+	font-size: 16px;
+}
+
+#text-content span.date span.num {
+	font-size: 42px;
+}
+
+#text-content span.date span.day {
+	font-size: 15px;
+}
+
 #text-content .info_box {
-	background-color: #F7F7F7;
-	border-left: solid 8px #333333;
-	margin-top: 12px;
-	margin-bottom: 12px;
-	padding-left: 24px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	padding-right: 24px;
+	// background-color: #F7F7F7;
+	// border-left: solid 8px #333333;
+	// margin-top: 12px;
+	// margin-bottom: 12px;
+	padding-left: 0;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	// padding-right: 24px;
 }
 
 #text-content .info_box h3.info_box_title {
@@ -971,15 +1133,18 @@ button.cta:active {
 }
 
 #text-content h2.subsection_title {
-	font-weight: 600;
-	font-size: 24px;
-	color: #1A1A1A;
+	font-weight: 300;
+	font-size: 28px;
+	color: #000000;
+	margin-bottom: 30px;
+	border-top: solid 1px #E6E6E6;
+	padding-top: 30px;	
 }
 
 #text-content .info_box p.info_box_text {
 	font-weight: 400;
 	font-size: 16px;
-	color: #4D4D4D;
+	color: #000000;
 	line-height: 22px;
 }
 
@@ -998,11 +1163,81 @@ button.cta:active {
 	width: 14px;
 }
 
+
+
+
+// Specific info box styles
+
+// Schedule
+#text-content #section-overview .info_box.welcome_message {
+	border-top: solid 1px #E6E6E6;
+	padding-top: 20px;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+#text-content .schedule {
+	margin-bottom: 32px;
+}
+
+#text-content .schedule .info_box {
+	// padding-top: 12px;
+	// padding-bottom: 12px;
+}
+
 #text-content .schedule .info_box h3.info_box_title {
 	margin-bottom: 4px;
 }
 
+#text-content .schedule .info_box .info_box_time {
+	margin-bottom: 4px;
+	display: block;
+	background-color: #1D1D1D;
+	color: #FFFFFF;
+	font-weight: 600;
+	font-size: 10px;
+	text-transform: uppercase;
+	width: 70px;
+	height: 70px;
+	line-height: 11px;
+	padding-top: 30px;
+	padding-left: 7px;
+	float: left;
+	margin-right: 18px;
+}
+
+// Tips
+#text-content .tips {
+	// border-top: solid 1px #E6E6E6;
+}
+
+
+#text-content .schedule .info_box .info_box_time img {
+	display: none;
+}
+
+
+// Arrival
+#text-content #section-arrival .info_box.welcome_message {
+	border-top: solid 1px #E6E6E6;
+	padding-top: 20px;
+}
+
+#text-content #section-arrival .info_box.welcome_message .info_box_text {
+	font-weight: 600;
+}
+
+
 // Related Accessibility Accommodations
+
+#text-content #accordion-controlled-example .panel,
+#text-content #accordion-controlled-example .panel-heading, {
+	background-color: #FFFFFF;
+	border-radius: 0;
+	box-shadow: none;
+	border: none;
+	padding-top: 0;
+}
 
 #text-content .accessibility_link img {
 	width: 16px;
@@ -1091,7 +1326,7 @@ button.cta:active {
 
 #text-content .overview_details,
 #text-content .arrival_details {
-	margin-bottom: 56px;
+	margin-bottom: 20px;
 }
 
 #text-content .breadcrumbs {

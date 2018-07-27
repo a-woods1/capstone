@@ -36,7 +36,7 @@ class Requests extends React.Component {
 
     let lgClose = () => this.setState({ lgShow: false });
     return (
-    <div>
+     <div className="container page-view page-requests">
      <div id="requests">
       <Grid>
         <Row>

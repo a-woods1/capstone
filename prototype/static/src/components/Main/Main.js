@@ -207,7 +207,7 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
     //console.log(this.state.stages);
 
     return (
-      <div>
+      <div className="container page-view page-main">
       <ImmersiveComponent
             changeImmersive={this.showImmersive.bind(this)}
             toggleImmersiveNavigator={this.toggleImmersiveNavigator.bind(this)}
@@ -220,7 +220,7 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
             stages={this.state.stages}
             previewScenes={this.state.previewScenes}
       />
-      <div id="text-content" className="col-xs-8">
+      <div id="text-content" className="col-xs-9">
         <Grid>
           <Overview />
           <Arrival
