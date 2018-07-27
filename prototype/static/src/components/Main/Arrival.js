@@ -135,7 +135,7 @@ componentDidMount() {
                       <button className="short-button" onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Select</button>
                     </div>
                     <a onClick={() => this.setState({ lgShow: true })} className="accommodation_list_link"><img src={new_window} /> Full Accommodation List</a>
-                    <AccommodationModal show={this.state.lgShow} categories={this.props.categories} products={this.props.products} onHide={lgClose} />
+                    <AccommodationModal show={this.state.lgShow} products={this.props.products} onHide={lgClose} />
                   </div>
 
                   </Panel.Body>

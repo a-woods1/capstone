@@ -10,7 +10,9 @@ import search_icon from '../../images/search.png';
 import common_req from '../../images/common-req.png';
 import plus from '../../images/plus.png';
 
+
 import ItemRequest from './Page2/ItemRequest.js';
+import Custom from './Page2b/Custom.js';
 
 
 class AccommodationModal extends React.Component {
@@ -18,7 +20,6 @@ class AccommodationModal extends React.Component {
       super(props);
 
       this.state = {
-          categories: this.props.categories,
           products: this.props.products,
           showPage: 1
       };
@@ -64,7 +65,7 @@ renderEntry = () => {
       <div>
         {list_items}
 
-        <Grid className="accommodation-item" id="custom-accommodation">
+        <Grid className="accommodation-item" id="custom-accommodation" onClick={(e) => this.customAccommodation(e)}>
           <Row>
             <Col xs={12} md={12}>
               <img src={plus} className="plus"/>
@@ -89,15 +90,45 @@ clickRequest = (e, i, accommodation_name, accommodation_description) => {
       });
   }
 
+  customAccommodation = (e) => {
+        this.setState({
+            showPage: 10
+        });
+    }
+
+
+
   closeModal = () => {
         this.setState({
             showPage : 1
         });
     }
 
+  renderSwitch(param){
+    switch(param) {
+      case 1:
+      return(
+
+          <div id="accommodations-list">
+            <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
+              {this.renderEntry()}
+            </Tabs>
+          </div>
+        )
+      case 2:
+        return (<ItemRequest product_id={this.state.product_id} accommodation_name={this.state.accommodation_name}
+        accommodation_description={this.state.accommodation_description}/>)
+      case 10:
+        return (<Custom/>)
+      default:
+        return 'error';
+    }
+
+  }
+
   render() {
-    const isFirstPage = this.state.showPage === 1
     return (
+      <div>
       <Modal
         {...this.props}
         id="accommodations-modal"
@@ -114,7 +145,7 @@ clickRequest = (e, i, accommodation_name, accommodation_description) => {
              <Col xs={6} md={6}>
              <div id="search">
                <input id="search_field" type="text" placeholder="Search accommodations" />
-               <img class="search_icon" alt="Search icon" src={search_icon}/>
+               <img className="search_icon" alt="Search icon" src={search_icon}/>
              </div>
              </Col>
            </Row>
@@ -123,20 +154,11 @@ clickRequest = (e, i, accommodation_name, accommodation_description) => {
         </Modal.Header>
         <Modal.Body>
         <div id="modal-body-main">
-        {isFirstPage
-          ?
-          <div id="accommodations-list">
-            <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
-              {this.renderEntry()}
-            </Tabs>
-          </div>
-          :
-          <ItemRequest product_id={this.state.product_id} accommodation_name={this.state.accommodation_name}
-          accommodation_description={this.state.accommodation_description}/>
-        }
+        {this.renderSwitch(this.state.showPage)}
         </div>
         </Modal.Body>
       </Modal>
+      </div>
     );
   }
 }
