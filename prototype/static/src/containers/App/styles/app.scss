@@ -423,13 +423,94 @@ button.cta:active {
 	padding: 0 !important;
 }
 
-.page-view #requests .request-table .request_list_item {
-	font-size: 14px;	
-	background-color: #ffffff;
-	padding-top: 24px;
-	padding-bottom: 24px;
-	border-bottom: 1px solid #D8D8D8;
+// .page-view #requests .request-table .request_list_item .panel,
+// .page-view #requests .request-table .request_list_item.panel-group,
+// .page-view #requests .request-table .request_list_item .panel-default,
+// .page-view #requests .request-table .request_list_item .panel-heading,
+// .page-view #requests .request-table .request_list_item .panel-title {
+// 	font-size: 12px;	
+// 	background-color: #ffffff;
+// 	padding-left: 0 !important;
+// 	padding-right: 0 !important;
+// 	border-radius: 0;
+// 	border: none;
+// 	border-bottom: 1px solid #D8D8D8;
+// }
+
+// Accordion overrides
+.page-view #requests .request-table .request_list_item .panel {
+	font-size: 12px;	
+	background-color: #FFFFFF;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	border-radius: 0;
+	border: none;
+	// border-bottom: 1px solid #D8D8D8;
 }
+
+.page-view #requests .request-table .request_list_item.panel-group {
+	font-size: 12px;	
+	background-color: #FFFFFF;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	border-radius: 0;
+	border: none;
+	// border-bottom: 1px solid #D8D8D8;
+	margin-bottom: 0px;
+}
+
+.page-view #requests .request-table .request_list_item .panel-default {
+	font-size: 12px;	
+	background-color: #FFFFFF;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	border-radius: 0;
+	border: none;
+	// border-bottom: 1px solid #D8D8D8;
+}
+
+.page-view #requests .request-table .request_list_item .panel-heading {
+	font-size: 12px;	
+	background-color: #FFFFFF;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	border-radius: 0;
+	border: none;
+	// border-bottom: 1px solid #D8D8D8;
+	height: 100px;
+}
+
+.page-view #requests .request-table .request_list_item .panel-title {
+	font-size: 12px;	
+	background-color: #FFFFFF;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+	border-radius: 0;
+	border: none;
+	border-top: 1px solid #D8D8D8;
+}
+
+.page-view #requests .request-table .request_list_item .panel-title a {
+	display: block;
+	background-color: #FFFFFF;
+	height: 100%;
+	padding-top: 40px;
+	border-bottom: 1px solid #D8D8D8;	
+	font-weight: 600;
+}
+
+.page-view #requests .request-table .request_list_item .panel-body {
+	margin: 0 !important;
+	padding: 0 !important;
+	padding-top: 24px !important;
+	padding-bottom: 32px !important;
+	padding-left: 8.3333% !important;
+
+	font-size: 16px;
+}
+
 
 .page-view #requests .request-table .request_list_item img.expand {
 	position: relative;
@@ -441,6 +522,7 @@ button.cta:active {
 	position: relative;
 	top: -1px;
 	width: 16px;
+	height: auto;
 	margin-right: 4px;
 }
 
@@ -448,11 +530,14 @@ button.cta:active {
 	position: relative;
 	top: -1px;	
 	width: 16px;
+	height: auto;
 	margin-right: 4px;
 }
 
 .page-view #requests .request-table .request_list_item .status_tag img {
 	height: 24px;
+	position: relative;
+	top: -5px;
 }
 
 .page-view #requests .request-table .request_list_item .accommodation_name {
