@@ -501,6 +501,16 @@ button.cta:active {
 	font-weight: 600;
 }
 
+.page-view #requests .request-table .request_list_item .panel-body {
+	margin: 0 !important;
+	padding: 0 !important;
+	padding-top: 24px !important;
+	padding-bottom: 32px !important;
+	padding-left: 8.3333% !important;
+
+	font-size: 16px;
+}
+
 
 .page-view #requests .request-table .request_list_item img.expand {
 	position: relative;
