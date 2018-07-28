@@ -29,6 +29,20 @@ class Custom extends Component{
           });
       }
 
+      handleTitleChange = (event) => {
+            this.setState({
+                accommodation_name: event.target.value
+            });
+        }
+
+
+
+        handleDescriptionChange = (event) => {
+              this.setState({
+                  accommodation_description: event.target.value
+              });
+          }
+
     renderPage(param) {
 
     switch(param) {
@@ -42,17 +56,31 @@ class Custom extends Component{
               <Row>
                 <Col xs={12} md={12}>
                   <ControlLabel>Accommodation Title</ControlLabel>
-                  <FormControl
-                    type="text"
-                    value={this.state.accommodation_name}
-                  />
+
+                    <div onClick={() => {this.title.focus()}}>
+                    <input
+                      type="text"
+                      placeholder="Enter title here."
+                      ref={(input_title) => this.title = input_title}
+                      onChange={(e) => {this.handleTitleChange(e)}}
+                    />
+                  </div>
                 </Col>
               </Row>
               <Row>
                 <Col xs={12} md={12}>
                   <ControlLabel>Accommodation Description</ControlLabel>
                   <p>*Please provide us with additional details about your request.</p>
-                  <textarea rows="4" cols="50" id="custom_accommodation_description" name="accommodation_description" placeholder="Enter details here." required></textarea>
+                  <div onClick={() => {this.description.focus()}}>
+                    <textarea
+                    rows="4"
+                    cols="50"
+                    id="custom_accommodation_description"
+                    name="accommodation_description"
+                    placeholder="Enter details here."
+                    ref={(input_description) => this.description = input_description}
+                    onChange={(e) => {this.handleDescriptionChange(e)}} required></textarea>
+                  </div>
                 </Col>
               </Row>
               <Row>
@@ -68,7 +96,7 @@ class Custom extends Component{
             </form>
           )
       case 3:
-        return (<Confirmation product_id={0} accommodation_name={document.getElementById("custom_accommodation_title").value} accommodation_description={document.getElementById("custom_accommodation_description").value}/>)
+        return (<Confirmation product_id={0} accommodation_name={this.state.accommodation_name} accommodation_description={this.state.accommodation_description}/>)
       default:
         return <div>Error</div>
       }
