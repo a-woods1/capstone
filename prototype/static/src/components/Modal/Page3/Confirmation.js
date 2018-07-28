@@ -106,7 +106,9 @@ switch(param) {
       <Row>
         <Col xs={12} md={12}>
           <p>*Please provide us with additional details about your request.</p>
-          <textarea rows="4" cols="50" name="specification" placeholder="Enter details here." required></textarea>
+          <div onClick={() => {this.request_description.focus()}}>
+            <textarea ref={(request_description) => this.request_description = request_description} rows="4" cols="50" name="specification" placeholder="Enter details here." required></textarea>
+          </div>
         </Col>
       </Row>
       <Row>

@@ -35,8 +35,6 @@ class Custom extends Component{
             });
         }
 
-
-
         handleDescriptionChange = (event) => {
               this.setState({
                   accommodation_description: event.target.value
@@ -56,7 +54,6 @@ class Custom extends Component{
               <Row>
                 <Col xs={12} md={12}>
                   <ControlLabel>Accommodation Title</ControlLabel>
-
                     <div onClick={() => {this.title.focus()}}>
                     <input
                       type="text"
@@ -104,7 +101,6 @@ class Custom extends Component{
 
 
     render() {
-
       return (
         <div>
         {this.renderPage(this.state.showPage)}

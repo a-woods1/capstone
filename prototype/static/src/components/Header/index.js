@@ -34,24 +34,44 @@ export class Header extends Component {
         super(props);
     }
 
+    renderFirstEntry(){
+      var num_stages = this.props.stages.length
+      //console.log(num_stages)
+      var stages = this.props.stages.slice(-1)
+      return Object.entries(stages).map(([key, value], i) => {
+        //console.log("i " + i)
+        var obj = stages[i]
+        var stage_id = obj.stage_id
+        var stage_title = obj.stage_title
+        return (
+          <span>
+            <span className="ordinal_stage">Current Stage</span> <br />
+            <span className="stage_title">{stage_title}</span>
+          </span>
+       )
+     })
+    }
+
+
     renderEntry(){
         var num_stages = this.props.stages.length
         //console.log(num_stages)
-        return Object.entries(this.props.stages).map(([key, value], i) => {
+        var stages = this.props.stages.slice(1, this.props.stages.length)
+        return Object.entries(stages).map(([key, value], i) => {
           //console.log("i " + i)
           var obj = this.props.stages[i]
           var stage_id = obj.stage_id
           var stage_title = obj.stage_title
           return (
             <NavItem className={num_stages-1 === i ? "current-stage" : ""} href="">
-            <div>
+            <MenuItem>
             {num_stages-1 === i ?
               <span className="ordinal_stage">Current Stage</span>
               :
               <span className="ordinal_stage">Stage {stage_id}</span>
             }
             <span className="stage_title">{stage_title}</span>
-            </div>
+            </MenuItem>
             </NavItem>
          )
        })
@@ -112,9 +132,20 @@ export class Header extends Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav id="top-nav-stages">
+          <NavItem className="" href="">
+          <div>
+            <span className="ordinal_stage">Position</span>
+          <span className="stage_title">Software Engineer</span>
+          </div>
+          </NavItem>
+            <NavDropdown className="top-nav-user-menu" title={<span>{this.renderFirstEntry()}</span>} id="basic-nav-dropdown">
             {this.renderEntry()}
+            </NavDropdown>
           </Nav>
           <Nav pullRight id="top-nav-right-nav">
+          <NavItem className="my-requests" title="Contact Recruiter">
+            Contact Recruiter
+          </NavItem>
             <NavItem className="my-requests" title="My Requests" onClick={() => this.dispatchNewRoute('/requests')}>
               My Requests
             </NavItem>
