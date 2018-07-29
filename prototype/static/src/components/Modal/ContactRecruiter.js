@@ -5,11 +5,14 @@ import { bindActionCreators } from 'redux';
 import { Grid, Row, Col, Modal, Tabs, Tab, TabContainer, TabContent, TabPane, Glyphicon } from 'react-bootstrap';
 
 import * as actionCreators from '../../actions/auth';
-import accessibility_logo from '../../images/a11y.png';
+import contact_dark from '../../images/contact-dark.png';
 import search_icon from '../../images/search.png';
 import common_req from '../../images/common-req.png';
-import plus from '../../images/plus.png';
 import placeholder from '../../images/photos/placeholder.png';
+
+import contact_person from '../../images/contact-person.png';
+import contact_email from '../../images/contact-email.png'
+import contact_phone from '../../images/contact-phone.png'
 
 class Contact extends React.Component {
   constructor(props) {
@@ -21,7 +24,7 @@ class Contact extends React.Component {
     return (
       <Modal
         {...this.props}
-        id="accommodations-modal"
+        id="contact-modal"
         bsSize="large"
         aria-labelledby="contained-modal-title-lg"
       >
@@ -29,7 +32,7 @@ class Contact extends React.Component {
          <Grid>
            <Row>
              <Col xs={5} md={5}>
-               <img id="a11y_icon" alt="Accessibility icon" src={accessibility_logo} />
+               <img id="contact_icon" alt="Accessibility icon" src={contact_dark} />
                <h4 id = "modal_screen_title">Contact Recruiter</h4>
              </Col>
            </Row>
@@ -46,24 +49,33 @@ class Contact extends React.Component {
           </Row>
           <Row>
             <Col xs={12} md={12}>
-              <h4 id = "recruiter_name">Jessica Barton</h4>
+              <h4 id = "recruiter_name">Rosa Garcia</h4>
             </Col>
           </Row>
           <Row>
             <Col xs={12} md={12}>
-              <span className="time"><Glyphicon glyph="user"></Glyphicon> Engineering Recruiter at Bloomberg</span>
-            </Col>
-          </Row>
-
-          <Row>
-            <Col xs={12} md={12}>
-              <span className="time"><Glyphicon glyph="envelope"></Glyphicon> jbarton@bloomberg.net</span>
+              <span className="person">
+                <img src={contact_person} />
+                Engineering Recruiter at Bloomberg
+              </span>
             </Col>
           </Row>
 
           <Row>
             <Col xs={12} md={12}>
-              <span className="time"><Glyphicon glyph="phone-alt"></Glyphicon> +1 (212) 555-5555</span>
+              <span className="email">
+                <img src={contact_email} />              
+                rosa.garcia@bloomberg.net
+              </span>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col xs={12} md={12}>
+              <span className="phone">
+                <img src={contact_phone} />                            
+                +1 (212) 555-5555
+              </span>
             </Col>
           </Row>
 
