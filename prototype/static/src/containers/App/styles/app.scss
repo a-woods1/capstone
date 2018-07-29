@@ -823,7 +823,8 @@ button.cta:active {
 }
 
 // Close
-#accommodations-modal .modal-dialog .modal-content .modal-header button.close {
+#accommodations-modal .modal-dialog .modal-content .modal-header button.close,
+#contact-modal .modal-dialog .modal-content .modal-header button.close {
 	opacity: 1;
 	margin: 0;
 	padding: 0;
@@ -835,7 +836,8 @@ button.cta:active {
 	border-radius: 0 !important;
 }
 
-#accommodations-modal .modal-dialog .modal-content .modal-header button.close:hover {
+#accommodations-modal .modal-dialog .modal-content .modal-header button.close:hover,
+#contact-modal .modal-dialog .modal-content .modal-header button.close:hover {
 	opacity: 1;
 	margin: 0;
 	padding: 0;
@@ -846,11 +848,13 @@ button.cta:active {
 	border-bottom: solid 1px #E6E6E6;
 }
 
-#accommodations-modal .modal-dialog .modal-content .modal-header button.close:active {
+#accommodations-modal .modal-dialog .modal-content .modal-header button.close:active,
+#contact-modal .modal-dialog .modal-content .modal-header button.close:active {
 	background-color: #f7f7f7;
 }
 
-#accommodations-modal .modal-dialog .modal-content .modal-header button.close span {
+#accommodations-modal .modal-dialog .modal-content .modal-header button.close span,
+#contact-modal .modal-dialog .modal-content .modal-header button.close span {
 	font-size: 36px;
 	font-weight: 400;
 	text-shadow: none;
@@ -2079,6 +2083,138 @@ ul.imm-stages li.stage-collapsed .poi-selector {
     z-index: -1;
 }
 
+// ------
+// CONTACT MODAL
+// ------
 
 
+#contact-modal .modal-dialog {
+	width: 800px;
+}
+
+#contact-modal .modal-dialog .modal-content {
+	background-color: #ffffff;
+	border-radius: 0px;
+}
+
+#contact-modal .modal-dialog .modal-content .modal-body {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+// Header
+
+#contact-modal .modal-dialog .modal-content .modal-header {
+	height: 60px;
+	padding: 0;
+	margin: 0;
+}
+
+#contact-modal .modal-dialog .modal-content .modal-header .container {
+	margin: 0 !important;
+	padding: 0 !important;
+	width: 100%;
+	height: 60px;
+}
+
+#contact-modal .modal-dialog .modal-content .modal-header .container .row {
+	margin: 0 !important;
+	padding: 0 !important;
+	height: 60px;
+}
+
+
+#contact-modal .modal-dialog .modal-content .modal-header img#contact_icon {
+	display: inline-block;
+	position: relative;
+	top: -1px;
+	width: 24px;
+	height: 24px;
+	margin-left: 8px;
+	margin-right: 12px;
+}
+
+#contact-modal .modal-dialog .modal-content .modal-header h4 {
+	display: inline-block;
+	font-family: Roboto;
+	font-weight: 600;
+	font-size: 18px;
+	color: #000000;
+	margin: 0;
+	margin-top: 22px;	
+}
+
+// Content
+
+#contact-modal .modal-dialog .modal-content #modal-body-main .container {
+	text-align: center;
+	width: 100%;
+	padding-top: 72px;
+	padding-bottom: 96px;
+} 
+
+// Recruiter (name, photo, title)
+
+#contact-modal .modal-dialog .modal-content #modal-body-main img#recruiter_photo {
+	width: 84px;
+	height: 84px;
+} 
+
+#contact-modal .modal-dialog .modal-content #modal-body-main h4 {
+	font-weight: 600;
+	font-size: 24px;
+	color: #000000;
+}
+
+#contact-modal .modal-dialog .modal-content #modal-body-main span.person
+{
+	display: block;
+	font-weight: 400;
+	font-size: 16px;
+	margin-bottom: 40px;
+}
+
+#contact-modal .modal-dialog .modal-content #modal-body-main span.person img
+{
+	margin-right: 10px;
+	position: relative;
+	top: -1px;
+}
+
+// Contact details
+
+#contact-modal .modal-dialog .modal-content #modal-body-main img 
+{
+	width: 24px;
+	height: 24px;
+	margin-right: 28px;
+}
+
+#contact-modal .modal-dialog .modal-content #modal-body-main a {
+	color: #000000;
+}
+
+#contact-modal .modal-dialog .modal-content #modal-body-main a:hover,
+#contact-modal .modal-dialog .modal-content #modal-body-main a:focus {
+	text-decoration: none;
+	background-color: #f7f7f7;
+}
+
+#contact-modal .modal-dialog .modal-content #modal-body-main a.email,
+#contact-modal .modal-dialog .modal-content #modal-body-main a.phone
+{
+	display: block;
+	text-align: left;
+	width: 356px;
+	margin: 0 auto;
+	height: 65px;
+	padding-top: 18px;
+	border-bottom: solid 1px #D8D8D8;
+	font-weight: 400;
+	font-size: 20px;
+}
+#contact-modal .modal-dialog .modal-content #modal-body-main a.email {
+	border-top: solid 1px #D8D8D8;
+
+}
 
