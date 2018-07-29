@@ -19,6 +19,8 @@ import clock from '../../images/clock.png';
 import pin from '../../images/pin.png';
 import pin_blue from '../../images/pin-blue.png';
 import a11y_blue from '../../images/a11y-blue.png';
+import section_schedule from '../../images/section-schedule.png';
+import section_tips from '../../images/section-tips.png';
 
 function mapStateToProps(state) {
     return {
@@ -92,7 +94,10 @@ for (var i = 0; i < sessionStorage.length; i++) {
 
                   <div className="schedule">
                     <Row>
-                      <h2 className="subsection_title">Schedule</h2>
+                      <h2 className="subsection_title">
+                        <img src={section_schedule} />
+                        Schedule
+                      </h2>
                     </Row>
                     <Row className="info_box">
                       <span className="info_box_time"><img src={clock} />9:00<span className="am-pm">AM</span></span>
@@ -115,7 +120,10 @@ for (var i = 0; i < sessionStorage.length; i++) {
                   </div>
 
                   <Row className="tips">
-                  <h2 className="subsection_title">Tips</h2>
+                  <h2 className="subsection_title">
+                    <img src={section_tips} />
+                    Tips
+                  </h2>
                   </Row>
                   <Row className="info_box">
                     <h3 className="info_box_title">Review Your Interview Details</h3>

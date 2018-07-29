@@ -18,7 +18,7 @@
 
 // Variables
 $break-small: 768px;
-$top-nav-color: #1d1d1d;
+$top-nav-color: #2C2C2C;
 $top-nav-focus: #080808;
 
 
@@ -1287,6 +1287,14 @@ button.cta:active {
 	margin-bottom: 30px;
 	border-top: solid 1px #E6E6E6;
 	padding-top: 30px;	
+}
+
+#text-content h2.subsection_title img {
+	position: relative;
+	top: -2px;
+	width: 36px;
+	height: 36px;
+	margin-right: 8px;
 }
 
 #text-content .info_box p.info_box_text {
