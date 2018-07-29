@@ -743,6 +743,7 @@ button.cta:active {
 	height: 60px;
 	padding: 0;
 	margin: 0;
+	white-space: nowrap;
 }
 
 #accommodations-modal .modal-dialog .modal-content .modal-header .container {
@@ -762,7 +763,7 @@ button.cta:active {
 #accommodations-modal .modal-dialog .modal-content .modal-header img#a11y_icon {
 	display: inline-block;
 	position: relative;
-	top: -3px;
+	top: -5px;
 	width: 24px;
 	height: 24px;
 	margin-left: 8px;
@@ -776,7 +777,10 @@ button.cta:active {
 	font-size: 18px;
 	color: #000000;
 	margin: 0;
-	margin-top: 22px;	
+	margin-top: 22px;
+	max-width: 85%;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 // Search
@@ -1017,9 +1021,10 @@ button.cta:active {
 	margin-right: 16px;
 }
 
-
-// Confirmation page
-#accommodations-modal .modal-dialog .modal-content .confirm-page-content.container {
+// All sub-pages - outer padding rules
+#accommodations-modal .modal-dialog .modal-content .item-details.container,
+#accommodations-modal .modal-dialog .modal-content .confirm-page-content.container,
+#accommodations-modal .modal-dialog .modal-content .request-success.container {
 	background-color: #ffffff;
 	width: 100%;
 	padding-left: 116px;
@@ -1030,7 +1035,100 @@ button.cta:active {
 	font-size: 16px;
 	line-height: 19px;
 	color: #000000;	
+
+	padding-bottom: 42px;
 }
+
+
+// Item details page
+#accommodations-modal .modal-dialog .modal-content .item-details.container {
+
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .item-details p {
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 24px;
+	margin-bottom: 36px;
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .item-details form {
+	margin-bottom: 72px;
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .item-details label {
+	font-weight: 400;
+	position: relative;
+	display: block;
+	height: 40px;
+	padding-top: 10px;
+	width: 100%;
+	padding-left: 32px;
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .item-details label:hover {
+	cursor: pointer;
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .item-details label input {
+	opacity: 0;
+}
+
+// Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_radio
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .item-details label .radio-selector {
+    position: absolute;
+    top: 11px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .item-details label input ~ .radio-selector {
+    background-color: #ffffff;
+    border: 2px solid #9B9B9B;
+}
+
+/* When the radio button is checked, add a blue background */
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .item-details label input:checked ~ .radio-selector {
+    background-color: #ffffff;
+    border: 2px solid #000000;    
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio-selector:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .item-details label input:checked ~ .radio-selector:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .item-details label .radio-selector:after {
+ 	top: 4px;
+	left: 4px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #000000;
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .item-details button {
+	width: 100%;
+	margin-bottom: 42px;
+}
+
+// Confirmation page
+#accommodations-modal .modal-dialog .modal-content .confirm-page-content.container {
+}
+
 
 #accommodations-modal .modal-dialog .modal-content .confirm-page-content h3.confirmation_heading {
 	display: inline-block;
@@ -1069,6 +1167,11 @@ button.cta:active {
 	margin-bottom: 4px;
 }
 
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .confirm-page-content p.request_type {
+	margin-top: 16px;
+	font-weight: 600;
+}
+
 #accommodations-modal .modal-dialog .modal-content #modal-body-main .confirm-page-content p.modal_text_emphasized {
 	font-size: 18px;
 	font-weight: 600;
@@ -1097,23 +1200,11 @@ button.cta:active {
 	margin-bottom: 42px;
 }
 
+
 // Success page
 
-#accommodations-modal .modal-dialog .modal-content #modal-body-main .request-success.container {
-	width: 100%;
-
-	background-color: #ffffff;
-	width: 100%;
-	padding-left: 116px;
-	padding-right: 116px;
-	padding-top: 48px;
-
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 24px;
-	color: #000000;	
-
-	padding-bottom: 42px;
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .request-success.container
+{
 }
 
 #accommodations-modal .modal-dialog .modal-content #modal-body-main .request-success {
@@ -1512,6 +1603,20 @@ button.cta:active {
 #text-content .poi-selector {
 	margin-bottom: 48px;
 }
+
+#text-content .immersive_views {
+}
+
+#text-content .immersive_views p {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 22px;
+	color: #000000;
+}
+
+#text-content .immersive_views p:last-of-type {
+	margin-bottom: 32px;	
+} 
 
 // ------
 // PLACEHOLDER - TO DELETE

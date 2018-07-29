@@ -39,7 +39,7 @@ class ItemRequest extends Component{
         return (<AccommodationModal />)
       case 2:
         return  (
-            <Grid>
+            <Grid className="item-details">
               <Row>
                 <Col xs={12} md={12}>
                         <p>Would you prefer to bring your own {this.state.accommodation_name}? Or do you need us to provide the {this.state.accommodation_name}?</p>
@@ -48,17 +48,25 @@ class ItemRequest extends Component{
                     <Row>
                       <Col xs={12} md={12}>
                         <form action="">
-                          <input type="radio" name="bring_provide" value="" /> I will bring my own<br/>
-                          <input type="radio" name="bring_provide" value="" defaultChecked="true" /> Please provide a {this.state.accommodation_name}
+                          <label>
+                            I will bring my own
+                            <input type="radio" name="bring_provide" value=""/>
+                            <span className="radio-selector"></span>
+                          </label>
+                          <label>
+                            Please provide the {this.state.accommodation_name}                          
+                            <input type="radio" name="bring_provide" value="" defaultChecked="true" />
+                            <span className="radio-selector"></span>                            
+                          </label>
                         </form>
                       </Col>
                     </Row>
                     <Row>
-                      <Col xs={4} md={4}>
-                        <Button onClick={this.clickBack} bsSize="small" block>Back to List</Button>
+                      <Col xs={6} md={6}>
+                        <button onClick={this.clickBack}>Back to List</button>
                       </Col>
-                      <Col xs={4} md={4}>
-                        <Button onClick={this.clickNext} bsSize="small" block>Next</Button>
+                      <Col xs={6} md={6}>
+                        <button onClick={this.clickNext} className="cta">Next</button>
                       </Col>
                     </Row>
                   </Grid>)

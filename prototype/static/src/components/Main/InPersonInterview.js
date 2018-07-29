@@ -82,13 +82,14 @@ class InPersonInterview extends React.Component { // eslint-disable-line react/p
               <p className="info_box_text">This 30-60 minute interview will consist of a few rounds of technical interviews (most likely) with members of the Engineering team. During the interview we are assessing your thought process
     and problem solving ability as much as anything else, so please talk through your steps as you solve the problem.</p>
             </Row>
-            <Row className="poiSelector">
+            <Row className="immersive_views">
               <h2 className="subsection_title">
                 <img src={section_360} />
-                360 Views
+                360° Tour
               </h2>
-
               <div>
+                <p>The 360° Tours below can give you a sense of the range of conference rooms we use for interviews. If you have questions or requests regarding access to any of these rooms, please feel welcome to contact your recruiter.</p>              
+                <p>These tours are accessible to screen readers and keyboard navigation.</p>
                 <ImmersiveNavStagePoiList
                   kickerLabel=""
                   activeViewData={this.props.activeViewData}
