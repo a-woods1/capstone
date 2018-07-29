@@ -20,6 +20,7 @@ class AccommodationModal extends React.Component {
       super(props);
 
       this.state = {
+          modal_screen_title: "Accessibility Accommodations",
           products: this.props.products,
           showPage: 1
       };
@@ -33,7 +34,7 @@ renderEntry = () => {
   Object.entries(this.state.products).forEach(([key, value], i) => {
     let list_items = []
     //Create list items
-    console.log(key)
+    //console.log(key)
     Object.entries(value).forEach(([subkey, subvalue]) => {
       //console.log(subvalue)
       list_items.push(
@@ -82,8 +83,10 @@ renderEntry = () => {
 }
 
 clickRequest = (e, i, accommodation_name, accommodation_description) => {
+      var title = accommodation_name + " Request";
       this.setState({
           showPage: 2,
+          modal_screen_title: title,
           product_id: i,
           accommodation_name: accommodation_name,
           accommodation_description: accommodation_description
@@ -91,8 +94,10 @@ clickRequest = (e, i, accommodation_name, accommodation_description) => {
   }
 
   customAccommodation = (e) => {
+        var title = "Accommodation Request";
         this.setState({
-            showPage: 10
+            showPage: 10,
+            modal_screen_title: title,
         });
     }
 
@@ -116,7 +121,7 @@ clickRequest = (e, i, accommodation_name, accommodation_description) => {
           </div>
         )
       case 2:
-        return (<ItemRequest product_id={this.state.product_id} accommodation_name={this.state.accommodation_name}
+        return (<ItemRequest product_id={this.state.product_id} accommodation_name={this.state.accommodation_name} modal_screen_title={this.state.modal_screen_title}
         accommodation_description={this.state.accommodation_description}/>)
       case 10:
         return (<Custom/>)
@@ -140,7 +145,7 @@ clickRequest = (e, i, accommodation_name, accommodation_description) => {
            <Row>
              <Col xs={5} md={5}>
                <img id="a11y_icon" alt="Accessibility icon" src={accessibility_logo} />
-               <h4 id = "modal_screen_title">Accessibility Accommodations</h4>
+               <h4 id = "modal_screen_title">{this.state.modal_screen_title}</h4>
              </Col>
              <Col xs={6} md={6}>
              <div id="search">

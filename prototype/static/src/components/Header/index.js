@@ -5,7 +5,7 @@ import { bindActionCreators } from 'redux';
 import { Navbar, Nav, NavItem, MenuItem, NavDropdown, Glyphicon} from 'react-bootstrap';
 import ScrollableAnchor from 'react-scrollable-anchor'
 
-
+import ContactRecruiter from '../Modal/ContactRecruiter.js';
 import * as actionCreators from '../../actions/auth';
 import brand_logo from '../../images/photos/placeholder.png';
 import profile_img from '../../images/profile-img.png';
@@ -33,6 +33,9 @@ export class Header extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+          lgShow: false,
+    }
     }
 
     renderFirstEntry(){
@@ -110,6 +113,7 @@ export class Header extends Component {
     }
 
     render() {
+      let lgClose = () => this.setState({ lgShow: false });
       var icon = (
         <span class="logo">
 
@@ -144,9 +148,10 @@ export class Header extends Component {
             </NavDropdown>
           </Nav>
           <Nav pullRight id="top-nav-right-nav">
-          <NavItem className="contact-recruiter" title="Contact Recruiter">
+          <NavItem className="contact-recruiter" title="Contact Recruiter" onClick={() => this.setState({ lgShow: true })}>
             <img src={contact_white} />
             Contact Recruiter
+            <ContactRecruiter show={this.state.lgShow} onHide={lgClose} />
           </NavItem>
             <NavItem className="my-requests" title="My Requests" onClick={() => this.dispatchNewRoute('/requests')}>
               My Requests

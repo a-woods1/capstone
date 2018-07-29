@@ -22,7 +22,8 @@ class Confirmation extends Component{
           showPage: 3,
           product_id: this.props.product_id,
           accommodation_name: this.props.accommodation_name,
-          accommodation_description: this.props.accommodation_description
+          accommodation_description: this.props.accommodation_description,
+          bring_provide: this.props.bring_provide
       };
   }
 
@@ -35,12 +36,23 @@ class Confirmation extends Component{
         items = JSON.parse(items);
 
     }
+    /*
+    var already_requested = false;
 
-    items.push({
-      product_id: this.state.product_id,
-      accommodation_name: this.state.accommodation_name,
-      accommodation_description: this.props.accommodation_description
-    });
+    for (var i = 0; i < items.length; i++) {
+      console.log(items[i].product_id);
+      if (items[i].product_id === this.state.product_id){
+        already_requested = true;
+      }
+    }
+*/
+    //if (already_requested == false){
+      items.push({
+        product_id: this.state.product_id,
+        accommodation_name: this.state.accommodation_name,
+        accommodation_description: this.props.accommodation_description
+      });
+    //}
 
     localStorage.setItem("accommodation_requests", JSON.stringify(items));
 
@@ -73,6 +85,7 @@ switch(param) {
         <Col xs={12} md={12}>
           <h4>{this.state.accommodation_name}</h4>
           <p className="modal_text">{this.state.accommodation_description}</p>
+          <p>REQUEST TYPE: Please provide this item.</p>
         </Col>
       </Row>
       <Row>

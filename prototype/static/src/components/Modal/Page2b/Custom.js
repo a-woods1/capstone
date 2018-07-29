@@ -11,6 +11,7 @@ class Custom extends Component{
 
       this.state = {
           showPage: 10,
+          modal_screen_title: this.props.modal_screen_title,
           product_id: this.props.product_id,
           accommodation_name: this.props.accommodation_name,
           accommodation_description: this.props.accommodation_description,
@@ -82,7 +83,7 @@ class Custom extends Component{
               </Row>
               <Row>
                 <Col xs={4} md={4}>
-                  <Button onClick={this.clickBack} bsSize="small" block>Cancel</Button>
+                  <Button onClick={this.clickBack} bsSize="small" block>Back to List</Button>
                 </Col>
                 <Col xs={4} md={4}>
                   <Button onClick={this.clickNext} bsSize="small" block>Next</Button>

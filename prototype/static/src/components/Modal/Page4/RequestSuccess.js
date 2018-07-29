@@ -68,8 +68,8 @@ class RequestSuccess extends Component{
           </Row>
           <Row>
             <Col xs={12} md={12}>
-              <h3>Success!</h3>
-              <p className="modal_text">You’ve just submitted a request for {this.state.accommodation_name} successfully. We will ensure that your coordinator has an {this.state.accommodation_name} available during the onsite interview. If you have any questions, please reach out to your recruiter.</p>
+              <h3>Submitted</h3>
+              <p className="modal_text">You’ve successfully submitted a request for the {this.state.accommodation_name}. We will ensure that this item is available during your onsite interview. If you have any questions, please reach out to your recruiting coordinator.</p>
             </Col>
           </Row>
             <Row>
