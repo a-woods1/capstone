@@ -3,13 +3,16 @@ import { browserHistory } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Navbar, Nav, NavItem, MenuItem, NavDropdown, Glyphicon} from 'react-bootstrap';
-import ScrollableAnchor from 'react-scrollable-anchor'
+import ScrollableAnchor, {configureAnchors} from 'react-scrollable-anchor'
 
 import ContactRecruiter from '../Modal/ContactRecruiter.js';
 import * as actionCreators from '../../actions/auth';
 import brand_logo from '../../images/photos/placeholder.png';
 import profile_img from '../../images/profile-img.png';
 import contact_white from '../../images/contact-white.png';
+
+
+configureAnchors({offset: -135})
 
 function mapStateToProps(state) {
     return {
