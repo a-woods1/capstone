@@ -54,7 +54,7 @@ class ItemRequest extends Component{
                             <span className="radio-selector"></span>
                           </label>
                           <label>
-                            Please provide the {this.state.accommodation_name}                          
+                            I want Bloomberg to provide the {this.state.accommodation_name}                          
                             <input type="radio" name="bring_provide" value="" defaultChecked="true" />
                             <span className="radio-selector"></span>                            
                           </label>

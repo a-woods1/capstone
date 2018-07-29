@@ -51,10 +51,10 @@ class Custom extends Component{
         return  (
           <form>
           <FormGroup controlId="formBasicText">
-            <Grid>
+            <Grid className="custom-accommodation-page">
               <Row>
                 <Col xs={12} md={12}>
-                  <ControlLabel>Accommodation Title</ControlLabel>
+                  <ControlLabel>Title of the accommodation</ControlLabel>
                     <div onClick={() => {this.title.focus()}}>
                     <input
                       type="text"
@@ -67,7 +67,7 @@ class Custom extends Component{
               </Row>
               <Row>
                 <Col xs={12} md={12}>
-                  <ControlLabel>Accommodation Description</ControlLabel>
+                  <ControlLabel>Description of the accommodation</ControlLabel>
                   <p>*Please provide us with additional details about your request.</p>
                   <div onClick={() => {this.description.focus()}}>
                     <textarea
@@ -82,11 +82,11 @@ class Custom extends Component{
                 </Col>
               </Row>
               <Row>
-                <Col xs={4} md={4}>
-                  <Button onClick={this.clickBack} bsSize="small" block>Back to List</Button>
+                <Col xs={6} md={6}>
+                  <button onClick={this.clickBack}>Back to List</button>
                 </Col>
-                <Col xs={4} md={4}>
-                  <Button onClick={this.clickNext} bsSize="small" block>Next</Button>
+                <Col xs={6} md={6}>
+                  <button onClick={this.clickNext} className="cta">Next</button>
                 </Col>
               </Row>
             </Grid>

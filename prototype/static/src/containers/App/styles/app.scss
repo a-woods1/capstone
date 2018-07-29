@@ -1024,7 +1024,8 @@ button.cta:active {
 // All sub-pages - outer padding rules
 #accommodations-modal .modal-dialog .modal-content .item-details.container,
 #accommodations-modal .modal-dialog .modal-content .confirm-page-content.container,
-#accommodations-modal .modal-dialog .modal-content .request-success.container {
+#accommodations-modal .modal-dialog .modal-content .request-success.container,
+#accommodations-modal .modal-dialog .modal-content .custom-accommodation-page {
 	background-color: #ffffff;
 	width: 100%;
 	padding-left: 116px;
@@ -1198,6 +1199,35 @@ button.cta:active {
 #accommodations-modal .modal-dialog .modal-content #modal-body-main .confirm-page-content button {
 	width: 100%;
 	margin-bottom: 42px;
+}
+
+// Custom Accommodation Page
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .custom-accommodation-page .row {
+	margin-bottom: 32px;
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .custom-accommodation-page label {
+	margin-bottom: 8px;
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .custom-accommodation-page input,
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .custom-accommodation-page textarea
+{
+	width: 100%;
+	border: solid 1px #000000;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .custom-accommodation-page input {
+	height: 40px;
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .custom-accommodation-page button {
+	width: 100%;
 }
 
 
