@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import * as actionCreators from '../../../actions/auth';
 import { Grid, Row, Col, Glyphicon,ButtonToolbar, Button } from 'react-bootstrap';
 
-import Contact from '../../Modal/Contact.js';
+import AccommodationModal from '../../Modal/AccommodationModal.js';
 import RequestList from './RequestList/RequestList.js';
 import contact from '../../../images/contact.png';
 
@@ -73,8 +73,8 @@ class Requests extends React.Component {
         <Row>
           <Col xs={12} md={12}>
             <div className="contact-recruiter">
-              <a onClick={() => this.setState({ lgShow: true })} className="accommodation_list_link"><img src={contact} /> Contact Recruiter</a>
-              <Contact show={this.state.lgShow} onHide={lgClose} />
+              <a onClick={() => this.setState({ lgShow: true })} className="accommodation_list_link"><img src={contact} /> Make a New Request</a>
+              <AccommodationModal show={this.state.lgShow} products={this.props.products} onHide={lgClose} />
             </div>
           </Col>
         </Row>
