@@ -18,6 +18,8 @@
 
 // Variables
 $break-small: 768px;
+$top-nav-color: #1d1d1d;
+$top-nav-focus: #080808;
 
 
 // ------
@@ -40,7 +42,7 @@ $break-small: 768px;
 
 #both-nav #top-nav {
 	position: relative;
-	background-color: #1d1d1d;
+	background-color: $top-nav-color;
 	border-radius: 0px; 
 	margin-bottom: 0px;
 	height: 60px;
@@ -71,38 +73,59 @@ $break-small: 768px;
 
 // Stages
 
-#top-nav #top-nav-stages {
+#top-nav #top-nav-left {
 
 }
 
-#both-nav #top-nav #top-nav-stages li {
+#both-nav #top-nav #top-nav-left li {
 	margin: 0;
 	padding: 0;
-	padding-left: 32px;
-	padding-right: 32px;
+	// padding-left: 32px;
+	// padding-right: 32px;
 	height: 60px;
 }
 
-#both-nav #top-nav ul#top-nav-stages li a {
+#both-nav #top-nav ul#top-nav-left li a {
 	margin: 0;
 	padding: 0;
 	height: 100%;
 }
 
-#both-nav #top-nav ul#top-nav-stages li {
+#both-nav #top-nav ul#top-nav-left li {
 	border-right: 1px solid #000000;
 }
 
-#both-nav #top-nav ul#top-nav-stages li.current-stage a div span.ordinal_stage,
-#both-nav #top-nav ul#top-nav-stages li.current-stage a div span.stage_title {
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown {
+	width: 200px;
+	// padding-right: 8px;
+}
+
+#both-nav #top-nav ul#top-nav-left li.candidate_stages a span.caret {
+	display: inline-block;
+	position: absolute;
+	right: 32px;
+	top: 34px;
+}
+
+#both-nav #top-nav ul#top-nav-left li a div span.selected_position_label,
+#both-nav #top-nav ul#top-nav-left li a div span.selected_position_title,
+#both-nav #top-nav ul#top-nav-left li.candidate_stages a {
 	color: #ffffff;
 }
 
-#both-nav #top-nav ul#top-nav-stages li.current-stage {
+#both-nav #top-nav ul#top-nav-left li a {
+	padding-top: 10px;
+	padding-left: 32px;
+	padding-right: 32px;	
+}
+
+#both-nav #top-nav ul#top-nav-left li.current-stage {
 	background-color: #4A4A4A;
 }
 
-#both-nav #top-nav #top-nav-stages li a div span.ordinal_stage {
+#both-nav #top-nav #top-nav-left li a div span.selected_position_label,
+#both-nav #top-nav ul#top-nav-left li.candidate_stages a span.ordinal_stage
+ {
 	display: block;
 	font-size: 11px;
 	font-weight: 300;
@@ -110,10 +133,11 @@ $break-small: 768px;
 	color: #ffffff;
 	margin: 0;
 	padding: 0;
-	margin-top: 10px;
+	// margin-top: 10px;
 }
 
-#both-nav #top-nav #top-nav-stages li a div span.stage_title {
+#both-nav #top-nav #top-nav-left li a div span.selected_position_title,
+#both-nav #top-nav ul#top-nav-left li.candidate_stages a span.stage_title {
 	display: block;
 	font-size: 16px;
 	font-weight: 700;
@@ -121,6 +145,84 @@ $break-small: 768px;
 	margin: 0;
 	margin-top: -4px;
 	padding: 0;	
+}
+
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu {
+	width: 200px;
+	background-color: $top-nav-color;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+}
+
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu li {
+	width: 100%;
+	padding: 0;
+	border: none;
+	height: 60px;		
+}
+
+// Set padding for all top level nav items
+
+#both-nav #top-nav ul li a {
+	background-color: $top-nav-color;
+}
+
+#both-nav #top-nav ul li a:hover,
+#both-nav #top-nav ul li a:focus {
+	background-color: $top-nav-focus;
+}
+
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu li a,
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu li a li,
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu li a li a, {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu > li > a
+{
+	position: relative;
+	background-color: #1d1d1d;
+	padding-left: 32px;
+	padding-right: 32px;
+	padding-top: 10px;
+
+}
+
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu > li > a:hover,
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu > li > a:focus
+{
+	background-color: $top-nav-focus;
+}
+
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu > li > a:hover::before,
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu > li > a:focus::before
+{
+	content: '•';
+	font-size: 32px;
+	display: block;
+	position: absolute;
+	left: 18px;
+	top: 14px;
+}
+
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu li a:hover,
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu li a:focus
+{
+	text-decoration: none;	
+}
+
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu li a span.ordinal_stage {
+	padding: 0;
+	margin: 0;
+}
+
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu li a span.stage_title {
+	padding: 0;
+	margin: 0;
 }
 
 // Right Nav
@@ -136,26 +238,27 @@ $break-small: 768px;
 	color: #ffffff;
 }
 
+#both-nav #top-nav ul#top-nav-right-nav .contact-recruiter,
 #both-nav #top-nav ul#top-nav-right-nav .my-requests {
 	height: 60px;
 	padding: 0;
 	margin: 0;
-	padding-top: 5px;
-	padding-left: 28px;
-	padding-right: 28px;
 	border-left: 1px solid #000000;			
 }
 
+#both-nav #top-nav ul#top-nav-right-nav .contact-recruiter a,
 #both-nav #top-nav ul#top-nav-right-nav .my-requests a {
 	color: #ffffff;
+	font-size: 14px;
+	height: 100%;
+	padding-top: 20px;
+	padding-left: 28px;
+	padding-right: 28px;	
 }
 
 // User Menu
 
-#both-nav #top-nav ul#top-nav-right-nav .top-nav-user-menu {
-	padding-top: 19px;
-	padding-left: 28px;
-	padding-right: 28px;
+#both-nav #top-nav ul#top-nav-right-nav li.top-nav-user-menu {
 	height: 100%;
 	border-left: 1px solid #000000;				
 }
@@ -167,6 +270,9 @@ $break-small: 768px;
 	width: 100%;
 	height: 100%;
 	color: #ffffff;	
+	padding-top: 19px;
+	padding-left: 28px;
+	padding-right: 28px;		
 }
 
 #both-nav #top-nav ul#top-nav-right-nav .top-nav-user-menu img {
@@ -177,18 +283,60 @@ $break-small: 768px;
 // Log out button
 #both-nav #top-nav ul#top-nav-right-nav .top-nav-user-menu ul.dropdown-menu {
 	width: 100%;
-	background-color: #1d1d1d; 
+	background-color: $top-nav-color; 
 	border-radius: 0;
-	height: 60px;
-	padding-top: 19px;	
-	padding-left: 28px;
-	padding-right: 28px;
 	border: none;
+	padding: 0;
+}
+
+#both-nav #top-nav ul#top-nav-right-nav .top-nav-user-menu ul.dropdown-menu li {
+	padding: 0;
+	margin: 0;
+	height: 60px;
+}
+
+#both-nav #top-nav ul#top-nav-right-nav .top-nav-user-menu ul.dropdown-menu li a,
+#both-nav #top-nav ul#top-nav-right-nav .top-nav-user-menu ul.dropdown-menu li a li,
+#both-nav #top-nav ul#top-nav-right-nav .top-nav-user-menu ul.dropdown-menu li a li a, {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+}
+
+#both-nav #top-nav ul#top-nav-right-nav .top-nav-user-menu ul.dropdown-menu > li > a
+{
+	position: relative;
+	background-color: $top-nav-color;
+	padding-left: 32px;
+	padding-right: 32px;
+	padding-top: 18px;
+
+}
+
+#both-nav #top-nav ul#top-nav-right-nav .top-nav-user-menu ul.dropdown-menu  > li > a:hover,
+#both-nav #top-nav ul#top-nav-right-nav .top-nav-user-menu ul.dropdown-menu  > li > a:focus,
+#both-nav #top-nav ul#top-nav-right-nav .top-nav-user-menu ul.dropdown-menu  > li > a:hover li a,
+#both-nav #top-nav ul#top-nav-right-nav .top-nav-user-menu ul.dropdown-menu  > li > a:focus li a,
+{
+	background-color: $top-nav-focus;
+}
+
+#both-nav #top-nav ul#top-nav-right-nav .top-nav-user-menu ul.dropdown-menu  > li > a:hover::before,
+#both-nav #top-nav ul#top-nav-right-nav .top-nav-user-menu ul.dropdown-menu  > li > a:focus::before
+{
+	content: '•';
+	font-size: 32px;
+	display: block;
+	position: absolute;
+	left: 18px;
+	top: 8px;
 }
 
 // TODO: Fix hover styles for dropdown menu
 #top-nav-right-nav > li.top-nav-user-menu.dropdown.open {
-	background-color: #0f0f0f;
+	background-color: $top-nav-color;
 }
 
 // ------

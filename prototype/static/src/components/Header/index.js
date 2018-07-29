@@ -9,6 +9,7 @@ import ContactRecruiter from '../Modal/ContactRecruiter.js';
 import * as actionCreators from '../../actions/auth';
 import brand_logo from '../../images/photos/placeholder.png';
 import profile_img from '../../images/profile-img.png';
+import contact_white from '../../images/contact-white.png';
 
 function mapStateToProps(state) {
     return {
@@ -48,7 +49,7 @@ export class Header extends Component {
         var stage_title = obj.stage_title
         return (
           <span>
-            <span className="ordinal_stage">Current Stage</span> <br />
+            <span className="ordinal_stage">Current Stage</span>
             <span className="stage_title">{stage_title}</span>
           </span>
        )
@@ -135,19 +136,20 @@ export class Header extends Component {
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
-          <Nav id="top-nav-stages">
+          <Nav id="top-nav-left">
           <NavItem className="" href="">
           <div>
-            <span className="ordinal_stage">Position</span>
-          <span className="stage_title">Software Engineer</span>
+            <span className="selected_position_label">Position</span>
+            <span className="selected_position_title">Software Engineer</span>
           </div>
           </NavItem>
-            <NavDropdown className="top-nav-user-menu" title={<span>{this.renderFirstEntry()}</span>} id="basic-nav-dropdown">
+            <NavDropdown className="candidate_stages" title={<span>{this.renderFirstEntry()}</span>} id="basic-nav-dropdown">
             {this.renderEntry()}
             </NavDropdown>
           </Nav>
           <Nav pullRight id="top-nav-right-nav">
-          <NavItem className="my-requests" title="Contact Recruiter" onClick={() => this.setState({ lgShow: true })}>
+          <NavItem className="contact-recruiter" title="Contact Recruiter" onClick={() => this.setState({ lgShow: true })}>
+            <img src={contact_white} />
             Contact Recruiter
             <ContactRecruiter show={this.state.lgShow} onHide={lgClose} />
           </NavItem>
