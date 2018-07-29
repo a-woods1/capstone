@@ -15,6 +15,10 @@ import pin_blue from '../../images/pin-blue.png';
 import a11y_blue from '../../images/a11y-blue.png';
 import new_window from '../../images/new-window.png';
 import expand_blue from '../../images/expand-blue.png';
+import section_360 from '../../images/section-360.png';
+import section_tasks from '../../images/section-tasks.png';
+import section_tools from '../../images/section-tools.png';
+import section_environment from '../../images/section-environment.png';
 
 function mapStateToProps(state) {
     return {
@@ -81,7 +85,10 @@ componentDidMount() {
               <p className="info_box_text">Welcome!<br/>Bloomberg is an exciting place to be. Here are some things to know for when you arrive at our office:</p>
             </Row>
             <Row className="poiSelector">
-              <h2 className="subsection_title">360 Views</h2>
+              <h2 className="subsection_title">
+                <img src={section_360} />
+                360° Views
+              </h2>
                 <div>
                 <ImmersiveNavStagePoiList
                   kickerLabel=""
@@ -94,7 +101,10 @@ componentDidMount() {
             </Row>
 
             <Row>
-              <h2 className="subsection_title">What You’ll Do</h2>
+              <h2 className="subsection_title">
+                <img src={section_tasks} />
+                What You’ll Do
+              </h2>
             </Row>
 
             <Row className="info_box">
@@ -146,7 +156,10 @@ componentDidMount() {
             </Row>
 
             <Row>
-              <h2 className="subsection_title">Additional Details</h2>
+              <h2 className="subsection_title">
+                <img src={section_tools} />
+                Additional Details
+              </h2>
             </Row>
             <Row className="info_box">
               <h3 className="info_box_title">Enjoy a Drink or a Snack</h3>
@@ -160,7 +173,10 @@ componentDidMount() {
             </Row>
 
             <Row>
-              <h2 className="subsection_title">About the Space</h2>
+              <h2 className="subsection_title">
+                <img src={section_environment} />
+                About the Space
+              </h2>
             </Row>
             <Row className="info_box">
               <h3 className="info_box_title">Entrance</h3>
