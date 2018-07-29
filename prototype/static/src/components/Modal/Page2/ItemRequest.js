@@ -62,11 +62,11 @@ class ItemRequest extends Component{
                       </Col>
                     </Row>
                     <Row>
-                      <Col xs={4} md={4}>
-                        <Button onClick={this.clickBack} bsSize="small" block>Back to List</Button>
+                      <Col xs={6} md={6}>
+                        <button onClick={this.clickBack}>Back to List</button>
                       </Col>
-                      <Col xs={4} md={4}>
-                        <Button onClick={this.clickNext} className="cta" bsSize="small" block>Next</Button>
+                      <Col xs={6} md={6}>
+                        <button onClick={this.clickNext} className="cta">Next</button>
                       </Col>
                     </Row>
                   </Grid>)

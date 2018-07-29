@@ -1048,6 +1048,10 @@ button.cta:active {
 	margin-bottom: 36px;
 }
 
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .item-details form {
+	margin-bottom: 72px;
+}
+
 #accommodations-modal .modal-dialog .modal-content #modal-body-main .item-details label {
 	font-weight: 400;
 	position: relative;
@@ -1077,7 +1081,6 @@ button.cta:active {
     background-color: #eee;
     border-radius: 50%;
 }
-
 
 /* On mouse-over, add a grey background color */
 #accommodations-modal .modal-dialog .modal-content #modal-body-main .item-details label input ~ .radio-selector {
@@ -1111,6 +1114,11 @@ button.cta:active {
 	height: 8px;
 	border-radius: 50%;
 	background: #000000;
+}
+
+#accommodations-modal .modal-dialog .modal-content #modal-body-main .item-details button {
+	width: 100%;
+	margin-bottom: 42px;
 }
 
 // Confirmation page
