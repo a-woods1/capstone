@@ -9,6 +9,7 @@ import ScrollableAnchor from 'react-scrollable-anchor'
 import * as actionCreators from '../../actions/auth';
 import brand_logo from '../../images/photos/placeholder.png';
 import profile_img from '../../images/profile-img.png';
+import contact_white from '../../images/contact-white.png';
 
 function mapStateToProps(state) {
     return {
@@ -143,7 +144,8 @@ export class Header extends Component {
             </NavDropdown>
           </Nav>
           <Nav pullRight id="top-nav-right-nav">
-          <NavItem className="my-requests" title="Contact Recruiter">
+          <NavItem className="contact-recruiter" title="Contact Recruiter">
+            <img src={contact_white} />
             Contact Recruiter
           </NavItem>
             <NavItem className="my-requests" title="My Requests" onClick={() => this.dispatchNewRoute('/requests')}>

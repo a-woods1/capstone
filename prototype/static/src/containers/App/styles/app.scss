@@ -207,6 +207,7 @@ $break-small: 768px;
 	color: #ffffff;
 }
 
+#both-nav #top-nav ul#top-nav-right-nav .contact-recruiter,
 #both-nav #top-nav ul#top-nav-right-nav .my-requests {
 	height: 60px;
 	padding: 0;
@@ -217,8 +218,10 @@ $break-small: 768px;
 	border-left: 1px solid #000000;			
 }
 
+#both-nav #top-nav ul#top-nav-right-nav .contact-recruiter a,
 #both-nav #top-nav ul#top-nav-right-nav .my-requests a {
 	color: #ffffff;
+	font-size: 14px;
 }
 
 // User Menu
