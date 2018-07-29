@@ -71,11 +71,11 @@ $break-small: 768px;
 
 // Stages
 
-#top-nav #top-nav-stages {
+#top-nav #top-nav-left {
 
 }
 
-#both-nav #top-nav #top-nav-stages li {
+#both-nav #top-nav #top-nav-left li {
 	margin: 0;
 	padding: 0;
 	padding-left: 32px;
@@ -83,26 +83,42 @@ $break-small: 768px;
 	height: 60px;
 }
 
-#both-nav #top-nav ul#top-nav-stages li a {
+#both-nav #top-nav ul#top-nav-left li a {
 	margin: 0;
 	padding: 0;
 	height: 100%;
 }
 
-#both-nav #top-nav ul#top-nav-stages li {
+#both-nav #top-nav ul#top-nav-left li {
 	border-right: 1px solid #000000;
 }
 
-#both-nav #top-nav ul#top-nav-stages li.current-stage a div span.ordinal_stage,
-#both-nav #top-nav ul#top-nav-stages li.current-stage a div span.stage_title {
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown {
+	width: 200px;
+	// padding-right: 8px;
+}
+
+#both-nav #top-nav ul#top-nav-left li.candidate_stages a span.caret {
+	display: inline-block;
+	position: absolute;
+	right: 0px;
+	top: 24px;
+}
+
+
+#both-nav #top-nav ul#top-nav-left li a div span.selected_position_label,
+#both-nav #top-nav ul#top-nav-left li a div span.selected_position_title,
+#both-nav #top-nav ul#top-nav-left li.candidate_stages a {
 	color: #ffffff;
 }
 
-#both-nav #top-nav ul#top-nav-stages li.current-stage {
+#both-nav #top-nav ul#top-nav-left li.current-stage {
 	background-color: #4A4A4A;
 }
 
-#both-nav #top-nav #top-nav-stages li a div span.ordinal_stage {
+#both-nav #top-nav #top-nav-left li a div span.selected_position_label,
+#both-nav #top-nav ul#top-nav-left li.candidate_stages a span.ordinal_stage
+ {
 	display: block;
 	font-size: 11px;
 	font-weight: 300;
@@ -113,7 +129,8 @@ $break-small: 768px;
 	margin-top: 10px;
 }
 
-#both-nav #top-nav #top-nav-stages li a div span.stage_title {
+#both-nav #top-nav #top-nav-left li a div span.selected_position_title,
+#both-nav #top-nav ul#top-nav-left li.candidate_stages a span.stage_title {
 	display: block;
 	font-size: 16px;
 	font-weight: 700;
