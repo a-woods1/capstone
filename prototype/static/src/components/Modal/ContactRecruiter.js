@@ -11,8 +11,9 @@ import common_req from '../../images/common-req.png';
 import placeholder from '../../images/photos/placeholder.png';
 
 import contact_person from '../../images/contact-person.png';
-import contact_email from '../../images/contact-email.png'
-import contact_phone from '../../images/contact-phone.png'
+import contact_email from '../../images/contact-email.png';
+import contact_phone from '../../images/contact-phone.png';
+import contact_photo from '../../images/contact-photo.png';
 
 class Contact extends React.Component {
   constructor(props) {
@@ -32,7 +33,7 @@ class Contact extends React.Component {
          <Grid>
            <Row>
              <Col xs={5} md={5}>
-               <img id="contact_icon" alt="Accessibility icon" src={contact_dark} />
+               <img id="contact_icon" alt="Contact Recruiter Icon" src={contact_dark} />
                <h4 id = "modal_screen_title">Contact Recruiter</h4>
              </Col>
            </Row>
@@ -44,7 +45,7 @@ class Contact extends React.Component {
         <Grid>
           <Row>
             <Col xs={12} md={12}>
-              <img id="recruiter_photo" alt="Photo of recruiter" width="100px" src={placeholder} />
+              <img id="recruiter_photo" alt="Photo of recruiter" width="100px" src={contact_photo} />
             </Col>
           </Row>
           <Row>
@@ -63,19 +64,19 @@ class Contact extends React.Component {
 
           <Row>
             <Col xs={12} md={12}>
-              <span className="email">
-                <img src={contact_email} />              
+              <a className="email" href="mailto:rosa.garcia@bloomberg.net">
+                <img src={contact_email} />
                 rosa.garcia@bloomberg.net
-              </span>
+              </a>
             </Col>
           </Row>
 
           <Row>
             <Col xs={12} md={12}>
-              <span className="phone">
+              <a className="phone">
                 <img src={contact_phone} />                            
                 +1 (212) 555-5555
-              </span>
+              </a>
             </Col>
           </Row>
 
