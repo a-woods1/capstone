@@ -78,8 +78,8 @@ $break-small: 768px;
 #both-nav #top-nav #top-nav-left li {
 	margin: 0;
 	padding: 0;
-	padding-left: 32px;
-	padding-right: 32px;
+	// padding-left: 32px;
+	// padding-right: 32px;
 	height: 60px;
 }
 
@@ -101,15 +101,20 @@ $break-small: 768px;
 #both-nav #top-nav ul#top-nav-left li.candidate_stages a span.caret {
 	display: inline-block;
 	position: absolute;
-	right: 0px;
-	top: 24px;
+	right: 32px;
+	top: 34px;
 }
-
 
 #both-nav #top-nav ul#top-nav-left li a div span.selected_position_label,
 #both-nav #top-nav ul#top-nav-left li a div span.selected_position_title,
 #both-nav #top-nav ul#top-nav-left li.candidate_stages a {
 	color: #ffffff;
+}
+
+#both-nav #top-nav ul#top-nav-left li a {
+	padding-top: 10px;
+	padding-left: 32px;
+	padding-right: 32px;	
 }
 
 #both-nav #top-nav ul#top-nav-left li.current-stage {
@@ -126,7 +131,7 @@ $break-small: 768px;
 	color: #ffffff;
 	margin: 0;
 	padding: 0;
-	margin-top: 10px;
+	// margin-top: 10px;
 }
 
 #both-nav #top-nav #top-nav-left li a div span.selected_position_title,
@@ -138,6 +143,55 @@ $break-small: 768px;
 	margin: 0;
 	margin-top: -4px;
 	padding: 0;	
+}
+
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu {
+	width: 200px;
+	background-color: #1d1d1d;
+	padding: 0;
+	border: none;
+	border-radius: 0;
+}
+
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu li {
+	width: 100%;
+	padding: 0;
+	border: none;
+	height: 60px;		
+}
+
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu li a,
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu li a li,
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu li a li a, {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu li a
+{
+	background-color: #1d1d1d;
+	padding-left: 32px;
+	padding-right: 32px;
+	padding-top: 10px;
+}
+
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu li a:hover,
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu li a:focus
+{
+	background-color: #080808;
+	text-decoration: none;
+}
+
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu li a span.ordinal_stage {
+	padding: 0;
+	margin: 0;
+}
+
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu li a span.stage_title {
+	padding: 0;
+	margin: 0;
 }
 
 // Right Nav
