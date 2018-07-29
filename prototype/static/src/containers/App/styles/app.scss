@@ -18,6 +18,8 @@
 
 // Variables
 $break-small: 768px;
+$top-nav-color: #1d1d1d;
+$top-nav-focus: #080808;
 
 
 // ------
@@ -40,7 +42,7 @@ $break-small: 768px;
 
 #both-nav #top-nav {
 	position: relative;
-	background-color: #1d1d1d;
+	background-color: $top-nav-color;
 	border-radius: 0px; 
 	margin-bottom: 0px;
 	height: 60px;
@@ -147,7 +149,7 @@ $break-small: 768px;
 
 #both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu {
 	width: 200px;
-	background-color: #1d1d1d;
+	background-color: $top-nav-color;
 	padding: 0;
 	border: none;
 	border-radius: 0;
@@ -182,7 +184,7 @@ $break-small: 768px;
 #both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu > li > a:hover,
 #both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu > li > a:focus
 {
-	background-color: #080808;
+	background-color: $top-nav-focus;
 }
 
 #both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu > li > a:hover::before,
