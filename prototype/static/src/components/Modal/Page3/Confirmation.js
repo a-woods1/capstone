@@ -85,7 +85,7 @@ switch(param) {
         <Col xs={12} md={12}>
           <h4>{this.state.accommodation_name}</h4>
           <p className="modal_text">{this.state.accommodation_description}</p>
-          <p className="request_type">REQUEST TYPE: Please provide this item.</p>
+          <p className="request_type">REQUEST TYPE: I want Bloomberg to provide this item.</p>
         </Col>
       </Row>
       <Row>
