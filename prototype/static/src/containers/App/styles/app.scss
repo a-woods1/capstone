@@ -169,19 +169,37 @@ $break-small: 768px;
 	margin: 0;
 }
 
-#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu li a
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu > li > a
 {
+	position: relative;
 	background-color: #1d1d1d;
 	padding-left: 32px;
 	padding-right: 32px;
 	padding-top: 10px;
+
+}
+
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu > li > a:hover,
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu > li > a:focus
+{
+	background-color: #080808;
+}
+
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu > li > a:hover::before,
+#both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu > li > a:focus::before
+{
+	content: '•';
+	font-size: 32px;
+	display: block;
+	position: absolute;
+	left: 18px;
+	top: 14px;
 }
 
 #both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu li a:hover,
 #both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu li a:focus
 {
-	background-color: #080808;
-	text-decoration: none;
+	text-decoration: none;	
 }
 
 #both-nav #top-nav ul#top-nav-left li.candidate_stages.dropdown .dropdown-menu li a span.ordinal_stage {
