@@ -82,12 +82,14 @@ componentDidMount() {
               <h3 className="info_box_title">The Coding Interview</h3>
               <p className="info_box_text">Each coding challenge can last up to 60 minutes.</p>
             </Row>
-            <Row className="poiSelector">
+            <Row className="immersive_views">
               <h2 className="subsection_title">
                 <img src={section_360} />
-                360 Views
+                360° Tour
               </h2>
               <div>
+                <p>The 360° Tours below can give you a sense of the range of rooms we use for coding interviews. If you have questions or requests regarding access to any of these rooms, please feel welcome to contact your recruiter.</p>              
+                <p>These tours are accessible to screen readers and keyboard navigation.</p>
                 <ImmersiveNavStagePoiList
                   kickerLabel=""
                   activeViewData={this.props.activeViewData}
@@ -107,7 +109,7 @@ componentDidMount() {
             <Row className="info_box">
               <h3 className="info_box_title">Write Code</h3>
               <p className="info_box_text">You can expect to write code with a pen and paper, whiteboard, or computer depending on the team.</p>
-              <p>If you anticipate that any of these tasks will be problematic for you, please look over our accessibility accommodations, and let us know if you need anything.</p>
+              <p className="info_box_text">If you anticipate that any of these tasks will be problematic for you, please look over our accessibility accommodations, and let us know if you need anything.</p>
               <PanelGroup
                 accordion
                 id="accordion-controlled-example"
