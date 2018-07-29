@@ -743,6 +743,7 @@ button.cta:active {
 	height: 60px;
 	padding: 0;
 	margin: 0;
+	white-space: nowrap;
 }
 
 #accommodations-modal .modal-dialog .modal-content .modal-header .container {
@@ -762,7 +763,7 @@ button.cta:active {
 #accommodations-modal .modal-dialog .modal-content .modal-header img#a11y_icon {
 	display: inline-block;
 	position: relative;
-	top: -3px;
+	top: -5px;
 	width: 24px;
 	height: 24px;
 	margin-left: 8px;
@@ -776,7 +777,10 @@ button.cta:active {
 	font-size: 18px;
 	color: #000000;
 	margin: 0;
-	margin-top: 22px;	
+	margin-top: 22px;
+	max-width: 85%;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 // Search
