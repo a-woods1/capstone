@@ -63,6 +63,8 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
     this.toggleImmersiveNavigator = this.toggleImmersiveNavigator.bind(this);
     this.oScroll = this.onScroll.bind(this);
 
+    this.testFunction = this.testFunction.bind(this);
+
   }
 
   initScroller() {
@@ -126,6 +128,7 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
   componentDidMount() {
 
       this.initScroller();
+      window.addEventListener('keydown', this.testFunction);
 
       var s = { stages };
       var p = { previewScenes };
@@ -139,7 +142,6 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
 
       //console.log('XYZ Component (main) did mount');
       //console.log(this.state.stages);
-
     }
 
     getDataById(recordId) {
@@ -177,14 +179,33 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
       this.setState({
         activeViewData: dataRecord
       }, function() {
-        //console.log('App.js set state for data record');
-        //console.log(dataRecord);
+        // console.log('App.js set state for data record');
+        // console.log(dataRecord);
+
+        // Set ARIA focus
+        document.getElementById("ImmersiveControls").focus();
       });
+
+    }
+
+    testFunction(e) {
+
+      // use 'K' to test focus functions
+      if(e.keyCode == 75) { 
+
+        var q = document.getElementById("test-focus");
+        console.log('trying to focus on ');
+        console.log(q);
+
+        setTimeout(function() { q.focus({preventScroll:false}) }, 1);   
+
+      }   
 
     }
 
     hideImmersive () {
       // this.threeEntryPoint.updateRenderer();
+      console.log('hideImmersive called');
       this.setState({immersiveOpen : false });
       this.threeEntryPoint.pauseRender();
     }
@@ -220,7 +241,10 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
             stages={this.state.stages}
             previewScenes={this.state.previewScenes}
       />
-      <div id="text-content" className="col-xs-9">
+      <div
+        id="text-content"
+        className={"col-xs-9 " + (this.state.immersiveOpen ? "hide" : "show")}
+        >
         <Grid>
           <Overview />
           <Arrival

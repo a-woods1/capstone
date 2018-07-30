@@ -23,10 +23,21 @@ class ImmersiveNavigator extends Component {
       return (
           <div className={"imm-navigator " + (this.props.immersiveNavigatorExpanded ? 'imm-navigator-expanded' : 'imm-navigator-collapsed')}>
             <div className="imm-current-view">
-              <span className="kicker">Current View</span>
+              <span className="kicker">Current Room</span>
               <div className="imm-current-view-label">
-                <h2>{this.props.activeViewData.taskName ? this.props.activeViewData.taskName : 'Task Name'}</h2>
+                <h2
+                  id="dialog-title"
+                  tabIndex="0"
+                  aria-label={this.props.activeViewData.name ? this.props.activeViewData.name : 'Bloomberg Offices'}
+                  aria-live="polite">{this.props.activeViewData.name ? this.props.activeViewData.name : 'Bloomberg Offices'}
+                >{this.props.activeViewData.taskName ? this.props.activeViewData.taskName : 'Task Name'}</h2>
                 <h3><img src={pin_white} />{this.props.activeViewData.name ? this.props.activeViewData.name : 'Stage Name'}</h3>
+                <p
+                  className="sr-only"
+                  aria-live="polite"
+                >
+                  {this.props.activeViewData.srDescription ? this.props.activeViewData.srDescription : 'No description available for this room.'}
+                </p>
               </div>
             </div>
 
@@ -37,8 +48,8 @@ class ImmersiveNavigator extends Component {
               previewScenes={this.props.previewScenes}              
             />
 
-            <div className="toggle" onClick={()=>this.props.toggleImmersiveNavigator(!this.props.immersiveNavigatorExpanded)}>
-              <img className={(this.props.immersiveNavigatorExpanded ? 'left' : 'right')} src={caret}/>
+            <div className="toggle" aria-label="Toggle Immersive Panel" onClick={()=>this.props.toggleImmersiveNavigator(!this.props.immersiveNavigatorExpanded)}>
+              <img className={(this.props.immersiveNavigatorExpanded ? 'left' : 'right')} src={caret} role="presentation"/>
             </div>  
 
           </div>

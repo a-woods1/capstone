@@ -71,7 +71,12 @@ class ImmersiveNavStagePoi extends Component {
 	    return (
 			<li
 				className={this.props.activeViewData.id ? (this.props.activeViewData.id == this.props.id ? 'active-poi' : '') : ''}
-				onClick={()=>this.props.changeImmersive(this.props.id)}>
+				onClick={()=>this.props.changeImmersive(this.props.id)}
+				tabIndex="0"
+				role="link"
+				aria-label={"Select to open immersive view for" + this.data.name}
+				>
+
 				<div
 					className="poi-thumbnail"
 					// TODO: Look at ImmersiveNavStagePoi for details;
@@ -83,7 +88,7 @@ class ImmersiveNavStagePoi extends Component {
 				<div className="poi-label">
 					<h5>{poiTaskname}</h5>
 					<h6>
-						<img src={this.props.activeViewData.id ? (this.props.activeViewData.id == this.props.id ? pin_white : pin_blue) : pin_blue} />
+						<img role="presentation" src={this.props.activeViewData.id ? (this.props.activeViewData.id == this.props.id ? pin_white : pin_blue) : pin_blue} />
 						{poiName}
 					</h6>					
 				</div>
