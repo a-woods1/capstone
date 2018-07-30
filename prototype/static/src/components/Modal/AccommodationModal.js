@@ -113,7 +113,6 @@ clickRequest = (e, i, accommodation_name, accommodation_description) => {
     switch(param) {
       case 1:
       return(
-
           <div id="accommodations-list">
             <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
               {this.renderEntry()}
@@ -121,7 +120,7 @@ clickRequest = (e, i, accommodation_name, accommodation_description) => {
           </div>
         )
       case 2:
-        return (<ItemRequest product_id={this.state.product_id} accommodation_name={this.state.accommodation_name} modal_screen_title={this.state.modal_screen_title}
+        return (<ItemRequest products={this.state.products} product_id={this.state.product_id} accommodation_name={this.state.accommodation_name} modal_screen_title={this.state.modal_screen_title}
         accommodation_description={this.state.accommodation_description}/>)
       case 10:
         return (<Custom/>)
@@ -140,7 +139,7 @@ clickRequest = (e, i, accommodation_name, accommodation_description) => {
         bsSize="large"
         aria-labelledby="contained-modal-title-lg"
       >
-        <Modal.Header closeButton onClick={this.closeModal}>
+        <Modal.Header id="modal_close" closeButton onClick={this.closeModal}>
          <Grid>
            <Row>
              <Col xs={5} md={5}>

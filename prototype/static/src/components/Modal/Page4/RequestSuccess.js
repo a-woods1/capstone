@@ -41,7 +41,13 @@ class RequestSuccess extends Component{
       };
   }
 
+  closeModal(){
+       document.getElementsByClassName('close')[0].click();
+       this.dispatchNewRoute('/requests')
+    }
+
   clickStatus = () => {
+        this.closeModal()
         this.setState({
             showPage : 5
         });
@@ -74,10 +80,10 @@ class RequestSuccess extends Component{
           </Row>
             <Row>
               <Col xs={6} md={6}>
-                <button onClick={this.clickBackToList}>Back to List</button>
+                <button>Back to List</button>
               </Col>
               <Col xs={6} md={6}>
-                <button onClick={() => this.dispatchNewRoute('/requests')} className="cta">Check Status</button>
+                <button onClick={() => this.closeModal() } className="cta">Check Status</button>
               </Col>
             </Row>
         </Grid>)
