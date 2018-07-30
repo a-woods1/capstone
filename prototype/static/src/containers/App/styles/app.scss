@@ -1238,16 +1238,6 @@ button.cta:active {
 	margin-top: 56px;
 }
 
-.hide #text-content {
-	display: none;
-	visibility: hidden;
-}
-
-.show #text-content {
-	display: block;
-	visibility: visible;
-}
-
 #text-content .container {
 	padding: 0 !important;
 	margin: 0 !important;
@@ -2455,26 +2445,6 @@ a.link:focus .link-label {
 	border-bottom: solid 1px #D8D8D8;
 	font-weight: 400;
 	font-size: 20px;
-
-// Screen Reader
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
-}
-
-// Test style for a11y testing
-#test-focus {
-	border: 1px solid yellow;
-}
-
-#test-focus:focus {
-	border: 10px solid red;
 }
 
 #contact-modal .modal-dialog .modal-content #modal-body-main a.email {

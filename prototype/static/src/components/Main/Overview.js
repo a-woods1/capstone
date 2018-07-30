@@ -78,12 +78,7 @@ for (var i = 0; i < sessionStorage.length; i++) {
 
                   <Row className="overview_section">
                     <ScrollableAnchor id={'section1'}>
-                      <h1
-                        className="section_title"
-                        tabIndex="0"
-                        onClick={this.props.testFunction}>
-                        Overview
-                      </h1>
+                      <h1 className="section_title" onClick={this.props.testFunction}>Overview</h1>
                     </ScrollableAnchor>
                   </Row>
 
