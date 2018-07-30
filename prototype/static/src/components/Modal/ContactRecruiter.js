@@ -34,7 +34,7 @@ class Contact extends React.Component {
            <Row>
              <Col xs={5} md={5}>
                <img role="presentation" id="contact_icon" src={contact_dark} />
-               <h4 id = "modal_screen_title">Contact Recruiter</h4>
+               <h4 id = "modal_screen_title" tabIndex="0">Contact Recruiter</h4>
              </Col>
            </Row>
          </Grid>
@@ -64,7 +64,7 @@ class Contact extends React.Component {
 
           <Row>
             <Col xs={12} md={12}>
-              <a className="email" href="mailto:rosa.garcia@bloomberg.net">
+              <a className="email" tabIndex="0" href="mailto:rosa.garcia@bloomberg.net">
                 <img alt="Email address" src={contact_email} />
                 rosa.garcia@bloomberg.net
               </a>
@@ -73,7 +73,7 @@ class Contact extends React.Component {
 
           <Row>
             <Col xs={12} md={12}>
-              <a className="phone">
+              <a className="phone" tabIndex="0">
                 <img alt="Phone number" src={contact_phone} />                            
                 +1 (212) 555-5555
               </a>
