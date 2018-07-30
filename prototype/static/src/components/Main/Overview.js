@@ -47,7 +47,15 @@ class Overview extends React.Component { // eslint-disable-line react/prefer-sta
       this.state = {
         lgShow: false,
   }
+  this.launchAccModalSetFocus = this.launchAccModalSetFocus.bind(this);
 }
+
+  launchAccModalSetFocus() {
+    this.setState({ lgShow: true });
+    setTimeout(function(){
+      document.getElementById('modal_screen_title').focus();
+    }, 100)
+  }
 
   componentDidMount() {
 
@@ -132,7 +140,7 @@ for (var i = 0; i < sessionStorage.length; i++) {
                   <Row className="info_box">
                     <h3 className="info_box_title">Let Us Know What You Need</h3>
                     <p className="info_box_text">If you require any accommodations to fully participate in the interview, please let us know. We will make every effort to ensure you are provided with appropriate assistance.</p>
-                    <a onClick={() => this.setState({ lgShow: true })} className="accessibility_link"><img src={a11y_blue} /> Accessibility Accommodations</a>
+                    <a onClick={this.launchAccModalSetFocus} className="accessibility_link"><img src={a11y_blue} /> Accessibility Accommodations</a>
 
 
                     <AccommodationModal show={this.state.lgShow} categories={this.props.categories} products={this.props.products} onHide={lgClose} />
