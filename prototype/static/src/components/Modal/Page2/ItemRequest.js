@@ -17,7 +17,8 @@ class ItemRequest extends Component{
           product_id: this.props.product_id,
           accommodation_name: this.props.accommodation_name,
           accommodation_description: this.props.accommodation_description,
-          bring_provide: true
+          bring_provide: true,
+          request_description: ""
       };
   }
 
@@ -73,7 +74,7 @@ class ItemRequest extends Component{
                     </Row>
                   </Grid>)
       case 3:
-        return (<Confirmation show={this.state.show} product_id={this.state.product_id} accommodation_name={this.state.accommodation_name} accommodation_description={this.state.accommodation_description} bring_provide={this.state.bring_provide} />)
+        return (<Confirmation show={this.state.show} product_id={this.state.product_id} accommodation_name={this.state.accommodation_name} accommodation_description={this.state.accommodation_description} bring_provide={this.state.bring_provide} request_description={this.state.request_description} />)
       default:
         return <div>Error</div>
       }

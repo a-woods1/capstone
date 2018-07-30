@@ -32,7 +32,7 @@ class Requests extends React.Component {
   render() {
     var requests = JSON.parse(localStorage.getItem("accommodation_requests"));
     const hasRequests = requests != null
-    console.log(hasRequests)
+    console.log("Request Description" + this.state.request_description)
 
     let lgClose = () => this.setState({ lgShow: false });
     return (
@@ -68,7 +68,7 @@ class Requests extends React.Component {
           :
           <div></div>
           }
-          <RequestList />
+          <RequestList request_description={this.state.request_description}/>
         </div>
         <Row>
           <Col xs={12} md={12}>

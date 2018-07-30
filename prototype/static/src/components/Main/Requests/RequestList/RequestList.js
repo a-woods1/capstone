@@ -11,7 +11,7 @@ import expand_blue from '../../../../images/expand-blue.png';
 class RequestList extends Component{
   constructor(props, context) {
     super(props, context);
-
+    
     this.handleSelect = this.handleSelect.bind(this);
   }
 
@@ -27,13 +27,13 @@ class RequestList extends Component{
       return Object.entries(requests).map(([key, value], i) => {
         //console.log("i " + i)
         //console.log("key " + key)
-        console.log("value " + value.accommodation_name)
+        //console.log("value " + value.accommodation_name)
         return (
           <PanelGroup
             accordion
             id="accordion-controlled-example"
             onSelect={this.handleSelect}
-            className="request_list_item"            
+            className="request_list_item"
           >
             <Panel eventKey={i}>
               <Panel.Heading>
@@ -72,7 +72,7 @@ class RequestList extends Component{
               </Row>
               <Row>
                 <Col xs={12} md={12}>
-                  <span><strong>Detailed Information:</strong> Please have this item available in the interview room.</span>
+                  <span><strong>Detailed Information:</strong> {value.request_description}</span>
                 </Col>
               </Row>
             </Grid>

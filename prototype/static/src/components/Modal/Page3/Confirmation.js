@@ -23,7 +23,8 @@ class Confirmation extends Component{
           product_id: this.props.product_id,
           accommodation_name: this.props.accommodation_name,
           accommodation_description: this.props.accommodation_description,
-          bring_provide: this.props.bring_provide
+          bring_provide: this.props.bring_provide,
+          request_description: this.props.request_description
       };
   }
 
@@ -46,12 +47,12 @@ class Confirmation extends Component{
       }
     }
 
-    //console.log("already_requested " + already_requested)
     if (already_requested == false){
       items.push({
         product_id: this.state.product_id,
         accommodation_name: this.state.accommodation_name,
-        accommodation_description: this.props.accommodation_description
+        accommodation_description: this.props.accommodation_description,
+        request_description: this.state.request_description
       });
     }
 
@@ -68,8 +69,15 @@ clickBack = () => {
       });
   }
 
+
+  handleDescriptionChange = (event) => {
+        this.setState({
+            request_description: event.target.value
+        });
+    }
+
 renderPage(param) {
-console.log(param)
+//console.log(param)
 switch(param) {
   case 2:
     return (<ItemRequest product_id={this.state.product_id} accommodation_name={this.state.accommodation_name} accommodation_description={this.state.accommodation_description}/>)
@@ -121,7 +129,11 @@ switch(param) {
         <Col xs={12} md={12}>
           <p>*Please provide us with additional details about your request.</p>
           <div onClick={() => {this.request_description.focus()}}>
-            <textarea ref={(request_description) => this.request_description = request_description} rows="4" cols="50" name="specification" placeholder="Enter details here." required></textarea>
+            <textarea
+              ref={(request_description) => this.request_description = request_description}
+              onChange={(e) => {this.handleDescriptionChange(e)}}
+              rows="4" cols="50" name="specification" placeholder="Enter details here." required>
+            </textarea>
           </div>
         </Col>
       </Row>
@@ -135,7 +147,7 @@ switch(param) {
       </Row>
      </Grid>)
   case 4:
-    return (<RequestSuccess product_id={this.state.product_id} accommodation_name={this.state.accommodation_name} accommodation_description={this.state.accommodation_description}/>)
+    return (<RequestSuccess product_id={this.state.product_id} accommodation_name={this.state.accommodation_name} accommodation_description={this.state.accommodation_description} request_description={this.state.request_description}/>)
   default:
     return <div>Error</div>
   }
