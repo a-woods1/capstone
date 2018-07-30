@@ -17,8 +17,8 @@ class ItemRequest extends Component{
           product_id: this.props.product_id,
           accommodation_name: this.props.accommodation_name,
           accommodation_description: this.props.accommodation_description,
-          bring_provide: true,
-          request_description: ""
+          bring_provide: "Please provide this item",
+          request_description: "N/A"
       };
   }
 
@@ -35,8 +35,14 @@ class ItemRequest extends Component{
           });
       }
 
+    handleSelectionChange = (event) => {
+      this.setState({
+        bring_provide: event.target.value
+      });
+    }
+
     renderPage(param) {
-    console.log(this.state.products)
+    //console.log(this.state.products)
     switch(param) {
       case 1:
         return (<AccommodationModal modal_screen_title={this.state.modal_screen_title} products={this.state.products} />)
@@ -53,12 +59,25 @@ class ItemRequest extends Component{
                         <form action="">
                           <label>
                             I will bring my own
-                            <input type="radio" name="bring_provide" value=""/>
+                            <input
+                            type="radio"
+                            name="bring_provide"
+                            value="I will bring my own"
+                            checked={this.state.bring_provide === "I will bring my own"}
+                            onChange={(e) => {this.handleSelectionChange(e)}}
+                            />
                             <span className="radio-selector"></span>
                           </label>
                           <label>
-                            I want Bloomberg to provide the {this.state.accommodation_name}
-                            <input type="radio" name="bring_provide" value="" defaultChecked="true" />
+                            Please provide this item
+                            <input
+                            type="radio"
+                            name="bring_provide"
+                            value="Please provide this item"
+                            checked={this.state.bring_provide === "Please provide this item"}
+                            onChange={(e) => {this.handleSelectionChange(e)}}
+                            defaultChecked="true"
+                            />
                             <span className="radio-selector"></span>
                           </label>
                         </form>

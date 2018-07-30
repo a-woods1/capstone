@@ -11,7 +11,7 @@ import expand_blue from '../../../../images/expand-blue.png';
 class RequestList extends Component{
   constructor(props, context) {
     super(props, context);
-    
+
     this.handleSelect = this.handleSelect.bind(this);
   }
 
@@ -67,7 +67,7 @@ class RequestList extends Component{
               <Grid>
               <Row>
                 <Col xs={12} md={12}>
-                  <span><strong>Bring my own?</strong> No.</span>
+                  <span><strong>Request Type:</strong> {value.bring_provide}</span>
                 </Col>
               </Row>
               <Row>

@@ -52,6 +52,7 @@ class Confirmation extends Component{
         product_id: this.state.product_id,
         accommodation_name: this.state.accommodation_name,
         accommodation_description: this.props.accommodation_description,
+        bring_provide: this.props.bring_provide,
         request_description: this.state.request_description
       });
     }
@@ -94,7 +95,7 @@ switch(param) {
         <Col xs={12} md={12}>
           <h4>{this.state.accommodation_name}</h4>
           <p className="modal_text">{this.state.accommodation_description}</p>
-          <p className="request_type">REQUEST TYPE: I want Bloomberg to provide this item.</p>
+          <p className="request_type">REQUEST TYPE: {this.state.bring_provide}</p>
         </Col>
       </Row>
       <Row>
@@ -147,7 +148,7 @@ switch(param) {
       </Row>
      </Grid>)
   case 4:
-    return (<RequestSuccess product_id={this.state.product_id} accommodation_name={this.state.accommodation_name} accommodation_description={this.state.accommodation_description} request_description={this.state.request_description}/>)
+    return (<RequestSuccess product_id={this.state.product_id} accommodation_name={this.state.accommodation_name} accommodation_description={this.state.accommodation_description} bring_provide={this.state.bring_provide} request_description={this.state.request_description}/>)
   default:
     return <div>Error</div>
   }
