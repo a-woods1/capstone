@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import * as go from './glyphs/go.png';
+import go from '../../images/go.png';
 
 export function LinkedView( scene, thisPosition, thisId ) {
 
@@ -23,19 +23,30 @@ export function LinkedView( scene, thisPosition, thisId ) {
 
 		//console.log('drawDomLink called');
 
+		var linkContainer = document.createElement("span");
+		linkContainer.className = "link-container";
+
+		var linkLabel = document.createElement("span");
+		var labelNode = document.createTextNode("Move Here");
+		linkLabel.appendChild(labelNode);
+		linkLabel.className = "link-label";
 		var linkPin = document.createElement("a");
 		linkPin.className = "link";
 		var pinImg = document.createElement('IMG');
 		pinImg.src = go;
 		linkPin.appendChild(pinImg);
+
+		linkContainer.appendChild(linkPin);
+		linkContainer.appendChild(linkLabel);
+
 		// TODO: add index to thisId
 		var xId = "link-" + thisId;
 		linkPin.setAttribute("id", xId);
 		linkPin.setAttribute("href", "#");
-		document.getElementById("ThreeContainer").appendChild(linkPin);
+		document.getElementById("ThreeContainer").appendChild(linkContainer);
 
 		// returns the DOM element
-		return linkPin;
+		return linkContainer;
 	}
 
 	// adds a listener to the <a> tag
