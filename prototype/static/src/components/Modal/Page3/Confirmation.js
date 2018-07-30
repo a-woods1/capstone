@@ -87,7 +87,7 @@ switch(param) {
       <Grid className="confirm-page-content">
       <Row>
       <Col xs={12} md={12}>
-        <h3 className="confirmation_heading"><span className="num">1</span><span>Confirm Accommodation(s)</span></h3>
+        <h3 aria-label="Step 1, Confirm Accommodations" className="confirmation_heading"><span className="num">1</span><span>Confirm Accommodation(s)</span></h3>
       </Col>
 
       </Row>
@@ -99,11 +99,11 @@ switch(param) {
         </Col>
       </Row>
       <Row>
-        <hr />
+        <hr role="presentation" />
       </Row>
       <Row>
         <Col xs={12} md={12}>
-          <h3 className="confirmation_heading"><span className="num">2</span><span>Confirm Date & Location</span></h3>
+          <h3 aria-label="Step 2, Confirm Date and Location" className="confirmation_heading"><span className="num">2</span><span>Confirm Date & Location</span></h3>
         </Col>
       </Row>
       <Row>
@@ -119,11 +119,11 @@ switch(param) {
         </Col>
       </Row>
       <Row>
-        <hr />
+        <hr role="presentation" />
       </Row>
       <Row>
         <Col xs={12} md={12}>
-          <h3 className="confirmation_heading"><span className="num">3</span><span>Send Message</span></h3>
+          <h3 aria-label="Step 3, Send Message" className="confirmation_heading"><span className="num">3</span><span>Send Message</span></h3>
         </Col>
       </Row>
       <Row>
@@ -133,7 +133,7 @@ switch(param) {
             <textarea
               ref={(request_description) => this.request_description = request_description}
               onChange={(e) => {this.handleDescriptionChange(e)}}
-              rows="4" cols="50" name="specification" placeholder="Enter details here." required>
+              rows="4" cols="50" name="specification" placeholder="Enter details here.">
             </textarea>
           </div>
         </Col>
