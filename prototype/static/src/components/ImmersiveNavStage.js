@@ -14,9 +14,17 @@ class ImmersiveNavStage extends Component {
 				className={this.props.stageOrder == this.props.expandedStage ? "stage-expanded" : "stage-collapsed"}
 				onClick={()=>this.props.expandStage(this.props.stageOrder)}
 			>
-				<img src={clock} className="clock" />
-				<span className="time">{this.props.stageTime}</span>
-				<h3>{this.props.stageName}</h3>
+				<div className="stage-label">
+					<img src={clock} className="clock" />
+					<span className="time">
+						{this.props.stageTime}
+						<span className="am-pm">AM</span>
+					</span>
+					<h3>{this.props.stageName}</h3>
+					<span className="expand-glyph">
+						{this.props.stageOrder == this.props.expandedStage ? "–" : "+"}
+					</span>
+				</div>
 				<ImmersiveNavStagePoiList
 					kickerLabel="Other Views"
 		            activeViewData={this.props.activeViewData}										

@@ -25,7 +25,8 @@ class ImmersiveNavigator extends Component {
             <div className="imm-current-view">
               <span className="kicker">Current View</span>
               <div className="imm-current-view-label">
-                <img src={pin_white} /><h2>{this.props.activeViewData.name ? this.props.activeViewData.name : 'Stage Name'}</h2>
+                <h2>{this.props.activeViewData.taskName ? this.props.activeViewData.taskName : 'Task Name'}</h2>
+                <h3><img src={pin_white} />{this.props.activeViewData.name ? this.props.activeViewData.name : 'Stage Name'}</h3>
               </div>
             </div>
 
