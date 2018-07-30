@@ -26,8 +26,17 @@ class Requests extends React.Component {
       this.state = {
         lgShow: false,
   }
+
+  this.launchModalSetFocus = this.launchModalSetFocus.bind(this);
+
 }
 
+  launchModalSetFocus() {
+    this.setState({ lgShow: true });
+    setTimeout(function(){
+      document.getElementById('modal_screen_title').focus();
+    })
+  }
 
   render() {
     var requests = JSON.parse(localStorage.getItem("accommodation_requests"));
@@ -44,25 +53,25 @@ class Requests extends React.Component {
             <h1>Current Requests</h1>
           </Col>
         </Row>
-        <div className="request-table">
+        <div aria-label="Table of current requests" className="request-table">
           {hasRequests
           ?
-          <Row className="request-table-header">
+          <Row aria-label="Table header" className="request-table-header">
             <Col xs={1} md={1}></Col>
             <Col xs={3} md={3}>
-              <div>Accommodation</div>
+              <div id="request-table-col1">Accommodation</div>
             </Col>
             <Col xs={2} md={2}>
-              <div>Interview Date</div>
+              <div id="request-table-col2">Interview Date</div>
             </Col>
             <Col xs={2} md={2}>
-              <div>Interview Stage</div>
+              <div id="request-table-col3">Interview Stage</div>
             </Col>
             <Col xs={2} md={2}>
-              <div>Location</div>
+              <div id="request-table-col4">Location</div>
             </Col>
             <Col xs={2} md={2}>
-              <div>Status</div>
+              <div id="request-table-col5">Status</div>
             </Col>
           </Row>
           :
@@ -73,7 +82,9 @@ class Requests extends React.Component {
         <Row>
           <Col xs={12} md={12}>
             <div className="contact-recruiter">
-              <a onClick={() => this.setState({ lgShow: true })} className="accommodation_list_link"><img src={add_blue} /> ADD A NEW REQUEST</a>
+              <a onClick={this.launchModalSetFocus} tabIndex="0" className="accommodation_list_link">
+                <img role="presentation" src={add_blue} /> Add a new request
+              </a>
               <AccommodationModal show={this.state.lgShow} products={this.props.products} onHide={lgClose} />
             </div>
           </Col>

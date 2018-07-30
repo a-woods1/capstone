@@ -38,7 +38,7 @@ renderEntry = () => {
     Object.entries(value).forEach(([subkey, subvalue]) => {
       //console.log(subvalue)
       list_items.push(
-        <Grid className="accommodation-item">
+        <Grid role="listitem" aria-label={subvalue.accommodation_name} className="accommodation-item">
             <Row>
               <Col xs={7} md={7}>
                 <span>
@@ -54,7 +54,12 @@ renderEntry = () => {
               </Col>
               <Col xs={5} md={5}>
 
-                <button className="short-button" onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Select</button>
+                <button
+                  aria-label={"Select " + subvalue.accommodation_name}
+                  className="short-button"  
+                  onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>
+                  Select
+                </button>
               </Col>
             </Row>
     </Grid>
@@ -63,13 +68,13 @@ renderEntry = () => {
     //Create tabs and add list items
     tabs.push(
       <Tab eventKey={i+1} title={key}>
-      <div>
+      <div role="list" aria-label="List of accessibility accommodations">
         {list_items}
 
-        <Grid className="accommodation-item" id="custom-accommodation" onClick={(e) => this.customAccommodation(e)}>
+        <Grid role="listitem" className="accommodation-item" id="custom-accommodation" onClick={(e) => this.customAccommodation(e)}>
           <Row>
             <Col xs={12} md={12}>
-              <img src={plus} className="plus"/>
+              <img role="presentation" src={plus} className="plus"/>
               <span>I need another accommodation that is not on this list</span>
             </Col>
           </Row>
@@ -137,19 +142,19 @@ clickRequest = (e, i, accommodation_name, accommodation_description) => {
         {...this.props}
         id="accommodations-modal"
         bsSize="large"
-        aria-labelledby="contained-modal-title-lg"
+        aria-labelledby="modal_screen_title"
       >
         <Modal.Header id="modal_close" closeButton onClick={this.closeModal}>
          <Grid>
            <Row>
              <Col xs={5} md={5}>
-               <img id="a11y_icon" alt="Accessibility icon" src={accessibility_logo} />
-               <h4 id = "modal_screen_title">{this.state.modal_screen_title}</h4>
+               <img role="presentation" id="a11y_icon" src={accessibility_logo} />
+               <h4 id="modal_screen_title" tabIndex="0" aria-live="assertive">{this.state.modal_screen_title}</h4>
              </Col>
              <Col xs={6} md={6}>
              <div id="search">
-               <input id="search_field" type="text" placeholder="Search accommodations" />
-               <img className="search_icon" alt="Search icon" src={search_icon}/>
+               <input role="search" id="search_field" type="text" placeholder="Search accommodations" />
+               <img className="search_icon" alt="Submit" src={search_icon}/>
              </div>
              </Col>
            </Row>
