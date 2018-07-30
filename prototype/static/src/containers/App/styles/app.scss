@@ -2461,6 +2461,10 @@ a.link:focus .link-label {
 }
 
 
+// ------
+// SCREEN READER STYLES
+// ------
+
 // Screen Reader
 .sr-only {
   position: absolute;
@@ -2472,6 +2476,37 @@ a.link:focus .link-label {
   clip: rect(0,0,0,0);
   border: 0;
 }
+
+// Skip to main content
+// Src: https://accessibility.oit.ncsu.edu/it-accessibility-at-nc-state/developers/accessibility-handbook/mouse-and-keyboard-events/skip-to-main-content/
+
+a.skip-main {
+	left:-999px;
+    position:absolute;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    z-index:-999;
+}
+
+a.skip-main:focus, a.skip-main:active {
+    color: #ffffff;
+    background-color:#0000ff;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: auto;
+    overflow:auto;
+    margin: 10px 35%;
+    padding:5px;
+    text-align:center;
+    font-size:1.2em;
+    z-index:999;
+    text-decoration: none;
+    font-weight: 600;
+}
+
  // Test style for a11y testing
 #test-focus {
 	border: 1px solid yellow;

@@ -131,6 +131,7 @@ export class Header extends Component {
         </header>
       :
       <header id="both-nav">
+        <a className="skip-main" href="main#section1">Skip to main content</a>
         <Navbar inverse collapseOnSelect id="top-nav">
         <Navbar.Header>
           <Navbar.Brand className="brand-logo">
