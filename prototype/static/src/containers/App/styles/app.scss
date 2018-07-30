@@ -874,9 +874,12 @@ button.cta:active {
 	margin-right: 16px !important;
 }
 
+
 #accommodations-modal .modal-dialog .modal-content .modal-body ul.nav-tabs li.active a,
 #accommodations-modal .modal-dialog .modal-content .modal-body ul.nav-tabs li:hover a,
 #accommodations-modal .modal-dialog .modal-content .modal-body ul.nav-tabs li:focus a,
+#accommodations-modal .modal-dialog .modal-content .modal-body ul.nav-tabs li a:hover,
+#accommodations-modal .modal-dialog .modal-content .modal-body ul.nav-tabs li a:focus,
 {
 	padding: 0 !important;
 	margin: 0 !important;
