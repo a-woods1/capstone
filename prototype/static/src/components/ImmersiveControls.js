@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import exit from '../img/exit.png';
 import ImmersiveNavigator from './ImmersiveNavigator.js';
 import ImmersiveInstructions from './ImmersiveInstructions.js';
+import a11y_white from '../images/a11y-white.png';
 
 class ImmersiveControls extends Component {
 
@@ -55,6 +56,9 @@ class ImmersiveControls extends Component {
             aria-label="Close Immersive Explorer"
             tabIndex="1"
           />
+          <button className="cta">
+            <img src={a11y_white} />Accessibility Accommodations
+          </button>
         </div>
       );
   }

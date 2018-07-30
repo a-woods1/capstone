@@ -1684,6 +1684,7 @@ canvas {
 	-webkit-transition: opacity 100ms linear;
 }
 
+
 #imm-exit:hover,
 #imm-exit:focus {
 	opacity: 1;
@@ -2339,12 +2340,28 @@ a.link:hover .link-label,
 a.link:focus .link-label {
 }
 
-
-
 #number {
 	position: absolute;
 	z-index: -1;
 }
+
+
+#ImmersiveControls button {
+	position: fixed;
+	right: 48px;
+	bottom: 72px;
+	font-size: 16px;
+	font-weight: 600;
+	width: 356px;
+}
+
+#ImmersiveControls button img {
+	position: relative;
+	top: -2px;
+	width: 16px;
+	margin-right: 8px;
+}
+
 
 // ------
 // CONTACT MODAL
