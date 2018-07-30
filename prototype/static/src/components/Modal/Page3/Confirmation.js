@@ -36,23 +36,24 @@ class Confirmation extends Component{
         items = JSON.parse(items);
 
     }
-    /*
-    var already_requested = false;
 
+    var already_requested = false;
+    //console.log("state product_id " + this.state.product_id)
     for (var i = 0; i < items.length; i++) {
-      console.log(items[i].product_id);
-      if (items[i].product_id === this.state.product_id){
+      //console.log("item product_id " + items[i].product_id);
+      if (items[i].accommodation_name === this.state.accommodation_name){
         already_requested = true;
       }
     }
-*/
-    //if (already_requested == false){
+
+    //console.log("already_requested " + already_requested)
+    if (already_requested == false){
       items.push({
         product_id: this.state.product_id,
         accommodation_name: this.state.accommodation_name,
         accommodation_description: this.props.accommodation_description
       });
-    //}
+    }
 
     localStorage.setItem("accommodation_requests", JSON.stringify(items));
 
