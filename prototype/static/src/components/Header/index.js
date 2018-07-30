@@ -159,7 +159,7 @@ export class Header extends Component {
             <NavItem className="my-requests" title="My Requests" onClick={() => this.dispatchNewRoute('/requests')}>
               My Requests
             </NavItem>
-            <NavDropdown className="top-nav-user-menu" title={<span><img id="profile_img" src={profile_img} />Hi, {this.props.userName}!</span>} id="basic-nav-dropdown">
+            <NavDropdown className="top-nav-user-menu" title={<span><span id="profile_img">{this.props.userName.charAt(0).toUpperCase()}</span>Hi, {this.props.userName}!</span>} id="basic-nav-dropdown">
               <NavItem>
                 <MenuItem onClick={(e) => this.logout(e)}>
                   Log Out

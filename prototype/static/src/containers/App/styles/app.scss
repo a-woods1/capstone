@@ -259,8 +259,15 @@ $top-nav-focus: #080808;
 	padding-right: 28px;
 }
 
-#both-nav #top-nav ul#top-nav-right-nav .top-nav-user-menu img {
-	width: 24px;
+#both-nav #top-nav ul#top-nav-right-nav .top-nav-user-menu span#profile_img {
+	display: inline-block;
+	text-align: center;
+	padding-top: 4px;
+	width: 28px;
+	height: 28px;
+	background-color: #4A4A4A;
+	color: #9B9B9B;
+	border-radius: 50%;
 	margin-right: 10px;
 }
 
