@@ -346,6 +346,16 @@ $top-nav-focus: #080808;
 	border-bottom: solid 1px #d8d8d8;
 }
 
+#sub-nav.hide {
+	visibility: hidden !important;
+	display: none !important;
+}
+
+#sub-nav.show {
+	visibility: visible;
+	display: block !important;
+}
+
 #both-nav #sub-nav .container {
 	padding: 0 !important;
 	margin: 0 !important;
@@ -2355,6 +2365,7 @@ a.link:focus .link-label {
 	font-size: 16px;
 	font-weight: 600;
 	width: 356px;
+	box-shadow: 0 12px 23px 0 rgba(0, 0, 0, 0.5);
 }
 
 #ImmersiveControls button img {
