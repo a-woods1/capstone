@@ -86,10 +86,14 @@ class ImmersiveControls extends Component {
             src={exit}
             onClick={this.props.close}
             aria-label="Close Immersive Explorer"
-            tabIndex="1"
+            tabIndex="0"
           />
 
-          <button  onClick={() => this.setState({ lgShow: true })} className="cta">
+          <button
+            onClick={() => this.setState({ lgShow: true })}
+            className="cta"
+            tabIndex="0"            
+          >
             <img src={a11y_white} />Accessibility Accommodations
           </button>
           <AccommodationModal show={this.state.lgShow} products={this.props.products} onHide={lgClose} />
