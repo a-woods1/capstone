@@ -149,7 +149,7 @@ clickRequest = (e, i, accommodation_name, accommodation_description) => {
            <Row>
              <Col xs={5} md={5}>
                <img role="presentation" id="a11y_icon" src={accessibility_logo} />
-               <h4 id="modal_screen_title" aria-live="assertive">{this.state.modal_screen_title}</h4>
+               <h4 id="modal_screen_title" tabIndex="0" aria-live="assertive">{this.state.modal_screen_title}</h4>
              </Col>
              <Col xs={6} md={6}>
              <div id="search">

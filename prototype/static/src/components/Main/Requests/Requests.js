@@ -26,8 +26,17 @@ class Requests extends React.Component {
       this.state = {
         lgShow: false,
   }
+
+  this.launchModalSetFocus = this.launchModalSetFocus.bind(this);
+
 }
 
+  launchModalSetFocus() {
+    this.setState({ lgShow: true });
+    setTimeout(function(){
+      document.getElementById('modal_screen_title').focus();
+    })
+  }
 
   render() {
     var requests = JSON.parse(localStorage.getItem("accommodation_requests"));
@@ -73,7 +82,7 @@ class Requests extends React.Component {
         <Row>
           <Col xs={12} md={12}>
             <div className="contact-recruiter">
-              <a onClick={() => this.setState({ lgShow: true })} className="accommodation_list_link">
+              <a onClick={this.launchModalSetFocus} tabIndex="0" className="accommodation_list_link">
                 <img role="presentation" src={add_blue} /> Add a new request
               </a>
               <AccommodationModal show={this.state.lgShow} products={this.props.products} onHide={lgClose} />

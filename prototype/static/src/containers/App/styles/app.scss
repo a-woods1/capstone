@@ -891,6 +891,12 @@ button.cta:active {
 	padding-top: 18px !important;
 }
 
+#accommodations-modal .modal-dialog .modal-content .modal-body ul.nav-tabs li:hover a,
+#accommodations-modal .modal-dialog .modal-content .modal-body ul.nav-tabs li:focus a
+{
+
+}
+
 // Accommodations list
 #accommodations-modal .modal-dialog .modal-content #modal-body-main {}
 
