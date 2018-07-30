@@ -11,7 +11,6 @@ import brand_logo from '../../images/photos/placeholder.png';
 import profile_img from '../../images/profile-img.png';
 import contact_white from '../../images/contact-white.png';
 
-
 configureAnchors({offset: -135})
 
 function mapStateToProps(state) {
@@ -35,10 +34,44 @@ function mapDispatchToProps(dispatch) {
 export class Header extends Component {
 
     constructor(props) {
-        super(props);
-        this.state = {
-          lgShow: false,
+      super(props);
+      this.state = {
+        lgShow: false,
+      }
     }
+
+    componentDidMount() {
+
+    }
+
+    // TODO: Maybe write a function to overwrite the ARIA settings on
+    // all of the Bootstrap navigation elements
+    overwriteBootstrapAria() {
+
+      // Select the header items
+
+      setTimeout(function(){
+
+        var topNav = document.getElementById('top-nav');
+        var elements = topNav.getElementsByTagName("*");
+        console.log('elements');
+        console.log(elements);
+
+        // strip bad aria
+        for(var i = 0; i < elements.length; i++) {
+          // console.log(elements[i]);
+
+          elements[i].removeAttribute('aria-label');
+          elements[i].removeAttribute('aria-labelledby');          
+          elements[i].removeAttribute('role');
+
+        }
+
+        // assign good aria
+        topNav.getElementsByClassName('brand_log').first().setAttribute('aria-label','B Ready Logo');
+
+      }, 500);
+
     }
 
     renderFirstEntry(){
@@ -115,6 +148,18 @@ export class Header extends Component {
         });
     }
 
+    skipToContent() {
+      setTimeout(function(){
+        document.getElementsByClassName('date')[0].focus();
+      }, 10);
+    }
+
+    skipToSection(i) {
+      setTimeout(function(){
+        document.getElementsByClassName('section_title')[i].focus();
+      }, 200);
+    }    
+
     render() {
       let lgClose = () => this.setState({ lgShow: false });
       var icon = (
@@ -125,13 +170,15 @@ export class Header extends Component {
         </span>
       );
 
+      this.overwriteBootstrapAria();
+
       return (
        !this.props.isAuthenticated ?
         <header>
         </header>
       :
       <header id="both-nav">
-        <a className="skip-main" href="main#section1">Skip to main content</a>
+        <a className="skip-main" href="#" onClick={this.skipToContent}>Skip to main content</a>
         <Navbar aria-label="Main Navigation" inverse collapseOnSelect id="top-nav">
         <Navbar.Header>
           <Navbar.Brand className="brand-logo">
@@ -141,19 +188,19 @@ export class Header extends Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav id="top-nav-left">
-          <NavItem role="button" className="" href="">
-          <div>
-            <span className="selected_position_label">Position</span>
-            <span className="selected_position_title">Software Engineer</span>
-          </div>
-          </NavItem>
+            <NavItem className="" href="">
+              <div>
+                <span className="selected_position_label">Position</span>
+                <span className="selected_position_title">Software Engineer</span>
+              </div>
+            </NavItem>
             <NavDropdown className="candidate_stages" title={<span>{this.renderFirstEntry()}</span>} id="basic-nav-dropdown">
-            {this.renderEntry()}
+              {this.renderEntry()}
             </NavDropdown>
           </Nav>
           <Nav pullRight id="top-nav-right-nav">
           <NavItem className="contact-recruiter" title="Contact Recruiter" onClick={() => this.setState({ lgShow: true })}>
-            <img src={contact_white} />
+            <img role="presentation" src={contact_white} />
             Contact Recruiter
             <ContactRecruiter show={this.state.lgShow} onHide={lgClose} />
           </NavItem>
@@ -172,25 +219,32 @@ export class Header extends Component {
       </Navbar>
 
 
-      <Navbar aria-label="Interview Stages Navigation" inverse collapseOnSelect id="sub-nav">
+      <Navbar
+        aria-label="Interview Stages Navigation"
+        inverse
+        collapseOnSelect
+        id="sub-nav"
+      >
       <Navbar.Header>
         <Navbar.Toggle />
       </Navbar.Header>
       <Navbar.Collapse>
         <Nav>
-          <NavItem href='#section1'>{this.props.steps[0].step_title}
+          <NavItem href='#section1' onClick={() => this.skipToSection(0)}>{this.props.steps[0].step_title}
           </NavItem>
-          <NavItem href='#section2'>{this.props.steps[1].step_title}
+          <NavItem href='#section2' onClick={() => this.skipToSection(1)}>{this.props.steps[1].step_title}
           </NavItem>
-          <NavItem href='#section3'>{this.props.steps[2].step_title}
+          <NavItem href='#section3' onClick={() => this.skipToSection(2)}>{this.props.steps[2].step_title}
           </NavItem>
-          <NavItem href='#section4'>{this.props.steps[3].step_title}
+          <NavItem href='#section4' onClick={() => this.skipToSection(3)}>{this.props.steps[3].step_title}
           </NavItem>
         </Nav>
         </Navbar.Collapse>
       </Navbar>
       </header>
+
         );
+
     }
 }
 

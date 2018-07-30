@@ -71,13 +71,13 @@ componentDidMount() {
             </Row>
             <Row className="arrival_section">
               <ScrollableAnchor id={'section2'}>
-                <h1 className="section_title">Arrival</h1>
+                <h1 tabIndex="0" className="section_title">Arrival</h1>
               </ScrollableAnchor>
             </Row>
 
             <div className="overview_details">
               <Row>
-                <span className="location"><img src={pin_blue} /> 731 Lexington Avenue, New York</span>
+                <span className="location"><img role="presentation" src={pin_blue} /> 731 Lexington Avenue, New York</span>
               </Row>
             </div>
 
@@ -86,7 +86,7 @@ componentDidMount() {
             </Row>
             <Row className="immersive_views">
               <h2 className="subsection_title">
-                <img src={section_360} />
+                <img role="presentation" src={section_360} />
                 360° Tour
               </h2>
                 <div>
@@ -104,7 +104,7 @@ componentDidMount() {
 
             <Row>
               <h2 className="subsection_title">
-                <img src={section_tasks} />
+                <img role="presentation" src={section_tasks} />
                 What You’ll Do
               </h2>
             </Row>
@@ -131,7 +131,7 @@ componentDidMount() {
                 <Panel eventKey={1}>
                   <Panel.Heading>
                     <Panel.Title toggle>
-                      <span className="accessibility_link"><img src={a11y_blue} /> Related Accessibility Accommodations <img className="expand" src={expand_blue} /></span>
+                      <span className="accessibility_link"><img role="presentation" src={a11y_blue} /> Related Accessibility Accommodations <img role="presentation" className="expand" src={expand_blue} /></span>
 
                     </Panel.Title>
                   </Panel.Heading>
@@ -142,7 +142,7 @@ componentDidMount() {
                       <p>This badge allows you to stop the elevator at any floor you need.</p>
                       <button className="short-button" onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Select</button>
                     </div>
-                    <a onClick={() => this.setState({ lgShow: true })} className="accommodation_list_link"><img src={new_window} /> Full Accommodation List</a>
+                    <a onClick={() => this.setState({ lgShow: true })} className="accommodation_list_link"><img alt="Open Dialogue" src={new_window} /> Full Accommodation List</a>
                     <AccommodationModal show={this.state.lgShow} products={this.props.products} onHide={lgClose} />
                   </div>
 
@@ -159,7 +159,7 @@ componentDidMount() {
 
             <Row>
               <h2 className="subsection_title">
-                <img src={section_tools} />
+                <img role="presentation" src={section_tools} />
                 Additional Details
               </h2>
             </Row>
@@ -176,7 +176,7 @@ componentDidMount() {
 
             <Row>
               <h2 className="subsection_title">
-                <img src={section_environment} />
+                <img role="presentation" src={section_environment} />
                 About the Space
               </h2>
             </Row>

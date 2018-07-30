@@ -48,8 +48,8 @@ class ImmersiveNavigator extends Component {
               previewScenes={this.props.previewScenes}              
             />
 
-            <div className="toggle" onClick={()=>this.props.toggleImmersiveNavigator(!this.props.immersiveNavigatorExpanded)}>
-              <img className={(this.props.immersiveNavigatorExpanded ? 'left' : 'right')} src={caret}/>
+            <div className="toggle" aria-label="Toggle Immersive Navigation" tabIndex="0" onClick={()=>this.props.toggleImmersiveNavigator(!this.props.immersiveNavigatorExpanded)}>
+              <img role="presentation" className={(this.props.immersiveNavigatorExpanded ? 'left' : 'right')} src={caret}/>
             </div>  
 
           </div>

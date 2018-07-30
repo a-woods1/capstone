@@ -32,6 +32,9 @@ renderEntry = () => {
 
   //Create tabs
   Object.entries(this.state.products).forEach(([key, value], i) => {
+
+    console.log(key);
+
     let list_items = []
     //Create list items
     //console.log(key)
@@ -68,9 +71,8 @@ renderEntry = () => {
     //Create tabs and add list items
     tabs.push(
       <Tab eventKey={i+1} title={key}>
-      <div role="list" aria-label="List of accessibility accommodations">
+      <div role="list" aria-label={"List of accessibility accommodations for " + key + "."}>
         {list_items}
-
         <Grid role="listitem" className="accommodation-item" id="custom-accommodation" onClick={(e) => this.customAccommodation(e)}>
           <Row>
             <Col xs={12} md={12}>
@@ -81,7 +83,6 @@ renderEntry = () => {
         </Grid>
       </div>
       </Tab>
-
     )
   })
   return tabs

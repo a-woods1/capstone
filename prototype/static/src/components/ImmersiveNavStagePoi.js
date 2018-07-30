@@ -74,7 +74,7 @@ class ImmersiveNavStagePoi extends Component {
 				onClick={()=>this.props.changeImmersive(this.props.id)}
 				tabIndex="0"
 				role="link"
-				aria-label={"Select to open immersive view for" + this.data.name}
+				aria-label={"Select to hear an immersive description for" + this.data.taskName + ", " + this.data.name}
 				>
 				<div
 					className="poi-thumbnail"
