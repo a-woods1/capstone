@@ -1,5 +1,4 @@
 import * as THREE from 'three';
-import * as info from './glyphs/info.png';
 
 export function Annotation( scene, thisPosition, thisData ) {
 
@@ -20,6 +19,8 @@ export function Annotation( scene, thisPosition, thisData ) {
 
 		domPin.addEventListener("mouseenter", onPinMouseEnter);
 		domPin.addEventListener("mouseleave", onPinMouseLeave);
+		domPin.addEventListener("focusin", onPinMouseEnter);
+		domPin.addEventListener("focusout", onPinMouseLeave);		
 
 		domPin.addEventListener("click", onPinClick);
 
@@ -97,12 +98,11 @@ export function Annotation( scene, thisPosition, thisData ) {
 
 		var annotationContainer = document.createElement("div");
 		annotationContainer.className = "annotation-container";
-
 		var annotationPin = document.createElement("div");
 		annotationPin.className = "annotation-pin";
+		annotationPin.setAttribute("tabIndex","0");
 		// var pinNode = document.createTextNode('i');
-		var pinImg = document.createElement('IMG');
-		pinImg.src = info;
+		var pinImg = document.createTextNode("i");
 		// console.log('imported',info);
 		annotationPin.appendChild(pinImg);
 		// annotationPin.appendChild(pinNode);
