@@ -78,9 +78,9 @@ for (var i = 0; i < sessionStorage.length; i++) {
             <section id="section-overview">
                   <Row>
                         <span aria-label="Interview Date: Wednesday, July 28" tabIndex="0" className="date">
-                          <span className="month">Jul</span>
-                          <span className="num">28</span>
-                          <span className="day">Wednesday</span>
+                          <span aria-hidden="true" className="month">Jul</span>
+                          <span aria-hidden="true" className="num">28</span>
+                          <span aria-hidden="true" className="day">Wednesday</span>
                         </span>
                   </Row>
 
@@ -140,7 +140,7 @@ for (var i = 0; i < sessionStorage.length; i++) {
                   <Row className="info_box">
                     <h3 className="info_box_title">Let Us Know What You Need</h3>
                     <p className="info_box_text">If you require any accommodations to fully participate in the interview, please let us know. We will make every effort to ensure you are provided with appropriate assistance.</p>
-                    <a onClick={this.launchAccModalSetFocus} className="accessibility_link"><img role="presentation" src={a11y_blue} /> Accessibility Accommodations</a>
+                    <a onClick={this.launchAccModalSetFocus} aria-label="Click to open the Accessibility Accommodations dialog." className="accessibility_link"><img role="presentation" src={a11y_blue} /> Accessibility Accommodations</a>
 
 
                     <AccommodationModal show={this.state.lgShow} categories={this.props.categories} products={this.props.products} onHide={lgClose} />
