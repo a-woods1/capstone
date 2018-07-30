@@ -48,6 +48,8 @@ class Custom extends Component{
       case 1:
         return (<AccommodationModal />)
       case 10:
+        var search_bar = document.getElementById("search")
+        search_bar.style.display = "none";
         return  (
           <form>
           <FormGroup controlId="formBasicText">

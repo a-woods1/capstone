@@ -47,6 +47,8 @@ class ItemRequest extends Component{
       case 1:
         return (<AccommodationModal modal_screen_title={this.state.modal_screen_title} products={this.state.products} />)
       case 2:
+        var search_bar = document.getElementById("search")
+        search_bar.style.display = "none";
         return  (
             <Grid className="item-details">
               <Row>
