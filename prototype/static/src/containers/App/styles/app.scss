@@ -1673,6 +1673,32 @@ canvas {
 	display: none;
 }
 
+#imm-instructions {
+	display: block;
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 72px;
+	background-color: #0f0f0f;
+	opacity: .90;
+	width: 320px;
+	margin: 0 auto;
+	font-weight: 400;
+	font-size: 12px;
+	padding: 24px;
+}
+
+#imm-instructions span {
+	display: block;
+	margin-bottom: 8px;
+}
+
+#imm-instructions img {
+	display: inline-block;
+	height: 24px;
+	margin-right: 16px;
+}
+
 
 /* IMMERSIVE NAVIGATOR STYLES */
 

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import exit from '../img/exit.png';
 import ImmersiveNavigator from './ImmersiveNavigator.js';
+import ImmersiveInstructions from './ImmersiveInstructions.js';
 
 class ImmersiveControls extends Component {
 
@@ -15,7 +16,8 @@ class ImmersiveControls extends Component {
   render () {
       return (
       	<div id="ImmersiveControls">
-          <div id="imm-shim"></div>        
+          <div id="imm-shim"></div>
+          <ImmersiveInstructions />
           <ImmersiveNavigator
             changeImmersive={this.props.changeImmersive}
             activeViewData={this.props.activeViewData}
