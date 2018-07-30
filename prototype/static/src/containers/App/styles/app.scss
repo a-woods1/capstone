@@ -1673,6 +1673,44 @@ canvas {
 	display: none;
 }
 
+#imm-instructions {
+	display: block;
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 72px;
+	background-color: $top-nav-color;
+	opacity: .90;
+	width: 320px;
+	margin: 0 auto;
+	font-weight: 400;
+	font-size: 12px;
+	padding: 24px;
+}
+
+.show #imm-instructions {
+	opacity: 0;
+	visibility: hidden;	
+	transition: all 1000ms linear 5000ms;
+}
+
+.hide #imm-instructions {
+	opacity: 1;
+	visibility: visible;
+	transition: all 1000ms linear 0ms;
+}
+
+#imm-instructions span {
+	display: block;
+	margin-bottom: 8px;
+}
+
+#imm-instructions img {
+	display: inline-block;
+	height: 24px;
+	margin-right: 16px;
+}
+
 
 /* IMMERSIVE NAVIGATOR STYLES */
 
