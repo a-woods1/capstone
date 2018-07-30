@@ -2,6 +2,7 @@ export var previewScenes = [
 	{
 		id : "g-58th-ext-3",
 		name : "58th Street Entrance",
+		taskName: "Entering the building",
 		thumbnailID: 0,
 		thumbnailUrl: "./textures/thumbnails/g-58th-ext-3-thumb.jpg",
 		texture : {
@@ -32,6 +33,7 @@ export var previewScenes = [
 	{
 		id : "g-58th-ext-4",
 		name : "58th Street Entrance",
+		taskName: "Entering the building",		
 		thumbnailID: 1,
 		thumbnailUrl: "./textures/thumbnails/g-58th-ext-4-thumb.jpg",
 		texture : {
@@ -66,6 +68,7 @@ export var previewScenes = [
 	{
 		id : "g-58th-desk-2",
 		name : "Front Desk",
+		taskName: "Getting your guest badge",		
 		thumbnailID: 2,
 		thumbnailUrl: "./textures/thumbnails/g-58th-desk-2-thumb.jpg",
 		texture : {
@@ -104,6 +107,7 @@ export var previewScenes = [
 	{
 		id : "g-badge-1",
 		name : "Badge Check-In",
+		taskName: "Checking in with security",				
 		thumbnailID: 3,
 		thumbnailUrl: "./textures/thumbnails/g-badge-1-thumb.jpg",
 		texture : {
@@ -138,6 +142,7 @@ export var previewScenes = [
 	{
 		id : "g-elevator-1",
 		name : "Elevators",
+		taskName: "Checking in with security",		
 		thumbnailID: 4,
 		thumbnailUrl: "./textures/thumbnails/g-elevator-1-thumb.jpg",
 		texture : {
@@ -228,6 +233,7 @@ export var previewScenes = [
 	{
 		id : "6-link-couch",
 		name : "6th Fl - Pink Couch",
+		taskName: "Waiting for your interviewer",
 		thumbnailID: 8,
 		thumbnailUrl: "./textures/thumbnails/6-link-couch-thumb.jpg",
 		texture : {
