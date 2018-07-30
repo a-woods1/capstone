@@ -25,8 +25,19 @@ class ImmersiveNavigator extends Component {
             <div className="imm-current-view">
               <span className="kicker">Current View</span>
               <div className="imm-current-view-label">
-                <h2>{this.props.activeViewData.taskName ? this.props.activeViewData.taskName : 'Task Name'}</h2>
+                <h2
+                  id="dialog-title"
+                  tabIndex="0"
+                  aria-label={this.props.activeViewData.name ? this.props.activeViewData.name : 'Bloomberg Offices'}
+                  aria-live="polite"
+                >{this.props.activeViewData.taskName ? this.props.activeViewData.taskName : 'Task Name'}</h2>
                 <h3><img src={pin_white} />{this.props.activeViewData.name ? this.props.activeViewData.name : 'Stage Name'}</h3>
+                <p
+                  className="sr-only"
+                  aria-live="polite"
+                >
+                  {this.props.activeViewData.srDescription ? this.props.activeViewData.srDescription : 'No description available for this room.'}
+                </p>
               </div>
             </div>
 
