@@ -27,13 +27,13 @@ class Contact extends React.Component {
         {...this.props}
         id="contact-modal"
         bsSize="large"
-        aria-labelledby="contained-modal-title-lg"
+        aria-labelledby="modal_screen_title"
       >
         <Modal.Header closeButton>
          <Grid>
            <Row>
              <Col xs={5} md={5}>
-               <img id="contact_icon" alt="Contact Recruiter Icon" src={contact_dark} />
+               <img role="presentation" id="contact_icon" src={contact_dark} />
                <h4 id = "modal_screen_title">Contact Recruiter</h4>
              </Col>
            </Row>
@@ -56,7 +56,7 @@ class Contact extends React.Component {
           <Row>
             <Col xs={12} md={12}>
               <span className="person">
-                <img src={contact_person} />
+                <img alt="Recruiter name" role="presentation" src={contact_person} />
                 Engineering Recruiter at Bloomberg
               </span>
             </Col>
@@ -65,7 +65,7 @@ class Contact extends React.Component {
           <Row>
             <Col xs={12} md={12}>
               <a className="email" href="mailto:rosa.garcia@bloomberg.net">
-                <img src={contact_email} />
+                <img alt="Email address" src={contact_email} />
                 rosa.garcia@bloomberg.net
               </a>
             </Col>
@@ -74,7 +74,7 @@ class Contact extends React.Component {
           <Row>
             <Col xs={12} md={12}>
               <a className="phone">
-                <img src={contact_phone} />                            
+                <img alt="Phone number" src={contact_phone} />                            
                 +1 (212) 555-5555
               </a>
             </Col>

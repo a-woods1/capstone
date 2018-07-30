@@ -35,13 +35,17 @@ class RequestList extends Component{
             onSelect={this.handleSelect}
             className="request_list_item"
           >
-            <Panel eventKey={i}>
+            <Panel
+              eventKey={i}
+              role="listitem"
+              aria-label={value.accommodation_name}
+              >
               <Panel.Heading>
                 <Panel.Title toggle>
                 <Grid>
                 <Row>
                   <Col xs={1} md={1}>
-                    <img className="expand" height="25px" src={expand} />
+                    <img role="presentation" className="expand" height="25px" src={expand} />
                   </Col>
                   <Col xs={3} md={3}>
                     <div className="accommodation_name">{value.accommodation_name}</div>
@@ -56,7 +60,7 @@ class RequestList extends Component{
                     <span><img className="pin" height="25px" src={pin} />731 Lexington Ave</span>
                   </Col>
                   <Col xs={2} md={2}>
-                    <div className="status_tag"><img src={status_submitted} height="25px" /></div>
+                    <div className="status_tag"><img alt="Status: Submitted" src={status_submitted} height="25px" /></div>
                   </Col>
                 </Row>
               </Grid>

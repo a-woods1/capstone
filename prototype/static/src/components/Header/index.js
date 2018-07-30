@@ -132,16 +132,16 @@ export class Header extends Component {
       :
       <header id="both-nav">
         <a className="skip-main" href="main#section1">Skip to main content</a>
-        <Navbar inverse collapseOnSelect id="top-nav">
+        <Navbar aria-label="Main Navigation" inverse collapseOnSelect id="top-nav">
         <Navbar.Header>
           <Navbar.Brand className="brand-logo">
-            <a href="/"><span>B</span></a>
+            <a href="/"><span aria-label="B Ready Logo">B</span></a>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav id="top-nav-left">
-          <NavItem className="" href="">
+          <NavItem role="button" className="" href="">
           <div>
             <span className="selected_position_label">Position</span>
             <span className="selected_position_title">Software Engineer</span>
@@ -160,7 +160,7 @@ export class Header extends Component {
             <NavItem className="my-requests" title="My Requests" onClick={() => this.dispatchNewRoute('/requests')}>
               My Requests
             </NavItem>
-            <NavDropdown className="top-nav-user-menu" title={<span><span id="profile_img">{this.props.userName.charAt(0).toUpperCase()}</span>Hi, {this.props.userName}!</span>} id="basic-nav-dropdown">
+            <NavDropdown className="top-nav-user-menu" title={<span><span aria-hidden="true" id="profile_img">{this.props.userName.charAt(0).toUpperCase()}</span>Hi, {this.props.userName}!</span>} id="basic-nav-dropdown">
               <NavItem>
                 <MenuItem onClick={(e) => this.logout(e)}>
                   Log Out
@@ -172,7 +172,7 @@ export class Header extends Component {
       </Navbar>
 
 
-      <Navbar inverse collapseOnSelect id="sub-nav">
+      <Navbar aria-label="Interview Stages Navigation" inverse collapseOnSelect id="sub-nav">
       <Navbar.Header>
         <Navbar.Toggle />
       </Navbar.Header>
