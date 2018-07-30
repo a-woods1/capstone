@@ -3,12 +3,16 @@ import { browserHistory } from 'react-router';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Navbar, Nav, NavItem, MenuItem, NavDropdown, Glyphicon} from 'react-bootstrap';
-import ScrollableAnchor from 'react-scrollable-anchor'
+import ScrollableAnchor, {configureAnchors} from 'react-scrollable-anchor'
 
-
+import ContactRecruiter from '../Modal/ContactRecruiter.js';
 import * as actionCreators from '../../actions/auth';
 import brand_logo from '../../images/photos/placeholder.png';
 import profile_img from '../../images/profile-img.png';
+import contact_white from '../../images/contact-white.png';
+
+
+configureAnchors({offset: -135})
 
 function mapStateToProps(state) {
     return {
@@ -32,26 +36,49 @@ export class Header extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+          lgShow: false,
     }
+    }
+
+    renderFirstEntry(){
+      var num_stages = this.props.stages.length
+      //console.log(num_stages)
+      var stages = this.props.stages.slice(-1)
+      return Object.entries(stages).map(([key, value], i) => {
+        //console.log("i " + i)
+        var obj = stages[i]
+        var stage_id = obj.stage_id
+        var stage_title = obj.stage_title
+        return (
+          <span>
+            <span className="ordinal_stage">Current Stage</span>
+            <span className="stage_title">{stage_title}</span>
+          </span>
+       )
+     })
+    }
+
 
     renderEntry(){
         var num_stages = this.props.stages.length
         //console.log(num_stages)
-        return Object.entries(this.props.stages).map(([key, value], i) => {
+        var stages = this.props.stages.slice(1, this.props.stages.length)
+        return Object.entries(stages).map(([key, value], i) => {
           //console.log("i " + i)
           var obj = this.props.stages[i]
           var stage_id = obj.stage_id
           var stage_title = obj.stage_title
           return (
             <NavItem className={num_stages-1 === i ? "current-stage" : ""} href="">
-            <div>
+            <MenuItem>
             {num_stages-1 === i ?
               <span className="ordinal_stage">Current Stage</span>
               :
               <span className="ordinal_stage">Stage {stage_id}</span>
             }
             <span className="stage_title">{stage_title}</span>
-            </div>
+            </MenuItem>
             </NavItem>
          )
        })
@@ -89,6 +116,7 @@ export class Header extends Component {
     }
 
     render() {
+      let lgClose = () => this.setState({ lgShow: false });
       var icon = (
         <span class="logo">
 
@@ -111,14 +139,27 @@ export class Header extends Component {
           <Navbar.Toggle />
         </Navbar.Header>
         <Navbar.Collapse>
-          <Nav id="top-nav-stages">
+          <Nav id="top-nav-left">
+          <NavItem className="" href="">
+          <div>
+            <span className="selected_position_label">Position</span>
+            <span className="selected_position_title">Software Engineer</span>
+          </div>
+          </NavItem>
+            <NavDropdown className="candidate_stages" title={<span>{this.renderFirstEntry()}</span>} id="basic-nav-dropdown">
             {this.renderEntry()}
+            </NavDropdown>
           </Nav>
           <Nav pullRight id="top-nav-right-nav">
+          <NavItem className="contact-recruiter" title="Contact Recruiter" onClick={() => this.setState({ lgShow: true })}>
+            <img src={contact_white} />
+            Contact Recruiter
+            <ContactRecruiter show={this.state.lgShow} onHide={lgClose} />
+          </NavItem>
             <NavItem className="my-requests" title="My Requests" onClick={() => this.dispatchNewRoute('/requests')}>
               My Requests
             </NavItem>
-            <NavDropdown className="top-nav-user-menu" title={<span><img id="profile_img" src={profile_img} />Hi, {this.props.userName}!</span>} id="basic-nav-dropdown">
+            <NavDropdown className="top-nav-user-menu" title={<span><span id="profile_img">{this.props.userName.charAt(0).toUpperCase()}</span>Hi, {this.props.userName}!</span>} id="basic-nav-dropdown">
               <NavItem>
                 <MenuItem onClick={(e) => this.logout(e)}>
                   Log Out
@@ -139,13 +180,10 @@ export class Header extends Component {
           <NavItem href='#section1'>{this.props.steps[0].step_title}
           </NavItem>
           <NavItem href='#section2'>{this.props.steps[1].step_title}
-            <div className="caret-right"></div>
           </NavItem>
           <NavItem href='#section3'>{this.props.steps[2].step_title}
-            <div className="caret-right"></div>
           </NavItem>
           <NavItem href='#section4'>{this.props.steps[3].step_title}
-            <div className="caret-right"></div>
           </NavItem>
         </Nav>
         </Navbar.Collapse>

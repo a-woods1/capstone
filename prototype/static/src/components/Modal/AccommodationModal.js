@@ -10,129 +10,33 @@ import search_icon from '../../images/search.png';
 import common_req from '../../images/common-req.png';
 import plus from '../../images/plus.png';
 
+
 import ItemRequest from './Page2/ItemRequest.js';
+import Custom from './Page2b/Custom.js';
 
-const style = {
-    marginTop: 10,
-    paddingBottom: 10,
-    paddingTop: 10,
-    width: '100%',
-    display: 'inline-block',
-};
-
-let items = {
-    "Equipment" : [{
-      "accommodation_name": "Ergonomic Keyboard",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": true
-    },
-    {
-      "accommodation_name": "Ergonomic Mouse",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": true
-    },
-    {
-      "accommodation_name": "Large Computer Monitor",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": false
-    },
-    {
-      "accommodation_name": "Screen-Reader Compatible Computer",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": true
-    }
-],
-    "Environment" : [{
-      "accommodation_name": "Elevator All-Floor Access",
-      "accommodation_description": "This badge allows you to stop the elevator at any floor you need.",
-      "pre_approved": false
-    }, {
-      "accommodation_name": "Severe Allergies",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": false
-    },
-{
-      "accommodation_name": "Minimize Walking",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": false
-    },
-{
-      "accommodation_name": "Quiet Space",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": true
-    }, {
-      "accommodation_name": "Height-Adjustable Table/Desk",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": true
-    }],
-    "Communications" : [{
-      "accommodation_name": "Text-to-Speech Software",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": true
-    }, {
-      "accommodation_name": "Sign-Language Interpreter",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": false
-    },
-{
-      "accommodation_name": "Captions",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": true
-    },
-{
-      "accommodation_name": "Braille Copies",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": false
-    }],
-
-
-    "Policy" : [{
-      "accommodation_name": "Use My Own Computer",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": true
-    }, {
-      "accommodation_name": "Extra Time",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": true
-    },
-{
-      "accommodation_name": "Transportation to Interview",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": false
-    },
-{
-      "accommodation_name": "Service Animal",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": false
-    }, {
-      "accommodation_name": "Personal Aide",
-      "accommodation_description": "Lorem ipsum dolor sit amet",
-      "pre_approved": false
-    }]
-
-};
 
 class AccommodationModal extends React.Component {
   constructor(props) {
       super(props);
 
       this.state = {
-          categories: this.props.categories,
+          modal_screen_title: "Accessibility Accommodations",
+          products: this.props.products,
           showPage: 1
       };
   }
-
 
 
 renderEntry = () => {
   let tabs = []
 
   //Create tabs
-  Object.entries(items).forEach(([key, value], i) => {
+  Object.entries(this.state.products).forEach(([key, value], i) => {
     let list_items = []
     //Create list items
+    //console.log(key)
     Object.entries(value).forEach(([subkey, subvalue]) => {
-      console.log(subvalue)
+      //console.log(subvalue)
       list_items.push(
         <Grid className="accommodation-item">
             <Row>
@@ -153,7 +57,6 @@ renderEntry = () => {
                 <button className="short-button" onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Select</button>
               </Col>
             </Row>
-            {i < items.length && <hr />}
     </Grid>
       )
     })
@@ -163,7 +66,7 @@ renderEntry = () => {
       <div>
         {list_items}
 
-        <Grid className="accommodation-item" id="custom-accommodation">
+        <Grid className="accommodation-item" id="custom-accommodation" onClick={(e) => this.customAccommodation(e)}>
           <Row>
             <Col xs={12} md={12}>
               <img src={plus} className="plus"/>
@@ -180,13 +83,25 @@ renderEntry = () => {
 }
 
 clickRequest = (e, i, accommodation_name, accommodation_description) => {
+      var title = accommodation_name + " Request";
       this.setState({
           showPage: 2,
+          modal_screen_title: title,
           product_id: i,
           accommodation_name: accommodation_name,
           accommodation_description: accommodation_description
       });
   }
+
+  customAccommodation = (e) => {
+        var title = "Accommodation Request";
+        this.setState({
+            showPage: 10,
+            modal_screen_title: title,
+        });
+    }
+
+
 
   closeModal = () => {
         this.setState({
@@ -194,26 +109,47 @@ clickRequest = (e, i, accommodation_name, accommodation_description) => {
         });
     }
 
+  renderSwitch(param){
+    switch(param) {
+      case 1:
+      return(
+          <div id="accommodations-list">
+            <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
+              {this.renderEntry()}
+            </Tabs>
+          </div>
+        )
+      case 2:
+        return (<ItemRequest products={this.state.products} product_id={this.state.product_id} accommodation_name={this.state.accommodation_name} modal_screen_title={this.state.modal_screen_title}
+        accommodation_description={this.state.accommodation_description}/>)
+      case 10:
+        return (<Custom/>)
+      default:
+        return 'error';
+    }
+
+  }
+
   render() {
-    const isFirstPage = this.state.showPage === 1
     return (
+      <div>
       <Modal
         {...this.props}
         id="accommodations-modal"
         bsSize="large"
         aria-labelledby="contained-modal-title-lg"
       >
-        <Modal.Header closeButton onClick={this.closeModal}>
+        <Modal.Header id="modal_close" closeButton onClick={this.closeModal}>
          <Grid>
            <Row>
              <Col xs={5} md={5}>
                <img id="a11y_icon" alt="Accessibility icon" src={accessibility_logo} />
-               <h4 id = "modal_screen_title">Accessibility Accommodations</h4>
+               <h4 id = "modal_screen_title">{this.state.modal_screen_title}</h4>
              </Col>
              <Col xs={6} md={6}>
              <div id="search">
                <input id="search_field" type="text" placeholder="Search accommodations" />
-               <img class="search_icon" alt="Search icon" src={search_icon}/>
+               <img className="search_icon" alt="Search icon" src={search_icon}/>
              </div>
              </Col>
            </Row>
@@ -222,19 +158,11 @@ clickRequest = (e, i, accommodation_name, accommodation_description) => {
         </Modal.Header>
         <Modal.Body>
         <div id="modal-body-main">
-        {isFirstPage
-          ?
-          <div id="accommodations-list">
-            <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
-              {this.renderEntry()}
-            </Tabs>
-          </div>
-          :
-          <ItemRequest product_id={this.state.product_id} accommodation_name={this.state.accommodation_name} accommodation_description={this.state.accommodation_description}/>
-        }
+        {this.renderSwitch(this.state.showPage)}
         </div>
         </Modal.Body>
       </Modal>
+      </div>
     );
   }
 }

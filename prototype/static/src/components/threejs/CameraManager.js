@@ -3,16 +3,16 @@ import * as THREE from 'three';
 export function CameraManager(canvasManager) {
 
 	// set up camera
-	const camera = initCamera();	
+	const camera = initCamera();
 
 	// use TWEEN.JS for smooth animation
-    var TWEEN = require('@tweenjs/tween.js');	
+    var TWEEN = require('@tweenjs/tween.js');
 
 	// variables for lat/lon
 	var lat = 0;
 	var lon = 0;
 	const lonSens = 15; // how sensitive is the viewer to keyboard left/right navigation
-	const latSens = 10; // how sensitive is the viewer to keyboard up/down navigation	
+	const latSens = 10; // how sensitive is the viewer to keyboard up/down navigation
 	var phi = 0;
 	var theta = 0;
 	var distance = 10;
@@ -33,7 +33,7 @@ export function CameraManager(canvasManager) {
 		const camera = new THREE.PerspectiveCamera( 75, canvasManager.canvas.width / canvasManager.canvas.height, 1, 1100 );
 		// camera.aspect = window.innerWidth / window.innerHeight;
 		camera.updateProjectionMatrix();
-		camera.target = new THREE.Vector3( 0, 0, 0 );		
+		camera.target = new THREE.Vector3( 0, 0, 0 );
 
 		return camera;
 
@@ -41,7 +41,7 @@ export function CameraManager(canvasManager) {
 
 	// increment lon by a predefined amount
 	function incrementLon(dir) {
-		
+
 		var deg = dir * lonSens;
 
 		var tweenLon = {x: lon};
@@ -54,7 +54,7 @@ export function CameraManager(canvasManager) {
 			// console.log(tweenLon);
 			lon = tweenLon.x;
 		})
-		.start();		
+		.start();
 
 	}
 
@@ -73,9 +73,9 @@ export function CameraManager(canvasManager) {
 			// console.log(tweenLat);
 			lat = tweenLat.x;
 		})
-		.start();	
+		.start();
 
-	}	
+	}
 
 	function setLon(val) {
 		lon = val;
@@ -89,9 +89,9 @@ export function CameraManager(canvasManager) {
 
 	function updateAspect() {
 
-		console.log('updateAspect called')
-		console.log(canvasManager.canvas.width);
-		console.log(canvasManager.canvas.height);		
+		//console.log('updateAspect called')
+		//console.log(canvasManager.canvas.width);
+		//console.log(canvasManager.canvas.height);
 
 		camera.aspect = canvasManager.canvas.width / canvasManager.canvas.height;
 		camera.updateProjectionMatrix();
@@ -116,7 +116,7 @@ export function CameraManager(canvasManager) {
 
 	function update() {
 
-        TWEEN.update();		
+        TWEEN.update();
 		updatePosition();
 
 	}
@@ -130,9 +130,9 @@ export function CameraManager(canvasManager) {
 		incrementLon,
 		incrementLat,
 		setLon,
-		setLat,		
+		setLat,
 		update,
-		updateAspect		
+		updateAspect
 	}
 
 }

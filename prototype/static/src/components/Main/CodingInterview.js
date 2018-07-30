@@ -3,17 +3,22 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as actionCreators from '../../actions/auth';
 import ScrollableAnchor from 'react-scrollable-anchor'
-import { Grid, Row, Col, Glyphicon, Modal, ButtonToolbar, Button } from 'react-bootstrap';
+import { Grid, Row, Col, Glyphicon, Modal, ButtonToolbar, Button, PanelGroup, Panel } from 'react-bootstrap';
 
+import AccommodationModal from '../Modal/AccommodationModal.js';
 import ImmersiveNavStagePoiList from '../ImmersiveNavStagePoiList.js';
 
 import arrival_360 from '../../images/photos/placeholder.png';
 import calendar from '../../images/calendar.png';
 import clock from '../../images/clock.png';
-import pin from '../../images/pin.png';
+import pin_blue from '../../images/pin-blue.png';
 import a11y_blue from '../../images/a11y-blue.png';
 import new_window from '../../images/new-window.png';
 import expand_blue from '../../images/expand-blue.png';
+import section_360 from '../../images/section-360.png';
+import section_tasks from '../../images/section-tasks.png';
+import section_tools from '../../images/section-tools.png';
+import section_environment from '../../images/section-environment.png';
 
 function mapStateToProps(state) {
     return {
@@ -41,6 +46,12 @@ class CodingInterview extends React.Component { // eslint-disable-line react/pre
       this.state = {
         lgShow: false,
   }
+  this.handleSelect = this.handleSelect.bind(this);
+}
+
+
+handleSelect(activeKey) {
+  this.setState({ activeKey });
 }
 
 componentDidMount() {
@@ -48,11 +59,12 @@ componentDidMount() {
 }
 
     render() {
+        let lgClose = () => this.setState({ lgShow: false });
         return (
         <section id="section-coding">
           <div>
             <Row>
-              <div>Software Engineer > Onsite Interview</div>
+                <span className="time"><img src={clock} />10:30<span className="am-pm">AM</span></span>
             </Row>
             <Row className="arrival_section">
               <ScrollableAnchor id={'section4'}>
@@ -62,38 +74,78 @@ componentDidMount() {
 
             <div className="overview_details">
               <Row>
-                <span className="time"><img src={clock} />Late Morning</span>
+                <span className="location"><img src={pin_blue} /> 731 Lexington Avenue, New York</span>
               </Row>
-              <Row>
-                <span className="location"><img src={pin} /> 731 Lexington Avenue, New York</span>
-              </Row>
-            </div>            
+            </div>
 
             <Row className="info_box">
               <h3 className="info_box_title">The Coding Interview</h3>
               <p className="info_box_text">Each coding challenge can last up to 60 minutes.</p>
             </Row>
-            <Row className="poiSelector">
-              <h2 className="subsection_title">360 Views</h2>
+            <Row className="immersive_views">
+              <h2 className="subsection_title">
+                <img src={section_360} />
+                360° Tour
+              </h2>
               <div>
+                <p>The 360° Tours below can give you a sense of the range of rooms we use for coding interviews. If you have questions or requests regarding access to any of these rooms, please feel welcome to contact your recruiter.</p>              
+                <p>These tours are accessible to screen readers and keyboard navigation.</p>
                 <ImmersiveNavStagePoiList
                   kickerLabel=""
                   activeViewData={this.props.activeViewData}
                   changeImmersive={this.props.changeImmersive}
                   pois={this.props.stagePois[2] ? this.props.stagePois[2].pois : []}
                 />
-                </div>              
+                </div>
             </Row>
 
             <Row>
-              <h2 className="subsection_title">What You’ll Do</h2>
+              <h2 className="subsection_title">
+                <img src={section_tasks} />
+                What You’ll Do
+              </h2>
             </Row>
 
             <Row className="info_box">
               <h3 className="info_box_title">Write Code</h3>
               <p className="info_box_text">You can expect to write code with a pen and paper, whiteboard, or computer depending on the team.</p>
-              <p>If you anticipate that any of these tasks will be problematic for you, please look over our accessibility accommodations, and let us know if you need anything.</p>
-              <span className="accessibility_link"><img src={a11y_blue} /> Related Accessibility Accommodations  <img className="expand" src={expand_blue} /></span>
+              <p className="info_box_text">If you anticipate that any of these tasks will be problematic for you, please look over our accessibility accommodations, and let us know if you need anything.</p>
+              <PanelGroup
+                accordion
+                id="accordion-controlled-example"
+                onSelect={this.handleSelect}
+              >
+                <Panel eventKey={1}>
+                  <Panel.Heading>
+                    <Panel.Title toggle>
+                      <span className="accessibility_link"><img src={a11y_blue} /> Related Accessibility Accommodations <img className="expand" src={expand_blue} /></span>
+
+                    </Panel.Title>
+                  </Panel.Heading>
+                  <Panel.Body collapsible>
+                  <div className="accommodation-item">
+                    <div className="accommodation-item-details">
+                      <h4>Ergonomic Keyboard</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      <button className="short-button" onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Select</button>
+                    </div>
+                    <a onClick={() => this.setState({ lgShow: true })} className="accommodation_list_link"><img src={new_window} /> Full Accommodation List</a>
+                    <AccommodationModal show={this.state.lgShow} categories={this.props.categories} products={this.props.products} onHide={lgClose} />
+                  </div>
+
+                  <div className="accommodation-item">
+                    <div className="accommodation-item-details">
+                      <h4>Ergonomic Mouse</h4>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                      <button className="short-button" onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Select</button>
+                    </div>
+                    <a onClick={() => this.setState({ lgShow: true })} className="accommodation_list_link"><img src={new_window} /> Full Accommodation List</a>
+                    <AccommodationModal show={this.state.lgShow} categories={this.props.categories} products={this.props.products} onHide={lgClose} />
+                  </div>
+
+                  </Panel.Body>
+                </Panel>
+              </PanelGroup>
             </Row>
 
             <Row className="info_box">
@@ -102,7 +154,10 @@ componentDidMount() {
             </Row>
 
             <Row>
-              <h2 className="subsection_title">About the Space</h2>
+              <h2 className="subsection_title">
+                <img src={section_environment} />
+                About the Space
+              </h2>
             </Row>
             <Row className="info_box">
               <h3 className="info_box_title">Open Office</h3>
@@ -119,18 +174,35 @@ componentDidMount() {
             <Row className="info_box">
               <h3 className="info_box_title">Elevators</h3>
               <p className="info_box_text">Our elevators require authorized access to stop at every floor in the building. Please request Elevator All-Floor Access from the accessibility accommodations below if you would prefer to avoid stair climbing. Note that we will never ask you to take more than three flights of stairs.</p>
-              <span className="accessibility_link"><img src={a11y_blue} /> Related Accessibility Accommodations <img className="expand" src={expand_blue} /></span>
-              <div className="accommodation-item">
-                <div className="accommodation-item-details">
-                  <h4>Elevator All-Floor Access</h4>
-                  <p>This badge allows you to stop the elevator at any floor you need.</p>
-                  <button className="short-button" onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Select</button>
-                </div>
-                <span className="accommodation_list_link"><img src={new_window} /> Full Accommodation List</span>
-              </div>
+              <PanelGroup
+                accordion
+                id="accordion-controlled-example"
+                onSelect={this.handleSelect}
+              >
+                <Panel eventKey={1}>
+                  <Panel.Heading>
+                    <Panel.Title toggle>
+                      <span className="accessibility_link"><img src={a11y_blue} /> Related Accessibility Accommodations <img className="expand" src={expand_blue} /></span>
+
+                    </Panel.Title>
+                  </Panel.Heading>
+                  <Panel.Body collapsible>
+                  <div className="accommodation-item">
+                    <div className="accommodation-item-details">
+                      <h4>Elevator All-Floor Access</h4>
+                      <p>This badge allows you to stop the elevator at any floor you need.</p>
+                      <button className="short-button" onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Select</button>
+                    </div>
+                    <a onClick={() => this.setState({ lgShow: true })} className="accommodation_list_link"><img src={new_window} /> Full Accommodation List</a>
+                    <AccommodationModal show={this.state.lgShow} categories={this.props.categories} products={this.props.products} onHide={lgClose} />
+                  </div>
+
+                  </Panel.Body>
+                </Panel>
+              </PanelGroup>
             </Row>
           </div>
-        </section>          
+        </section>
         );
     }
 }

@@ -4,8 +4,9 @@ import { connect } from 'react-redux';
 import * as actionCreators from '../../../actions/auth';
 import { Grid, Row, Col, Glyphicon,ButtonToolbar, Button } from 'react-bootstrap';
 
+import AccommodationModal from '../../Modal/AccommodationModal.js';
 import RequestList from './RequestList/RequestList.js';
-import contact from '../../../images/contact.png';
+import add_blue from '../../../images/add-blue.png';
 
 function mapStateToProps(state) {
     return {
@@ -20,15 +21,22 @@ function mapDispatchToProps(dispatch) {
 
 @connect(mapStateToProps, mapDispatchToProps)
 class Requests extends React.Component {
-
+  constructor(props, context) {
+      super(props, context);
+      this.state = {
+        lgShow: false,
+  }
+}
 
 
   render() {
     var requests = JSON.parse(localStorage.getItem("accommodation_requests"));
     const hasRequests = requests != null
-    console.log(hasRequests)
+    console.log("Request Description" + this.state.request_description)
+
+    let lgClose = () => this.setState({ lgShow: false });
     return (
-    <div>
+     <div className="container page-view page-requests">
      <div id="requests">
       <Grid>
         <Row>
@@ -60,19 +68,20 @@ class Requests extends React.Component {
           :
           <div></div>
           }
-          <RequestList />
+          <RequestList request_description={this.state.request_description}/>
         </div>
         <Row>
           <Col xs={12} md={12}>
             <div className="contact-recruiter">
-              <a href="#"><img src={contact} />Contact Recruiter</a>
+              <a onClick={() => this.setState({ lgShow: true })} className="accommodation_list_link"><img src={add_blue} /> ADD A NEW REQUEST</a>
+              <AccommodationModal show={this.state.lgShow} products={this.props.products} onHide={lgClose} />
             </div>
-          </Col>    
-        </Row>    
+          </Col>
+        </Row>
     </Grid>
     </div>
-    <div className="requests background-fill"></div>         
-    </div>    
+    <div className="requests background-fill"></div>
+    </div>
     );
   }
 }

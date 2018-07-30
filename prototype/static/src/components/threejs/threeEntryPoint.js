@@ -39,7 +39,7 @@ export function threeEntryPoint(container, viewId) {
 
     function init() {
 
-        console.log('threeEntryPoint init() called');
+        //console.log('threeEntryPoint init() called');
 
         // initialize event listeners
         interactionManager.initEventListeners();
@@ -53,7 +53,7 @@ export function threeEntryPoint(container, viewId) {
 
     // for changing the view based on a React prop
     function changeView( id ) {
-        console.log('threeEntryPoint changeView called');
+        //console.log('threeEntryPoint changeView called');
         sceneManager.changeView(id);
     }
 
@@ -83,13 +83,9 @@ export function threeEntryPoint(container, viewId) {
 
             // console.log('is rendering');
             // this starts the animation loop
-            // window.requestAnimationFrame(render);
-
-            setTimeout( function() {
-
-                window.requestAnimationFrame( render );
-
-            }, 1000 / frameRate );
+             setTimeout( function() {
+                 window.requestAnimationFrame( render );
+             }, 1000 / frameRate );
 
             sceneManager.update();
             canvasManager.update(canvasManager.renderer, sceneManager.scene, sceneManager.cameraManager.camera);

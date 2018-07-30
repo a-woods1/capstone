@@ -5,6 +5,8 @@ import * as actionCreators from '../../actions/auth';
 import ScrollableAnchor from 'react-scrollable-anchor'
 import { Grid, Row, Col, Glyphicon, Modal, ButtonToolbar, Button } from 'react-bootstrap';
 
+import AccommodationModal from '../Modal/AccommodationModal.js';
+
 import SubStageDetail from '../SubstageDetail.js';
 import ThreeContainer from '../ThreeContainer.js';
 import { threeEntryPoint } from '../threejs/threeEntryPoint';
@@ -15,7 +17,10 @@ import arrival_360 from '../../images/photos/placeholder.png';
 import calendar from '../../images/calendar.png';
 import clock from '../../images/clock.png';
 import pin from '../../images/pin.png';
+import pin_blue from '../../images/pin-blue.png';
 import a11y_blue from '../../images/a11y-blue.png';
+import section_schedule from '../../images/section-schedule.png';
+import section_tips from '../../images/section-tips.png';
 
 function mapStateToProps(state) {
     return {
@@ -50,6 +55,8 @@ class Overview extends React.Component { // eslint-disable-line react/prefer-sta
 
     render() {
 
+      let lgClose = () => this.setState({ lgShow: false });
+
 console.log("Local Storage:");
 for (var i = 0; i < localStorage.length; i++)   {
     console.log(localStorage.key(i) + "=[" + localStorage.getItem(localStorage.key(i)) + "]");
@@ -62,7 +69,11 @@ for (var i = 0; i < sessionStorage.length; i++) {
         return (
             <section id="section-overview">
                   <Row>
-                      <div>Software Engineer > Onsite Interview</div>
+                        <span className="date">
+                          <span className="month">Jul</span>
+                          <span className="num">28</span>
+                          <span className="day">Wednesday</span>
+                        </span>
                   </Row>
 
                   <Row className="overview_section">
@@ -78,44 +89,46 @@ for (var i = 0; i < sessionStorage.length; i++) {
 
                   <div className="overview_details">
                     <Row>
-                        <span className="date"><img src={calendar} /> August 6, 2018</span>
-                    </Row>
-                    <Row>
-                      <span className="location"><img src={pin} /> 731 Lexington Avenue, New York</span>
+                      <span className="location"><img src={pin_blue} /> 731 Lexington Avenue, New York</span>
                     </Row>
                   </div>
 
-                  <Row className="info_box">
-                    <h3 className="info_box_title">{this.props.userName}:</h3>
-                    <p className="info_box_text">Great news! The team enjoyed speaking with you, and would like to invite you to the NYC office for an onsite, in-person interview.</p>
+                  <Row className="welcome_message info_box">
+                    <p className="info_box_text">Hi {this.props.userName}!<br/>The team enjoyed speaking with you, and would like to invite you to the NYC office for an onsite, in-person interview.</p>
                   </Row>
 
                   <div className="schedule">
                     <Row>
-                      <h2 className="subsection_title">Schedule</h2>
+                      <h2 className="subsection_title">
+                        <img src={section_schedule} />
+                        Schedule
+                      </h2>
                     </Row>
                     <Row className="info_box">
-                      <span className="info_box_time"><img src={clock} /> 9:00 a.m.</span>
+                      <span className="info_box_time"><img src={clock} />9:00<span className="am-pm">AM</span></span>
                       <h3 className="info_box_title">Arrival</h3>
                       <p className="info_box_text">We would like you to arrive and make yourself comfortable at the Bloomberg office by 9 a.m. EDT.</p>
                     </Row>
 
                     <Row className="info_box">
-                      <span className="info_box_time"><img src={clock} /> Early Morning</span>
+                      <span className="info_box_time"><img src={clock} />9:30<span className="am-pm">AM</span></span>
                       <h3 className="info_box_title">In-Person Interview</h3>
                       <p className="info_box_text">You will have at least one in-person interview during the day with a recruiter.</p>
                     </Row>
 
                     <Row className="info_box">
-                      <span className="info_box_time"><img src={clock} /> Late Morning</span>
+                      <span className="info_box_time"><img src={clock} />10:30<span className="am-pm">AM</span></span>
                       <h3 className="info_box_title">Coding Interview</h3>
                       <p className="info_box_text">You will have at least one coding interview during the day with a software engineer.</p>
                     </Row>
 
                   </div>
 
-                  <Row>
-                  <h2 className="subsection_title">Tips</h2>
+                  <Row className="tips">
+                  <h2 className="subsection_title">
+                    <img src={section_tips} />
+                    Tips
+                  </h2>
                   </Row>
                   <Row className="info_box">
                     <h3 className="info_box_title">Review Your Interview Details</h3>
@@ -124,7 +137,11 @@ for (var i = 0; i < sessionStorage.length; i++) {
                   <Row className="info_box">
                     <h3 className="info_box_title">Let Us Know What You Need</h3>
                     <p className="info_box_text">If you require any accommodations to fully participate in the interview, please let us know. We will make every effort to ensure you are provided with appropriate assistance.</p>
-                    <span className="accessibility_link"><img src={a11y_blue} /> Accessibility Accommodations</span>
+                    <a onClick={() => this.setState({ lgShow: true })} className="accessibility_link"><img src={a11y_blue} /> Accessibility Accommodations</a>
+
+
+                    <AccommodationModal show={this.state.lgShow} categories={this.props.categories} products={this.props.products} onHide={lgClose} />
+
                   </Row>
                   <Row className="info_box">
                     <h3 className="info_box_title">Come as You Are</h3>

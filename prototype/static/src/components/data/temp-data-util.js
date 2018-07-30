@@ -2,6 +2,7 @@ export var previewScenes = [
 	{
 		id : "g-58th-ext-3",
 		name : "58th Street Entrance",
+		taskName: "Entering the building",
 		srDescription: "You are standing in a large, circular courtyard that extends between 58th and 59th Streets. The ground surface is covered with cobblestones. A few people pass through the courtyard, and there are sometimes vehicles parked around the perimeter. As you face north towards 59th Street, the entrance to Bloomberg is approximately 30 feet west from the center of the courtyard. You can enter the building through the revolving door. There is a curb in front of the door.",		
 		thumbnailID: 0,
 		thumbnailUrl: "./textures/thumbnails/g-58th-ext-3-thumb.jpg",
@@ -33,6 +34,7 @@ export var previewScenes = [
 	{
 		id : "g-58th-ext-4",
 		name : "58th Street Entrance",
+		taskName: "Entering the building",		
 		srDescription: "You are now facing a revolving door that enters the Bloomberg office from the 58th Street courtyard. There is a curb that steps up to the revolving door. 15 feet to your left, there is a wheelchair-accessible ramp between two potted plants.",		
 		thumbnailID: 1,
 		thumbnailUrl: "./textures/thumbnails/g-58th-ext-4-thumb.jpg",
@@ -68,6 +70,7 @@ export var previewScenes = [
 	{
 		id : "g-58th-desk-2",
 		name : "Front Desk",
+		taskName: "Getting your guest badge",		
 		srDescription: "You have just entered the revolving doors, and are now in the ground floor lobby of 731 Lexington. Approximately 15 feet to your left, the front desk staff are waiting to assist you with your badge behind the counter. 10 feet to your right, a long bench available for seating extends along the wall. 15 feet in front of you, a small flight of four stairs descends into a hallway that extends to the Lexington Avenue entrance on the opposite side of the building. Immediately at the bottom of the stairs to the right are the kiosks where security attendants will scan your badge to let you into the building.",		
 		thumbnailID: 2,
 		thumbnailUrl: "./textures/thumbnails/g-58th-desk-2-thumb.jpg",
@@ -107,6 +110,7 @@ export var previewScenes = [
 	{
 		id : "g-badge-1",
 		name : "Badge Check-In",
+		taskName: "Checking in with security",				
 		srDescription : "You are standing directly in front of a set of kiosks where security checks badges on the way into Bloomberg. There are three lanes, separated by scanning units approximately 3.5 feet tall. Please enter through the outer lanes, not the center lane.",
 		thumbnailID: 3,
 		thumbnailUrl: "./textures/thumbnails/g-badge-1-thumb.jpg",
@@ -142,6 +146,7 @@ export var previewScenes = [
 	{
 		id : "g-elevator-1",
 		name : "Elevators",
+		taskName: "Checking in with security",		
 		srDescription : "You have just passed the security kiosk and are standing in the ground-floor elevator well, which is approximately 10 feet wide by 25 feet long. There are four elevators on your left, and four elevators on your right. All of these elevators go to the 6th floor, which is where you will wait for your interviewer. The button to summon the elevators is between the center two elevators on either side.",
 		thumbnailID: 4,
 		thumbnailUrl: "./textures/thumbnails/g-elevator-1-thumb.jpg",
@@ -233,6 +238,7 @@ export var previewScenes = [
 	{
 		id : "6-link-couch",
 		name : "6th Fl - Pink Couch",
+		taskName: "Waiting for your interviewer",
 		thumbnailID: 8,
 		thumbnailUrl: "./textures/thumbnails/6-link-couch-thumb.jpg",
 		texture : {

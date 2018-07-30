@@ -121,7 +121,7 @@ export default class LoginView extends React.Component {
                       <FormControl
                         id="email"
                         type="email"
-                        errorText={this.state.email_error_text}
+                        //errorText={this.state.email_error_text}
                         onChange={(e) => this.changeValue(e, 'email')}
                       />
                    </div>
@@ -130,7 +130,7 @@ export default class LoginView extends React.Component {
                      <FormControl
                        id="password"
                        type="password"
-                       errorText={this.state.password_error_text}
+                       //errorText={this.state.password_error_text}
                        onChange={(e) => this.changeValue(e, 'password')}
                       />
                    </div>
@@ -139,7 +139,6 @@ export default class LoginView extends React.Component {
                      disabled={this.state.disabled}
                      style={{ marginTop: 50 }}
                      label="Login"
-                     fullWidth={true}
                      onClick={(e) => this.login(e)}
                     >Login</Button>
                     </div>

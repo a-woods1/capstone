@@ -12,8 +12,8 @@ class ImmersiveNavStagePoi extends Component {
 
   	componentDidMount() {
   		this.data = this.getDataById(this.props.id);
-  		console.log('this record: ');
-  		console.log(this.data);
+  		//console.log('this record: ');
+  		//console.log(this.data);
   		window.setTimeout(function(){
   			this.render();
   		}.bind(this), 1000);
@@ -49,6 +49,7 @@ class ImmersiveNavStagePoi extends Component {
 
 		var thumbnailStyle;
 		var poiName;
+		var poiTaskname;
 		if(this.data) {
 			var thumbnailPath = './textures/thumbnails/' + this.data.id + '.jpg';
 			thumbnailStyle = {
@@ -58,11 +59,13 @@ class ImmersiveNavStagePoi extends Component {
 				backgroundPosition: 'center'
 			}
 			poiName = this.data.name;
+			poiTaskname = this.data.taskName;
 		} else {
 			thumbnailStyle = {
 				backgroundImage: 'none'
 			}
 			poiName = this.props.id;
+			poiTaskname = this.props.id;			
 		}
 
 	    return (
@@ -83,8 +86,11 @@ class ImmersiveNavStagePoi extends Component {
 					style={thumbnailStyle}>
 				</div>
 				<div className="poi-label">
-					<img role="presentation" src={this.props.activeViewData.id ? (this.props.activeViewData.id == this.props.id ? pin_white : pin_blue) : pin_blue} />
-					<h5>{poiName}</h5>
+					<h5>{poiTaskname}</h5>
+					<h6>
+						<img role="presentation" src={this.props.activeViewData.id ? (this.props.activeViewData.id == this.props.id ? pin_white : pin_blue) : pin_blue} />
+						{poiName}
+					</h6>					
 				</div>
 			</li>
 		)

@@ -120,10 +120,10 @@ export default class RegisterView extends React.Component {
                         <div className="col-md-12">
                         <ControlLabel>Username</ControlLabel>
                             <FormControl
-                              hintText="Username"
-                              floatingLabelText="Username"
+                              //hintText="Username"
+                              //floatingLabelText="Username"
                               type="username"
-                              errorText={this.state.username_error_text}
+                              //errorText={this.state.username_error_text}
                               onChange={(e) => this.changeValue(e, 'username')}
                             />
                         </div>
@@ -131,10 +131,10 @@ export default class RegisterView extends React.Component {
                         <div className="col-md-12">
                         <ControlLabel>Email</ControlLabel>
                             <FormControl
-                              hintText="Email"
-                              floatingLabelText="Email"
+                              //hintText="Email"
+                              //floatingLabelText="Email"
                               type="email"
-                              errorText={this.state.email_error_text}
+                              //errorText={this.state.email_error_text}
                               onChange={(e) => this.changeValue(e, 'email')}
                             />
                         </div>
@@ -142,10 +142,10 @@ export default class RegisterView extends React.Component {
                         <div className="col-md-12">
                         <ControlLabel>Password</ControlLabel>
                             <FormControl
-                              hintText="Password"
-                              floatingLabelText="Password"
+                              //hintText="Password"
+                              //floatingLabelText="Password"
                               type="password"
-                              errorText={this.state.password_error_text}
+                              //errorText={this.state.password_error_text}
                               onChange={(e) => this.changeValue(e, 'password')}
                             />
                         </div>

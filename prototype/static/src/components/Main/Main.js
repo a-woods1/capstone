@@ -73,8 +73,8 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
     window.addEventListener('scroll', this.onScroll.bind(this), { passive: true })
 
     this.navElements = document.getElementById('sub-nav').getElementsByTagName('li');
-    // console.log('xxxx');
-    // console.log(this.navElements);
+    //console.log('xxxx');
+    //console.log(this.navElements);
 
     this.sectionPositions[0] = document.getElementById('section-overview').offsetTop;
     this.sectionPositions[1] = document.getElementById('section-arrival').offsetTop;
@@ -90,9 +90,9 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
     var x = document.body.scrollTop;
     // console.log(x);
 
-    // console.log('yyy');
-    // console.log(this.sectionPositions);
-    // console.log(this.navElements);
+    //console.log('yyy');
+    //console.log(this.sectionPositions);
+    //console.log(this.navElements);
 
     // starting with the last element,
 
@@ -120,7 +120,7 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
 
   componentWillUnmount() {
 
-    // Add 
+    // Add
     window.removeEventListener('scroll', this.onScroll);
 
   }
@@ -140,9 +140,8 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
         stages: stages
       });
 
-      // console.log('XYZ Component (main) did mount');
-      // console.log(this.state.stages);
-
+      //console.log('XYZ Component (main) did mount');
+      //console.log(this.state.stages);
     }
 
     getDataById(recordId) {
@@ -185,7 +184,6 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
 
         // Set ARIA focus
         document.getElementById("ImmersiveControls").focus();
-
       });
 
     }
@@ -213,7 +211,7 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
     }
 
     showImmersive ( id ) {
-      console.log('showImmersiveView called');
+      //console.log('showImmersiveView called');
       this.setState({
         immersiveOpen : true,
         activeViewId : id
@@ -226,11 +224,11 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
 
   render() {
 
-    console.log('Rendering Main.js');
-    console.log(this.state.stages);
+    //console.log('Rendering Main.js');
+    //console.log(this.state.stages);
 
     return (
-      <div>
+      <div className="container page-view page-main">
       <ImmersiveComponent
             changeImmersive={this.showImmersive.bind(this)}
             toggleImmersiveNavigator={this.toggleImmersiveNavigator.bind(this)}
@@ -241,11 +239,11 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
             immersiveNavigatorExpanded={this.state.immersiveNavigatorExpanded}
             hideImmersive={this.hideImmersive.bind(this)}
             stages={this.state.stages}
-            previewScenes={this.state.previewScenes}      
+            previewScenes={this.state.previewScenes}
       />
       <div
         id="text-content"
-        className={"col-xs-8 " + (this.state.immersiveOpen ? "hide" : "show")}
+        className={"col-xs-9 " + (this.state.immersiveOpen ? "hide" : "show")}
         >
         <Grid>
           <Overview />

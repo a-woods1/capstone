@@ -12,14 +12,14 @@ export function PhotoSphere(canvasManager, cameraManager, dataManager, scene, ge
 	// change the Photosphere to a new view
 	function changeView ( id ) {
 
-		console.log('changeView called: ');
-		console.log(id);
+		//console.log('changeView called: ');
+		//console.log(id);
 
 		destroyAugmentations();
 
 		var newData = dataManager.getDataById ( id );
 
-		console.log(newData);
+		//console.log(newData);
 
 		// TODO: The scene isn't removing the mesh which
 		// is causing performance issues
@@ -34,7 +34,7 @@ export function PhotoSphere(canvasManager, cameraManager, dataManager, scene, ge
 		loadAnnotations( newData );
 		loadLinks( newData );
 
-		console.log(cameraManager);
+		//console.log(cameraManager);
 
 		// set orientation
 		cameraManager.setLon(newData.defaultTarget.lon);
@@ -71,16 +71,16 @@ export function PhotoSphere(canvasManager, cameraManager, dataManager, scene, ge
 	// load Annotations for this Photosphere
 	function loadAnnotations ( data ) {
 
-		console.log('loadAnnotations called');
+		//console.log('loadAnnotations called');
 
 		// Draw an annotation
 		for(var i = 0; i < data.annotations.length; i++)
 		{
-			console.log( 'loading annotation from data ' );
+			//console.log( 'loading annotation from data ' );
 			var a = new Annotation( scene, data.annotations[i].position, data.annotations[i].data );
 			a.setIndex(annotations.length);
 			annotations.push(a);
-			console.log(annotations);
+			//console.log(annotations);
 		}
 
 	}
@@ -90,7 +90,7 @@ export function PhotoSphere(canvasManager, cameraManager, dataManager, scene, ge
 
 		for(var i = 0; i < data.linkedViews.length; i++)
 		{
-			console.log( 'loading linkedView from data ' );
+			//console.log( 'loading linkedView from data ' );
 			var a = new LinkedView( scene, data.linkedViews[i].position, data.linkedViews[i].id );
 			a.addDomListener(changeView, a.id);
 			linkedViews.push(a);
@@ -120,7 +120,7 @@ export function PhotoSphere(canvasManager, cameraManager, dataManager, scene, ge
 				require("../textures/21wa-int-4.jpg"),
 		];
 
-		console.log('loadTexture called');
+		//console.log('loadTexture called');
 		var t;
 
 		// Load photo texture
@@ -128,8 +128,8 @@ export function PhotoSphere(canvasManager, cameraManager, dataManager, scene, ge
 
 		if(data.texture.textureType == "photo") {
 
-			console.log("loading photo texture");
-			console.log(data.texture.textureUrl);
+			//console.log("loading photo texture");
+			//console.log(data.texture.textureUrl);
 			// TODO: TEMP WORKAROUND FOR LOCAL TESTING
 			//var path = './' + data.texture.textureUrl;
 			t = new THREE.TextureLoader().load( textures[textureID] );
@@ -138,7 +138,7 @@ export function PhotoSphere(canvasManager, cameraManager, dataManager, scene, ge
 		// are pre-loaded in the background at this time
 		} else if (data.texture.textureType == "video") {
 
-			console.log("loading video texture");
+			//console.log("loading video texture");
 			var video = document.createElement( 'video' );
 			video.width = 640;
 			video.height = 360;
@@ -153,7 +153,7 @@ export function PhotoSphere(canvasManager, cameraManager, dataManager, scene, ge
 			t.format = THREE.RGBFormat;
 		}
 
-		console.log("loadTexture is ending");
+		//console.log("loadTexture is ending");
 
 		return t;
 
