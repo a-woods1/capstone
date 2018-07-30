@@ -67,7 +67,7 @@ class InPersonInterview extends React.Component { // eslint-disable-line react/p
             </Row>
             <Row className="arrival_section">
               <ScrollableAnchor id={'section3'}>
-                <h1 className="section_title">In-Person Interview</h1>
+                <h1 tabIndex="0" className="section_title">In-Person Interview</h1>
               </ScrollableAnchor>
             </Row>
 

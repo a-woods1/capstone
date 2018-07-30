@@ -77,7 +77,7 @@ for (var i = 0; i < sessionStorage.length; i++) {
         return (
             <section id="section-overview">
                   <Row>
-                        <span aria-label="Interview Date" tabIndex="0" className="date">
+                        <span aria-label="Interview Date: Wednesday, July 28" tabIndex="0" className="date">
                           <span className="month">Jul</span>
                           <span className="num">28</span>
                           <span className="day">Wednesday</span>
@@ -86,13 +86,13 @@ for (var i = 0; i < sessionStorage.length; i++) {
 
                   <Row className="overview_section">
                     <ScrollableAnchor id={'section1'}>
-                      <h1 className="section_title" onClick={this.props.testFunction}>Overview</h1>
+                      <h1 className="section_title" tabIndex="0" onClick={this.props.testFunction}>Overview</h1>
                     </ScrollableAnchor>
                   </Row>
 
                   <div className="overview_details">
                     <Row>
-                      <span className="location"><img src={pin_blue} /> 731 Lexington Avenue, New York</span>
+                      <span className="location"><img alt="Address" src={pin_blue} /> 731 Lexington Avenue, New York</span>
                     </Row>
                   </div>
 
@@ -103,24 +103,24 @@ for (var i = 0; i < sessionStorage.length; i++) {
                   <div className="schedule">
                     <Row>
                       <h2 className="subsection_title">
-                        <img src={section_schedule} />
+                        <img role="presentation" src={section_schedule} />
                         Schedule
                       </h2>
                     </Row>
                     <Row className="info_box">
-                      <span className="info_box_time"><img src={clock} />9:00<span className="am-pm">AM</span></span>
+                      <span className="info_box_time"><img role="presentation" src={clock} />9:00<span className="am-pm">AM</span></span>
                       <h3 className="info_box_title">Arrival</h3>
                       <p className="info_box_text">We would like you to arrive and make yourself comfortable at the Bloomberg office by 9 a.m. EDT.</p>
                     </Row>
 
                     <Row className="info_box">
-                      <span className="info_box_time"><img src={clock} />9:30<span className="am-pm">AM</span></span>
+                      <span className="info_box_time"><img role="presentation" src={clock} />9:30<span className="am-pm">AM</span></span>
                       <h3 className="info_box_title">In-Person Interview</h3>
                       <p className="info_box_text">You will have at least one in-person interview during the day with a recruiter.</p>
                     </Row>
 
                     <Row className="info_box">
-                      <span className="info_box_time"><img src={clock} />10:30<span className="am-pm">AM</span></span>
+                      <span className="info_box_time"><img role="presentation" src={clock} />10:30<span className="am-pm">AM</span></span>
                       <h3 className="info_box_title">Coding Interview</h3>
                       <p className="info_box_text">You will have at least one coding interview during the day with a software engineer.</p>
                     </Row>
@@ -129,7 +129,7 @@ for (var i = 0; i < sessionStorage.length; i++) {
 
                   <Row className="tips">
                   <h2 className="subsection_title">
-                    <img src={section_tips} />
+                    <img role="presentation" src={section_tips} />
                     Tips
                   </h2>
                   </Row>
@@ -140,7 +140,7 @@ for (var i = 0; i < sessionStorage.length; i++) {
                   <Row className="info_box">
                     <h3 className="info_box_title">Let Us Know What You Need</h3>
                     <p className="info_box_text">If you require any accommodations to fully participate in the interview, please let us know. We will make every effort to ensure you are provided with appropriate assistance.</p>
-                    <a onClick={this.launchAccModalSetFocus} className="accessibility_link"><img src={a11y_blue} /> Accessibility Accommodations</a>
+                    <a onClick={this.launchAccModalSetFocus} className="accessibility_link"><img role="presentation" src={a11y_blue} /> Accessibility Accommodations</a>
 
 
                     <AccommodationModal show={this.state.lgShow} categories={this.props.categories} products={this.props.products} onHide={lgClose} />

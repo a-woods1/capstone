@@ -71,7 +71,7 @@ componentDidMount() {
             </Row>
             <Row className="arrival_section">
               <ScrollableAnchor id={'section2'}>
-                <h1 className="section_title">Arrival</h1>
+                <h1 tabIndex="0" className="section_title">Arrival</h1>
               </ScrollableAnchor>
             </Row>
 

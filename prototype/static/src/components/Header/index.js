@@ -115,6 +115,18 @@ export class Header extends Component {
         });
     }
 
+    skipToContent() {
+      setTimeout(function(){
+        document.getElementsByClassName('date')[0].focus();
+      }, 10);
+    }
+
+    skipToSection(i) {
+      setTimeout(function(){
+        document.getElementsByClassName('section_title')[i].focus();
+      }, 200);
+    }    
+
     render() {
       let lgClose = () => this.setState({ lgShow: false });
       var icon = (
@@ -131,7 +143,7 @@ export class Header extends Component {
         </header>
       :
       <header id="both-nav">
-        <a className="skip-main" href="main#section1">Skip to main content</a>
+        <a className="skip-main" href="#" onClick={this.skipToContent}>Skip to main content</a>
         <Navbar aria-label="Main Navigation" inverse collapseOnSelect id="top-nav">
         <Navbar.Header>
           <Navbar.Brand className="brand-logo">
@@ -178,13 +190,13 @@ export class Header extends Component {
       </Navbar.Header>
       <Navbar.Collapse>
         <Nav>
-          <NavItem href='#section1'>{this.props.steps[0].step_title}
+          <NavItem href='#section1' onClick={() => this.skipToSection(0)}>{this.props.steps[0].step_title}
           </NavItem>
-          <NavItem href='#section2'>{this.props.steps[1].step_title}
+          <NavItem href='#section2' onClick={() => this.skipToSection(1)}>{this.props.steps[1].step_title}
           </NavItem>
-          <NavItem href='#section3'>{this.props.steps[2].step_title}
+          <NavItem href='#section3' onClick={() => this.skipToSection(2)}>{this.props.steps[2].step_title}
           </NavItem>
-          <NavItem href='#section4'>{this.props.steps[3].step_title}
+          <NavItem href='#section4' onClick={() => this.skipToSection(3)}>{this.props.steps[3].step_title}
           </NavItem>
         </Nav>
         </Navbar.Collapse>
