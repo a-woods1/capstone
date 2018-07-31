@@ -96,7 +96,7 @@ export function PhotoSphere(canvas, cameraManager, dataManager, scene, geometry,
 	function loadTexture ( data ) {
 
 		var textures = [
-				require( "../textures/g-58th-ext-3.jpg"),
+				require("../textures/g-58th-ext-3.jpg"),
 				require("../textures/g-58th-ext-4.jpg"),
 				require("../textures/g-58th-desk-2.jpg"),
 				require("../textures/g-badge-1.jpg"),
@@ -111,13 +111,19 @@ export function PhotoSphere(canvas, cameraManager, dataManager, scene, geometry,
 				require("../textures/21wa-int-1.jpg"),
 				require("../textures/21wa-int-3.jpg"),
 				require("../textures/21wa-int-4.jpg"),
+				require("../textures/17w2-int-1.jpg"),
+				require("../textures/7w7-int-5.jpg")				
 		];
+		console.log('textures');
+		console.log(textures);
 
 		//console.log('loadTexture called');
 		var t;
 
 		// Load photo texture
 		var textureID = data.thumbnailID;
+
+		console.log(data.thumbnailID);
 
 		if(data.texture.textureType == "photo") {
 

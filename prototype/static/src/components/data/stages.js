@@ -9,7 +9,7 @@ export var stages = [
       stageOrder: 2,
       stageName: 'One-on-One Interview',
       stageTime: '9:30',
-      pois: ['21wa-int-1','21wa-ext-1']
+      pois: ['21wa-int-1','7w7-int-5','17w2-int-1']
     },
     {
       stageOrder: 3,

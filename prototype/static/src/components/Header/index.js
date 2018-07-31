@@ -68,7 +68,7 @@ export class Header extends Component {
         }
 
         // assign good aria
-        topNav.getElementsByClassName('brand_log').first().setAttribute('aria-label','B Ready Logo');
+        topNav.getElementsByClassName('brand-logo')[0].setAttribute('aria-label','B Ready Logo');
 
       }, 500);
 

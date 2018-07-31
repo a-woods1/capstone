@@ -45,6 +45,8 @@ class ImmersiveNavStagePoi extends Component {
 			require("./textures/21wa-int-1.jpg"),
 			require("./textures/21wa-int-3.jpg"),
 			require("./textures/21wa-int-4.jpg"),
+			require("./textures/17w2-int-1.jpg"),
+			require("./textures/7w7-int-5.jpg")			
 		];
 
 		var thumbnailStyle;
@@ -54,7 +56,7 @@ class ImmersiveNavStagePoi extends Component {
 			var thumbnailPath = './textures/thumbnails/' + this.data.id + '.jpg';
 			thumbnailStyle = {
 				//backgroundImage: 'url(' + thumbnailPath + ')',
-        backgroundImage: 'url(' + thumbnails[this.data.thumbnailID] + ')',
+		        backgroundImage: 'url(' + thumbnails[this.data.thumbnailID] + ')',
 				backgroundSize: '200%',
 				backgroundPosition: 'center'
 			}
