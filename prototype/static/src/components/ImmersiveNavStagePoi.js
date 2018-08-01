@@ -45,6 +45,8 @@ class ImmersiveNavStagePoi extends Component {
 			require("./textures/21wa-int-1.jpg"),
 			require("./textures/21wa-int-3.jpg"),
 			require("./textures/21wa-int-4.jpg"),
+			require("./textures/17w2-int-1.jpg"),
+			require("./textures/7w7-int-5.jpg")			
 		];
 
 		var thumbnailStyle;
@@ -54,7 +56,7 @@ class ImmersiveNavStagePoi extends Component {
 			var thumbnailPath = './textures/thumbnails/' + this.data.id + '.jpg';
 			thumbnailStyle = {
 				//backgroundImage: 'url(' + thumbnailPath + ')',
-        backgroundImage: 'url(' + thumbnails[this.data.thumbnailID] + ')',
+		        backgroundImage: 'url(' + thumbnails[this.data.thumbnailID] + ')',
 				backgroundSize: '200%',
 				backgroundPosition: 'center'
 			}
@@ -74,7 +76,7 @@ class ImmersiveNavStagePoi extends Component {
 				onClick={()=>this.props.changeImmersive(this.props.id)}
 				tabIndex="0"
 				role="link"
-				aria-label={"Select to open immersive view for" + this.data.name}
+				aria-label={"Select to hear an immersive description for" + this.data.taskName + ", " + this.data.name}
 				>
 				<div
 					className="poi-thumbnail"

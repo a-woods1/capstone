@@ -330,6 +330,7 @@ export var previewScenes = [
 	},
 	{
 		id : "21wa-int-1",
+		taskName: "Small Interview Room",		
 		name : "Interview Room - 21WA",
 		thumbnailID: 12,
 		thumbnailUrl: "./textures/thumbnails/21wa-int-1-thumb.jpg",
@@ -388,5 +389,45 @@ export var previewScenes = [
 				id : "21wa-int-3",
 				position : { x: 33.57558188002136, y: -71.2103397983865, z: -61.223300692865315},			},
 		]
-	}
+	},
+	{
+		id : "17w2-int-1",
+		taskName: "Large Interview Room",
+		name : "17W2",
+		srDescription: "You are standing in a large conference room that is approximately 24 feet long by 15 feet wide.",
+		thumbnailID: 15,
+		thumbnailUrl: "./textures/thumbnails/17w2-int-1-thumb.jpg",
+		texture : {
+			textureType : "photo",
+			textureUrl : "textures/17w2-int-1.jpg"
+		},
+		defaultTarget : { lon: 386.1985173992517, lat: 25.493561093732623 },
+		annotations : [
+		],
+		linkedViews : [
+			{
+				id : "21wa-int-3",
+				position : { x: 33.57558188002136, y: -71.2103397983865, z: -61.223300692865315},			},
+		]
+	},
+	{
+		id : "7w7-int-5",
+		taskName: "Medium Interview Room",
+		name : "17W2",
+		srDescription: "You are standing in a medium conference room that is approximately 24 feet long by 15 feet wide. In the center of the room there is a table. The room's back wall is a window that overlooks the main Bloomberg atrium.",
+		thumbnailID: 16,
+		thumbnailUrl: "./textures/thumbnails/7w7-int-5-thumb.jpg",
+		texture : {
+			textureType : "photo",
+			textureUrl : "textures/7w7-int-5.jpg"
+		},
+		defaultTarget : { lon: 386.1985173992517, lat: 25.493561093732623 },
+		annotations : [
+		],
+		linkedViews : [
+			{
+				id : "21wa-int-3",
+				position : { x: 33.57558188002136, y: -71.2103397983865, z: -61.223300692865315},			},
+		]
+	}	
 ]

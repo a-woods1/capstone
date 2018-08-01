@@ -23,7 +23,10 @@ class ImmersiveNavStagesList extends Component {
 
       return (
 
-		<ul className="imm-stages">
+		<ul
+			role="list"
+			className="imm-stages"
+		>
 
 		{this.props.stages.map((item)=>
 			<ImmersiveNavStage

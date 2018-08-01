@@ -63,17 +63,17 @@ class InPersonInterview extends React.Component { // eslint-disable-line react/p
         <section id="section-interview">
           <div>
             <Row>
-                <span className="time"><img src={clock} />9:30<span className="am-pm">AM</span></span>
+                <span className="time"><img role="presentation" src={clock} />9:30<span className="am-pm">AM</span></span>
             </Row>
             <Row className="arrival_section">
               <ScrollableAnchor id={'section3'}>
-                <h1 className="section_title">In-Person Interview</h1>
+                <h1 tabIndex="0" className="section_title">In-Person Interview</h1>
               </ScrollableAnchor>
             </Row>
 
             <div className="overview_details">
               <Row>
-                <span className="location"><img src={pin_blue} /> 731 Lexington Avenue, New York</span>
+                <span className="location"><img role="presentation" src={pin_blue} /> 731 Lexington Avenue, New York</span>
               </Row>
             </div>
 
@@ -84,7 +84,7 @@ class InPersonInterview extends React.Component { // eslint-disable-line react/p
             </Row>
             <Row className="immersive_views">
               <h2 className="subsection_title">
-                <img src={section_360} />
+                <img role="presentation" src={section_360} />
                 360° Views
               </h2>
                 <div>
@@ -102,7 +102,7 @@ class InPersonInterview extends React.Component { // eslint-disable-line react/p
 
             <Row>
               <h2 className="subsection_title">
-                <img src={section_tasks} />
+                <img role="presentation" src={section_tasks} />
                 What You’ll Do
               </h2>
             </Row>
@@ -119,7 +119,7 @@ class InPersonInterview extends React.Component { // eslint-disable-line react/p
 
             <Row>
               <h2 className="subsection_title">
-                <img src={section_tools} />
+                <img role="presentation" src={section_tools} />
                 Additional Details
               </h2>
             </Row>
@@ -142,7 +142,7 @@ class InPersonInterview extends React.Component { // eslint-disable-line react/p
 
             <Row>
               <h2 className="subsection_title">
-                <img src={section_environment} />
+                <img role="presentation" src={section_environment} />
                 About the Space
               </h2>
             </Row>
@@ -169,7 +169,7 @@ class InPersonInterview extends React.Component { // eslint-disable-line react/p
                 <Panel eventKey={1}>
                   <Panel.Heading>
                     <Panel.Title toggle>
-                      <span className="accessibility_link"><img src={a11y_blue} /> Related Accessibility Accommodations <img className="expand" src={expand_blue} /></span>
+                      <span className="accessibility_link"><img role="presentation" src={a11y_blue} /> Related Accessibility Accommodations <img role="presentation" className="expand" src={expand_blue} /></span>
 
                     </Panel.Title>
                   </Panel.Heading>
@@ -180,7 +180,7 @@ class InPersonInterview extends React.Component { // eslint-disable-line react/p
                       <p>This badge allows you to stop the elevator at any floor you need.</p>
                       <button className="short-button" onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Select</button>
                     </div>
-                    <a onClick={() => this.setState({ lgShow: true })} className="accommodation_list_link"><img src={new_window} /> Full Accommodation List</a>
+                    <a onClick={() => this.setState({ lgShow: true })} className="accommodation_list_link"><img alt="Open accommodations dialog" src={new_window} /> Full Accommodation List</a>
                     <AccommodationModal show={this.state.lgShow} categories={this.props.categories} products={this.props.products} onHide={lgClose} />
                   </div>
 

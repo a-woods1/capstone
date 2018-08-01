@@ -187,6 +187,11 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
       // this.threeEntryPoint.updateRenderer();
       this.setState({immersiveOpen : false });
       this.threeEntryPoint.pauseRender();
+
+      // show the subnavigation bar
+      document.getElementById('sub-nav').classList.remove('hide');      
+      document.getElementById('sub-nav').classList.add('show');
+
     }
 
     showImmersive ( id ) {
@@ -195,6 +200,11 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
         immersiveOpen : true,
         activeViewId : id
       }, function() {
+
+        // hide the subnavigation bar
+        document.getElementById('sub-nav').classList.remove('show');              
+        document.getElementById('sub-nav').classList.add('hide');
+
         this.changeImmersive();
         this.threeEntryPoint.updateRenderer();
         this.threeEntryPoint.resumeRender();
@@ -220,7 +230,10 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
             stages={this.state.stages}
             previewScenes={this.state.previewScenes}
       />
-      <div id="text-content" className="col-xs-9">
+      <div
+        id="text-content"
+        className={"col-xs-9 " + (this.state.immersiveOpen ? "hide" : "show")}
+        >
         <Grid>
           <Overview />
           <Arrival
