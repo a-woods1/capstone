@@ -946,7 +946,8 @@ button.cta:active {
 }
 
 #accommodations-modal .modal-dialog .modal-content #modal-body-main .common-req {
-	display: inline-block;
+	display: none;
+	// display: inline-block;
 	position: relative;
 	top: -2px;
 	padding-top: 4px;
