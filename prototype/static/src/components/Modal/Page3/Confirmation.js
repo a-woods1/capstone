@@ -109,7 +109,7 @@ switch(param) {
       <Row>
         <Col xs={12} md={12}>
           <p>Onsite Interview Date</p>
-          <p className="modal_text_emphasized">August 6, 2018</p>
+          <p className="modal_text_emphasized">July 25, 2018</p>
         </Col>
       </Row>
       <Row>

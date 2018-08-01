@@ -77,9 +77,9 @@ for (var i = 0; i < sessionStorage.length; i++) {
         return (
             <section id="section-overview">
                   <Row>
-                        <span aria-label="Interview Date: Wednesday, July 28" tabIndex="0" className="date">
+                        <span aria-label="Interview Date: Wednesday, July 25" tabIndex="0" className="date">
                           <span aria-hidden="true" className="month">Jul</span>
-                          <span aria-hidden="true" className="num">28</span>
+                          <span aria-hidden="true" className="num">25</span>
                           <span aria-hidden="true" className="day">Wednesday</span>
                         </span>
                   </Row>
