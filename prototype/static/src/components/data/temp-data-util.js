@@ -1,7 +1,7 @@
 export var previewScenes = [
 	{
 		id : "g-58th-ext-3",
-		name : "58th Street Entrance",
+		name : "58th St Entrance",
 		taskName: "Entering the building",
 		srDescription: "You are now facing a revolving door that enters the Bloomberg office from the 58th Street courtyard. There is a curb that steps up to the revolving door. 15 feet to your left, there is a wheelchair-accessible ramp between two potted plants.",		
 		thumbnailID: 0,
@@ -69,7 +69,7 @@ export var previewScenes = [
 	},
 	{
 		id : "g-58th-desk-2",
-		name : "Front Desk",
+		name : "Front Desk, Floor G",
 		taskName: "Getting your guest badge",		
 		srDescription: "You have just entered the revolving doors, and are now in the ground floor lobby of 731 Lexington. Approximately 15 feet to your left, the front desk staff are waiting to assist you with your badge behind the counter. 10 feet to your right, a long bench available for seating extends along the wall. 15 feet in front of you, a small flight of four stairs descends into a hallway that extends to the Lexington Avenue entrance on the opposite side of the building. Immediately at the bottom of the stairs to the right are the kiosks where security attendants will scan your badge to let you into the building.",		
 		thumbnailID: 2,
@@ -145,7 +145,7 @@ export var previewScenes = [
 	},
 	{
 		id : "g-elevator-1",
-		name : "Elevators",
+		name : "Elevators, Floor G",
 		taskName: "Checking in with security",
 		srDescription : "You have just passed the security kiosk and are standing in the ground-floor elevator well, which is approximately 10 feet wide by 25 feet long. There are four elevators on your left, and four elevators on your right. All of these elevators go to the 6th floor, which is where you will wait for your interviewer. The button to summon the elevators is between the center two elevators on either side.",
 		thumbnailID: 4,
@@ -237,7 +237,7 @@ export var previewScenes = [
 	},
 	{
 		id : "6-link-couch",
-		name : "6th Fl - Pink Couch",
+		name : "Couch, Floor 6",
 		taskName: "Waiting for your interviewer",
 		thumbnailID: 8,
 		thumbnailUrl: "./textures/thumbnails/6-link-couch-thumb.jpg",
@@ -331,7 +331,7 @@ export var previewScenes = [
 	{
 		id : "21wa-int-1",
 		taskName: "Small Interview Room",		
-		name : "Interview Room - 21WA",
+		name : "Room 21WA",
 		thumbnailID: 12,
 		thumbnailUrl: "./textures/thumbnails/21wa-int-1-thumb.jpg",
 		texture : {
@@ -393,7 +393,7 @@ export var previewScenes = [
 	{
 		id : "17w2-int-1",
 		taskName: "Large Interview Room",
-		name : "17W2",
+		name : "Room 17W2",
 		srDescription: "You are standing in a large conference room that is approximately 24 feet long by 15 feet wide.",
 		thumbnailID: 15,
 		thumbnailUrl: "./textures/thumbnails/17w2-int-1-thumb.jpg",
@@ -413,7 +413,7 @@ export var previewScenes = [
 	{
 		id : "7w7-int-5",
 		taskName: "Medium Interview Room",
-		name : "17W2",
+		name : "Room 7W7",
 		srDescription: "You are standing in a medium conference room that is approximately 24 feet long by 15 feet wide. In the center of the room there is a table. The room's back wall is a window that overlooks the main Bloomberg atrium.",
 		thumbnailID: 16,
 		thumbnailUrl: "./textures/thumbnails/7w7-int-5-thumb.jpg",

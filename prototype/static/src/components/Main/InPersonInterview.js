@@ -88,7 +88,7 @@ class InPersonInterview extends React.Component { // eslint-disable-line react/p
                 360° Views
               </h2>
                 <div>
-                <p>The 360° Views below show you what to expect when you first arrive at the office for your interview.</p>
+                <p>The 360° Views below show the types of rooms that your interview might take place in.</p>
                 <p>The views are accessible to screen readers and are keyboard navigable.</p>
                 <ImmersiveNavStagePoiList
                   kickerLabel=""
