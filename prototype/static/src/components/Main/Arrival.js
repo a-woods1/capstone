@@ -132,7 +132,7 @@ componentDidMount() {
                 <Panel eventKey={1}>
                   <Panel.Heading>
                     <Panel.Title toggle>
-                      <span className="accessibility_link"><img role="presentation" src={a11y_blue} /> Related Accessibility Accommodations <img role="presentation" className="expand" src={expand_blue} /></span>
+                      <span className="accessibility_link"><img role="presentation" src={a11y_blue} /> Need Related Accessibility Accommodations? <img role="presentation" className="expand" src={expand_blue} /></span>
 
                     </Panel.Title>
                   </Panel.Heading>
@@ -143,7 +143,7 @@ componentDidMount() {
                       <p>This badge allows you to stop the elevator at any floor you need.</p>
                       <button className="short-button" onClick={(e) => this.clickRequest(e, i, subvalue.accommodation_name, subvalue.accommodation_description)}>Select</button>
                     </div>
-                    <a onClick={() => this.setState({ lgShow: true })} className="accommodation_list_link"><img alt="Open Dialogue" src={new_window} /> Full Accommodation List</a>
+                    <a onClick={() => this.setState({ lgShow: true })} className="accommodation_list_link"><img alt="Open Dialogue" src={new_window} /> All Accessibility Accommodations</a>
                     <AccommodationModal show={this.state.lgShow} products={this.props.products} onHide={lgClose} />
                   </div>
 
@@ -155,7 +155,7 @@ componentDidMount() {
 
             <Row className="info_box">
               <h3 className="info_box_title">Wait for Recruiter</h3>
-              <p className="info_box_text">A greeter at the help desk on the 6th floor will point you to the pink couch.</p>
+              <p className="info_box_text">A greeter at the help desk on the 6th floor will point you to the waiting area.</p>
             </Row>
 
             <Row>
