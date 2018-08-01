@@ -140,7 +140,7 @@ switch(param) {
       </Row>
       <Row>
         <Col xs={6} md={6}>
-          <button onClick={this.clickBack}>Cancel</button>
+          <button>Cancel</button>
         </Col>
         <Col xs={6} md={6}>
           <button onClick={this.clickSubmit} className="cta">Submit</button>

@@ -85,7 +85,7 @@ class Custom extends Component{
               </Row>
               <Row>
                 <Col xs={6} md={6}>
-                  <button onClick={this.clickBack}>Back to List</button>
+                  <button>Back to List</button>
                 </Col>
                 <Col xs={6} md={6}>
                   <button onClick={this.clickNext} className="cta">Next</button>
