@@ -54,6 +54,9 @@ class Requests extends React.Component {
     console.log("Request Description" + this.state.request_description)
 
     let lgClose = () => this.setState({ lgShow: false });
+
+    var sub_nav = document.getElementById("sub-nav")
+    sub_nav.style.display = "none";
     return (
      <div className="container page-view page-requests">
      <button onClick={() => this.dispatchNewRoute('/main') } > Back to Onsite Interview</button>

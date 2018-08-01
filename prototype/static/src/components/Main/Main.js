@@ -189,7 +189,7 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
       this.threeEntryPoint.pauseRender();
 
       // show the subnavigation bar
-      document.getElementById('sub-nav').classList.remove('hide');      
+      document.getElementById('sub-nav').classList.remove('hide');
       document.getElementById('sub-nav').classList.add('show');
 
     }
@@ -202,7 +202,7 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
       }, function() {
 
         // hide the subnavigation bar
-        document.getElementById('sub-nav').classList.remove('show');              
+        document.getElementById('sub-nav').classList.remove('show');
         document.getElementById('sub-nav').classList.add('hide');
 
         this.changeImmersive();
@@ -215,6 +215,8 @@ class Main extends Component { // eslint-disable-line react/prefer-stateless-fun
 
     //console.log('Rendering Main.js');
     //console.log(this.state.stages);
+    var sub_nav = document.getElementById("sub-nav")
+    sub_nav.style.display = "block";
 
     return (
       <div className="container page-view page-main">

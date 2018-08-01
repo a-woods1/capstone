@@ -62,7 +62,7 @@ export class Header extends Component {
           // console.log(elements[i]);
 
           elements[i].removeAttribute('aria-label');
-          elements[i].removeAttribute('aria-labelledby');          
+          elements[i].removeAttribute('aria-labelledby');
           elements[i].removeAttribute('role');
 
         }
@@ -95,7 +95,7 @@ export class Header extends Component {
 
     renderEntry(){
         var num_stages = this.props.stages.length
-        //console.log(num_stages)
+        console.log(num_stages)
         var stages = this.props.stages.slice(1, this.props.stages.length)
         return Object.entries(stages).map(([key, value], i) => {
           //console.log("i " + i)
@@ -103,8 +103,7 @@ export class Header extends Component {
           var stage_id = obj.stage_id
           var stage_title = obj.stage_title
           return (
-            <NavItem className={num_stages-1 === i ? "current-stage" : ""} href="">
-            <MenuItem>
+            <MenuItem className={num_stages-1 === i ? "current-stage" : ""}>
             {num_stages-1 === i ?
               <span className="ordinal_stage">Current Stage</span>
               :
@@ -112,7 +111,6 @@ export class Header extends Component {
             }
             <span className="stage_title">{stage_title}</span>
             </MenuItem>
-            </NavItem>
          )
        })
   }
@@ -156,7 +154,7 @@ export class Header extends Component {
       setTimeout(function(){
         document.getElementsByClassName('section_title')[i].focus();
       }, 200);
-    }    
+    }
 
     render() {
 
@@ -229,7 +227,7 @@ export class Header extends Component {
         inverse
         collapseOnSelect
         id="sub-nav"
-        className={currentPathName == '/requests' ? "hide" : "show"}
+        //className={currentPathName == '/requests' ? "hide" : "show"}
       >
       <Navbar.Header>
         <Navbar.Toggle />
