@@ -82,16 +82,17 @@ componentDidMount() {
             </div>
 
             <Row className="info_box welcome_message">
-              <p className="info_box_text">Welcome!<br/>Bloomberg is an exciting place to be. Here are some things to know for when you arrive at our office:</p>
+              <p className="info_box_text">We are pleased to welcome you to Bloomberg’s NY offices for an interview.</p>
+              <p className="info_box_text">Here is what you should plan to do once you arrive.</p>
             </Row>
             <Row className="immersive_views">
               <h2 className="subsection_title">
                 <img src={section_360} />
-                360° Tour
+                360° Views
               </h2>
                 <div>
-                <p>The 360° tours below can give you a sense of what to expect when you first arrive at the office for your interview.</p>
-                <p>These tours are accessible to screen readers and keyboard navigation.</p>
+                <p>The 360° Views below show you what to expect when you first arrive at the office for your interview.</p>
+                <p>The views are accessible to screen readers and are keyboard navigable.</p>
                 <ImmersiveNavStagePoiList
                   kickerLabel=""
                   activeViewData={this.props.activeViewData}

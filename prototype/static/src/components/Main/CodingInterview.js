@@ -85,11 +85,11 @@ componentDidMount() {
             <Row className="immersive_views">
               <h2 className="subsection_title">
                 <img src={section_360} />
-                360° Tour
+                360° Views
               </h2>
-              <div>
-                <p>The 360° Tours below can give you a sense of the range of rooms we use for coding interviews. If you have questions or requests regarding access to any of these rooms, please feel welcome to contact your recruiter.</p>              
-                <p>These tours are accessible to screen readers and keyboard navigation.</p>
+                <div>
+                <p>The 360° Views below show you what to expect when you first arrive at the office for your interview.</p>
+                <p>The views are accessible to screen readers and are keyboard navigable.</p>
                 <ImmersiveNavStagePoiList
                   kickerLabel=""
                   activeViewData={this.props.activeViewData}

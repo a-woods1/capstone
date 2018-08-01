@@ -140,7 +140,7 @@ for (var i = 0; i < sessionStorage.length; i++) {
                   </Row>
                   <Row className="info_box">
                     <h3 className="info_box_title">Come as You Are</h3>
-                    <p className="info_box_text">Engineers at Bloomberg often dress casually. We encourage you to wear whatever make you feel most comfortable, as we will be focused on you knowledge and skills, not your clothing.</p>
+                    <p className="info_box_text">Engineers at Bloomberg often dress casually. We encourage you to wear whatever make you feel most comfortable, as we will be focused on your knowledge and skills, not your clothing.</p>
                   </Row>
                   <Row className="info_box">
                     <h3 className="info_box_title">Get Excited!</h3>
