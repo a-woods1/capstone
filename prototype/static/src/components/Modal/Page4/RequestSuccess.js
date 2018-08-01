@@ -45,7 +45,7 @@ class RequestSuccess extends Component{
        document.getElementsByClassName('close')[0].click();
        this.dispatchNewRoute('/requests')
        // document.getElementById('subNav').classList.remove('show');
-       // document.getElementById('subNav').classList.add('hide');   
+       // document.getElementById('subNav').classList.add('hide');
     }
 
   clickStatus = () => {

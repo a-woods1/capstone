@@ -1,12 +1,14 @@
-import React from 'react';
-import { bindActionCreators } from 'redux';
+import React, { Component } from 'react';
+import { browserHistory } from 'react-router';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import * as actionCreators from '../../../actions/auth';
 import { Grid, Row, Col, Glyphicon,ButtonToolbar, Button } from 'react-bootstrap';
 
 import AccommodationModal from '../../Modal/AccommodationModal.js';
 import RequestList from './RequestList/RequestList.js';
 import add_blue from '../../../images/add-blue.png';
+
 
 function mapStateToProps(state) {
     return {
@@ -38,6 +40,14 @@ class Requests extends React.Component {
     })
   }
 
+  dispatchNewRoute(route) {
+      browserHistory.push(route);
+      this.setState({
+          open: false,
+      });
+
+  }
+
   render() {
     var requests = JSON.parse(localStorage.getItem("accommodation_requests"));
     const hasRequests = requests != null
@@ -46,6 +56,7 @@ class Requests extends React.Component {
     let lgClose = () => this.setState({ lgShow: false });
     return (
      <div className="container page-view page-requests">
+     <button onClick={() => this.dispatchNewRoute('/main') } > Back to Onsite Interview</button>
      <div id="requests">
       <Grid>
         <Row>
