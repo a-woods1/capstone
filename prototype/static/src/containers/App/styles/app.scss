@@ -436,6 +436,7 @@ $top-nav-focus: #080808;
 	padding-left: 10% !important;
 	padding-right: 10% !important;
 	padding-bottom: 72px !important;
+	top: 60px;
 }
 
 .page-view .container {
@@ -946,7 +947,8 @@ button.cta:active {
 }
 
 #accommodations-modal .modal-dialog .modal-content #modal-body-main .common-req {
-	display: inline-block;
+	display: none;
+	// display: inline-block;
 	position: relative;
 	top: -2px;
 	padding-top: 4px;

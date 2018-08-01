@@ -123,9 +123,7 @@ export class Header extends Component {
         this.setState({
             open: false,
         });
-
     }
-
 
     handleClickOutside() {
         this.setState({
@@ -161,6 +159,13 @@ export class Header extends Component {
     }    
 
     render() {
+
+      console.log('subNavVisible');
+      console.log(this.props);
+
+      var currentPathName = window.location.pathname;
+      // alert('window pathname is ' + currentPathName);
+
       let lgClose = () => this.setState({ lgShow: false });
       var icon = (
         <span class="logo">
@@ -204,7 +209,7 @@ export class Header extends Component {
             Contact Recruiter
             <ContactRecruiter show={this.state.lgShow} onHide={lgClose} />
           </NavItem>
-            <NavItem className="my-requests" title="My Requests" onClick={() => this.dispatchNewRoute('/requests')}>
+            <NavItem className="my-requests" title="My Requests" onClick={()=>this.dispatchNewRoute('/requests')}>
               My Requests
             </NavItem>
             <NavDropdown className="top-nav-user-menu" title={<span><span aria-hidden="true" id="profile_img">{this.props.userName.charAt(0).toUpperCase()}</span>Hi, {this.props.userName}!</span>} id="basic-nav-dropdown">
@@ -224,6 +229,7 @@ export class Header extends Component {
         inverse
         collapseOnSelect
         id="sub-nav"
+        className={currentPathName == '/requests' ? "hide" : "show"}
       >
       <Navbar.Header>
         <Navbar.Toggle />
