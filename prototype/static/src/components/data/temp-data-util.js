@@ -3,7 +3,7 @@ export var previewScenes = [
 		id : "g-58th-ext-3",
 		name : "58th Street Entrance",
 		taskName: "Entering the building",
-		srDescription: "You are now facing a revolving door that enters the Bloomberg office from the 58th Street courtyard. There is a curb that steps up to the revolving door. 15 feet to your left, there is a wheelchair-accessible ramp between two potted plants.",		
+		srDescription: "You are standing in a large, circular courtyard that extends between 58th and 59th Streets. As you face north towards 59th Street, the entrance to Bloomberg is approximately 30 feet west from the center of the courtyard. You can enter the building through the revolving door. There is a slight curb in front of the door, and an accessible ramp between two potted plants.",		
 		thumbnailID: 0,
 		thumbnailUrl: "./textures/thumbnails/g-58th-ext-3-thumb.jpg",
 		texture : {
@@ -15,10 +15,7 @@ export var previewScenes = [
 			lat: 0
 		},
 		annotations : [
-			{
-				position : {x: 79.25228692471325, y: 6.900493865194609, z: -59.77090501342626},
-				data: "This is Bloomberg's 58th Street entrance. Please note that our accessible entrance is around the corner on Lexington Ave."
-			},
+ 
 		],
 		linkedViews : [
 			{
