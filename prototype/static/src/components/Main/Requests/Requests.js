@@ -8,7 +8,7 @@ import { Grid, Row, Col, Glyphicon,ButtonToolbar, Button } from 'react-bootstrap
 import AccommodationModal from '../../Modal/AccommodationModal.js';
 import RequestList from './RequestList/RequestList.js';
 import add_blue from '../../../images/add-blue.png';
-
+import caret_left_blue from '../../../images/caret-left-blue.png';
 
 function mapStateToProps(state) {
     return {
@@ -59,7 +59,9 @@ class Requests extends React.Component {
     sub_nav.style.display = "none";
     return (
      <div className="container page-view page-requests">
-     <button onClick={() => this.dispatchNewRoute('/main') } > Back to Onsite Interview</button>
+     <button id="temp-back" onClick={() => this.dispatchNewRoute('/main') } >
+        <img src={caret_left_blue} />Back to Onsite Interview
+      </button>
      <div id="requests">
       <Grid>
         <Row>
