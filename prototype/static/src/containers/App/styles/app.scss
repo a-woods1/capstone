@@ -2565,6 +2565,10 @@ button#temp-back {
 	color: #737373;
 }
 
+button#temp-back:hover {
+	text-decoration: underline;
+}
+
 button#temp-back img {
 	width: 6px;
 	margin-right: 8px;
