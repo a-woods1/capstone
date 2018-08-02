@@ -15,6 +15,6 @@ export var stages = [
       stageOrder: 3,
       stageName: 'Coding Interview',
       stageTime: '10:30',
-      pois: ['21wa-ext-1','g-badge-1']
+      pois: ['21wa-int-1','7w7-int-5','17w2-int-1']
     }
 ]

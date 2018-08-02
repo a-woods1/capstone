@@ -328,7 +328,7 @@ export var previewScenes = [
 	{
 		id : "21wa-int-1",
 		taskName: "Small Interview Room",		
-		name : "Interview Room - 21WA",
+		name : "21WA",
 		thumbnailID: 12,
 		thumbnailUrl: "./textures/thumbnails/21wa-int-1-thumb.jpg",
 		texture : {
@@ -371,7 +371,8 @@ export var previewScenes = [
 	},
 	{
 		id : "21wa-int-4",
-		name : "Interview Room - 21WA",
+		taskName: "Small Interview Room",
+		name : "21WA",
 		thumbnailID: 14,
 		thumbnailUrl: "./textures/thumbnails/21wa-int-4-thumb.jpg",
 		texture : {
@@ -410,7 +411,7 @@ export var previewScenes = [
 	{
 		id : "7w7-int-5",
 		taskName: "Medium Interview Room",
-		name : "17W2",
+		name : "7W7",
 		srDescription: "You are standing in a medium conference room that is approximately 24 feet long by 15 feet wide. In the center of the room there is a table. The room's back wall is a window that overlooks the main Bloomberg atrium.",
 		thumbnailID: 16,
 		thumbnailUrl: "./textures/thumbnails/7w7-int-5-thumb.jpg",
