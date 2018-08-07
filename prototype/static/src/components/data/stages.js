@@ -3,7 +3,7 @@ export var stages = [
       stageOrder: 1,
       stageName: 'Arrival',
       stageTime: '9:00',
-      pois: ['g-58th-ext-3','g-58th-desk-2','g-elevator-1', '6-link-couch']
+      pois: ['g-58th-ext-3','g-58th-desk-2','g-elevator-1']
     },
     {
       stageOrder: 2,

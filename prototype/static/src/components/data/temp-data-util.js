@@ -1,7 +1,7 @@
 export var previewScenes = [
 	{
 		id : "g-58th-ext-3",
-		name : "58th Street Entrance",
+		name : "68th Street Entrance",
 		taskName: "Entering the building",
 		srDescription: "You are standing in a large, circular courtyard that extends between 58th and 59th Streets. As you face north towards 59th Street, the entrance to Bloomberg is approximately 30 feet west from the center of the courtyard. You can enter the building through the revolving door. There is a slight curb in front of the door, and an accessible ramp between two potted plants.",		
 		thumbnailID: 0,
@@ -30,7 +30,7 @@ export var previewScenes = [
 	},
 	{
 		id : "g-58th-ext-4",
-		name : "58th Street Entrance",
+		name : "68th Street Entrance",
 		taskName: "Entering the building",	
 		srDescription: "You are now facing a revolving door that enters the Bloomberg office from the 58th Street courtyard. There is a curb that steps up to the revolving door. 15 feet to your left, there is a wheelchair-accessible ramp between two potted plants.",					
 		thumbnailID: 1,
@@ -68,7 +68,7 @@ export var previewScenes = [
 		id : "g-58th-desk-2",
 		name : "Front Desk",
 		taskName: "Getting your guest badge",		
-		srDescription: "You have just entered the revolving doors, and are now in the ground floor lobby of 731 Lexington. Approximately 15 feet to your left, the front desk staff are waiting to assist you with your badge behind the counter. 10 feet to your right, a long bench available for seating extends along the wall. 15 feet in front of you, a small flight of four stairs descends into a hallway that extends to the Lexington Avenue entrance on the opposite side of the building. Immediately at the bottom of the stairs to the right are the kiosks where security attendants will scan your badge to let you into the building.",		
+		srDescription: "You have just entered the revolving doors, and are now in the ground floor lobby of 888 Madison Avenue. Approximately 15 feet to your left, the front desk staff are waiting to assist you with your badge behind the counter. 10 feet to your right, a long bench available for seating extends along the wall. 15 feet in front of you, a corridor extends to the Madison Avenue entrance on the opposite side of the building. The corridor is lined with small potted trees on either side. At the end of the corridor is a kiosk where you will swipe your badge with security.",		
 		thumbnailID: 2,
 		thumbnailUrl: "./textures/thumbnails/g-58th-desk-2-thumb.jpg",
 		texture : {
@@ -76,7 +76,7 @@ export var previewScenes = [
 			textureUrl : "textures/g-58th-desk-2.jpg"
 		},
 		defaultTarget : {
-			lon: 234,
+			lon: 20,
 			lat: 0
 		},
 		annotations : [

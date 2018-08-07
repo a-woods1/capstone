@@ -607,10 +607,16 @@
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components",
-		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/data"
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/data",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/Main"
 	],
 	"file_history":
 	[
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/threejs/PhotoSphere.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/data/stages.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/Main/Arrival.js",
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/data/temp-data-util.js",
+		"/Users/afaucher/Documents/Github/BB-website/project/templates/solution.html",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/ImmersiveNavStagePoi.js",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/ImmersiveControls.js",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/Main/Main.js",
@@ -620,10 +626,8 @@
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/ImmersiveNavStagePoiList.js",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/Main/Overview.js",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/containers/App/styles/app.scss",
-		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/data/temp-data-util.js",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/threejs/threeEntryPoint.js",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/threejs/SceneManager.js",
-		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/threejs/PhotoSphere.js",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/ImmersiveComponent.js",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/threejs/CameraManager.js",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/node_modules/bootstrap/js/modal.js",
@@ -633,10 +637,8 @@
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/threejs/LinkedView.js",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/css/App.scss",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/css/Placeholder.scss",
-		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/Main/Arrival.js",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/Main/InPersonInterview.js",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/Main/CodingInterview.js",
-		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/data/stages.js",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/containers/App/index.js",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Summer/Development/capstone/prototype/static/src/components/Main/Requests/Requests.js",
 		"/Users/afaucher/Documents/Coding/AppleScript/Wisdom/todos.json",
@@ -737,12 +739,11 @@
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/Summer/Sprint 1/while prototyping 2",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Misc/When you come back to prototyping:",
 		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/Meeting Notes/06 04 Notes on User Test",
-		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Misc/Assumption",
-		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Misc/06-01-2018 Agenda for Talk with Lee"
+		"/Users/afaucher/Documents/Grad School 2017/CMU HCI/Courses/_0X Capstone/_Misc/Assumption"
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 39.0
 	},
 	"find_in_files":
 	{
@@ -757,6 +758,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"getting your guest badge",
 			".hide",
 			"text",
 			"hide",
@@ -940,7 +942,7 @@
 	"project": "bb-prototype.sublime-project",
 	"replace":
 	{
-		"height": 48.0
+		"height": 70.0
 	},
 	"save_all_on_build": true,
 	"select_file":

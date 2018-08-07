@@ -77,12 +77,12 @@ componentDidMount() {
 
             <div className="overview_details">
               <Row>
-                <span className="location"><img role="presentation" src={pin_blue} /> 731 Lexington Avenue, New York</span>
+                <span className="location"><img role="presentation" src={pin_blue} />888 Madison Avenue, New York</span>
               </Row>
             </div>
 
             <Row className="info_box welcome_message">
-              <p className="info_box_text">We are pleased to welcome you to Bloomberg’s NY offices for an interview.</p>
+              <p className="info_box_text">We are pleased to welcome you to our New York offices for an interview.</p>
               <p className="info_box_text">Here is what you should plan to do once you arrive.</p>
             </Row>
             <Row className="immersive_views">
